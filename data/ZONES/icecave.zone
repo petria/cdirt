@@ -74,6 +74,8 @@ Pname     = hole
 Location  = IN_ROOM:S_Cave
 Oflags    {NoGet}
 Linked    = Hole_G_Hall
+State     = 1
+MaxState  = 1
 Desc[0]   = "A hole has been dug south through the snow."
 End       = Hole_Snow_Cave
 
