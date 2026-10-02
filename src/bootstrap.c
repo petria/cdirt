@@ -170,10 +170,51 @@ void set_flagpoints(void) {
   }
 }
 
+#ifndef GEN
+static int load_level_scores(void) {
+  FILE *fp;
+  int count, i;
+  int score[LVL_WIZARD + 1];
+
+  if (!(fp = fopen("levels", "r"))) {
+    perror("Unable to open levels");
+    return -1;
+  }
+
+  if (fscanf(fp, "%d", &count) != 1 || count != LVL_WIZARD) {
+    fprintf(stderr, "Invalid levels file: expected %d level thresholds.\n",
+            LVL_WIZARD);
+    fclose(fp);
+    return -1;
+  }
+
+  for (i = 1; i <= count; i++) {
+    if (fscanf(fp, "%d", &score[i]) != 1 || score[i] < 0 ||
+        (i > 1 && score[i] < score[i - 1])) {
+      fprintf(stderr, "Invalid score threshold for level %d in levels file.\n",
+              i);
+      fclose(fp);
+      return -1;
+    }
+  }
+
+  fclose(fp);
+  for (i = 1; i <= count; i++)
+    levels[i] = score[i];
+
+  return 0;
+}
+#endif
+
 int bootstrap(void) {
   char buff[256];
   struct dirent **namelist;
   int n, x;
+
+#ifndef GEN
+  if (load_level_scores() == -1)
+    return -1;
+#endif
 
   xzon = 0;
 
