@@ -1,0 +1,28 @@
+C-Dirt 3.0 Release Notes :
+================================================================
+
+Bug fixes to clone bouncing people and objects around
+In-line help command, eliminates silly "pfilter"
+New bootstrap loader (faster) loads zones directly into game
+Saves wiz zones as regular text files
+Miscellaneous bug fixes to io, and new/better update system
+New flag system which makes adding flags or flagsets easy
+New pflags booter, makes adding levels easier
+
+C-Dirt 2.4 Release Notes :
+================================================================
+
+BUG FIXES! BUG FIXES! BUG FIXES!
+Newer aberchat
+Improved looting commands
+64-bit Mflags
+Some zones removed (but it's a good thing that they are...)
+Smarter mobiles (will equip only when they find a better weapon)
+Should work with RedHat and other linuxes out of the box
+Make distro for people who want to re-distribute cdirt
+
+=================================================================
+  G. Castrataro              is         Prometheus
+(weenrdog@bluemarble.net)            (Promised Lands)
+=================================================================
+

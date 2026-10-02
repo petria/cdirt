@@ -1,0 +1,53 @@
+# Generated configuration and zone-derived headers
+.config
+.config.pri
+.config.pri.tmp
+.config.mkfile
+.config.mkfile.tmp
+include/config.h
+include/MACHINE.H
+include/locations.h
+include/objects.h
+include/mobiles.h
+include/verbs.h
+src/Makefile
+
+# Compiled programs and intermediate files
+bin/aberd
+bin/aberd.new
+bin/*.o
+src/*.o
+src/utils/*.o
+cr/*.o
+utils/*.o
+*.o
+*.a
+*.so
+*.d
+core
+core.*
+*.core
+
+# Mutable player and runtime state
+data/players/**
+!data/players/.gitkeep
+data/CRASHES/**
+!data/CRASHES/.gitkeep
+data/LOGS/**
+!data/LOGS/.gitkeep
+data/TMP/**
+!data/TMP/.gitkeep
+data/WALL/**
+!data/WALL/.gitkeep
+data/DESC/**
+!data/DESC/.gitkeep
+data/XRMAIL/**
+!data/XRMAIL/.gitkeep
+data/XRVOTE/**
+!data/XRVOTE/.gitkeep
+data/mkdata.log
+
+# Temporary editor and operating-system files
+**/.#*
+**/*~
+.DS_Store

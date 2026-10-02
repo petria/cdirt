@@ -1,0 +1,111 @@
+From interaccess.com!knappenp Thu Feb 22 14:46:14 1996
+Return-Path: <knappenp@interaccess.com>
+Received: from cayman.ucs.indiana.edu (cayman.ucs.indiana.edu [129.79.10.63]) by copper.ucs.indiana.edu (8.6.11/8.6.11) with ESMTP id OAA06878 for <gcastrat@copper.ucs.indiana.edu>; Thu, 22 Feb 1996 14:46:34 -0500
+Received: from flowbee.interaccess.com (knappenp@flowbee.interaccess.com [198.80.0.32]) by cayman.ucs.indiana.edu (8.7.3/8.7.3/1.10IUPO) with ESMTP id OAA15095 for <gcastrat@copper.ucs.indiana.edu>; Thu, 22 Feb 1996 14:47:17 -0500 (EST)
+Received: (from knappenp@localhost) by flowbee.interaccess.com (8.7.2/8.6.9) id NAA29422 for gcastrat@copper.ucs.indiana.edu; Thu, 22 Feb 1996 13:45:31 -0600 (CST)
+Date: Thu, 22 Feb 1996 13:45:31 -0600 (CST)
+From: Paul Knappenberger <knappenp@interaccess.com>
+Message-Id: <199602221945.NAA29422@flowbee.interaccess.com>
+To: gcastrat@copper.ucs.indiana.edu
+Status: RO
+
+database.c. for fairytale.zone
+
+
+/* open closet */
+VERB_OPEN, OBJ_FAIRYTALE_BEAUTY_COFFIN, ANY,
+   PAR,0, PAR,0, PAR,0, PAR,0, PAR,0, PAR,0,
+   COM_OPEN, DONE, NUL, NUL,
+
+/* open Fairytale pipe with anything else */
+VERB_UNLOCK, OBJ_FAIRYTALE_STEAM_PIPE, ANY,
+   PAR,0, PAR,0, PAR,0, PAR,0, PAR,0, PAR,0,
+   287, DONE, NUL, NUL,
+
+/* open fails */
+VERB_OPEN, ANY, ANY,
+   PAR,0, PAR,0, PAR,0, PAR,0, PAR,0, PAR,0,
+   213, DONE, NUL, NUL,
+/*
+VERB_OPEN, ANY, ANY,
+   PAR,0, PAR,0, PAR,0, PAR,0, PAR,0, PAR,0,
+   COM_OPEN, OK, NUL, NUL,
+*/
+
+/* unlock Fairytale pipe with the correct key */
+VERB_UNLOCK, OBJ_FAIRYTALE_STEAM_PIPE, OBJ_FAIRYTALE_GOLD_KEY,
+   STATE,OBJ_FAIRYTALE_STEAM_PIPE, PAR,2, PAR,OBJ_FAIRYTALE_STEAM_PIPE, PAR,1, PAR,0, PAR,0,
+   SETSTATE, OK, NUL, NUL,
+
+/* unlock */
+VERB_UNLOCK, OB, ANY,
+   NOT|HASANY,OFL_KEY, PAR,0, PAR,0, PAR,0, PAR,0, PAR,0,
+   222, DONE, NUL, NUL,
+
+/* unlock */
+VERB_UNLOCK, OB, ANY,
+   NOT|OBIT,FL_OB1, NUL,3, PAR,0, PAR,0, PAR,0, PAR,0,
+   226, DONE, NUL, NUL,
+
+/* unlock */
+VERB_UNLOCK, OB, ANY,
+   NOT|STATE,FL_OB1, PAR,2, PAR,0, PAR,0, PAR,0, PAR,0,
+   225, DONE, NUL, NUL,
+
+/* unlock Fairytale pipe with anything else */
+VERB_UNLOCK, OBJ_FAIRYTALE_STEAM_PIPE, ANY,
+   PAR,0, PAR,0, PAR,0, PAR,0, PAR,0, PAR,0,
+   287, DONE, NUL, NUL,
+
+/* unlock */
+VERB_UNLOCK, OB, ANY,
+   PAR,FL_OB1, PAR,1, PAR,0, PAR,0, PAR,0, PAR,0,
+   SETSTATE, OK, NUL, NUL,
+
+
+/* Kick cup in fairytale */
+VERB_KICK, OBJ_FAIRYTALE_STONE_CUP, ANY,
+  IN,LOC_FAIRYTALE_FAIRYTALE38, PHERE,P(MOB_FAIRYTALE_BIG), PAR,P(MOB_FAIRYTALE_BIG), PAR,1000, 
+  PAR,OBJ_FAIRYTALE_STONE_CUP, PAR,0,
+  285, WOUNDMON, DESTROY, NEXT,
+
+VERB_KICK, OBJ_FAIRYTALE_STONE_CUP, ANY,
+  PAR,OBJ_FAIRYTALE_G_BOD_TOP, PAR,0, PAR,OBJ_FAIRYTALE_STONE_CUP, PAR,0, PAR,0, PAR,0,
+  SETSTATE, DESTROY, NUL, NUL,
+
+VERB_KICK, OBJ_FAIRYTALE_STONE_CUP, ANY,
+  IN,LOC_FAIRYTALE_FAIRYTALE38, PAR,OBJ_FAIRYTALE_STONE_CUP, PAR,0, PAR,0, PAR,0, PAR,0,
+  286, DESTROY, NUL, NUL,
+
+/* Kick the glass in fairytale */   
+VERB_KICK, OBJ_FAIRYTALE_FULL_GLASS, ANY,
+  IN,LOC_FAIRYTALE_FAIRYTALE38, PAR,OBJ_FAIRYTALE_FULL_GLASS, PAR,0, PAR,0, PAR,0, PAR,0,
+  284, DESTROY, NUL, NUL,
+
+/* Kiss the beauty who sleeps (Fairytale) */
+VERB_KISS, OBJ_FAIRYTALE_BEAUTY_COFFIN, ANY,
+  PHERE, P(MOB_FAIRYTALE_SLEEPING_BEAUTY), NOT|CANSEE, P(MOB_FAIRYTALE_SLEEPING_BEAUTY),
+  NOT|SFLAG, FL_MYNUM, NUL, SFL_FEMALE, PAR, FL_MYNUM, PAR,Q_FAIRYTALE,
+  303, SETQUEST, NEXT, NUL, 
+
+VERB_KISS, OBJ_FAIRYTALE_BEAUTY_COFFIN, ANY,
+   PHERE, P(MOB_FAIRYTALE_SLEEPING_BEAUTY), NOT|CANSEE, P(MOB_FAIRYTALE_SLEEPING_BEAUTY),
+   NOT|SFLAG, FL_MYNUM, NUL, SFL_FEMALE, PAR, P(MOB_FAIRYTALE_SLEEPING_BEAUTY),
+   PAR, 0,
+   SETVIS, NEXT, NUL, NUL,
+
+VERB_KISS, OBJ_FAIRYTALE_BEAUTY_COFFIN, ANY,
+   PHERE, P(MOB_FAIRYTALE_SLEEPING_BEAUTY), CANSEE, P(MOB_FAIRYTALE_SLEEPING_BEAUTY),
+   NOT|SFLAG, FL_MYNUM, NUL, SFL_FEMALE, PAR, LOC_START_CHURCH, PAR, 0,
+   305, GOTO, DONE, NUL, 
+
+
+/* Female tries to kiss her */
+VERB_KISS, OBJ_FAIRYTALE_BEAUTY_COFFIN, ANY,
+   PHERE, P(MOB_FAIRYTALE_SLEEPING_BEAUTY), NOT|CANSEE, P(MOB_FAIRYTALE_SLEEPING_BEAUTY),
+   SFLAG, FL_MYNUM, NUL, SFL_FEMALE, PAR, 0, PAR, 0,
+   304, DONE, NUL, NUL,
+
+   
+
+

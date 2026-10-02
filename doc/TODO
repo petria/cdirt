@@ -1,0 +1,34 @@
+Things to improve in C-dirt 2.5...
+
+make killing other mud work
+improve pre-configure
+install finger ability
+install wall or something
+install bulletin board
+make clean necessary sometimes (fix that)
+use indent to clean up code
+hp's too low?
+make durations saved...
+update help files.. way out of date..
+make fleecom smarter
+make kill the orc work
+make other functions use seeplr
+extend spell support for where & bang & pose....
+SYSLOG DOESN'T SHOWS SOME CRASHES
+a wear on finger wflag for rings
+crashed on reset at stone.
+noBlack command to eliminate invisible text
+the help screens need corrections...especially for the higher levels
+need a NOCORPSE mflag
+There is no WAIST Aflags...and should be.
+we need a NOSUMMON flag for objects!
+fix SMELLCOM
+FORCE looks weird on the other side (same with crawl)
+BOAT flag useful to be added
+MITHDAN fountain...food flag
+
+=================================================================
+  G. Castrataro              is         Prometheus
+(weenrdog@bluemarble.net)            (Promised Lands)
+=================================================================
+

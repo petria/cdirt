@@ -1,0 +1,135 @@
+#########################################################
+# C-Dirt Makefile  (C) G.Castrataro
+#########################################################
+
+# Directory Definitions
+#
+export BIN	= $(ROOTDIR)bin/
+export DATA	= $(ROOTDIR)data/
+export ZONE	= $(DATA)ZONES
+export HDIR	= $(ROOTDIR)include/
+export XDIR	= $(ROOTDIR)cr_inc/
+export SDIR	= $(ROOTDIR)specials/
+export FDIR	= $(ROOTDIR)flags/
+export UTIL	= $(ROOTDIR)utils/
+export CRDIR	= $(ROOTDIR)cr
+export UTILDIR	= $(ROOTDIR)src/utils
+export CR	= $(CRDIR)/cr.a
+
+# Target Executables#
+MUDD	= aberd.new
+GEN	= generate
+
+# Compiler and Compiler Flags
+#
+# CC      : The C Compiler.
+# LDFLAGS : The Linker Flags. NetBSD requires -lcrypt.
+# CFLAGS  : C Compiler Flags.
+# DFLAGS  : Debug Flags. (-g for GNU Debug Libs) (-DCORE to make MUD dump core)
+
+MAKE            = make
+export CC	= gcc
+export CFLAGS   = -I$(FDIR) -I$(HDIR) -I$(XDIR) -I$(SDIR) $(COPT)
+export LDFLAGS  = $(LDOPT)
+export ECHO	= /bin/echo
+export DFLAGS   =
+
+# MUD Daemon Dependencies
+#
+MUDDOBJS = parse.o ban.o acct.o bootstrap.o change.o \
+	   clone.o commands.o exit.o group.o \
+	   frob.o log.o magic.o main.o mobile.o god.o \
+	   move.o mud.o objsys.o rooms.o sendsys.o \
+	   timing.o utils.o viewcom.o wizard.o wizlist.o \
+	   zones.o quests.o spell.o puff.o comm.o help.o \
+
+# Make Targets
+#
+all:	cr mudd utilsrc
+gen:    $(BIN)$(GEN)
+reg:	clean all
+mudd:	$(BIN)$(MUDD)
+
+# Make OverWrite
+#
+ow:	all
+	@(ECHO) Overwriting "stable" binary!
+	@cd $(BIN);cp -f $(MUDD) aberd
+
+# Clean up
+#
+clean:	delfiles
+	@$(MAKE) gen
+
+delfiles:
+	@rm -f errlist *.o *~ \#* Makefile.old *.save
+	@rm -f $(CRDIR)/*.o $(CRDIR)/*~ $(CRDIR)/cr.a $(CRDIR)/core 
+	@rm -f $(CRDIR)/\#* $(CRDIR)/Makefile.old
+	@rm -f $(HDIR)*~ $(HDIR)\#* $(HDIR)core
+	@rm -f $(UTILDIR)/*~ $(UTILDIR)/\#* $(UTILDIR)/*.o $(UTILDIR)/core
+	@rm -f $(DATA)*~ $(DATA)core $(DATA)\#* $(DATA)TMP/*
+	@rm -f $(DATA)core $(DATA)pid.*
+	@rm -f $(DATA)ZONES/\#* $(DATA)ZONES/*~
+	@rm -f $(BIN)* $(ROOTDIR).*~
+	
+distro:	delfiles
+	@rm -f $(DATA)syslog $(DATA)csyslog
+	@rm -f $(DATA)players/[A-Z]/* $(DATA)CRASHES/*
+	@rm -f $(DATA)DESC/* $(DATA)LOGS/* $(DATA)WALL/*
+	@rm -f $(DATA)WIZ_ZONES/* $(DATA)XRMAIL/* $(DATA)XRVOTE/*
+	@rm -f $(DATA)wizlist $(DATA)banned_*
+	@rm -f $(DATA)monitor_hosts
+	@rm -f $(ROOTDIR)server.log $(ROOTDIR)#* $(ROOTDIR)*~
+	@rm -f $(ROOTDIR).config.mkfile $(ROOTDIR).config.pri
+	@rm -f $(ROOTDIR).config.mkfile.tmp $(ROOTDIR).config.pri.tmp
+	@rm -f $(ROOTDIR).config
+	@rm -f $(HDIR)MACHINE.H $(HDIR)config.h
+	@rm -f $(HDIR)locations.h 
+	@rm -f $(HDIR)verbs.h 
+	@rm -f $(HDIR)objects.h
+	@rm -f $(HDIR)mobiles.h
+
+# Generate dependencies
+#
+depend:
+	@../utils/makedep
+
+# Generator (gen) Target
+#
+
+$(BIN)$(GEN):
+	@$(ECHO) 'Compiling generator...'
+	@$(CC) -c -DGEN $(CFLAGS) bootstrap.c
+	@$(CC) -c -DGEN $(CFLAGS) utils.c
+	@$(CC) -o $(BIN)$(GEN) $(DFLAGS) bootstrap.o utils.o $(LDFLAGS)
+
+	@$(ECHO) -n 'Creating headers & verbs...'
+	@$(BIN)$(GEN)
+	@rm bootstrap.o utils.o $(BIN)$(GEN)
+
+# Crossroads archive
+cr:
+	@$(ECHO) 'Building Crossroads archive...'
+	@$(MAKE) -C $(CRDIR)
+
+# Build all Utils
+utilsrc:
+	@$(ECHO) 'Building Utilities...'
+	@$(MAKE) -C $(UTILDIR)
+
+# MUD Daemon
+$(BIN)$(MUDD): $(MUDDOBJS) $(CR)
+	@$(ECHO) 'Linking MUD Daemon...'
+	@$(CC) -o $(BIN)$(MUDD) $(LDFLAGS) $(DFLAGS) $(MUDDOBJS) $(CR) $(LDFLAGS)
+
+.c.o:
+	@$(ECHO) 'Compiling $*.c...'
+	@$(CC) -c $(CFLAGS) $(DFLAGS) $*.c
+
+#############################################################
+# Do not delete this line, the makedep program requires it. #
+# Last Updated: Mon Dec 1 01:58:38 MST 1997                #
+#############################################################
+
+# Dependencies for the MUD source code
+#

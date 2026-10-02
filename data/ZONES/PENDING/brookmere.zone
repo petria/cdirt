@@ -1,0 +1,446 @@
+#include "undef.h"
+#include "cflags.h"
+#include "exits.h"
+
+%mobiles
+
+Name        = Nasnath
+Location    = Brookmere11
+Strength    = 150
+Damage      = 10
+Armor       = 0
+Speed       = 0
+Description = "Nasnath the pacifist gnoll sits here."
+End         = Nasnath
+
+Name        = Taurig
+Location    = Brookmere14
+Strength    = 200
+Damage      = 12
+Armor       = 0
+Speed       = 0
+Description = "Taurig, a hobgoblin, is here on guard"
+End         = Taurig
+
+Name        = 
+Location    = Brookmere14
+Strength    = 200
+Damage      = 12
+Armor       = 0
+Speed       = 0
+Description = "<name>, a hobgoblin, is here on guard"
+End         =
+
+Name        = Swart
+Location    = Brookmere15
+Strength    = 200
+Damage      = 12
+Armor       = 0
+Speed       = 0
+Description = 
+"Swart, an orc guard, is here mumbling something about crummy goblins."
+End         = Swart
+
+Name        = Frang
+Location    = Brookmere18
+Strength    = 300
+Damage      = 17
+Armor       = 0
+Speed       = 0
+Description = 
+"Frang, Render of Flesh the wererat see you and begins to attack."
+End         = Frang
+
+%objects
+
+Name        = fungus
+Location    = IN_ROOM:Brookmere9
+OFlags      { Food }
+BValue      = 0
+Size        = 2
+Weight      = 1
+Desc[0]     = "Some green fungus lies here."
+End         = fungus
+
+Name        = chest
+OFlags      { Lockable Openable NoGet }
+State       = 2
+MaxState    = 2
+Location    = IN_ROOM:Brookmere14
+Desc[0]     = "An old battered chest sits here."
+Desc[1]     = "An old battered chest sits here."
+Desc[2]     = "An old battered chest sits here."
+End         = chest
+
+Name        = hobgoblin_cloak
+Pname       = cloak
+Oflags      { Wearable }
+Aflags	    { Chest Head Arms Legs Back }
+Location    = IN_ROOM:Brookmere15
+Desc[0]     = "An old and dirty hobgoblin cloak is laying here."
+End         = hobgoblin_cloak
+
+Name        = hobgoblin_helmet
+Pname       = helmet
+Oflags      { Wearable Getflips }
+Aflags	    { Head }
+Location    = IN_ROOM:Brookmere15
+state       = 1
+Maxstate    = 0
+Desc[0]     = "An old dented hobgoblin helmet is laying here."
+Desc[1]     = "A dented hobgobin helmet hangs on the wall."
+End         = hobgoblin_helmet
+
+%locations
+
+Brookmere1 d:Brookmere2;
+lflags { Outdoors }
+Forest Edge^
+   You stop at the edge of a forest that once ringed a castle and stare in
+disbelief.  The only thing that still stands is the broken shell of a tower.
+All else is ruins.  Scattered across the ground are enormous pile of boulders.
+The most noticeable feature on the ruined landscape is a wide black hole in
+the area of the castle that once seems to have housed the dungeons of
+Brookmere.
+^
+Brookmere2
+lflags { }
+Gaping Hole^
+
+^
+Brookmere3 u:Brookmere5 d:Brookmere4;
+lflags { }
+Rock Fall^
+   Far above you, you can see a faint light and the rim of the hole.  Below,
+you can make out the dim outline of a passageway leading into the dungeons.
+^
+Brookmere4;
+lflags { Death }
+Foot of the Rock Fall^
+   As you start to go down the stairs, your foot slips on a smooth rock, you
+let out a loud cry.  You roll to a stop, stunned by the fall.  Shaking your
+head to clear it, you see three larg, well-armed orcs standing by your side.
+Your cry has attracted their attention.
+   Chuckling evilly, they surround you.
+They pick you up, tie you securely, throw you over their shoulders, and walk
+off through the gloom.
+^
+Brookmere5 u:Brookmere1 d:Brookmere6;
+lflags { }
+Gaping Hole^
+
+^
+Brookmere6 u:Brookmere5 d:Brookmere7;
+lflags { }
+Rock Fall^
+Far above you, you can see a faint light and the rim of the hole. Below, you
+can make out the dim outline of a passageway leading into the dungeons.
+^
+Brookmere7 n:Brookmere49 w:Brookmere8 u:Brookmere6;
+lflags { Dark }
+Foot of the Rock Fall^
+   There are two dark tunnels at the foot of the rock, one going east, the
+other, north.  Looking and listening carefully, you can see a green glow at
+the end of the west tunnel.  From the north you see only darkness.
+^
+Brookmere8 e:Brookmere7 w:Brookmere9;
+lflags { }
+Corridor^
+   Walking is difficult as water drips from the walls and collects on the
+slippery stone floor.  The green glow grows brighter.  A deep pool of water
+has collected at the base and is filled with small blind cave fish and pale
+large-eyed salamanders.
+^
+Brookmere9 e:Brookmere8 w:brookmere10;
+lflags { }
+Ruined Room^
+   You are in a small ruined room, the green glow is especially bright here 
+after the dimness of the corridor.  At its far end is an archway dripping
+with a glowing green fungus.  A bitter smell like rotting mushrooms fills
+your nostrils.  Slowly, small pieces of the fungus break off and fall to the
+floor where they collect in a shimmering pool.
+^
+Brookmere10 n:Brookmere11 w:Brookmere12;
+lflags { Dark }
+Corrridor^
+   You find yourself in another corridor, unlit by the eerie green glow.
+The corridor opens to the north into what looks like once was a treasure room.
+Continueing to the west is a dark decrepid tunnel.
+^
+Brookmere11 n:Brookmere13 s:Brookmere10 ;
+lflags { Dark }
+Old Treasure Room^
+   You stand in a small room that was once used to store elven treasure
+before Castle Brookmere was invaded by orcs, giants and other monsters that
+swept down from the surrounding lands into Brookmere, and forced the elves to
+flee.
+^
+Brookmere12 e:Brookmere10 n:Brookmere28;
+lflags { Dark }
+Decrepid Tunnel^
+   Enormous boulders, dirt, and fallen timbers are scattered about the
+passageway blocking your path.  The tunnel must have been this way since
+Brookmere fell. you push your way through rubble, and accidentlally bump
+into a beam and dirt trickles down the ceiling.  From time to time, you
+hear a loud rumble and booming sound in the tunnel.
+^
+Brookmere13 s:Brookmere11 w:Brookmere14;
+lflags { }
+Lighted Corridor^
+   This corridor is well lighted and seems to be heavily travelled.
+Fortunately, the corridor frequently twists and turns, and leaves lots of
+places to hide in shadows and avoid being discovered.
+^
+Brookmere14 n:Brookmere16 e:Brookmere13 s:Brookmere15;
+lflags { }
+Large Room^
+   You are now in a large room where it looks as if a battle has taken
+place recently.  The wall on the far side of the room shows great
+destruction.  Most of the stonework has fallen into the room.  Large
+boulders lie scattered about the floor and the earthern wall is braced
+with a crisscross of metal plates held in place with massive wooden beams.
+^
+Brookmere15 n:Brookmere14;
+lflags { Dark }
+Cloakroom^
+   This is were the Goblins store many of there supplies.  There are many
+tattered and rumpled goblin and hobgoblin cloaks and helmets strung about.
+^
+Brookmere16 n:Broomere17 s:Brookmere14;
+lflags { Dark }
+South End of Corridor^
+   This is the beginning of a straight corridor that leads to south to
+a large room.  The corridor continues on to the north.
+^
+Brookmere17 n:Brookmere18 s:Brookmere16;
+lflags { }
+Straight Corridor^
+   This straight corridor is lit at intervals by toches.  You notice that
+the walls have been greatly damaged and that now they are braced with
+wooden beams.  The corridor continues on to the south, and to the north
+it opens up to an enormaous cavern.
+^
+Brookmere18 s:Broomere17 e:Brookmere19;
+lflags { }
+Enormous Cavern^
+   The roof of the cavern flickers in the red light of many torches.
+Stalagmites and stalactites rise and decend out of the gloom like huge
+teeth.  Centuries of dripping mineral water have created this glittering
+crystal room.  At the back wall of the cavern, a fossilized waterfall
+hangs in frozen space.  A throne sits on the crest of the stone wave.
+Corridors lead to the south and east out of the cavern.
+^
+Brookmere19 n:Brookmere20 e:Brookmere24 s:Brookmere22 w:Brookmere18;
+lflags { Dark }
+Short Corridor^
+   The corridor branches to the north, east and south.  An exit to the 
+west leads into a cavern.
+^
+Brookmere20 e:Brookmere21 s:Brookmere19;
+lflags { Dark }
+Darkened Corridor^
+   This darkened corridor leads to south and curves around to the east.
+^
+Brookmere21 s:Brookmere26 w:Brookmere20;
+lflags { }
+Kobold Guard Room^
+
+^
+Brookmere22 n:Brookmere19 e:Brookmere23;
+lflags { }
+Poorly Lit Corridor^
+   This poorly lit corridor leads to north and curves around to the east.
+^
+Brookmere23 n:Brookmere26 w:Brookmere22
+lflags { }
+Goblin Guard Room^
+
+^
+Brookmere24 e:Brookmere25 w:Brookmere19;
+lflags { Dark }
+Narrow Corridor^
+   This narrow corridor leads to east and west.
+^
+Brookmere25 e:Brookmere26 w:Brookmere24;
+lflags { }
+Gnoll Guard Room^
+
+^
+Brookmere26 n:Brookmere21 e:^wooden_door s:Brookmere23 w:Brookmere25;
+lflags { }
+Large Room^
+   Entering the large room, you look around and see no guards.  There is a
+huge wooden door on the east wall.
+^
+Brookmere27 w:^treasure_door;
+lflags { Dark }
+Dungeon Treasure Room^
+
+^
+Brookmere28 n:Brookmere32 e:Brookmere29 s:Brookmere12 w: ;
+lflags { }
+Long and Narrow Room^
+
+^
+Brookmere29 w:Brookmere28 n:Brookmere30;
+lflags { Dark }
+Corridor^
+
+^
+Brookmere30 n:Brookmere31 s:Brookmere29;
+lflags { }
+Musty Room^
+
+^
+Brookmere31 e:Brookmere14 s:Brookmere30;
+lflags { Dark }
+Corridor^
+
+^
+Brookmere32 s:Brookmere28 w:Brookmere33;
+lflags { }
+Room^
+
+^
+Brookmere33 n:Brookmere34 e:Brookmere32;
+lflags { Dark }
+Corridor^
+
+^
+Brookmere34 s:Brookmere33;
+lflags { Death }
+Glowing Cave^
+
+^
+Brookmere35 e:Brookmere28 s:Brookmere36 w:Brookmere37;
+lflags { Dark }
+Corridor^
+
+^
+Brookmere36 n:Brookmere35;
+lflags { Dark }
+Supply Room^
+
+^
+Brookmere37 e:Brookmere35 s:Brookmere38;
+lflags { }
+Room^
+
+^
+Brookmere38 n:Brookmere38 w:Brookmere39;
+lflags { Dark }
+Wet Corridor^
+   Black water drips continuously from the walls and ceiling in the
+corridor.  The water on the floor is ankle deep.  A strong breeze blows,
+making it difficult to keep any of your unmagicaly lit light sources.
+The air is damp and uncomfortable.  The corridor continues to the west,
+and back where it's dryer towards the north.
+^
+Brookmere39 e:Brookmere38 w:Brookmere40;
+lflags { Dark }
+Wet Corridor^
+   The corridor winds on endlessly.  Cold and miserable, you are wet
+to the waist.  You can hear a distant roaring noise.  The corridor
+leads both east and west from here.
+^
+Brookmere40 ;
+lflags { Dark }
+Wet Corridor^
+
+^
+Brookmere41 e:Brookmere42;
+lflags { Dark }
+Bottom of the Falls^
+
+^
+Brookmere42 n:Brookmere43 e:valleyzone;
+lflags { }
+Water Cavern^
+   You find yourself in a cavern dimly lit by some glowing fungus.
+The underground river continues to flow to the east, the current is
+just to fast to get to the cavern to the west.  A small tunnel also
+leads off to the north.
+^
+Brookmere43 n:Brookmere10 s:Brookmere42 w:Brookmere44;
+lflags { Dark }
+Small Tunnel^
+   This small tunnel seems to climb upwards to the north, you can hear
+the sounds of moving water below to the south.  Another tunnel branches
+to the west from here.
+^
+Brookmere44 e:Brookmere43 w:Brookmere45;
+lflags { Dark }
+Tunnel^
+   This east/west tunnel leads to the entrance of a small room to the west.
+^
+Brookmere45 n:^north_door e:Brookmere44 s:^south_door w:Brookmere48;
+lflags { }
+Small room^
+   This room seems to be in much better condition than the rooms you
+have travelled through up until now.  Torches are stuck in metal holders
+and spaced evenly on the walls. There are doors to both the north and south.
+An entrance to another room lies to the west.
+^
+Brookmere46 s:^store_door;
+lflags { Dark }
+Treasure Storeroom^
+
+^
+Brookmere47 n:^weapon_door;
+lflags { Dark }
+Weapon Storeroom^
+
+^
+Brookmere48 e:Brookmere45;
+lflags { Dark }
+Barracks^
+   Wooden bunk beds are built three high against the walls.  The room is
+empty and smells like a stable.   the beds are unmade and armor and peices
+of dirty orc underwear litter the floor.  Pictures of female orc Beauties
+are on the walls.  A wooden table in the middle of the room is covered with
+torn cards and a set of dice made from real bones.
+^
+Brookmere49 n:Brookmere50 e:Brookmer51;
+lflags { }
+Long Corridor^
+   You hurry along this long corridor.  As you draw closer to the end,
+you see a light.  The light comes from a strange doorway set in the stone
+wall of the north passageway.  The darkness surrounds you yet the doorway
+glows with the brightness of a million lightning bugs.  Thick white clouds
+puff and roll between the door frames.  Stray wisps reach out toward you.
+The corridor continues on to the east.
+^
+Brookmere50;
+lflags { Death }
+Through the White Mist^
+   Grasping the shihmmering doorway, you place your head and upper half of
+your body in the misty clouds and try to see what lies ahead.  For a minute
+nothing happens, then slowly the lower part of your body begins to glow
+and shimmer with an unearthly light. The glow fades.   The outline of your
+body can still be seen but it starts to smudge and blur.  Soon, all that is
+left is white, billowing smoke moving gently in the quiet corridor, then
+drifting through the door and becoming part of the larger cloud mass.
+   You seemed to have tried to pass through a door of nothingness.  Anyone
+who passes through it turns to nothing hence killing yourself.
+^
+Brookmere51 e:^brick_wall1 w:Brookmere49;
+lflags { Dark }
+Corridor^
+
+^
+Brookmere52 e:Brookmere53 w:^brick_wall2;
+lflags { Dark }
+Throne Room of Orobius^
+   You see a white marble throne.  Seated before you on the white marble
+Throne is Orobius, the Mater Illusionist of Brookmere, long dead from
+the day when Brookmere fell to the denzians that now dwell here.  A raised
+block of white marble standing between four white marble pillars are to the
+east.  Before the throne stands a table of white marble.  
+^
+Brookmere53 w:Brookmere52;
+lflags { Dark }
+On a White Block of Marble^
+   This is a Portal of Transport. 
+You are transported farther into the dungeon.
+^
+

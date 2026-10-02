@@ -1,0 +1,33 @@
+To install cdirt on linux, all you should have to do is type ./configure.
+It will ask you many questions, and then compile and run the game and 
+dns server.  If you wish to change something that configure asks you,
+you can run it again, and it will ask you if you'd like to load your
+previous settings.
+
+If you want to bypass running the configure script, it is possible
+to simply run the binary from the bin directory.  Of course, you'll
+have to make sure that the dns server, dns-serv is running, other
+wise it will slow down the login process and keep you from seeing
+people's host names.
+
+When you plan on adding zones to the game or modifying existing
+zones, it is HIGHLY recommended that you run a make gen before
+updating from the game.  This will tell you the errors in your
+zone without the game rebooting and finding those errors.. CRASH!
+
+It has been tested on RHL 5.1 and slackware (a while ago).
+If you are having problems with crypt, try removing -lcrypt from the
+configure script, and/or changing the #define to point to crypt.h.
+
+In the future, when you wish to run the game, please run the dns
+server (bin/dns-serv) before running the game.  It allows the
+game to do hostname lookups, and makes it completely asynchronous.
+
+=================================================================
+  G. Castrataro              is         Prometheus
+(weenrdog@bluemarble.net)            (Promised Lands)
+=================================================================
+
+
+
+

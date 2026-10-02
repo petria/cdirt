@@ -1,0 +1,19 @@
+You may get information on the following topics by using 'info [topic]'
+
+                          &+GSystem Information Files
+
+&+Cmotd        &*Message of the Day         &+Cadditions   &*Additions not by Illusion
+&+Czones       &*Added zones to the MUD     &+Cblink       &*Blinkies and their Usage
+&+Cmudlist     &*A list of other AberMUDs   &+Cgeneral     &*General MUD Information
+&+Czformat     &*iDIRT Zone Building Guide  &+Cquests      &*Information on the Quests
+&+Cmana        &*What are Mana points?      &+Cgame        &*General info
+&+Cnews        &*New things happening here  &+Cemail       &*Email addresses
+&+Cpolicy      &*The brief policy           &+Cwall        &*Wall command info
+&+Cstats       &*Statistics & growth        &+Cintermud    &*Intermud chat cmds
+&+Cchangelog   &*Changes as of 2/30/96      &+Ccombat      &*Info about new combat sys
+
+                  &+GFun and Interesting Information Files
+
+&+Cadmin       &*Types of Unix Admins       &+Ccprogram    &*Programming in C
+&+Crprogram    &*Real Programmers           &+Cwater       &*The dangers of water
+&+Clsd         &*Unix man page for lsd!     &+Cclients     &*What are mud clients???

@@ -1,0 +1,14 @@
+#! /bin/sh
+
+# Do a partial backup of the system
+
+MUDDIR=/home/xroads/idirt
+
+cd $MUDDIR/..
+unalias ls
+ls idirt/cr/*.c idirt/specials/*.h idirt/cr/Makefile idirt/cr_inc/*.h idirt/src/*.c idirt/src/Makefile idirt/include/*.h idirt/data/players/[A-Z]/* idirt/data/WIZ_ZONES/* idirt/src/utils/*.c idirt/include/*.H > $MUDDIR/tarfiles
+
+rm $MUDDIR/crossroads.tar.gz
+tar cfT $MUDDIR/crossroads.tar $MUDDIR/tarfiles
+gzip -9 $MUDDIR/crossroads.tar
+rm $MUDDIR/tarfiles

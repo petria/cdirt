@@ -1,0 +1,16 @@
+ The following may be filtered in the help file:
+
+        U : Master User
+        G : God
+        D : Avatar (Demi-God)
+        V : Advisor
+        A : ArchWizard
+        R : Prophet
+        W : Full Wizard (Non Emeriti)
+        X : Apprentice - Emeriti
+
+        L : Level Checking
+        P : PFlag Checking
+        M : Mask Checking
+        E : EFlag Checking
+        ! : Negative Return

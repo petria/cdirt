@@ -1,0 +1,81 @@
+***************************************************************************
+* C-Dirt 3.0beta3 (C) 1997, G. Castrataro (weenrdog@bluemarble.net)       *
+***************************************************************************
+
+Thank you for choosing Linux CDirt as your MUD code base.  This code has
+been written specifically for linux, but should be easily compiled on
+BSD POSIX systems, and, with a little work, most others.
+
+configure  --> Run this file to configure and install the game
+README     --> The file you're reading currently
+distro     --> Run this to make your own source code distribution
+cr/        --> C-Dirt support files and complete rewrites
+src/       --> Added/modified C source code based on the original dirt source
+include/   --> Header files for C source code
+cr_inc/    --> Includes for C-Dirt rewrites
+src/utils/ --> Utilities which run seperately from the mud daemon
+bin/       --> Compiled mud binaries and utilities
+data/      --> Text files for the mud, player files, mail, info files...
+ascii/     --> Some sample ASCII art
+doc/       --> Documentation files
+specials/  --> Zone-based additions to the game (for quests mainly)
+pending/   --> Zone additions not yet added
+
+Special thanks to: 
+
+Crimefighter, Rhubix, Forsaken and Promised Lands (for debugging)
+Mancini (for help with the original Crossroads)
+
+=================================================================
+
+## Docker (local use)
+
+Build the image from this directory:
+
+```sh
+docker build -t cdirt:local .
+```
+
+Start C-Dirt with a persistent data volume and publish its default port:
+
+```sh
+docker run -d --name cdirt --restart unless-stopped \
+  -p 6715:6715 -v cdirt-data:/mud/data cdirt:local
+```
+
+Connect from the host:
+
+```sh
+telnet localhost 6715
+```
+
+The image creates the initial `Master` account using the unveil password
+`AberMUD`. Choose a different password when building for your own use:
+
+```sh
+docker build --build-arg CDIRT_UNVEIL_PASS='your-password' -t cdirt:local .
+```
+
+The password must be 1–24 characters. The image runs the daemon as an
+unprivileged user and keeps mutable game files in `/mud/data`; the named
+volume preserves player accounts and logs when the container is replaced.
+The listener binds to the container interfaces so Docker port publishing can
+reach it.
+
+`docker stop cdirt` and `docker start cdirt` stop and restart the instance.
+Remove the container with `docker rm -f cdirt`; the `cdirt-data` volume remains
+until explicitly removed.
+
+## Docker build and run
+
+This build uses Ubuntu 22.04, GCC, Make, and libcrypt-dev. It generates
+C-Dirt's configuration and zone-derived headers, then compiles the game and
+utilities without running the interactive native `configure` flow.
+
+The C-Dirt flag system divides flags into logical 32-bit lanes. The bit masks
+use unsigned shifts so bit 31 remains a single lane bit on 64-bit builds.
+
+=================================================================
+  G. Castrataro              is         Prometheus
+(weenrdog@bluemarble.net)            (Promised Lands)
+=================================================================

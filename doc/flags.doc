@@ -1,0 +1,43 @@
+The new flag system allows for easier adding and removing of flags from
+the game, and automatically expands flag sets when you reach the 32-bit
+barriers of older idirt, or collapses them when they get smaller.
+
+ 0. Write the yourflags.h and yourflagnames.h file, and #include them.
+
+In flagindex.h :
+
+ 1. Decide which structure the category belongs : is it a player/mob flag,
+    location flag, game flag, etc...
+ 2. Put the name in quotes into the char *Flag[] line.
+ 3. Put the appropriate *_MAX line into the index.
+ 4. Add the flag set to the char ** line.
+
+In flags.h :
+
+ 5. Add the flag to the appropriate set, with a new number
+ 6. Add "+ YOURFLAGS_MAX/32" to the LEN define
+
+You're done! The rest is up to you.  You can mimic the way that
+the other flags work by editing the mudmacros.h file. 
+
+Note: If you would like to add a reset flag setting, then it is necessary
+to add two flags, one for the current setting and one for the reset.
+The reset flag the one that is loaded from the zone file, and used
+until an in-game reset happens.  To understand this, look at the way
+that PFLAGS_MAX is repeated 4 times (1x for the pflags, 1x for the reset
+pflags, 1x for the masks and 1x for the masks reset).  For greater code
+speed, the reset flags must always follow the in game flags.
+
+Note 2: Whenever you add new flags to the game, they will automatically be
+set to false when a player without those flags enters the game.
+
+Note 3: Anyone who is at level "creator" currently can change any pflag,
+mask bit, or any other flag for that matter.  So the pflags file need only
+contain flags and mask bits for the lower levels.
+
+Note 4: Flags are stored in plain text format, so adding flags and moving
+them around is simple (so long as you maintain the order in the
+appropriate flags.h and flagnames.h files).  However, if you choose to
+change the name of a flag, it will require a delete of all the player
+files, and the appropriate changes to all of the zones.
+

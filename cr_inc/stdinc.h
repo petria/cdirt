@@ -1,0 +1,47 @@
+#ifndef __STDINC_H__ 
+#define __STDINC_H__ 
+
+#include "levels.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <linux/time.h>
+#include "exits.h"
+#include "pflags.h"
+#include "mudmacros.h"
+#include "utils.h"
+#include "actions.h"
+#include "bootstrap.h"
+#include "bprintf.h"
+#include "cflags.h"
+#include "change.h"
+#include "commands.h"
+#include "condact.h"
+#include "condition.h"
+#include "exec.h"
+#include "extern.h"
+#include "fight.h"
+#include "files.h"
+#include "flags.h"
+#include "frob.h"
+#include "lflags.h"
+#include "log.h"
+#include "magic.h"
+#include "mflags.h"
+#include "mobile.h"
+#include "move.h"
+#include "mud.h"
+#include "objsys.h"
+#include "oflags.h"
+#include "parse.h"
+#include "quests.h"
+#include "sendsys.h"
+#include "sflags.h"
+#include "timing.h"
+#include "uaf.h"
+#include "climate.h"
+#include "wizard.h"
+#include "wizlist.h"
+#include "zones.h"
+#endif /* Add nothing past this line... */
+

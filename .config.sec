@@ -1,0 +1,57 @@
+/* .config.sec : defaults not part of the configure script */
+
+#define M_BUFFLEN               4096
+#define HIGH_MARK               1024
+#define DEBUG_LOOPS             30
+#undef	DEBUG_TIMER
+#undef	DEBUG_MEM 
+#define DEBUG_IO
+#define USE_QUESTS
+#define SHOW_LAST_LOGIN
+#define INTERNET_EMAIL
+
+#ifdef DEBUG_TIMER
+#define FOREGROUND True
+#endif
+
+#define QUIET                   True
+#define KILL_MUD                False
+#define CLEAR_SYSLOG            False
+#define FOREGROUND              True
+#define AWAYMSG_LEN             150
+#define PASSWD_PREFIX           "CDirtPW:"
+#define VERSION                 "CDirt 3.0beta3"
+#define LASTBUILD               __DATE__ "   " __TIME__
+#define SENDMAIL                "/usr/lib/sendmail"
+#define EXEC_LOC		BASE_LOC "/bin"
+#define TEXT_PFILES_BASE        BASE_LOC "/data/players"
+#define DATA_DIR                BASE_LOC "/data"
+#define H_DIR                   BASE_LOC "/include"
+#define MAILDIR                 BASE_LOC "/data/XRMAIL"
+#define EDIT_PATH               BASE_LOC "/data"
+#define ZONE_DIR                BASE_LOC "/data/ZONES"
+#define WIZ_ZONE_DIR            BASE_LOC "/data/WIZ_ZONES"
+#define HTML_FILE               BASE_LOC "/../www/players.html"
+#define SHUTDOWN_MSG            "\001$\003 is down, please try again later."
+#define HOMEPAGE         "http://www.geocities.com/SiliconValley/Horizon/2649"
+#define DEFAULT_SETIN           "%n has arrived."
+#define DEFAULT_SETOUT          "%n has gone %d."
+#define DEFAULT_SETMIN          "%n appears with an ear-splitting bang."
+#define DEFAULT_SETMOUT         "%n vanishes in a puff of smoke."
+#define DEFAULT_SETVIN          "%n suddenly appears!"
+#define DEFAULT_SETVOUT         "%n has vanished!"
+#define DEFAULT_SETQIN          "%n has entered the game."
+#define DEFAULT_SETQOUT         "%n has left the game."
+#define DEFAULT_SETSIT          "%n is sitting here."
+#define DEFAULT_SETSTAND        "%n is standing here."
+#define DEFAULT_SETSUM          "You are summoned by %n."
+#define DEFAULT_SETSUMIN        "%v appears with an ear-splitting bang."
+#define DEFAULT_SETSUMOUT       "%v vanishes in a puff of smoke."
+#define DEFAULT_PROMPT          "C: "             
+#define	CUTOFF_LEN		MAX_COM_LEN - 64
+#define COL_1 "&+B"     /* color for +'s in who list */
+#define COL_2 "&+b"     /* color for -'s in who list */
+
+#ifdef _LINUX_
+#define SIGSYS SIGUSR2
+#endif

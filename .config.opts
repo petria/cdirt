@@ -1,0 +1,278 @@
+
+<HEADER>
+Welcome to the CDirt configuration manager.  This utility allows you 
+to easily configure machine settings and preferences in the mud.  It
+will ask you questions, and if there is a default, it will show up
+in []'s and you can hit enter to select it.
+<LOAD_DEFTS>
+<PROMPT_LOADDEFTS>
+
+<CONFIG_VERBOSE>
+If you would like to see extended descriptions of each command before
+typing in a response, set this to Yes.  Otherwise, enter No.
+
+<PROMPT_CONFIG_VERBOSE> Turn on verbose mode <deft>?
+
+<INSTALL>
+<DEFAULT=Basic>
+This option gives you the ability to choose a custom or basic installation.
+The custom installation gives you more choices, and allows you to set
+additional in-game options.  It will also allow you to set up Aberchat,
+a very cool chat system that many abermuds use.
+
+<PROMPT_INSTALL> Please select from [B]asic or [C]ustom install <deft>:
+
+<BASE_LOC>
+The base location for the mud files.  Everything gets stored in this
+directory, and it should be the current directory you have the game in.
+
+<PROMPT_BASELOC>
+
+<HOSTNAME>
+Type in the hostname of the system you'll be running the mud on.  If your
+service provider has you run the mud off a different machine, type in the
+name of that machine rather than the one you're using now.
+
+<PROMPT_HOSTNAME> Your hostname <deft>:
+
+<MASTERUSER> 
+<DEFAULT=Master>
+Please type in the name of the Master User for the game.  This is the main
+account, which has a complete set of pflags and mask bits (ie, all the
+possible abilities in the game).  No spaces or special characters.
+
+<PROMPT> Master User Name <deft>:
+
+<UNVEIL_PASS>
+Please type in a password for your master user account.  You must type
+in this password the first time you log in, and it will allow you to
+log into any account you wish, provided you type in that account name
+and then the master password.
+
+<PROMPT_UNVEIL> Master User Pass:
+
+<MUD_NAME>
+Please type in the name of your new mud.  It may contain spaces, color
+codes, and symbols if you'd like.
+
+<PROMPT> MUD Name <deft>:
+
+<PORT>
+<DEFAULT=6715> 
+What port should the game run on?
+
+<PROMPT_VAL> Port <deft>:
+
+<EMAIL>
+What shall the official mud email address be?
+
+<PROMPT> MUD Email <deft>:
+
+<CC>
+<DEFAULT=gcc>
+If you have gcc on a system, it's probably a good idea to use it.  CC
+usually compiles slower code, and is probably less compatible codewise
+than GCC, which the mud was developed on.
+
+<PROMPT> Compiler <deft>:
+
+<CFLAGS>
+<DEFAULT=-O3 -Wall>
+The next option deals with the compiling process.  If you plan on
+debugging the mud, you should probably set this to -ggdb3.  If you want
+some optimization to be done, set it to -O3. If you want compiler
+warnings, set it to -Wall.  You can combine flags.
+
+<PROMPT_CFLAGS> Compile Flags <deft>:
+
+<LDFLAGS>
+Ldflags are for linking.  If you would like to add any special ldflags,
+just type them in here.  They will be added to a default set which are
+probed automatically by the configuration script.
+
+<PROMPT_LDFLAGS> Linker Flags <deft>:
+
+<_OLD_LINUX_>
+If your system is running an older kernel, you might want to define this.
+It becomes necessary to include crypt.h as a header file in later
+versions, instead of the library.  If you're confused, leave it blank.
+
+<PROMPT_NY> Old linux <deft>:
+
+<CUSTOM>
+
+<ABERCHAT>
+Would you like to run Aberchat, a mud chat protocol written for abermuds?
+If you select YES to this option, be sure to set your password in the next
+option, and mail this password to the current Aberchat administrator, Kroll
+(smile@mirai.net), so he can add your mud to the server.
+
+<PROMPT_YN> Enable Aberchat <deft>:
+
+<ACHAT_PASS>
+If you have Aberchat enabled, type in your password here.  Otherwise, just
+hit enter and configure will automatically skip this option.
+
+<PROMPT> Aberchat Password <deft>:
+
+<IO_STATS>
+Record extra information about the number of bytes the mud has sent,
+received, and connection status?
+
+<PROMPT_YN> IO Statistics <deft>:
+
+<RESET_IDLE>
+<DEFAULT=900>
+The minimum amount of time (in seconds) that a person can be idle
+before the reset stone can be pressed without him being there.
+
+<PROMPT_VAL> Reset Idle Time <deft>:
+
+<LOG_INPUT>
+Log everything sent to the mud?
+
+<PROMPT_NY> Log input <deft>:
+
+<IDLE_TM>
+<DEFAULT=99999999>
+How long should someone be allowed to idle on the game before they are
+kicked off automatically?  Setting this to a large number effectively
+disables the automatic kickoff (Unless Moses is on... :)
+
+<PROMPT_VAL> Idle timeout value <deft>:
+
+<LD_TM>
+<DEFAULT=600>
+How long should after someone cuts a connection should the mud keep the
+player in the game before timing them out automatically?
+
+<PROMPT_VAL> Linkdead timeout value <deft>:
+
+<RES_TM>
+<DEFAULT=6>
+How long should we wait for the hostname and ident/username of a player
+to come in from the DNS server and other computer? (in seconds)
+
+<PROMPT_VAL> Resolver timeout <deft>:
+
+<CONNECT_TM>
+<DEFAULT=240>
+How many seconds to wait for someone to log in.
+
+<PROMPT_VAL> Connect timeout <deft>:
+
+<MAX_PLAYERS>
+<DEFAULT=50>
+How many players should be allowed on the game at one time? Note:
+increasing this value also increases the memory requirements for the game.
+
+<PROMPT_VAL> Maximum players <deft>:
+
+<SAVE_HTML>
+Allow the game to keep an updated list of online players in HTML?
+
+<PROMPT_YN> Allow HTML <deft>:
+
+<MAX_CONNECTS>
+<DEFAULT=5> 
+What should be the maximum number of connections from one ip domain?
+Note: this is for security purposes, and will keep one person from tying
+up all the player slots.
+
+<PROMPT_VAL> Maximum connects <deft>:
+
+<BAN_UNRESOLVED_HOSTS>
+Here's an option you can set if you're really anal.  If you set this
+option to Y, then people who do not have formal hostnames will be banned
+(those who just have ip addresses).
+
+<PROMPT_NY> Ban Unresolved hosts <deft>:
+
+<USE_TSCALE>
+If you would like the value of items to increase as more players are
+online, type Yes to this option.  If you want the value of objects to stay
+the same no matter what, type No.
+
+<PROMPT_YN> Sliding Value Scale <deft>:
+
+<AUTO_FROB>
+If you would like wizards to automatically be frobbed to the standard
+wizard level, select Yes to this option.  Otherwise, you will have to
+frob them yourself (as part of a ceremony or whatever).
+
+<PROMPT_NY> Automatically frob wizards <deft>:
+
+<QTYPE>
+<DEFAULT=4>
+The quest system can be configured by setting this option to:
+ 0  : All quests required to become wizard.
+ 1  : Must do X quests (See levels) by level Y.
+ 2  : Quest points rather than just numbers of quests.
+ 3  : Same as 2, but with critical quests, must do by wizlevel.
+ 4  : Require quest points, and all critical quests.   
+
+<PROMPT_VAL> Quest Type <deft>:
+
+<WIZ_QPOINTS>
+<DEFAULT=33>
+
+<PROMPT_VAL> Number of quest points required to wiz <deft>:
+
+<BODYPART_COMBAT>
+Setting this option will allow body parts to be severed from players,
+and have the many different effects described in info combat.  For
+example, players can lose their characters if decapitated.
+
+<PROMPT_YN> Bodypart Combat <deft>?
+
+<MAX_WEAPON_DAM>
+<DEFAULT=48>
+This option sets the maximum damage possible with any weapon in the game.
+If the object has a higher damage set, then it is reduced to this number
+in combat.
+
+<PROMPT_VAL> Max Damage <deft>:
+
+<MAXARMOR>
+<DEFAULT=52>
+Maximum armor.  Same effect as max damage.
+
+<PROMPT_VAL> Max Armor <deft>:
+
+<IDLE_MAX>
+<DEFAULT=0>
+Maximum amount of time (in seconds) that a mortal can be idle before the
+MUD disconnects him automatically. Set to 0 to disable auto-timeout.   
+
+<PROMPT_VAL> Maximum Idle Time <deft>:
+
+<IDLE_WIZARD>
+If you want Wizards to be kicked off if they are idle too long, answer
+yes to this option.
+
+<PROMPT_NY> Kick off wizards <deft>:
+
+<HEALALL_TIME>
+<DEFAULT=0>
+The minimum amount of time that can pass between 'healall' commands.
+In the healallcom() code, if the user is above the Wizard level, he/she
+can healall regardless of the last time it was done.  Setting this value
+to 0 will disable the waiting period.
+
+<PROMPT_VAL> Healall time <deft>:
+
+<AUTOSAVE_TIME>
+<DEFAULT=600>
+Amount of time to pass between autosaves (in seconds).
+
+<PROMPT_VAL> Autosave time <deft>:
+
+<BOB>
+Include code for an AI character called bob?
+
+<PROMPT_YN> Enable BoB <deft>:
+
+<MAX_CRASHES>
+<DEFAULT=999>
+How many crashes should the mud put up with before giving up?
+<PROMPT_VAL> Maximum crashes <deft>:

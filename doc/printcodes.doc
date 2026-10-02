@@ -1,0 +1,28 @@
+----------------------------------------------------------------------------
+CDirt 2.3 Docfile                                 Giancarlo Castrataro, 1997
+----------------------------------------------------------------------------
+
+This file describes the print codes used by bprintf(), the mud's output
+function.  The two types of codes which are understood by the mud are
+special codes, and regular codes.  Special codes cannot be typed in by the
+user, and therefore are for things like printing a file, clearing the
+screen, piping input to a file, and that sort of thing.  Anything you
+don't want the average user to be able to do should be put in a
+special code.  Regular codes are for things like color, and anything else
+you feel like giving users access to.
+
+Here are some special codes:
+
+printf()          file read	define		meaning
+----------------------------------------------------------
+\001V\003         &V            VERSION         MUD Version
+\001@\003         &@            EMAIL           Email address of implementor
+\001$\003         &$            MUD_NAME        Name of MUD
+\001U\003         &U            MASTER_USER     Master user of MUD
+\001#\003         &#            PORT            Port of MUD
+\001?\003         &?            HOMEPAGE        Code available at
+\001T\003         &T            LASTBUILD       Time of last code build
+\001H\003         &H            _HOSTNAME_      Hostname of MUD
+\001O\003         &O            _OS_            OS of server
+\001~\003         &~            _ARCH_          Architecture of server
+\001!\003         &!            _VERSION_       Version of server

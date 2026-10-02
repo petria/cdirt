@@ -1,0 +1,59 @@
+#!/bin/sh
+#########################################################################
+# MakeDep 1.01								#
+# 1995, Illusion							#
+#########################################################################
+# This script detects the machine and OS type using the detect program	#
+# and then generates the dependencies for the Makefile.			#
+#########################################################################
+
+# Setup Variables
+#
+TEMP=/tmp/MAKEDEP		# Temporary File Location
+MAKE=Makefile			# Makefile Name
+CC=gcc				# Compiler (Default is gcc)
+
+# Clean up any old messes, make a backup, and start the new Makefile
+#
+rm -f $TEMP
+cp $MAKE $MAKE.old
+sed -e '/Do not delete this line, the makedep program/,$d' < $MAKE >> $TEMP
+echo '# Do not delete this line, the makedep program requires it. #' >> $TEMP
+echo '# Last Updated: '`date`'                #' >> $TEMP
+echo '#############################################################' >> $TEMP
+echo >> $TEMP
+echo '# Dependencies for the MUD source code' >> $TEMP
+echo '#' >> $TEMP
+
+# Make the dependencies
+#
+echo -n 'Creating MUD Dependencies...'
+$CC -E -M -I../include -I../cr_inc -I../flags -I../specials *.c >> $TEMP
+echo 'Done'
+
+# Clean up our mess
+#
+mv $TEMP $MAKE
+
+cd ../cr
+# Clean up any old messes, make a backup, and start the new Makefile
+#
+rm -f $TEMP
+cp $MAKE $MAKE.old
+sed -e '/Do not delete this line, the makedep program/,$d' < $MAKE >> $TEMP
+echo '# Do not delete this line, the makedep program requires it. #' >> $TEMP
+echo '# Last Updated: '`date`'                #' >> $TEMP
+echo '#############################################################' >> $TEMP
+echo >> $TEMP
+echo '# Dependencies for the MUD source code' >> $TEMP
+echo '#' >> $TEMP
+
+# Make the dependencies
+#
+echo -n 'Creating CDirt Dependencies...'
+$CC -E -M -I../include -I../cr_inc -I../specials -I../flags *.c >> $TEMP
+echo 'Done'
+
+# Clean up our mess
+#
+mv $TEMP $MAKE

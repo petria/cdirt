@@ -1,0 +1,18 @@
+&+MShalafi/God Commands
+&+B-------------------------------------------------------------------------------
+&+cSHUTDOWN     &+wExcorcises all users, disables logins, and displays [msg].
+&+cOPENGAME     &+wReopens game after SHUTDOWN.
+&+cDELETE       &+wDeletes a player from the system database.
+&+cGOD          &+wCommunication channel for DemiGod/Avatar/Gods.
+&+cNOGOD        &+wToggle listening to the God channel.
+&+cIDLE         &+wPretend to be idle when you really aren't.
+&+cLOAD         &+wDisplay system and iDIRT Daemon statistics.
+&+cUBULL        &+wRead bulletins for Avatars and Gods.
+&+cSFLAGS       &+wView/edit a players sflags.
+&+cEFLAGS       &+wView/edit a players spell flags.
+&+cBANHOST      &+wBan a host from the MUD.
+&+cBANCHAR      &+wBan a user from the MUD.
+&+cBANACCT      &+wBan a user@host from the MUD.
+&+cSETTIME      &+wSet the climate time.
+&+cLOG          &+wMake a note in the system logs.
+&+B-------------------------------------------------------------------------------

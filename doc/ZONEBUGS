@@ -1,0 +1,96 @@
+Many of these bugs should be already addressed, if anyone notices any
+more, please send them to weenrdog@bluemarble.net.
+
+=================================================================
+  G. Castrataro              is         Prometheus
+(weenrdog@bluemarble.net)            (Promised Lands)
+=================================================================
+
+Crimefighter - NOTE TO SELF:  Relocate the entry point to Sagewood and Cyrus.  \BAD transition into those zones from the current point.
+Crimefighter - the CRASH command is available to Demis
+Crimefighter - BLACK TEXT in the oshul zone is UNREADABLE
+Crimefighter - isn't there supposed to be a DEATH flag in portal1@sagewood?
+Crimefighter - Sagewood1 should now start at valley32 aka Path@valley
+Crimefighter - quarry18 -- pipe bad color code
+Crimefighter - change Bottom@quarry quarry17 down to quarry8 Mine@quarry -- som\e ancient typo I guess
+Crimefighter - A mortal WILL NEVER KNOW THERE"S A DOOR IN camelot135@camelot ..\. THERE IS NOTHING IN THE ROOM DESC!
+Crimefighter - THERE IS NO INDICATION OF A DOOR EXISTING IN camelot52@camelot!
+Crimefighter - NOTE TO SELF.  add a connector zone to camelot72@camelot east...\one to attach a bunch of them later.
+Freeman - the shazareth quest doesn't seem to work..
+Freeman - Add a message when you burn the roots in Spike
+Moog - there's no qinfo file for the doom quest.
+Moog - I did elvenforest and killed both the lich and asmodeus in that order --\ however it didn't give me the quest flag (I asked a power for it afterwards --\ don't worry about giving me the flag ;) )
+Valur - When examining the tube in blizzard53, the scroll should have its 'dest\royed' flag removed + it given to the person who examines the scroll tube. It s\ends a message saying that and it does this on other muds... ;)
+Snubweasel - is the doom zone linked to the mud or not?:)
+Snubweasel - why does the horseshoe drop your chance of hitting to nothing?
+Shadow - PUT STARFISH PATTERN isn't working in Atlantis quest.
+Shadow - Haggardly still won't take the pot in Draknor quest
+Crimefighter - fairybook is not connected
+Crimefighter - fairytale is not connected
+Crimefighter - mithdan fountain needs the food flag removed or another special
+ where you drink and it teleports you over...as implemented elsewhere...
+without destroying the fountain
+Crimefighter - sherwood mobs have lowercase first names
+Zefir - elvencloak quest....is it supposed to be required to drink beaker to
+get glove (from Angel).
+Cresso - No qinfo for faffner
+Rhubix - wintergreen as food
+Zefir - need fafner specials even if not quest (Kitten).
+Rhubix - not sure mithdan completes correctly
+Rhubix - FireKings chalice entry is broken!!!
+Cresso - The whistle doesn open the foxhole in the oak groove
+Cresso - the whistle doesn't open the hole
+Cresso - You get the message twice when you give the fan to viola.
+Drizzt - examin text on object potion in the house in Hickdale, check it :)
+Crimefighter - arrgh, i don't like the place of the start of chlyon
+Greenranger - the blinking construction sign needs to be removed from "The Hidd\en Falsls"
+Greenranger - change sex chicken is broken
+Greenranger - backpack from eastcoast appears twice in inventory
+Shadow - Why won't Haggardly take the pot?
+Fallstar - if sabre quest is working right then the mremaid may be impossible t\o get out of without such spells are deaf me or muse mermaid
+Fallstar - sabre is all MESSed up
+Fallstar - the sabre dissappeared to it's orignal place when i finished the que\st and i examined it... no ruby in hilt
+Crimefighter - An exit should open when the black knight dies....yes THAT one.
+Crimefighter - sagewood23...if you ACTUALLY kill the demon, hellish portal shou\ld throw you back out...and the portal closes.
+Crimefighter - Hey Cresso...Arthur's nickname was "WART" not "Buddy"
+Crimefighter - someone gave "Jeffery" in the doom zone a damage of 90!!
+Cresso - Name doesn't show up when one complete elvenforest
+Cresso - No name reported when completing the Batcave quest
+Fallstar - i fed the hermit food so he left the game.
+Fallstar - but i get this ' has gone east.'  ' comes in from the east.' message\s
+Rhubix - tower wand, doesnt work invis
+Zteuer - pIRATES DIDN'T BECOME WRECKED WHEN i MESSED IT UP.
+Zteuer - didn't have to drink the awful potion to get down to faffner...
+Crimefighter - camelot105@camelot camelot104  ... same problem with the other t\wo hiding spots.
+Crimefighter - Lesuorac is taking his loot to dead1 without dumping it
+Crimefighter - the File create/alter occurance happened two days ago appearentl\y.
+Greenranger - west should be EAST in End of Path ... Maeron
+Greenranger - bedroll from maeron claims to be not open and you can't put thing\s in it
+Greenranger - escarpment path exit missing
+Greenranger - we ought to move the bottom of the chute outside...NL put it in t\ower2
+Greenranger - when findgrail was done...the cup didn't come with me
+Crimefighter - Yeah, Holygrail looks like it completed a bunch of times...dirty\ cup.
+Crimefighter - Cyrus69 just bugs me...since many other rooms are titled "Climbi\ng the Mountain" and aren't deathrooms, while no warning of death coming in cyr\us83...this needs some work.
+Crimefighter - fix the sign in bridge@blizzard
+Crimefighter - Change MAXSTATE for the apple in the valley zone to ONE
+Crimefighter - Is fairybook and fairytale supposed to be open to runners???
+Crimefighter - is Daerius supposed to be wandering around the mud outside his z\one?
+Mortdred - Far too many mobiles have no descs. So what does a 'typical, run of \the mill Anook' look like, anywuf?
+Mortdred - shepherd's staff from Heaven says it is armor, but cannot be worn
+Mortdred - Mobiles in ruins get stuck in room where you sink from first to seco\nd level
+Mortdred - Criminal can take the dark gemstone whil Sauroth yet lives
+Mortdred - Figure guarding library may be backstabbed repeatedly
+Shadow - Shouldn't biting LeSuorac do something?
+Zefir - zitz reports pink elephant is messed up.
+Zefir - creatures are walking out of sdesert.
+Greenranger - the troll's loincloth didn't loot
+Shadow - It still says "A rope leads up the tree" even after untying and taking\ the rope
+Crimefighter - Note to self:  Specials files needed for the following zones:
+Crimefighter - Chylon: Thrace, Fairybook: Trent, Origins: Balladar, Eosia: Jar,\ Windy: unknown, Rome: Zarniwoop
+Crimefighter - ARRGH!  Fix the violin in atlantis zone!
+Freeman - Add a nice mesage when you put the chalice on the altar in the moor z\one
+Crimefighter - Altitude values need to be added to the Cyrus zone...THERE ARE N\ONE.
+Cresso - You do not need to drink the potion to get down in faffner
+Shadow - I've killed Lord Glaive, but when I try to loot the mana pendant it
+tells me I've taken it twice, and then I don't have it in my inventory.
+Cresso - You do not need to drink the potion to get down in faffner

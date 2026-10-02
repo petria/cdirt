@@ -1,0 +1,2403 @@
+:sad s
+target:%a sads you! SAD SAD SAD!
+sender:%t is as sad as a flounder!
+others:%a looks at %t with pity, and says sad sad SAD!
+
+:osad s
+target:%a rolls his eyes at you and says, "OoooooHHHH SAD!"
+sender:You OHSAD %t.
+others:%a rolls his eyes at %t and says, "OoooooHHHH SAD!" %!'s pretty sad, huh?
+
+:accuse s
+target:&+M%a &npoints a finger at you and screams &+G'%! &ndid it! Not me
+sender:&+m%<He%:She%> &ndid it! &+LNot me&+r!
+others:&+g%a &npoints a finger at &+B%t and yells &+Y'%! &ndid it!'
+
+:aguitar a
+all:&+G%a &nworks &+M%^ &nfingers over an imaginary &+Bguitar&n and jams a familiar tune!
+me:You place your fingers on an invisible &+Rfretboard &nand jam an unknown tune.
+
+:apology sa
+me:You should be sorry too!
+all:%a places %^ hand over %^ heart and deeply apologizes to everyone.
+target:%a humbly looks at you and says '&+mI am truly sorry&n'.
+sender:You humbly apologize to %t.
+others:%a humbly apologizes to %t.
+
+:applaud as
+all:%a gives a round of applause.
+me:&+BDa &+mCapo&+g!
+target:%a &+Gapplauds &nyou with &+Mgusto&n!
+sender:You give &+B%t &na &+Mheartfelt &napplaud.
+others:%a applauds %t with feeling.
+
+:argh a
+all:%a screams loudly in frustration.
+me:&+YA&+La&+Ra&+ra&+Ya&+La&+Ra&+ra&+Yr&+Lr&+Rr&+rr&+Yr&+Lr&+Rr&+rg&+Yg&+Lg&+Rg&+rg&+Yg&+Lg&+Rh&+rh&+Yh&+Lh&+Rh&+rh&+y!!!
+
+:arm s
+target:&+Y%a &nplaces &+B%^ &narm around you.
+sender:You put your arm around &+M%t&n.
+others:&+B%a &nplaces &+L%^ &narm around &+C%t&n.
+
+:aww a
+all:%a makes a silly face and goes '&+LAwwww&+B...&n'
+me:&+LAwwwwww&+B......
+
+:bark sa
+me:&+gRuff &+yruff&+Y!
+all:%a barks &+Gplayfully&n.
+target:%a barks &+Gplayfully &nat you.
+sender:You bark &+Gplayfully &nat %t.
+others:%a barks &+Gplayfully &nat %t.
+
+:bashful a
+all:%a looks &+Cbashful &nand writes a figure eight with %^ foot in the ground.
+me:No need to be so &+Bshy&n!!!
+
+:bearhug s
+target:&+M%a &ngives you a &+Ygreat&n, &+Gbig&n, bone-crushing &+ybearhug&n!
+sender:You give &+M%t a &+Ygreat&+w, &+Gbig&+w, bone-crushing &+ybearhug&n!
+others:&+C%a &ngives &+M%t &na &+Ggreat&n, &+Ybig&n, bone-crushing &+ybearhug&n!
+
+:beam a
+all:&+R%a &nis &+Ybeaming &nso &+Wbrightly&n. What could be the &+Bsource&n?
+me:&+YYou &+Wbeam&+w with &+Butter &+Wbrilliance&+Y.
+
+:beg as
+all:%a begs the &+LGods &+Wfor &+Bmercy.
+me:The &+LGods &nfalls down &+Claughing &nat your request for &+Bmercy.
+target:%a is desperately trying to squeeze a few &+Ycoins&n from you.
+sender:You desperately try to squeeze a few &+Ycoins &nfrom %t.
+others:%a is desperately trying to squeeze a few &+Ycoins &nfrom %t.
+
+:bite s
+target:%a leans over and &+Rbites &nyou firmly on the bottom.
+sender:You &+rbite&n %t on the bottom.
+others:%a leans over and &+Rbites &n%t firmly on the bottom.
+
+:blam a
+all:%a goes &+rmad&n, pulling out an Uzi. &+WBLAM&+R!&+WBLAM&+R!&+WBLAM&+R!
+me:You go mad, pull out an Uzi, and kill everything on sight!
+
+:blanket as
+me:You pull a &+bblanket &nover your head to hide beneath.
+all:%a hides under a blanket.
+target:%a offers you a &+Bblanket &nto hide beneath.
+sender:You offer %t a blanket to hide beneath.
+others:%a offers %t a blanket to hide beneath.
+
+:bleh a
+all:%a sticks a finger down %^ throat, gagging. &+yBleh&n!
+me:You choke on your finger. &+yBleh&n!
+
+:blink sa
+all:&+B%a &nblinks &+M%^ &neyes in disbelief!
+me:&+GBlink&n, &+Cblink&n!
+target:&+G%a &nblinks at you in disbelief!
+sender:You blink at &+B%t &nin disbelief!
+others:&+M%a &nblinks at &+C%t &nin disbelief!
+
+:blowk sfi
+target:%a blows a &+Mkiss &nto you.
+sender:You blow a &+Mkiss &nto %t.
+others:%a blows a &+Mkiss &nto %t.
+
+:blush a
+all:%a &+rblushes&n a lovely shade of &+Rred&n.
+me:Your cheeks are &+rburning.
+
+:bomb si
+target:%a sneaks behind your back and &+Ylights &nan Acme bomb. &+RBOOM!&n You're toast!
+sender:You sneak behind %t's back and light an Acme bomb. &+RBOOM!&n %t is toasted!
+others:%a sneaks behind %t's back and lights an Acme bomb. &+RBOOM!&n %t is toasted!
+
+:bop sai
+all:%a bops %~self for being such a &+Gfool&n!
+me:&+rStupid, stupid, stupid&n!
+target:%a bops you on the head for being such a &+Ysillybilly&n!
+sender:You bop %t on the head.
+others:%a bops %t on the head for being such a &+Gsillybilly&n!
+
+:bounce as
+all:%a &+Bb&+Go&+Yu&+Rn&+Cc&+Me&+Ws &naround.
+me:&+BB &+GO &+RI &+YN &+MG &+W!!
+target:%a bounces you.  &+BB &+GO &+RI &+YN &+MG &+W!!
+sender:You bounce %t.  &+BB &+GO &+RI &+YN &+MG &+W!!
+others:%a &+Bb&+Yo&+Mu&+Gn&+Wc&+Ce&+Rs&n %t.
+
+:bow sa
+all:%a bows &+Bgracefully&n.
+me:You &+Bbow &nto your audience.
+target:%a &+Bbows &nbefore you.
+sender:You &+Bbow &nto %t.
+others:%a &+Bbows &nto %t.
+
+:brb a
+all:&+Y%a &nwill &+Mbe &+Gright &+Bback&n!
+me:You tell everyone that you'll &+Mbe &+Gright &+Bback.
+
+:bucket s
+target:%a tips a bucket of &+wice &+bcold &+cwater &+Wover you!  &+BBrrrrr&n!
+sender:You tip a bucket of &+Wice &+bcold &+cwater &+Wover %#!  &+GHa &+cha&n!
+others:%a tips a bucket of &+Wice &+bcold &+cwater &+Wover %t!
+
+:buh as
+all:%a looks blankly about the room in utter confusion and says &+G'Buh&n?'
+me:You look blankly about the room and say &+B'Buh&n?'
+target:%a looks blankly at you in utter confusion and says &+L'Buh&n?'
+sender:You look blankly at %# and say &+M'Buh&n?'
+others:%a looks blankly at %t and says &+c'Buh&n?'
+
+:burp a
+all:%a &+yburps &nrudely.
+me:Excuse yourself!
+
+:button si
+target:%a sticks %^ tongue into your bellybutton and kisses it &+Rhotly&n.
+sender:You stick your tongue into %t's bellybutton and kiss it &+Rhotly&n.
+others:%a sticks %^ tongue into %t's bellybutton and kisses it &+Rhotly&n.
+
+:cackle a
+all:%a throws back &+g%^ &nhead and &+Ycackles&n with &+Bglee&+W!
+me:&nYou &+Ycackle &+Ggleefully.
+
+:caress si
+target:%a &+cgently &ncaresses you with a &+Ytwinkle &+Win %^ &+Ceye.
+sender:You can't help but smile as your hands glide over %t's smooth, soft flesh.
+others:%a gently &+Ccaresses &n%t.
+
+:censor asi
+all:%a censors %~self.
+me:&+R<CENSORED>
+target:%a slaps a sign that says '&+RCENSORED&n' over your mouth!
+sender:You have censored %t.
+others:%a slaps a sign that says '&+RCENSORED&n' over %t's mouth.
+
+:cheek s
+target:%a runs %^ hand softly across your cheek and smiles at you.
+sender:You run your hand softly across %t's cheek.
+others:%a runs %^ hand softly across %t's cheek and smiles at %#.
+
+:cheer as
+all:%a &+Bc&+Gh&+Me&+Ye&+Cr&+Rs &nwith great &+Bgusto&n!
+me:You &+Bc&+Gh&+Re&+Ye&+Mr &nwholeheartedly.
+target:%a &+Bcheers&n you on.
+sender:You &+Gcheer &n%t on.
+others:%a &+Mcheers &n%t on.
+
+:chuckle a
+all:%a &+Gchuckles &npolitely.
+me:You &+Gchuckle &npolitely.
+
+:clap a
+all:%a claps &+Rw&+Bi&+Yl&+Gd&+Cl&+My&+W!
+me:You clap &+Gw&+Yi&+Rl&+Bd&+Ml&+Cy&+W!
+
+:comb as
+all:%a combs %^ hair.  &+BSparks &nfly!&n
+me:You comb your hair.  Perfect!
+target:%a combs your hair.  Ahh... It feels lovely!
+sender:You comb %t.
+others:%a is combing %t's hair.
+
+:comfort s
+target:&+G%a &ncomforts you, and offers &+B%^ &nsympathy.
+sender:You comfort &+B%t&n.
+others:&+G%a &ncomforts &+M%t&n, and offers &+C%^ &nsympathy.
+
+:confuse asi
+all:%a is totally &+Mconfused&n.
+me:You succeed in confusing yourself totally.
+target:&+B%a &nhas confused you so much that your head spins.
+sender:You make no sense whatsoever!
+others:&+B%a &nis confusing &+M%t&n.
+
+:congrat sf
+target:%a &+Gcheers &nyou on and &+Bcongratulates &nyou on your &+Ysuccess&n.
+sender:You &+Bcongratulate &n%t.
+others:%a &+Gcheers &n%t on and &+Bcongratulates &n%# on %$ &+Ysuccess&n.
+
+:cookie asf
+all:&+M%a &ngives each of you a chocolate chip cookie from the famous Mud Grammie's kitchen.
+me:You give everyone a chocolate chip cookie from the famous Mud Grammie's kitchen.
+target:&+Y%a &nsends you a small box of the famous Mud Grammie's chocolate chip cookies.  Yum!
+sender:You send &+G%# a small box of the famous Mud Grammie's chocolate chip cookies.
+others:&+M%a &nsends &+B%t &na small box of the famous Mud Grammie's chocolate chip cookies.  Yum!
+
+:cool a
+all:&+m%a &nlifts an eyebrow behind &+B%^ dark shades and says '&+CCOOL&n!&n'
+me:You are really cool!
+
+:cough a
+all:%a &+ycoughs &nnoisily.
+me:Cover your mouth when you do that!
+
+:cringe as
+all:%a cringes in &+Rterror&n!
+me:Who are you &+bterrified &nof?
+target:%a &+Ycringes &naway from you, &+rterrified&n.
+sender:You cringe away from %t.
+others:%a &+Ycringes &naway &nfrom %t in &+Rmortal &nterror.
+
+:cross a
+me:You cross your fingers and toes hoping for &+Ggood &+Yluck&n.
+all:%a crosses %^ fingers and toes in &+Chope &nof some &+Ggood &+Bfortune.
+
+:cry a
+all:%a bursts into &+Ctears&n.
+me:&+BWaaaaah&n!
+
+:csaw si
+target:%a grabs %^ chainsaw and looks at you glaringly!  &+rrrrrr&+RRRRRRRR&+W!
+sender:You point your chainsaw at %t!   &+rrrrrr&+RRRRRRRR&+W!
+others:%a grabs %^ chainsaw and looks glaringly at %t.
+
+:cuddle si
+target:%a &+Gcuddles &nyou.
+sender:You &+Ycuddle &n%t.
+others:%a &+Mcuddles &n%t.
+
+:curtsey as
+all:%a curtseys &+Bgracefully&n.
+me:You curtsey gracefully.
+target:%a curtseys &+Bgracefully &ntowards you.
+sender:You curtsey &+Bgracefully &ntowards %t.
+others:%a curtseys &+Bgracefully &ntowards %t.
+
+:cutfry si
+target:%a &+Rcuts &nyou into little bits and &+Yfries &nyou up for dinner!
+sender:You &+Rcut &nand &+Yfry &n%t up for dinner!
+others:%a &+Rcuts &nand &+Yfries &n%t up for dinner!
+
+:cwd si
+target:%a conjures a small &+rdragon&n, made of &+Ycream &nof &+ywheat&n. It flies around the room spitting &+mraisins &nat you.
+sender:You conjure a small &+rdragon&n, made of &+Ycream &nof &+ywheat&n. It flies around the room and spits &+mraisins &nat %t.
+others:%a conjures a small &+rdragon&n, made of &+Ycream &nof &+ywheat&n. It flies around the room, spitting &+mraisins &nat %t.
+
+:dance sa
+all:%a does the &+GBartman&n.
+me:Think you're &+MMichael Jackson&n, eh?
+target:&+B%a &nsweeps you across the dance floor.
+sender:You sweep &+G%t &noff &+B%$ &+Cfeet.
+others:&+C%a &nand &+G%t &ndance.
+
+:doh as
+all:%a &+Bblinks&n, then &+Rslaps &n%^ forehead and screams &+G'DOH&n!'
+me:You &+Bblink&n, then &+Rslap &nyour forehead and scream &+G'DOH&n!'
+target:%a &+Bblinks&n at you, &+Rslapping &ntheir forehead and screams &+G'DOH&n!'
+sender:You &+Bblink &nat %t, &+Rslapping &nyour forehead. &+GDOH&n! How &+rSTUPID&n!
+others:%a &+Bblinks &nand &+Rslaps &ntheir forehead, screaming &+G'DOH&n!'
+
+:drool sai
+all:%a starts &+mdrooling&n all over the place.
+me:&+cSlibber, slobb&n!
+target:%a drools all over you. &+MYuck&n!
+sender:You start to &+Cdrool &nas you see %t.
+others:%a takes one look at %t and then starts to &+Cdrool&n.
+
+:eblow sai
+me:You blow a kiss into the air.
+all:&+G%a &nblows a kiss into the air.
+target:&+Y%a &nleans over and softly blows into your ear.
+sender:You softly blow into &+B%$ &near.
+others:Leaning toward &+G%t&n, &+C%a &nsoftly blows into &+M%$ &near.
+
+:eek sa
+all:%a leaps onto a table and screams '&+cEeeeeeeeek&n!&n'
+me:&+GEeeeeeeek&n!
+target:%a leaps onto a table and screams '&+YEeeeeeeeek&n!&n' at the sight of you.
+sender:&+C%t &nis &+Bterrifying&n!!!
+others:&+G%a &nleaps onto a table and screams '&+cEeeeeeeeek&n!&n' at the sight of &+M%t&n.
+
+:embrace s
+target:&+G%a &ngives you a warm and loving embrace.
+sender:Arms are for hugging, eh?
+others:&+B%a &ngives &+Y%t &na warm and loving embrace.
+
+:fart a
+all:%a lets off a real rip-roarer.
+me:&+RHow rude&n!
+
+:faint a
+all:%a faints &+bdead &naway.
+me:You feel woozey and then suddenly everything gets &+bblack&n...
+
+:finger si
+target:&+M%a &nuses the international sign language showing you &+G%^ &nmiddle finger.
+sender:You think &+B%t &nis a dork, huh? Try to behave.
+others:&+R%a &nuses the international sign language showing &+B%t %^&n middle finger.
+
+:flip asi
+all:%a flips &+Ghead &nover &+Yheels&n.
+me:You flip &+Bhead &nover &+Gheels&n.
+target:%a flips you &+Chead &nover &+Yheels&n.
+sender:You flip %t &+Mhead &nover &+Gheels&n.
+others:%a flips %t &+Yhead &nover &+Rheels&n.
+
+:fnord si
+target:%a points a finger at you and shouts '&+YFNORD&n!&n'
+sender:You point a finger at %t and shout '&=YrFNORD&n!&n'
+others:%a points a finger at %t and shouts '&+YFNORD&n!&n'
+
+:fondle s
+target:&+M%a &nfondles you.
+sender:You fondle &+B%t&n.
+others:&+G%a &nfondles &+Y%t&n.
+
+:french si
+target:%a gives you a deep and &+mpassionate &nkiss..it seems to take forever...
+sender:You show %t what a &+rREAL&n kiss is like!
+others:%a gives %t a &+Rdeep &nand &+mpassionate &nkiss.
+
+:frown sa
+all:%a &+gfrowns&n.
+me:Is something wrong?
+target:%a &+gfrowns &nat you.
+sender:What did %! do this time?
+others:%a &+gfrowns &nat %t.
+
+:gasp sa
+all:%a gasps in &+Bastonishment&n!
+me:You gasp in &+Bastonishment&n.
+target:%a &+Ggasps &nat you!
+sender:&+LShocked&n, aren't we?
+others:%a &+Bgasps &nat %t!
+
+:giggle as
+all:%a &+Ggiggles &nin a fit of uncontrollable mirth.
+me:You &+Bgiggle &ninsanely.
+target:%a &+Ggiggles &nmaniacally at your manners.
+sender:&+rDon't &nbe rude!
+others:%a &+Bgiggles &+Mmaniacally &nat %t.
+
+:glare s
+target:&+W%a fixes you with an &+Cicy &nglare!
+sender:&+WYou glare &+Cicily &nat %t.
+others:&+W%a fixes %t with an &+Cicy &nglare!
+
+:goodnit sa
+all:%a waves as %@ takes off for &+Bdream &nland.
+me:'&+bnight&n!
+target:%a &+Mkisses &nyou tenderly on the forehead and says '&+gGoodnight&n.
+sender:&+WYou give %t a &+Mkiss &non the forehead as you say &+Bgoodnight&n.
+others:%a kisses %t tenderly on the forehead and says '&+gGoodnight&n.'
+
+:greet sa
+all:%a raises %^ hand in greeting and says '&+BHello&n!'
+me:You raise your hand in greeting and tell the world '&+BHello&n!
+target:%a bids you &+Gwelcome&n.
+sender:You bid %t &+Gwelcome&n.
+others:%a bids %t &+Gwelcome&n.
+
+:grin sa
+all:%a &+Lgrins &+revilly&n.
+me:You &+Lgrin &+revilly&n.
+target:%a grins at you with &+rlust &nin %^ eyes!
+sender:&+GWatch it, bub&n!
+others:%a &+rgrins &nat %t!
+
+:grind asi
+all:&+B%a &ngrinds &+M%^ &nhips, looking deep into your eyes.
+me:You toss your hair and grind your hips teasingly.
+target:&+B%a &ngrinds &+M%^ &nhips against yours teasingly!
+sender:You grind your hips against &+G%+&n!
+others:&+C%a &ngrinds &+G%^ &nhips against &+M%t's&n!
+
+:grit sa
+me:You grit your teeth in anger.
+all:&+g%a &ngrits &+M%^ &nteeth angrily.
+target:&+M%a &ngrits &+Y%^ &nteeth angrily at you.
+sender:You grit your teeth in anger at &+B%t&n.
+others:&+Y%a &ngrits his teeth angrily at &+G%t&n.
+
+:groan a
+all:&+m%a &ngroans &+gmiserably&n!
+me:&+mYou &+ggroan &nmiserably.
+
+:grope si
+target:%a &+mgropes &nyou.
+sender:Well what sort of &+mnoise &ndo you expect here?>&n
+others:%a &+mgropes &n%t.
+
+:growl sai
+all:%a &+Rgrowls&n.
+me:&+RGrrrrr...
+target:%a &+Rgrowls &nat you.
+sender:You &+Rgrowl &nat %t.
+others:%a &+Rgrowls &nat %t.
+
+:hand s
+target:&+G%a &ntakes your hand and gives it a gentle, reassuring squeeze.
+sender:You squeeze &+M%t's &nhand.
+others:&+B%a &ntakes &+G%t &nby the hand.
+
+:happy a
+all:&+B%a &ncan't resist smiling &+Ghappily&n.
+me:&+MHappy&n, &+Ghappy &+rjoy &+Cjoy&n!&n
+
+:hiccup a
+all:%a &+Chiccups&n.
+me:&+MHic!
+
+:hifive sa
+all:&+C%a &ngives everyone a &+Ghigh &+Mfive&n!
+me:You jump up and give everyone a &+Ghigh &+Mfive&n!
+target:%a gives you a &+Bpowerful &+Ghigh &+Mfive&n!
+sender:You give %t a powerful &+Ghigh &+Mfive&n!
+others:%a gives %t a powerful &+Ghigh &+Mfive&n!
+
+:hmm a
+all:%a humms and umms in deep thoughts.
+me:&+gHmmm...
+
+:hold s
+target:%a holds you &+Mlovingly&n.
+sender:You hold %t like you never want to let go.
+others:%a holds %t &+Mlovingly&n.
+
+:honey si
+target:%a invites you to cover %~ with honey. (Hint hint!)
+sender:You invite %t to cover you with honey. (Inviting a tongue bath?)
+others:%a invites %t to pour honey all over %~.
+
+:howl a
+all:&+W%a lets loose a &+rblood &ncurdling &+Lhowl &nat the &+Ymoon&n.
+me:&+WYou &+Lhowl &nloudly at the &+Ymoon&n.
+
+:hsigh sa
+all:%a sighs &+Ghappily&n.
+me:You sigh &+Ghappily&n.
+target:%a sighs &+Ghappily &nand lays %^ head on your shoulder.
+sender:You sigh &+Ghappily &non %t's shoulder.
+others:%a sighs &+Ghappily &non %t's shoulder.
+
+:hug s
+target:%a hugs you close.
+sender:You hug %t.
+others:%a hugs %t.
+
+:hum a
+all:%a begins to &+Mhum&n.
+me:You &+Yhum &na quiet little tune to yourself.
+
+:innoc a
+all:%a points a finger at %^ chest and says '&+YWho? ME&n?
+me:They made me do it!!!
+
+:jaw as
+all:%a's jaw hits the ground in astonishment!
+me:Your jaw hits the ground in astonishment!
+target:%a looks at you and %^ jaw drops in astonishment!
+sender:You look at %t and your jaw drops in astonishment!
+others:%a looks at %t and %^ jaw drops in astonishment!
+
+:jbones si
+target:%a jumps your bones!
+sender:You jump %t's bones!
+others:%a jumps %t's bones!
+
+:khand si
+target:%a takes your hand and kisses it softly.
+sender:You take %t's hand and kiss it softly.
+others:%a takes %t's hand and kisses it softly.
+
+:kick si
+target:%a kicks you.   &+ROOOF!
+sender:You kick %t.
+others:%a kicks %t!
+
+:kiss si
+target:%a &+Rkisses&n you lightly on the cheek!
+sender:&+CAwww...how &+MSWEET&+C!
+others:%a gives %t a sweet kiss on the cheek!
+
+:kneel sa
+me:You kneel upon one knee and bow deeply.
+all:%a kneels upon one knee and bows %^ head deeply.
+target:%a kneels before you and kisses your hand. &+mHow sweet!
+sender:You kneel and kiss %t's hand. How sweet!
+others:%a kneels and kisses %t's hand.
+
+:kvetch a
+all:%a bitches and moans at the state of the world.
+me:Oy vey!  You think &+C*you've*&n got troubles?
+
+:lag a
+all:%a is seriously lagging. &+rLagmonster &+Lstrikes &+Ragain&n!
+me:&+rLagmonster &nyanks ahold of you and &+Bwrestles &nyou to the floor.
+
+:lapf si
+target:%a climbs on your &+Blap &nand sits there contentedly.
+sender:You climb on %t's &+Blap &nand sit there contentedly.
+others:%a climbs on %t's &+Blap &nand sits there contentedly.
+
+:lapm si
+target:%a gestures you to sit on %^ lap.
+sender:You feel the need for some body &+Rheat&n!
+others:%a needs some of %t's body &+Rheat&n!
+
+:late a
+all:%a waves happily.  Late as always...
+me:Ooops! A bit late, don't you agree?
+
+:laugh sa
+all:%a falls down &+mlaughing&n.
+me:You fall down &+mlaughing&n.
+target:%a &+mlaughs &nat you!
+sender:You &+mlaugh &nat %t.
+others:%a &+mlaughs &nat %t.
+
+:lick si
+target:%a &+Rlicks &nyou. (You don't want to know where!)
+sender:You &+Rlick &n%t.
+others:%a &+Rlicks &n%t.
+
+:lip asi
+all:%a licks %^ lips.
+me:You lick your lips.
+target:%a kisses you &+Msweetly &non your lips.
+sender:You give %t a sweet kiss on the &+Rlips&n.
+others:%a kisses %t.  How &+Msweet&n...
+
+:lips si
+target:%a traces your lips with %^ tongue.
+sender:You trace %t's lips with your tongue.
+others:%a traces %t's lips with %^ tongue.
+
+:listen sa
+me:You sit back and listen to the noise in the room.
+all:%a sits down and listens to the murmur around the room.
+target:%a looks your way, listening intently to what you have to say.
+sender:You listen to %t.
+others:%a listens carefully as %t talks.
+
+:lkiss si
+target:%a kisses your mouth gently, %^ lips lingering.
+sender:You kiss %t gently, your lips lingering.
+others:%a kisses %t gently, %^ lips lingering.
+
+:love as
+all:&+g%a &nseems to &+Yshine &nof internal &+Cpeace&n, &+Rlove &nand &+Ghappiness&n.
+me:&+gYou &nget a feeling of internal &+Cpeace&n, &+Rlove &nand &+Ghappiness &ninside you.
+target:%a whispers to you &+Msweet &nwords of  love&n.
+sender:You tell your true feelings to %#.
+others:%a whispers to %t &+Msweet &nwords of love.
+
+:lsd as
+all:%a swallows a hit of &+Ga&+Mc&+Wi&+Cd &nand falls into a deep conversation with the walls!
+me:&+MW&+Wh&+Go&+Ca&n.......Would you look at that, the walls...the walls are, are, are almost alive..
+target:%a offers you a hit of &+RL&+YS&+BD&n, feel the groove man...
+sender:too &+Cg&+Go&+Wo&+Md &nto keep to yourself man...spread it around...
+others:%a sneaks a hit out of &+GL&+CS&+MD &nand offers it to %t.
+
+:lust asi
+all:%a is feeling very lustful. Distance might be a good precaution!
+me:Watch them hormones!
+target:%a totally lusts after your bod!
+sender:You really really lust after %t.
+others:%a lusts after %t.
+
+:martian a
+all:%a suddenly pulls out a ray gun and yells '&+CTake me to your leader!&n'
+me:You suddenly pull out a ray gun and yell '&+CTake me to your leader!&n'
+
+:massage s
+target:%a expertly massages your neck and shoulders.
+sender:You expertly massage %t.
+others:%a expertly massages %t's neck and shoulders.
+
+:moan a
+all:%a moans softly.
+me:You moan softly.
+
+:mumble a
+all:%a mumbles to %~self.
+me:What a fascinating topic!
+
+:neck si
+target:%a leans closer and bites your neck lustily. It feels very nice.
+sender:You lean over to %t and bite %$ neck lustily.
+others:%a leans over to %t and bites %$ neck lustily.
+
+:nibble si
+target:%a nibbles on your ear.
+sender:You nibble %t's ear.
+others:%a nibbles %t's ear.
+
+:nod sa
+all:%a nods solemnly.
+me:You nod solemnly.
+target:%a &+Gnods&n to you in agreement.
+sender:You &+Gnod &nto %t in agreement.
+others:%a &+Gnods &nto %t in agreement.
+
+:nudge s
+target:%a nudges you experimentally.
+sender:You nudge %t experimentally.  &+gNope, out like a light!
+others:%a nudges %t experimentally.
+
+:nuzzle si
+target:%a softly nuzzles your neck.
+sender:You nuzzle %t's neck softly.
+others:%a nuzzles %t's neck softly.
+
+:oob as
+all:%a oobs in surprise!
+me:You oob in surprise!
+target:%a looks at you in surprise and says &+G'Oob&n!'
+sender:You oob at %# in surprise.
+others:%a oobs at %t in surprise.
+
+:pant sa
+all:%a pants like a dog.
+me:You pant like a dog.
+target:%a gazes hungrily at you and pants in anticipation!
+sender:Unable to control yourself, your jaw drops at the sight of %t!
+others:%a gazes hungrily at %t and pants in anticipation!
+
+:pinch si
+target:%a pinches you.  &+ROuch&n!
+sender:You pinch %t.
+others:%a pinches %t.
+
+:ping sa
+all:%a wonders if %@ is alive...
+me:Jupp!  I'm alive!
+target:%a tests if you are alive.
+sender:You test %t for some signs of life.
+others:%a pings %t.
+
+:poke si
+target:%a &+rpokes&n you in the ribs.
+sender:You poke %t in the ribs.
+others:%a pokes %t in the ribs.
+
+:ponder a
+all:%a &+Bponders&n the question of life, universe and everything.
+me:&+GForty&n-&+Mtwo&n!
+
+:pounce si
+target:&+W%a &+Cpounces&n on you &+Gpinning &+Myou &nunder &+Y%^ &+Wpaws.
+sender:You &+Cpounce&n on &+G%t&n!
+others:%a &+Cpounces&n on &+M%t &+Gpinning &+B&n%# &nunder &+R%^ &npaws.
+
+:pout a
+all:%a &+Lpouts&n.
+me:&+CAh&n, don't take it so &+Bhard&n.
+
+:prod si
+target:%a prods you, wanting to know more.
+sender:You prod %t, wanting to know more.
+others:%a prods %t.
+
+:prozac as
+all:%a sighs miserably, pulls out a bottle of &+cProzac&n, and downs it.
+me:No alchohol around eh?
+target:%a nods understandably, and offers you some &+cProzac&n.
+sender:You know you need a prescription to give that out don't you?
+others:%a offers %t a handful of &+cProzac&n.
+
+:pthb asi
+all:%a sticks %^ tongue out and goes 'PTHB!' spitting saliva everywhere.
+me:PTHBBBBBBBB!
+target:%a sticks %^ tongue out at you and goes 'PTHB!' splattering you with saliva.
+sender:You PTHB at %t!
+others:%a sticks %^ tongue out at %t and goes 'PTHB!'
+
+:puke asi
+all:%a &+ypukes &non %^ shoes.
+me:You &+ypuke &non your shoes.
+target:%a &+ypukes &nall over you!
+sender:You &+ypuke &nall over %t!
+others:%a &+ypukes &n all over %t!
+
+:punch asi
+all:%a is preparing for the next &+Rboxing &ntournament.
+me:Mike Tyson, huh?
+target:%a gives you a powerful punch at your chin!
+sender:&+W1&+B.. &n2&+B.. &n3&+B.. &n4&+B.. &n5&+B.. &n6&+B.. &n7&+B.. &n8&+B.. &n9&+B.. &n &+rOUT&n!
+others:%a gives %t a powerful punch at the chin!
+
+:purr a
+all:%a purrs contentedly.
+me:&+BMMMMEEEEEEEEOOOOOOOWWWWWWW&n!
+
+:raindan sa
+all:UGH&n! Great chief %a dances &+Ywildly &naround and a heavy &+Bstorm &nbreaks!
+me:&+bUGH&n! &nGreat chief &+R%a &nhas made &+crain&n!
+target:&+bChief %a &+Bwankamonkey &ndances around you making &+crain&n!
+sender:&+BYou &+Rdance &nwildly around &+C%t &nand a heavy &+Lstorm &nbreaks!
+others:&+bUGH&n! Great chief &+B%a &ndances wildly around &+L%t &nand a heavy &+bstorm &nbreaks!
+
+:rofl a
+all:&+W%a grabs %^ sides and &+Gtumbles &nto the &+Bfloor &nin &+Chysterics&n!
+me:&+WYou &+Groll &non the &+Bfloor &+Mlaughing &+Chysterically&n!
+
+:rofld a
+all:%a rolls on the floor in &+Mdrooling &+mhysterics&n!
+me:You roll on the floor in &+Mdrooling &+mhysterics&n!
+
+:rose sf
+target:%a sends you a single, perfect, deep red rose. &+r@>&+g--,--`------
+sender:You send &+G%t &na single, &+Bperfect&n, deep &+rred &nrose.
+others:&+C%a &nsends &+G%t &na &+rrose&n.
+
+:ruffle s
+target:%a ruffles your hair &+Gplayfully&n.
+sender:You ruffle %t's hair &+Gplayfully&n.
+others:%a ruffles %t's hair &+Gplayfully&n.
+
+:salute s
+target:%a salutes you smartly.
+sender:You give %t a salute.   &+gJoined the army?
+others:%a salutes %t smartly.
+
+:scare sa
+all:&+C%a &nmumbles some words trying to turn into a dragon but ends up as a &+gfrog&n.
+me:You try to scare your fellows. Do you think a &+gfrog&n would be scary enough?
+target:&+L%a &nsneaks behind your back and says '&+CBOOO!!!&n'
+sender:You sneak behind &+m%t's &nback scaring &+B%# &nout of &+g%$ &nwits.
+others:&+G%a &nsneaks behind &+Y%t's back scaring &+c%# out of &+L%$&n wits.
+
+:scratch asi
+all:%a scratches %^ head.
+me:You scratch your head.
+target:%a reaches over and scratches your back. It feels soo good.
+sender:You reach over and scratch %t's back lovingly.
+others:%a reaches over and scratches %t's back.
+
+:seduce asi
+all:%a really, really wants to be &+rseduced&n.
+me:You really, really want to be &+rseduced&n.
+target:%a invites for you to &+rseduce &n%~. Go for it!!!
+sender:You invite %t to &+rseduce &nyou.
+others:%a invites %t for some &+rseduction&n.
+
+:shake as
+all:%a shakes %^ head.
+me:You shake your head.
+target:%a shakes your hand.
+sender:You shake hands with %t.
+others:%a shakes hands with %t.
+
+:sheesh a
+all:%a rolls %^ eyes and mutters '&+RGet real!&n'
+me:&+RSHEESH!
+
+:shiver a
+all:&+c%a &+Lshivers &nfrom the &+bcold&n.
+me:&+cC'mon&n! Your &+Bviking ancestors &nwould be proud of you!
+
+:shmoo asi
+all:&+C%a &ndances around the room, spreading &+Mlove&+C and &+Yhugs&+C.
+me:&+CWho &ndo you think you are...&+MSuraklin&+C?
+target:&+M%a &ngives you the ultimate in &+Msnuggles&n, &+Bcuddles&n, and &+Gwuv&n.
+sender:You shower &+G%t &nwith your &+Wshmooieness&+M!
+others:&+Y%a &ngives &+G%t &nthe ultimate in &+Msnuggles&n, &+Bcuddles&n, and &+Mwuv&n.
+
+:shrug a
+all:%a shrugs &+chelplessly&n.
+me:You &+mshrug&N.
+
+:shun s
+target:%a coldly shuns you.
+sender:You coldly shun %t. How mean!!
+others:%a coldly shuns %t.
+
+:shy asi
+all:%a hides in a corner.
+me:You go hide in a corner.
+target:%a becomes very &+ctimid &nand &+Bshies &naway from you.
+sender:You &+Bshy &+maway &nfrom %t.
+others:%a becomes very timid and shies away from %t.
+
+:sigh sa
+all:%a sighs loudly.
+me:You sigh.
+target:%a leans against your shoulder sighing heavily.
+sender:You lean against %$ shoulder sighing heavily.
+others:%a leans against %t's shoulder sighing heavily.
+
+:sing as
+all:%a sings a beautiful Italian aria.
+me:You sing songs of love.
+target:%a sings a &+mbeautiful love song &nfor you.
+sender:&nYou sing a &+cbeautiful love song &nfor %t.
+others:%a sings a &+Bbeautiful love song &nfor %t.
+
+:slam si
+target:%a &+rSLAMS&n you hard as junk!  (Now what does that mean?)
+sender:&+Yda &+Gda &+Bda&n, &+Mda &+Rda &+Cda
+others:&+COooohh&n!  &+G%a &njust &+rSLAMMED&+c %t&n!!
+
+:slap si
+target:%a slaps you across the face!
+sender:You slap %t across the face!
+others:%a slaps %t across the face!
+
+:slapf asi
+all:%a slaps %^ forehead in utter exasperation.
+me:You slap your forehead in utter exasperation.
+target:%a slaps you on the forehead.
+sender:You slap %t on the forehead.
+others:%a slaps %t on the forehead.
+
+:slurp a
+all:%a &+Mslurps &nup whatever needed to be &+gslurped&n.
+me:&+CSluuuuuuuurp&n!
+
+:smash s
+target:%a leaps at you and frantically smashes you rough and hard!
+sender:You leap at %t and frantically smash %#!
+others:%a leaps at %t and frantically smashes %#!
+
+:smile sa
+all:%a smiles happily.
+me:You smile happily.
+target:%a smiles at you.
+sender:You smile at %t.
+others:%a smiles at %t.
+
+:smirk a
+all:%a smirks.
+me:You smirk.
+
+:smooch si
+target:%a kisses you &+mdeeply&n.
+sender:What a kiss!  I'd rate that an 8!
+others:%a kisses %t &+mdeeply&n.
+
+:snap a
+all:%a snaps %^ fingers.
+me:You snap your fingers.
+
+:sneer sai
+all:%a sneers contemptously.
+me:Oh, I just love evil players!
+target:%a sneers contemptously at you!
+sender:You sneer contemptously at %t.
+others:%a sneers contemptously at %t!
+
+:sneeze a
+all:%a &+csneezes&n.
+me:&+gGesundheit&n!
+
+:snicker a
+all:%a &+Rsnickers &nunder %^ breath.
+me:You &+Rsnicker&n.
+
+:sniff a
+all:%a &+Bsniffs&n.
+me:You &+Bsniff&n.
+
+:snm si
+target:%a ties you up and... Ha ha, fooled you!
+sender:You pretend to tie %t up for a little...
+others:%a pretends to tie %t up for a little...
+
+:snore a
+all:%a has started %^ Chainsaw & Timber Blues.
+me:&+BZzzzzzzzzz...
+
+:snort asi
+all:%a snorts derisively.
+me:You snort so hard your nose vibrates.
+target:%a snorts derisively at you.
+sender:You snort derisively at %t.
+others:%a snorts at %t.
+
+:snowb sif
+target:&+W%a conjures a snowball out of thin air and throws it in your face!
+sender:&+WSplatt!
+others:&+W%a conjures a snowball out of thin air and throws it in %t's face!
+
+:snuggle s
+target:%a snuggles up to you.
+sender:You snuggle %t.
+others:%a snuggles up to %t.
+
+:sob a
+all:%a &+bsobs&n.
+me:&+C&$&N comforts you.
+
+:spank si
+target:%a puts you over %^ knee and gives you a sound spanking!
+sender:You put %t over your knee and give %# a sound spanking!
+others:%a gives %t a sound spanking!
+
+:spit sai
+all:%a spits on the ground.
+me:&+cPtooey!
+target:%a spits on you!
+sender:You spit on %t.
+others:%a spits on %t!
+
+:spock as
+all:%a raises an &+meyebrow&n.
+me:You raise an &+beyebrow&n.
+target:%a raises an &+meyebrow&n at you.
+sender:You raise an &+meyebrow &nat %t.
+others:%a raises an &+beyebrow &nat %t.
+
+:squirm a
+all:%a squirms in private &+recstasy&n.
+me:You &+Gsquirm &nin your chair.
+
+:squirt asi
+all:%a grabs a squirt gun and chases everyone around squirting at them!
+me:You grab a squirt gun and chase people around squirting them!
+target:%a grabs a squirt gun and squirts water all over you!  Looks like you're all wet now!
+sender:You grab a squirt gun and squirt water all over %#!  Ha ha ha!
+others:%a grabs a squirt gun and squirts water all over %t, getting %# all wet.
+
+:squeeze si
+target:%a squeezes you fondly.
+sender:You squeeze %t fondly.
+others:%a squeezes %t fondly.
+
+:stare sa
+all:%a stares into &+bspace&n.
+me:You stare into &+bspace&n.
+target:%a stares deep into your eyes.
+sender:You stare &+Cdreamily &nat %t.
+others:%a 
+
+:stomp sai
+me:You stomp round the room &+Mmerrily&n.
+all:%a &+gstomps&n round the room &+Mmerrily&n.
+target:%a &+rstomps &non your foot. &+MOUCH&n!!!
+sender:You &+rstomp &non %$ foot.
+others:%a &+rstomps &non %t's foot.
+
+:strip a
+all:%a performs a &+Rseductive &nstrip tease!
+me:Don't catch a cold now...
+
+:stroke si
+target:%a strokes your hair.
+sender:You stroke %t's hair.
+others:%a strokes %t's hair.
+
+:strut a
+all:%a struts proudly.
+me:Strut your stuff!
+
+:suck asi
+all:%a sucks on %^ thumb.
+me:You suck on your thumb.
+target:%a crawls up and sucks on your &+rvital &norgan!
+sender:You crawl up and suck on %t's &+rvital &norgan!
+others:%a crawls up and sucks on %t's &+rvital &norgan!
+
+:sulk a
+all:%a &+Bsulks &nin the corner.
+me:You &+csulk&n.
+
+:sundanc sa
+all:&+B%a &ndances around trying to summon the &+Ysun &nout of the &+Lclouds.
+me:&+YBONGA &+BBONGA&n!!   You don't believe in &+Cweather &nforecasts?
+target:&+C%a &ndances wildly around you trying to summon the &+Ysun &nout of the &+Lclouds&n.
+sender:You dance wildly around &+G%# &ntrying to summon the &+Ysun &nout of the &+Lclouds&n.
+others:&+Y%a &ndances wildly around &+G%t &ntrying to summon the &+Ysun &nout of the &+Lclouds&n.
+
+:tag s
+target:%a tags you and dances around with glee, shouting '&+YYOU'RE IT!!&N'
+sender:You tag %# and dance around with glee, shouting '&+YYOU'RE IT!!&N'
+others:%a tags %t and dances around with glee, shouting '&+YYOU'RE IT!!&N'
+
+:tantrum a
+me:You throw a &+rtempter tantrum&n. Things can't be that bad.
+all:%a begins to scream, jumps up and down and bangs %^ hands on the floor in a fit of unhappiness.
+
+:tap sa
+me:You tap your foot impatiently.
+all:%a taps %^ foot impatiently.
+target:%a taps you on the shoulder and says '&+gExcuse me&n'
+sender:You tap %t on the shoulder in a attempt to get %$ attention.
+others:%a taps %t on the shoulder and says '&+gExcuse me&n'
+
+:tea sa
+me:Ahhh... Nothing like a nice cup of tea!
+all:%a sips contendedly on a cup of tea.
+target:%a hands you a nice, hot cup of tea.
+sender:You hand %t a nice, hot cup of &+gGunpowder Green&n.
+others:%a hands %t a hot cup of tea.
+
+:tease s
+target:%a is teasing you half to death!
+sender:Hee, hee!  That'll get %#!
+others:%a teases %t!
+
+:thank asf
+me:I'd like to thank my mother, my agent, and all my fans.
+all:%a thanks you all and wipes tears of joy from %^ eyes.
+target:%a thanks you whole-heartedly.
+sender:You thank %t.
+others:%a thanks %t whole-heartedly.
+
+:tkiss si
+target:%a covers your mouth with tender little kisses.
+sender:You cover %t's mouth with tender little kisses.
+others:%a covers %t's mouth with tender little kisses.
+
+:tohappy a
+me:Good to see you are happy, but don't cry to much.
+all:Tears of joy have formed in %a's eyes as %@ smiles happily round the room.
+
+:tongue sa
+me:Don't you look foolish.
+all:%a places %^ thumbs in %^ ears and pokes %^ tongue out while wiggling %^ fingers.
+target:%a tongues you wildly! (You don't want to know where!)
+sender:You tongue %#.
+others:%a wildly tongues %t! (You don't want to know where!)
+
+:towel si
+target:%a snaps a wet towel at you!
+sender:You grab a wet towel, twist it up hard, and snap it at %t!
+others:%a snaps a wet towel at %t!
+
+:tweak si
+target:%a gently tweaks your nose.
+sender:You tweak %$ nose.
+others:%a tweaks %t's nose.
+
+:twiddle a
+all:%a twiddles %^ thumbs.
+me:You twiddle your thumbs.
+
+:unk asi
+all:%a slams %^ club into the ground and grunts, '&+WUnk!&N'
+me:Feeling a little like a neanderthal today, are we?
+target:%a bashes in your skull with %^ club, grunting '&+WUnk, unk!&n'
+sender:You bash %t's skull in!  &+WUNK!!
+others:%a bashes %t's skull in with %^ club, grunting '&+WUnk, unk!&n'
+
+:urge as
+all:%a just got the urge from Mother Nature. BRB!
+me:When you gotta go, you gotta go!
+target:%a uses %^ best persuasive powers on you.
+sender:My my, aren't we coercive?
+others:%a tries %^ best persuasive powers on %t.
+
+:vbite si
+target:%a stares at your jugular and attacks your soft, pulsating neck.
+sender:You stare at %t's jugular, attacking the soft, pulsating neck.
+others:%a stares at %t's jugular, attacking the soft, pulsating neck.
+
+:violin as
+all:%a pulls out a &+mviolin &nand plays '&+MHearts &nand &+YFlowers&n'.
+me:You'll need a hankie if you keep up that music...
+target:%a plays you a &+Msweet &+Gmelody &non the violin.
+sender:Does %t cry for your music, or did you put your bow in %$ eye?
+others:%a is playing %^ &+mviolin &njust for %t.
+
+:waltz sa
+all:%a has put on %^ formal wear and is looking for someone to &+Gwaltz &nwith.
+me:You need someone to &+Gwaltz &nwith...
+target:%a sweeps you off your feet while &+Ywhistling &nthe tunes of a &+Gwaltz&n.
+sender:Whistling the melody of a waltz, you sweep %t off %$ feet.
+others:%a sweeps %t off %$ feet to the tune of a &+Bwaltz&n.
+
+:wcream si
+target:%a sprays whipcream on you, then licks it off slowly.
+sender:You spray whipcream on %t, then lick it off slowly.
+others:%a sprays whipcream on %t, then licks it off slowly.
+
+:whew a
+all:%a mops %^ brow and says '&+YWHEW!&n'
+me:&+YWHEW!
+
+:whimper sa
+me:You go whimper in the corner for a while.
+all:%a whimpers quietly in the corner.
+target:%a looks at you and whimpers longingly. Aaawww, how cute.
+sender:You whimper longingly at %t.
+others:%s stares at %t and whimpers longingly at %#.
+
+:whistle sa
+all:%a whistles &+Gappreciatively&n.
+me:You whistle &+Gappreciatively&n.
+target:%a whistles &+Gappreciatively &nat you.
+sender:You whistle &+Gappreciatively &nat %t.
+others:%a whistles &+Gappreciatively &nat %t.
+
+:whop si
+target:%a whips out a trusty pillow and WHOPS you upside da head!
+sender:You whip out your trusty pillow and WHOP %t upside da head!
+others:%a whips out a trusty pillow and WHOPS %t upside da head!
+
+:wiggle sa
+all:%a wiggles %^ bottom.
+me:You wiggle your bottom.
+target:%a wiggles %^ bottom at you.
+sender:You wiggle your bottom at %#.
+others:%a wiggles %^ bottom at %t.
+
+:wink sa
+all:%a winks &+Msuggestively&n.
+me:You &+mwink.
+target:%a winks suggestively at you.
+sender:You wink at %t.
+others:%a winks at %t.
+
+:worship sa
+all:%a falls to the ground in shameless worship of the gods of &+CMUD&n.
+me:You fall to your knees in reverance of the gods of MUD.
+target:%a snivels and grovels and shamelessly worships you.
+sender:You worship %t.
+others:%a falls down to worship %t.
+
+:worthy s
+target:%a bows to you screaming '&+GI'M NOT WORTHY!&n'
+sender:You are not worthy to be in %t's presence.
+others:%a bows down to the ground before %t, screaming '&+GI'M NOT WORTHY!&n' 
+
+:wrestle s
+target:%a wrestes you down to the floor and pins you, then with a smug grin, proclaims that %@ has won.
+sender:You wrestle %t down to the floor and pin %#, then with a smug grin you say 'I win.'
+others:%a wrestles %t to the ground and pins %#, then with a smug grin proclaims that %@ has won.
+
+:wrose sf
+target:%a sends you a beautiful &+Wsnow white &+rrose. &+W@>&+g--,--`-----
+sender:You send&+G %t &na beautiful &+Wsnow white &+rrose&n.
+others:&+B%a &nsends &+m%t &na lovely &+Wsnow white &+rrose&n.
+
+:yawn a
+all:%a &+Lyawns.
+me:My, what big teeth you have!
+
+:yodel sa
+me:You yodel your lungs off.
+all:%a puts %^ hand to %^ mouth, yodelling very loudly.
+target:%a yodels loudly at you, sharing %^ talent with you.
+sender:You yodel at %t sharing your talent well.
+others:%a yodels loudly at %t.
+
+:yy s
+target:%a points a finger at your chest and says '&+GYes&n, &+BYOU&n!&n'
+sender:You point a finger at %t's chest and say '&+GYes&n, &+BYOU&n!&n'
+others:%a points a finger at %t's chest and tells %# '&+GYes&n, &+BYOU&n!'
+
+:armad si
+target:%a snaps %^ fingers, and Arnold the Attack Armadillo emerges from a temporal paradox and bites you HARD on your toes, saying 'I'll be back.'
+sender:You snap your fingers, sending your armadillo after %t.
+others:%a snaps %^ fingers, summoning Arnold the Attack Armadillo to bite %t's toes!
+
+:bleed asi
+all:%a drops to the floor, &+rbleeding &nprofusely.
+me:You drop to the floor from loss of &+rblood&n.
+target:%a drips %^ nice warm &+rblood &nall over you.
+sender:You drip your nice warm &+rblood &nall over %t.
+others:%a &+rbleeds &non %t.
+
+:bonk asi
+all:%a bonks %~self on the head.
+me:You bonk yourself on the head.  &+MDorQ&n!
+target:%a bonks you on the head!
+sender:You bonk %v!
+
+:boot si
+target:A massive replica of %a's boot falls from the sky, crushing you flat!
+sender:You summon a boot from the sky to crush %t flat.
+others:%a summons a massive boot from the sky to crush %t flat.
+
+:brocco asf
+all:%a munches on a big bunch of &+gbroccoli&n.
+me:You stuff your face with a fat mouthful of &+gbroccoli&n.
+target:%a hands you a big bunch of &+gbroccoli&n... yum!
+sender:You cram some healthy green &+gbroccoli &ndown %t's throat.
+others:%a shoves some delicious &+gbroccoli &nin %t's face.
+
+:bud sif
+target:%a gives you a light... a BUD light!
+sender:You give %t a light... a BUD light!
+others:%a gives %t a light... a BUD light!
+
+:caff a
+all:%a bounces off the walls, buzzing on caffeine.
+me:Gotta cut down on that coffee.
+
+:carrot asf
+all:%a chews on a delicious &+Ycarrot&n.
+me:You chew on a delicious &+Ycarrot&n.
+target:%a sends you a delicious looking, deep orange &+Ycarrot&n!
+sender:You send %t a delicious &+Ycarrot&n.
+others:%a sends %t a &+Ycarrot&n.
+
+:chicken as
+all:%a lets out a 'be-GAWK!' as though %@ were a chicken getting its tail feathers plucked!
+me:be-GAWK!
+target:%a stares at you, then suddenly lets loose with a loud and piercing 'be-GAWK!'
+sender:You stare at %t, then suddenly lets loose with a loud and piercing 'be-GAWK!'
+others:%a stares at %t and lets loose a loud 'be-GAWK!'
+
+:clown asi
+all:%a just made an utter &+Mclown &nout of %~self.
+me:You clown!
+target:%a leaps up and points a finger at you, shouting 'YOU CLOWN!'
+sender:You leap up, point a finger at %t and shout 'YOU CLOWN!'
+others:%a leaps up, points a finger at %t and shouts 'YOU CLOWN!'
+
+:combhug si
+target:%a jumps wildly into your arms, giving you a &+BMEGA &+Mhug&n!!!
+sender:You combat hug %t!
+others:%a combat hugs %t!
+
+:correct asi
+all:%a corrects %^ typos.
+me:You correct your typos.
+target:%a corrects all your typos for you.
+sender:You correct all %t's typos for %#.
+others:%a corrects all %t's typos.
+
+:crush asi
+all:%a mumbles something about crushing people's heads.
+me:You mumble something about crushing people's heads.
+target:%a frames your face between 2 fingers and smashes them together.  'I'm CRUSHING your HEAD!'
+sender:You CRUSH %t's HEAD!
+others:%a frames %t's face between 2 fingers, smashing them together.  'I'm CRUSHING %t's HEAD!'
+
+:die as
+all:%a has &+Ldied&n.
+me:You &+Ldie&n.
+target:%a falls over and lies &+Ldead &nupon you.
+sender:You fall over and lie &+Ldead &nupon %t.
+others:%a falls over and lies &+Ldead &nupon %t.
+
+:lapf si
+target:%a climbs on your &+Blap &nand sits there contentedly.
+sender:You climb on %t's &+Blap &nand sit there contentedly.
+others:%a climbs on %t's &+Blap &nand sits there contentedly.
+
+:lapm si
+target:%a gestures you to sit on %^ lap.
+sender:You feel the need for some body &+Rheat&n!
+others:%a needs some of %t's body &+Rheat&n!
+
+:eep as
+all:%a eeps quietly, a look of horror crossing %^ face.
+me:Eep!
+target:%a eeps at you.
+sender:You eep at %t terrified!
+others:%a eeps in horror at %t.
+
+:eew as
+all:%a scrunches up %^ face. &+yEew, nasty&n.
+me:You scrunch up your face. &+yEew, nasty&n.
+target:%a &+yeews &nat you.
+sender:You &+yeew &nat %t.
+others:%a &+yeews &nat %t.
+
+:eh as
+all:%a is totally clueless.  &+GEh&n?
+me:You &+cconfused &nor something?
+target:%a looks at you &+BVERY &+cconfused&n.
+sender:%t confuse you or something?
+others:%a looks at %t, appearing to be totally &+mconfused&n.
+
+:etc a
+all:%a makes a waving motion with %^ hand.  Etc., etc.
+me:And etc.
+
+:eye asi
+all:%a has the evil eye.
+me:You have the evil eye.
+target:%a eyes you. (Uh oh!)
+sender:You eye %t.
+others:%a eyes %t.
+
+:flame asi
+all:%a bursts into one large flame.
+me:You burst into one large flame.
+target:%a forces you to burst into one large flame.
+sender:You force %t to burst into one large flame.
+others:%a forces %t to burst into one large flame.
+
+:flap a
+all:%a flaps %^ arms, vainly trying to fly.
+me:You flap your arms, vainly trying to fly.
+
+:flare as
+all:%a flares %^ nostrils.
+me:You flare your nostrils.
+target:%a flares up at you!
+sender:You flare up at %t!
+others %a flares up at %t!
+
+:flump as
+all:%a flumps on the ground.
+me:You flump on the ground.  Plop!
+target:%a flumps on top of you.
+sender:You flump on top of %t.  Plop!
+others:%a flumps on top of %t.
+
+:fss asi
+all:%a lets out a fssssssssss and deflates.
+me:Fssssss.. sssssss.. ssss!
+target:%a sticks %^ butt in your face and lets out a fsssssss!
+sender:You fssss in %t's face.
+others:%a fssss-ed in %t's face.
+
+:gnash as
+all:%a gnashes %^ teeth.
+me:You gnash your teeth.
+target:%a gnashes %^ teeth at you.
+sender:You gnash your teeth at %t.
+others:%a gnashes %^ teeth at %t.
+
+:halo as
+all:%a pulls out %^ halo polish and rubs %^ halo vigorously.
+me:Halo a little tarnished these days?
+target:%a offers you some patented halo polish, looks like you need it!
+sender:You offer some polish for %t's dimming halo.
+others:%a hands %t some expensive halo polish for that aching sainthood.
+
+:hiss as
+all:%a hisses through %^ teeth.
+me:You hiss through your teeth.
+target:%a &+Ghisses &nat you.
+sender:You &+Ghiss &nat %t.
+others:%a &+Ghisses &nat %t.
+
+:honor a
+all:%a is extremely honored.
+me:You are extremely honored.
+
+:hurl asi
+all:%a leans forward a bit and lets %^ stomach &+yjuices &nhurl to the ground.
+me:You lean forward, your stomach's &+ycontents &nnow coating the ground.
+target:%a hurls you into a wall!
+sender:You hurl %t into a wall!  &+BSmaaash&n!
+others:%a hurls %t into a wall!
+
+:ice ifa
+all:%a &+Gfrantically &ndigs &+cice &nout of %^ shirt.
+me:Aaiiee!  &+cCold&n!
+target:%a spits &+cicecubes &nat you, hitting you right between the eyes!
+sender:You skillfully expectorate &+cicecubes &nat %t's face!
+others:%a spits out &+cicecubes &nin %t's face faster than a machine gun.
+
+:ifa si
+target:%a suggests you to insert your favorite action here.
+sender:You suggest %t to insert a favorite action here.
+others:%a suggests for %t to insert a favorite action here.
+
+:ignore asi
+all:%a is &+gignoring &neverything.
+me:How rude!
+target:%a is utterly &+gignoring &nyou.
+sender:You &+gignore &n%t.
+others:%a is &+gignoring &n%t.
+
+:jeans asi
+all:%a &+Ywrithes &ninto %^ &+Bjeans&n.
+me:Having a hard time getting back into your &+Bjeans&n?
+target:%a &+Gsneaks &n%^ hand into your &+Bjeans&n, pulling you &+rclose&n.
+sender:You &+Gsneak &nyour hands into %t's &+Bjeans&n, pulling %# &+mclose&n.
+others:%a &+Gsneaks&n %^ &+Yhands &ninto %t's &+Mpockets.
+
+:joy a
+all:&+CTears &nof &+Yjoy &nform in %a's eyes.  Oh, how &+Ghappy&n!
+me:You are so &+Mhappy&n, &+Ctears &nof &+Yjoy &nform in your eyes.
+
+:juice asi
+all:%a looks around for something to suck on.
+me:You look around for something to suck on.
+target:%a squeezes every last bit of juice out of you.
+sender:You squeeze %t dry.
+others:%a squeezes every last bit of juice out of %t.
+
+:kewl as
+all:%a crosses %^ arms and leans back saying &+B'Kewl&n!'
+me:&+BExcellent&n!
+target:%a looks at you and says &+B'Kewl&n!'
+sender:In your excitement, you just can't stifle the word &+B'kewl'&n!
+others:%a is downright &+Bexcited&n!
+
+:lfire asi
+all:%a pulls out a lighter and says '&+YHeh heh&n, &+Rfire&n!'
+me:&+RFire&n!  &+BYES&n!
+target:%a pulls out %^ &+Ylighter &nand attempts to light your hair on &+Rfire&n.
+sender:You pull out a &+Ylighter &nand try to light %t's hair on &nfire.
+others:%a is trying to &+Ylight &n%t's hair on &+Rfire&n!
+
+:lint a
+all:&+Y%a &ndigs &+clint &nout of &+L%^ &npockets.
+me:More &+clint &nthan pennies, huh?
+
+:lol as
+all:&+M%a &nlaughs out loud at &+G%^ &ncomputer screen!
+me:Everyone must think you're &+Gc&+Yr&+Ga&+Yz&+Gy&n eh?
+target:&+G%a &nlaughs out loud at you!  You're pretty funny!
+sender:Was it really that funny?!?!
+others:&+G%a &nlaughs out loud at &+M%t&n.
+
+:lush as
+all:%a is an utter &+Mlush&n.
+me:Yes, yes.. but they already know that.
+target:&+G%a &nthinks you are &+Cswimming &nin &+Ybooze&n.
+sender:You let &+G%t &nknow what a lush &+B%! &nis.
+others:&+B%a &nthinks &+g%t's &nan utter lush.
+
+:mallow asi
+all:%a conjures a small &+Rflame &nand &+Yroasts &na Sta Puft marshmallow on a stick.
+me:You conjure a small &+Rflame &nand &+Yroast &na Sta Puft marshmallow on a stick.
+target:%a toasts you up on a stick, over a flame!
+sender:You toast %t up on a stick, over a flame!
+others:%a toasts %t up on a stick, over a flame!
+
+:mgrin as
+all:%a grins &+Gmischievously&n.
+me:You grin &+Gmischievously&n.
+target:%a grins &+Gmischievously &nat you.
+sender:You grin &+Gmischievously &nat %t.
+others:%a grins &+Gmischievously &nat %t.
+
+:missed as
+all:%a has missed you all &+msooooooo &nmuch!
+me:You are overcome with &+cnostalgia&n.
+target:%a has missed you terribly!
+sender:You're so happy to see %# again!
+others %a is very happy to see %t again.
+
+:mmm a
+all:%a drools.  '&+Mmmmmmm...'
+me:You drool.  &+MM&+mmm&+MMM&+mm&+MM&+mmmm&n!!!
+
+:noodle asi
+all:%a stuffs a wet noodle down %^ pants.
+me:You stuff a wet noodle down your pants.
+target:%a spanks you with a wet noodle!
+sender:You spank %t with a wet noodle!
+others:%a spanks %t with a wet noodle!
+
+:nose asi
+all:%a sticks %^ nose in the air in disdain.
+me:Snobby today, aren't we?
+target:%a gives you a sweet widdle kiss on da nose.
+sender:You give %t a sweet widdle kiss on da nose.
+others:%a gives %t a sweet widdle kiss on da nose.
+
+:nuke asif
+all:%a is suddenly blasted out of existence by misfiring %^ own &+Rmissile&n.
+me:You misfire and blast yourself out of existence.
+target:%a launches a &+Bnuclear &+Lbomb &nthat arcs down out of the sky to blast you out of existence! A huge &+Mmushroom &+Ccloud &nis all that's left of you.
+sender:You blast %t out of existence!
+others:%a blasts %t out of existence!
+
+:peer as
+all:%a peers into the sky.
+me:You peer into the sky.
+target:%a peers at you &+Bq&+Gu&+Bi&+Gz&+Bz&+Gi&+Bc&+Ga&+Bl&+Gl&+By&n.
+sender:You peer at %t &+Bq&+Gu&+Bi&+Gz&+Bz&+Gi&+Bc&+Ga&+Bl&+Gl&+By.
+others:%a peers &+Bq&+Gu&+Bi&+Gz&+Bz&+Gi&+Bc&+Ga&+Bl&+Gl&+By &nat %t.
+
+:perk a
+all:%a perks up.  (You don't want to know where!!!)
+me:You perk up!
+
+:plaid a
+all:%a turns tartan &+gp&+yl&+ba&+gi&+yd&n.
+me:You turn tartan &+rp&+bl&+ra&+bi&+rd&n.
+
+:pound si
+target:%a pounds you into mincemeat.
+sender:You pound %t into mincemeat.
+others:%a pounds %t into mincemeat.
+
+:random asi
+all:%a randomizes %~self and falls apart.
+me:You randomize yourself and fall apart.
+target:%a stares at you suddenly and screams 'RANDOM!' in your face.
+sender:You stare at %t suddenly and scream 'RANDOM!' in %$ face.
+others:%a stares at %t suddenly and screams 'RANDOM!' in %$ face.
+
+:rhair a
+all:%a rips %^ hair out!
+me:&+LFrustrated&n?
+
+:rodfw a
+all:%a rols on da fwor waffing.
+me:Ya grab yah sahds an' rol on da fwor waffing!
+
+:saw asi
+all:%a gets %^ chainsaw and starts it running.  &+RR&+rrr&n.  &+RR&+rrrr&n!  &+RRR&+rrr&+RRR&+LZZZ&+rz&+LZ&+RB&+LZZ&+rzz&+LZ&n!
+me:You start your chainsaw.  &+RR&+rrr&n.  &+RR&+rrrr&n!  &+RRR&+rrr&+RRR&+LZZZ&+rz&+LZ&+RB&+LZZ&+rzz&+LZ&n!
+target:%a's &+Rchainsaw &nsuddenly bites into your neck!  Chunks of flesh go a'flyin!
+sender:You swing your &+Rchainsaw &ninto %t's neck!  Chunks of flesh go a'flyin!
+others:%a's &+Rchainsaw &nsuddenly bites into %t's neck!  Chunks of flesh go a'flyin!
+
+:sdance as
+all:%a dances around trying to summon the &+Ysun &nout of the &+Cclouds&n.
+me:&+YBONGA &+CBONGA&n!!  You don't believe in weather forecasts?
+target:%a dances wildly around you trying to summon the &+Ysun &nout of the &+Cclouds&n.
+sender:You dance wildly around %# trying to summon the &+Ysun &nout of the &+Cclouds&n.
+others:%a dances wildly around %t trying to summon the &+Ysun &nout of the &+Cclouds&n.
+
+:shoop asi
+all:%a SHOOPS mindlessly.
+me:You SHOOP mindlessly.
+target:%a SHOOPS over to you with only one thing on %^ mind.
+sender:You do a Salt -N- Pepa impression for %t.
+others:%a SHOOPS in %t's general direction.
+
+:shoot asif
+all:%a puts a gun to %^ head.  &+LBlam&n!  So &+rmessy..
+me:&nYou pull out a gun, put it to your head, and pull the trigger.  &+LBlam&+r! &nThe world goes black.
+target:From a high building, %a scopes you out and shoots bullet-holes into you.
+sender:You go up to a high building and pull out your sniper's gun.  Scoping around, you find and blast %t full of holes.
+others:%a snipes %t from a high building.
+
+:shrieka a
+all:%a shrieks %^ bloody head off!
+me:You shriek your bloody head off!
+
+:shush s
+target:%a puts a hand over your mouth and shushes you.
+sender:You put a hand over %t's mouth and shush %#.
+others:%a puts a hand over %t's mouth to shush %#.
+
+:slop asif
+all:With %^ DOOM rocket-launcher, %a fires too close and turns %~self into slop.
+me:You fire too close with your DOOM rocket-launcher and make slop of yourself.
+target:A DOOM rocket-launcher looms before you.  Ba-WOOSH!  %a turns you into slop!
+sender:Combining your will with a DOOM rocket-launcher, you make slop of %t.
+others:%t has just been reduced to slop by %a's DOOM rocket-launcher.
+
+:slug asif
+all:%a's head explodes and a big black slug writhes out.
+me:Your head explodes as a big black slug writhes out.
+target:%a's head explodes and a big black slug jumps from the mess into your mouth!
+sender:Your head explodes and a big black slug jumps from what's left into %t's
+mouth!
+others:%a's head explodes and a big black slug jumps from the mess into %t's mouth!
+
+:slump a
+all:%a &+Lslumps &ndown in %^ chair.
+me:You &+Lslump &ndown in your chair.
+
+:snork as
+all:%a, not being able to think of anything else, &+mSNORKS&n!!
+me:&+mSNORK&n!!
+target:%a &+mSNORKS &nobnoxiously at you.
+sender:You &+mSNORK &nat %t.
+others:%a &+mSNORKS &nat %t.
+
+:speaker a
+all:%a moshes around carelessly and collides with a speaker.
+me:Smash it up!
+
+:splat asi
+all:%a steps off a high building and falls. S  P  L   A    T&n!
+me:You step off a high building and fall. S  P   L  A    T&n!
+target:%a pushes you off a high building.  S P  L   A    T&n!
+sender:You push %t off a high building.  S P  L   A    T!
+others:%a pushes %t off a high building.  S P  L   A    T!
+
+:spoison sif
+target:%a chirrups sweetly and spits poison in your eyes!
+sender:You turn briefly into a dilophosaur and spit poison at %t!
+others:With horrid reptilian visage, %a chirrups and spits poison at %t!
+
+:spy asif
+all:%a is a spy.
+me:Your schizophrenia has now got you thinking you're James Bond.
+target:You catch %a staring at you through binoculars.
+sender:You spy on %t with your binoculars.
+others:%a is playing "Peeping Tom" again, spying on %t.
+
+:starg a
+all:&+C%a &nstares up at the &+Ystars &nand gets lost in &+G%^ &nthoughts.
+me:You &+Lgaze &nlongingly at the &+Ystars&n.
+
+:stifle asi
+all:&+G%a &nputs &+M%^ &nhands over &+Y%^ &nmouth trying not to say something baaad.
+me:&+BNooo&n!  &+CDon't say it&n!  &+GDon't&n.. &+gdooooooon't&n!  &+LShhhhhhhhh&+b.
+target:&+Y%a &nputs &+G%^ &nhands over your mouth trying to &+cSHUSH &nyou!
+sender:&+BACK&n, what is &+G%! &nsaying?!?!
+others:%a puts %^ hands over %t's mouth shushing %# quickly!
+
+:tear asi
+all:A single, &+Lsolitary &+Ctear &nruns down &+M%a's &ncheek.
+me:A single, &+Lsolitary &+Ctear &nruns down your cheek.
+target:&+G%a &ntears all your clothing off with &+B%^ &nteeth!
+sender:You tear all of &+Y%t's &nclothing off with your teeth!
+others:&+G%a &ntears off all of &+C%t's &nclothing with &+Y%^ &nteeth!
+
+:tired as
+all:&+G%a &nis so tired, &+C%^ &nhead begins to nod and snores echo throughout the room.
+me:You nod off...   &+Czz&+Lss&+Bnn&+coo&+wOO&+gR&+bkkk&+LKK&n!
+target:&+C%a &nputs &+Y%^ &nhead in your lap and goes to sleep.
+sender:You put your head in &+M%t's &nlap and fall asleep.
+others:&+Y%a &nputs &+G%^ &nhead in &+C%t's &nlap and falls asleep.
+
+:tm a
+all:&+M%a &nrolls &+C%^ &neyes and mumbles 'Tell me about it.'
+me:You roll your eyes and mumble 'Tell me about it.'
+
+:trip asif
+all:&+Y%a &npops a pill and zonks out.  &+MGroovy&n, &+Gman&n.
+me:You pop a pill and start seeing &+CGod&n.  &+GGroovy&n, &+Mman&n.
+target:&+G%a&n sticks &+M%^ &nfoot out and trips you sending you to the floor.
+sender:You stick your foot out and trip &+C%t&n.
+others:&+C%a&n sticks &+B%^ &nfoot out and trips &+Y%t&n.  HeHe!
+
+:weo asi
+all:&+G%a &nruns around the rooms shouting &+R'Weeeeeeeeeoooo&n!'
+me:What in the world is a &+gWeo&n?
+target:&+M%a chases you around the room shouting &+Y'Weeeeeeeeooooo&n!'
+sender:&+YW&+GEEEEEEEEEEEEEEEEEEEEEEEEEEE&+COOOOOOOOOOOOOOOO&n!
+others:&+M%a &nruns around the room after&+Y %t &nshouting &+G'Weeeeeooo&n!' (what is this? Some sort of new
+mating ritual?)
+
+:whap asi
+all:&+Y%a &nwhaps &+G%~self&n.
+me:&+CWHAP&n!
+target:&+C%a &nwhaps you on the back of your head!
+sender:You whap &+M%t &non the back of the head!  &+BWHAP&n!
+others:&+G%a &nwhaps &+Y%t &non the back of the head!
+
+:wince a
+all:%a &+Lwinces&n.
+me:You &+Gwince&n.
+
+:wombat si
+target:%a whistles--a &+GMONGO &+Ywombat &nruns in and bites hard on your ankle.
+sender:You whistle and your wombat runs in, biting &+G%t's&n ankle.
+others:&+G%a &nwhistles, sending &+M%^ &nwombat after&+C %t&n!
+
+:wtears as
+all:&+G%a &nwipes the &+Ctears &nfrom &+L%^ &ncheeks.
+me:You wipe the &+ctears&n from your cheeks.
+target:&+G%a &ngently wipes the &+ctears &nfrom your eyes.
+sender:You wipe the &+Ctears &naway from &+Y%t's &neyes.
+others:&+Y%a &nwipes the &+Ctears &nfrom &+G%t's &neyes.
+
+:yeah si
+target:Beaming, &+C%a &nlooks at you and says &+C'YEAH&n!'
+sender:&+GYEAH&n!  &+cYEAH&n!
+others:%a beams at %t and says in a sappy voice &+C'YEAH&n!'
+
+:ache a
+all:&+G%a &nchokes out &+C'Ibuprofen&n... I need &+Cibuprofen&n...'
+me:You choke out &+C'Ibuprofen&n... I need &+Cibuprofen&n...'
+
+:ack a
+all:&+B%a &nacks in disgust.
+me:What a horrid thought!
+
+:afk a
+all:&+G%a &nhas just walked away from &+B%^ &nkeyboard.
+me:Away from the &+Rkeyboard&n eh?
+
+:aikido asi
+all:%a screams &+R'AieeeeeYAH!' &nand breaks a board with &+C%^ &nforehead.
+me:You scream &+R'AieeeeYAH!' &nand break a board with your forehead.
+target:&+R%a &nmakes mighty hand motions indicating that you are toast.
+sender:You make a lot of impressive hand motions at &+B%t&n.
+others:&+C%a &nmakes some sort of impressive hand motions at &+Y%t&n.
+
+:annoy s
+target:&+G%a &+Lplagues &nyou with a million questions.
+sender:You &+Rannoy&n the hell out of &+B%t&n.
+others:&+B%a &+Lplagues &+Y%t &nwith a million annoying questions.
+
+:barney as
+target:&+mBarney &+Bb&+Go&+Yu&+Rn&+Cc&+We&+Ms &ninto the room and gives you a &+BBIG &nhug!
+sender:You sic &+mBarney&n on &+G%t&n.
+others:&+mBarney &+Bb&+Ro&+Gu&+Yn&+Wc&+Me&+Cs &ninto the room and gives &+G%t &na &+BBIG &nhug!
+all:&+mBarney &+Bb&+Ro&+Yu&+Gn&+Mc&+Ce&+Ws&n into the room singing 'I love you... you love me...'
+me:I can't believe you just subjected these poor people to that &+mTHING&n.
+
+:bat as
+target:&+G%a &ngrabs a baseball bat and starts swinging it at you!
+sender:Calm down.. take a &+Bvalium&n.
+others:&+G%a &ngrabs a baseball bat and starts swinging it at &+Y%t!
+all:&+Y%a &ngrabs a baseball bat and starts to swing it around like a &+Rmadman&n!
+me:Whats your batting &+Gaverage&n?
+
+:bdance a
+me:&+GHuh &+Yhuh &+Bhuh&n!  That was cool!
+all:&+G%a &ndoes the &+MButthead&n.
+
+:beckon si
+target:%a &+Bbeckons &nyou to come to %~.
+sender:You &+Bbeckon &nfor %t to come to you.
+others:%a &+Bbeckons &n%t.
+
+:beer sa
+target:&+B%a &nbuys you a &+Ybeer&n.
+sender:Trying to get them &+Rdrunk&n, eh?
+others:&+G%a &nbuys &+B%t &na &+Ybeer&n.
+all:%a &+Rslams &ndown a &+Ybeer.
+me:&+BShotgun&n! &+gShotgun&n! &+mShotgun&n!
+
+:bhand si
+target:&+M%a &nhits you across the face with the back of &+Y%^ &nhand.
+sender:You hit &+M%t &+BREALLY &nhard!
+others:&+G%a &nhits &+M%t &nso hard that &+Y%! &nloses &+C%$ &+Bbalance&n!
+
+:blank as
+target:&+G%a &nlooks at you with a &+Lblank&n expression on &+M%^&n face.
+sender:&+BEmotions &nrun &+rdeep &nhuh?
+others:&+G%a &nlooks &+Lblankly &nat &+C%t&n.
+all:&+G%a &ngets a &+Lblank &+Bexpression &non &+M%^ &nface.
+me:That shows &+gemotion&n.
+
+:boo as
+target:&+Y%a &nruns up behind you and screams &+B'BOO&n!!!!!'
+sender:You &+Lscare &+G%t &nhalf to death!
+others:&+G%a &nruns up behind &+Y%t &nand scares &+M%# &nhalf to death!
+me:Oooh... you are &+BSCARY&n!
+all:%a screams &+B'BOO&n!!!!' at the top of&+G %^ &nlungs.
+
+:booga as
+target:%a yells &+m"BOOGA!!"&n in your ear!
+sender:I think you scared &+B%t &na little..
+others:%a sneaks up behind %t and yells &+g"BOOGA!!"&n in %$ ear!
+me:Wasn't that just &+gspecial&n?
+all:%a yells out&+g"BOOGA!!"
+
+:boomer fis
+target:%a throws a &+Rboomerang&n! &+CTHWACK! &nIt hits you in the head and returns to %~.
+sender:You hurl a &+Gboomerang &nat %t's head!
+others:%a throws a &+cboomerang &nat %t.  It bounces off with a &+RTHUD &nand comes back.
+
+:bored a
+me:&+gYah Yah&n... but I guess it's not as bad as studying for that test you have.
+all:%a is &+cBORED!!!! &n(yet is not about to go do real life things ;)
+
+:bs sa
+all:%a thinks that this is just a lot of &+rBS&n.
+me:You think that this is just &+mr&+gi&+md&+gi&+mc&+gu&+ml&+go&+mu&+gs&n.
+target:%a thinks you are full of &+rBS&n.
+sender:So you think &+B%t&n is a dork, eh?
+others:%a thinks that %t is full of&+r BS&n.
+
+:choke sa
+all:%a grabs his throat and starts to squeeze and gasps for &+Cair&n...
+me:What the &+rhell &nare you trying to do?!?!?
+target:%a goes into a &+Bblind &+rrage &nand wraps %^ hands around your neck.
+sender:I shall &+rKILL&n you %t!
+others:&+G%a &nscreams, &+B"DIE FOUL BEAST!"&n and chokes &+M%t&n!
+
+:cling as
+all:%a clings to the wall in &+mfear&n.
+me:&+CCHICKEN&n!
+target:%a &+Cclings &nto you.
+others:%a &+Cclings&n to %t.
+sender:You &+Ccling &nto %t.
+
+:cmon s
+target:%a tells you 'cmon!'
+others:%a tells %t to get a move on.
+sender:Impatient are we?
+
+:coffee as
+all:%a pours %~self a cup of coffee and wakes themselves up..
+me:&+RHANGOVER&n??
+target:%a thinks you need to wake up a bit, so %@ pours you a cup of coffee.
+others:%a thinks that %t needs to wake up a bit.
+sender:Wake em up, wake em up, wake em up!
+
+:coke s
+target:%a offers you a line..err bottle of coke.
+sender:Yea .. yea, that's it the bottle, yeah..
+others:%a offers %t a line..err bottle of coke.
+
+:cornh s
+target:%a looks to you and yells out &+Y'CORNHOLIO!'
+sender:I am the great &+YCORNOLIO!
+others:%a looks at %t and yells out &+Y'CORNHOLIO!'
+
+:corvett s
+target:%a wastes you with %^ &+Rcorvette&n!
+sender:&+RVroom Vroom&n! &+cBye Bye&n!
+others:%a wastes %t with %^ &+Rcorvette&n!
+
+:count a
+all:%a counts on %^ fingers: &+C1&n...&+M2&n...&+G5&n!
+me:You &+Rcount &non your fingers.
+
+:cow a
+all:%a's eyeballs bulge out of %^ head as %@ gives birth to a cow!
+me:Now you know what true pain is!
+
+:cower as
+all:%a cowers in the corner.
+me:What a wimp!
+target:%a cowers in fear of your wrath!
+others:%a cowers in the corner in fear of %t.
+sender:You cower in fear of %t.
+
+:cuff s
+target:%a &+rgrins evilly &nand then &+Lhandcuffs &nyou to the nearest bed.
+sender:Whats on &+cYOUR &nmind?
+others:%a &+rgrins evilly &nand then &+Lhandcuffs&n %t to the nearest bed.
+
+:cyanide a
+all:%a pulls out a black &+Bpill&n, swallows it and waves goodbye..
+me:&+RCyanide&n! The breakfast of champions!
+
+:cwhip s
+target:%a covers you with &+BCOOL WHIP&*, then licks it off slowly.
+sender:You cover %t with &+BCOOL WHIP&*, then lick it off slowly.
+others:%a covers %t with &+BCOOL WHIP&*, then licks it off slowly.
+
+:deja a
+all:%a gets a horrid case of &+md`eja vu&n!
+me:Don't you &+rHATE &nthat?!
+
+:dika s
+target:%a wonders '&+G%t&n... &+M%t&n... &+C%t&n......  do I know a &+B%t&n?'
+sender:Naaah, never heard of &+G%#&n.
+others:&+R%a &nwonders '&+G%t&n...&+B %t&n...&+Y %t&n..... do I know a &+c%t&n?'
+
+:disco a
+all:%a snaps %^ fingers and a lighted disco floor appears!
+me:&+MStayin' Alive&n! &+BStayin' Alive&n!
+
+:dive a
+all:%a dives for %^ bomb shelter in utter panic!
+me:Hit the &+ydirt&n!
+
+:drunk a
+all:%a calls out 'I'm &+GS&+BO&+CO&+YO&+MO&+BO&+GO&+WO&+MO&+GO&+YO&+CO&+BO&+MO&+GO&n drunk!'
+me:I hope you're not a &+Yblonde&n...
+
+:duck a
+me:Yah... you &+BBETTER &+Yduck&n...
+all:%a &+Bducks&n, fearing for %^ life.
+
+:duh a
+me:Can you say... &+G'dense'&n?  Sure, I knew you could.
+all:%a is feeling &+CPRETTY &ndumb right about now.
+
+:egiggle as
+all:%a &+Ggiggles &+mevilly&n.
+me:You &+Ggiggle &+mevilly.
+target:%a &+ggiggles &+mevilly &nat you.
+sender:You &+Bgiggle &+revilly &nat %t.
+others:%a &+Ygiggles &+gevilly&n at %t.
+
+:elbow s
+target:%a elbows you in the ribs.
+sender:That probably hurt!
+others:%a elbows %t in the ribs.
+
+:enough as
+target:%a looks at you and screams, &+R"I've had enough of you!"
+sender:&+GWow!&n %t has really gotten on your &+Bnerves |&nhuh?
+others:%a looks at %t and screams, "I've had enough of you!" at %#.
+all:%a screams out, "I've had enough!"
+me:Is your &+rstress &nlevel too high?
+
+:entwine s
+target:%a tangles %^ legs with yours and lies close to you.
+sender:&+CComfy&n?
+others:%a wraps %^self around %t.
+
+:explode a
+all:%a screams as %^ head &+rexplodes&n.
+me:Ever seen that scene in &+GScanners&n...
+
+:fever s
+target:%a checks to see if you have a &+rfever&n.
+sender:Is %! feeling all right?
+others:%a checks %t's forehead to see if %! has a &+Rfever&n.
+
+:fkiss: si
+target:%a sweeps back your hair, giving you a gentle &+Rkiss &non your forehead.
+sender:You give %t a gentle &+Rkiss&n on the forehead.
+others:%a gives %t a gentle &+Rkiss&n on the forehead.
+
+:flex a
+me:What a &+Ygirly&n-&+mmun&n.
+all:%a &+Yflexes &n%^ muscles, trying to look strong.
+
+:food a
+all:%a is going on a food run.
+me:Don't forget the &+BDoritos&n!
+
+:foot a
+all:%a opens %^ &+Gmouth&n and inserts %^ &+Cfoot&n.
+me:Open &+Gmouth&n, insert &+Cfoot&n!
+
+:freak as
+target:%a points at you and yells, &+B'FREAK!'
+sender:You point at %t and yell, &+B'FREAK!'
+others:%a points at %t and yells, &+B'FREAK!'
+all:%a yells, &+B'FREAKS!'
+me:&+BFreaks!&n All of them!
+
+:fsmile a
+all:%a tries to &+Msmile&n, but &+cfails &nmiserably.
+me:Better &+Gluck &nnext time, eh?
+
+
+:fthink a
+all:%a tries to &+Bthink&n, but &+Yfails&n miserably.
+me:Better &+Gluck&n next time, eh?
+
+:gag a
+all:%a makes a horrid &+ygagging &nnoise.
+me:&+BOoooh&n.... &+Mgrody&n to the max!  &+yGag&n me with a spoon.
+
+:gas as
+target:%a hands you a gallon of &+Ygas&n.
+others:%a hands %t a gallon of &+Ygas&n.
+sender:You hand %t a gallon of &+Ygas&n.
+all:%a takes a big ole swig of &+Ygas&n.
+me:&+YTANGY!
+
+:gkick s
+target:%a just kicked you in the &+Ggroin&n!
+sender:That &+BHAS &nto hurt!
+others:%a just kicked %t in the &+Ggroin&n!
+
+:gnite s
+target:%a sings '&+BGood &+Ynight &+Msweetheart&n... well.. its time to go..'
+sender:You don't really want to say &+Bgood &+Ynight&n...
+
+:green a
+all:%a turns &+ggreen
+me:You turn a shade of &+ggreen
+
+:grumble sa
+all:%a &+cgrumbles&n unhappily.
+me:Boy! You &+BMUST &nbe in a bad mood.
+target:%a is &+cgrumbling &nat you, what did you do to make %~ upset?
+sender:You &+ggrumble &nat %t.
+others:%a is &+mgrumbling &nunhappily at %t.
+
+:gush sa
+all:%a releases the flood gates and &+CGUSHES &nall over the floor!
+me:&+WG&+CUUUUUUUUUUUUUUUU&+cSSSSSSSSSSSSSS&+BHHHHHHHHHHH
+target:%a has just &+GGUSHED &nall over you!
+sender:That's disgusting, how in the name of God could you do that!?!
+others:%a has just &+CGUSHED &nall over %t!
+
+:guilty a
+me:Oh... I feel &+GSOOOO &nguilty!
+all:%a feels incredibly &+gguilty.
+
+:hattack a
+all:%a grabs %^ chest in utter pain as %@ falls to the floor.
+me:&+RSTRESS&+B! &+RSTRESS&+B! &+RSTRESS&+B!
+
+:hawk s
+target:%a watches you like a &+Yhawk&n.
+sender:Don't &+Btrust &n%t, do you?
+others:%a watches %t like a &+Yhawk&n.
+
+:hbang a
+all:%a headbangs &+Rwildly&n!
+me:&+BWhiplash&n!
+
+:head a
+all:%a bangs %^ head on the floor about &+B1000 &ntimes.
+me:That had to &+rhurt&+R!
+
+:hey as
+all:%a yells out '&+GHey &+BBABY&n!!'
+me:You go!
+target:%a looks at you and says '&+BHey &+YBABY&n!!'
+sender:You look at %t and say '&+gHey &+cBABY&n!!'
+others:%a looks at %t and says '&+mHey &+CBABY&n!!'
+
+:hide s
+target:%a &+Bhides &nfrom you.
+sender:You &+Bhide &nfrom %t.
+others:%a tries to &+Bhide &nfrom %t.
+
+:huggle s
+target:%a &+Chuggles &nup to you.
+sender:You &+Chuggle &nup to %t.
+others:%a &+Chuggles &nup to %t.
+
+:huh s
+target:%a blinks %^ eyes, shakes %^ head and says to you '&+MHuh&n?'
+sender:&+BDuh&n!
+others:%a blinks %^ eyes, shakes %^ head and says '&+CHuh&n?' to %t.
+
+:hypno s
+target:%a tries to &+Bh&+Yy&+Bp&+Yn&+Bo&+Yt&+Bi&+Yz&+Be&n you.
+sender:%t is getting &+csleepy&n....
+others:%a tries to &+Gh&+Yy&+Gp&+Yn&+Go&+Yt&+Gi&+Yz&+Ge&n %t.
+
+:idea a
+all:A &+Ylightbulb &nlights up over the top of %a's head!
+me:What's on your &+Cmind&n?
+
+:jinx s
+target:%a points at you and yells '&+GJINX&n!!!'
+sender:Got %#!
+others:%a points at %t and yells '&+GJINX&n!!!'
+
+:laydown s
+target:%a lays down next to you.
+sender:What are your &+Rintentions&n?
+
+:lcry a
+all:%a &+Glaughs &nso hard that %@ &+Ccries&n.
+me:You &+Glaugh &nuntil you &+Ccry&n.
+
+:licke s
+target:%a &+Rlicks &nyour ear.
+sender:Oh.. &+rkinky&n.
+others:%a &+Rlicks&n %t's ear.
+
+:lip s
+target:%a kisses you sweetly on the &+Rlips&n.
+sender:You kiss %t sweetly on the &+Rlips&n.
+others:%a kisses %t sweetly on the &+Rlips&n.
+
+:loser s
+target:%a points at you and yells &+Y'LOSER&n!'
+sender:What a &+Yloser&n!
+others:%a points at %t and yells '&+YLOSER&n!'
+
+:lovehug s
+target:%a hugs you close placing %^ head on your shoulder, telling you how much %@ loves you.
+sender:You hug %t lovingly.
+others:%a hugs %t lovingly.
+
+:lurk a
+all:%a lurks in the &+Bshadows&n.
+me:You lurk in the &+Bshadows&n.
+
+:melt sa
+all:%a melts into a &+Cpuddle &non the ground.
+me:Help!!! I'm &+CMelting&n!
+target:%a &+Cmelts &nat your touch.
+sender:You &+Cmelt&n at %t's touch.
+others:%a &+Cmelts &nat %t's touch.
+
+:mistype sa
+all:%a can not &+Mtype&n correctly at this present time, please forgive %~.
+me:Having problems &+Gtyping&n?
+target:%a thinks that you can't &+Ctype&n too well.
+sender:Isn't that rude?!?
+others:%a thinks that %t can't &+Btype &nto well.
+
+:moo as
+me:You moo like a cow.
+all:%a moos like a cow.
+target:%a opens %^ mouth and moos at you.
+sender:You moo at %t.
+others:%a opens %^ mouth and moos at %t.
+
+:moon asi
+me:Eeewww! How rude!
+all:%a pulls down %^ pants, showing %^ ass to everyone.
+target:%a turns around and pulls %^ pants, right in your face.
+sender:You stick your ass in %t's face.
+others:%a moons %t!
+
+:mosh as
+me:You jump around the room, breaking things.
+all:%a jumps around the room, breaking things.
+target:%a jumps at you, slamming you into the wall!
+sender:You jump at %t, slamming %# into the wall!
+others:%a jumps at %t, slamming %# into the wall!
+
+:nape s
+target:%a &+Cnuzzles &nthe nape of your neck and kisses it softly.
+sender:You &+Cnuzzle&n the nape of %t's neck and kiss it softly.
+others:%a &+Mnuzzles &nthe nape of %t's neck and kisses it softly.
+
+:nature a
+me:&+gNature's &na'calling!
+all:%a says 'brb... &+gnature &nrun'
+
+:nohear s
+target:%a covers %^ ears so that %@ can't hear you.
+sender:You cover your ears so that you can't hear %t.
+others:%a covers %^ ears so that %@ can't hear %t.
+
+:noogie s
+target:%a &+Gnoogies &nyou.
+sender:You &+Gnoogie &n%t.
+others:%a &+Gnoogies &n%t.
+
+:panic a
+me:Calm down!  What's my name?!?
+all:%a begins to &+Bpanic&n.
+
+:pathet as
+target:%a thinks that you are &+cpathetic&n.
+sender:How rude!
+others:%a thinks that %t is &+cpathetic&n.
+all:%a thinks that %@ is &+cpathetic&n.
+me:You're not &+cpathetic&n.
+
+:piddle a
+me:Use the toilet next time!
+all:%a leaves a puddle all over the floor.
+
+:pit s
+target:%a picks you up and &+Yhurls &nyou into the nearest &+Bpit&n.
+sender:You pick up %t and &+Yhurl&n %# into the nearest &+Bpit&n.
+others:%a picks up %t and &+Yhurls &n%# into the nearest &+Bpit&n.
+
+:pity s
+target:%a &+Gpities&n you.
+sender:You &+Bpity &n%t.
+others:%a &+Bpities&n %t.
+
+:pnoid as
+target:%a feels that you are a little bit &+Yp&+Ga&+Yr&+Ga&+Yn&+Go&+Yi&+Gd&n.
+sender:Humm, what makes you think that?
+others:%a feels that %t is a little bit &+Gp&+Ya&+Gr&+Ya&+Gn&+Yo&+Gi&+Yd&n.
+all:%a is starting to act &+Gp&+Ya&+Gr&+Ya&+Gn&+Yo&+Gi&+Yd&n.
+me:They're all around me!
+
+:power a
+all:%a yells, "I just can't do it Cap'n! I don't have the power!"
+me:What? Not enough power?
+
+:puh a
+me:Must be puhin' pretty bad!
+all:%a makes a large puhing motion with his hand.
+
+:pulse as
+target:%a checks your &+Rpulse&n.
+sender:Humm... how do I do this again?
+others:%a checks %t's &+Rpulse&n.
+all:%a checks %^ &+Rpulse&n.
+me:Nope, not &+Bdead &nyet.
+
+:quack as
+all:%a quacks like a &+Yduck&n.
+me:&+YQUACK QUACK&n!
+target:%a &+Yquacks &nat you playfully.
+sender:You &+Yquack &nat %t playfully?
+others:%a &+Yquacks &nat %t playfully.
+
+:reach s
+target:%a reaches out for your hand.
+sender:Just a little bit closer..
+others:%a reaches out for %t's hand.
+
+:reject s
+target:%a takes a sticker marked &+g'Reject'&n and plasters on your forehead.
+sender:You take a sticker marked &+g'Reject' &nand plaster it on %$ forehead.
+others:%a takes a sticker marked &+g'Reject'&n and plasters it on the forehead of %t.
+
+:relax s
+target:%a thinks that you should &+Crelax&n.
+sender:Hope they don't take that the wrong way.
+others:%a thinks that %t should &+Crelax&n.
+
+:rice s
+target:%a throws rice at you.
+sender:You throw rice at %t.
+others:%a throws rice at %t.
+
+:salt a
+me:You pour salt in your wounds.
+all:%a pours salt into %^ wounds.
+
+:shadow a
+me:Keep it up, and someday maybe you can beat up Mike Tyson!
+all:%a boxes with %^ shadow, and %^ shadow knocks %~ out.
+
+:shiverc a
+me:Is it really that &+ccold&+B?
+all:%a &+Bshivers &nfrom the &+Ccold&n.
+
+:shoulder s
+target:%a offers %^ shoulder for you to &+Ccry &non.
+sender:That's really nice of you.
+others:%a offers %^ shoulder for %t to &+Ccry &non.
+
+:sick a
+all:%a looks a little &+gsick&n.
+me:Are you feeling ok?
+
+:sledge s
+target:%a hits you over the head with a sledge hammer.
+sender:&+mTHWACK&n!
+others:%a hits %t over the head with a sledge hammer.
+
+:sleep a
+all:%a falls down sleeping.
+me:&+cZZZZZZZZZZZ&+Bzzzzzzzz&n.....
+
+:smack s
+target:%a smacks you across the mouth.
+sender:You smack %t sharply.
+others:%a smacks %t across the mouth!
+
+:smilel s
+target:%a smiles at you &+mlovingly&n.
+sender:You smile &+mlovingly &nat %t.
+others:%a smiles at %t &+mlovingly&n.
+
+:sneef a
+me:You &+Gsneef&n.
+all:%a &+Gsneefs&n.
+
+:sniggle s
+target:%a &+Bsniggles &nyou (pretty kinky, eh?).
+sender:You &+Bsniggle&n %t (kinky!).
+others:%a&+B sniggles&n with %t (pretty kinky, eh?).
+
+:soaker sa
+all:%a pulls out %^ &+YSuper&+GSoaker &nXP150 and sprays you all!
+me:Yes! The &+YSuper&+GSoaker &nXP150!
+target:%a pulls out %^ &+YSuper&+GSoaker &nXP150 and then sprays you!
+sender:Perfect shot!
+others:%a just hosed down %t with %^ &+YSuper&+GSoaker&n!
+
+:sorry s
+target:%a &+Bapologizes &nto you.
+sender:You better &+Bapologize &nfor that!
+others:%a &+Bapologizes &nto %t.
+
+:stretch a
+me:Ahh that felt good.
+all:%a stretches out all of %^ tight muscles.
+
+:stupid a
+all:%a is feeling pretty stupid.
+me:DUH!!
+
+
+:sugar a
+me:Hey! Chill out!
+all:%a flies around the room acting all hyper!
+
+
+:surren as
+me:I give up!
+all:%a throws %^ hands in the air and shouts 'I give up!'
+target:%a surrenders to you.
+sender:You hold up your white flag.
+others:%a surrenders to %t.
+
+:swat as
+me:You &+Bswat &nat a fly that is buzzing annoyingly around your head.
+all:%a &+Bswats &nat an annoying fly.
+target:%a&+B swats &nyou playfully on the arm.
+sender:You &+Bswat&n %t on the arm.
+others:%a &+Bswats &n%t playfully on the arm.
+
+:think as
+me:&+GBrain&n hurting?
+all:%a is trying to &+Bthink&n.
+target:%a is &+Bthinking &nabout you.
+others:%a is &+Bthinking &nabout %t.
+sender:You &+Bthink &nabout %t.
+
+:toe asi
+all:%a looks at %^ toes, so %@ can &+Gcount &nto 20.
+me:You &+Gcount&n your toes.
+target:%a plays &+Gfootsie&n with you.
+sender:You play &+Gfootsie&n with %t.
+others:%a plays &+Gfootsie&n with %t.
+
+:twit s
+target:%a labels you &+Y'Twit of the Century'
+others:%a labels %t &+M'Twit of the Century'
+sender:What a &+Gtwit&n!
+
+:uhoh a
+me:Oh poop....
+all:%a realizes %@ made a vital error...
+
+:unidle asf
+me:You slowly tip over and fall to the ground with a loud 'THUD!' You find yourself staring at the sky wondering how long you have been idle.
+all:You watch in wonder as %a slowly tips over and falls to the ground with a loud 'THUD'!
+target:%a slaps you upside the head in an attempt to wake you from your deep state of idleness!
+others:%a slaps %t upside the head in an attempt to wake %# from %$ deep state of idleness!
+sender:You slap %t in the head!
+
+:valium as
+target:%a thinks that you need a &+Bvalium&n.
+sender:Think %t is stressed eh?
+others:%a thinks that %t should take a &+Bvalium&n.
+all:%a screams out, "I need a &+Bvalium&n!!"
+me:&+BValium&n.. &+Bvalium&n.. please..
+
+:vodka as
+all:%a pulls out a bottle of vodka and chugs.
+me:Where's the chaser??
+target:%a pours you a double shot of vodka.
+sender:We know what you want!
+others:%a pours %t a double shot of vodka.
+
+:waff as
+all:%a gets a &+Cwarm &*and &+Cfuzzy &*feeling.
+me:You get a &+Cwarm &*and &+Cfuzzy &*feeling.
+target:%a gives you a &+Cwarm &*and &+Cfuzzy &*feeling.
+sender:You give %t a &+Cwarm &*and &+Cfuzzy &*feeling.
+others:%a gives %t a &+Cwarm &*and &+Cfuzzy &*feeling.
+
+:wakeup as
+target:%a tries to wake you up.
+sender:Did %t fall asleep on you?
+others:%a is trying to wake %t up.
+all:%a screams, "&+RWAKE UP&n!!"
+me:That must have woken everyone up!
+
+:wank a
+all:%a makes a blank face and starts doing a wanking motion.
+me:&+GWank&n, &+Gwank&n, &+Gwank&n...
+
+:wanker s
+target:%a takes a magic marker and writes &+Y'Wanker'&n on your forehead.
+sender:You take a magic marker and write &+C'Wanker'&n on %$ forehead.
+others:%a takes a magic marker and writes &+C'Wanker'&n on the forehead of %t.
+
+:warcry a
+all:%a lets out a loud warcry!
+me:Go get 'em!
+
+:weenie s
+target:%a points at you and screams &+G'WEENIE!' &nat the top of his lungs.
+sender:You call %t a &+Gweenie&n.
+others:You watch as %a points at %t and screams &+C'WEENIE!'&n.
+
+:welcome s
+target:%a &+Mwelcomes &nyou.
+sender:You &+Cwelcome &n%t to this humble abode.
+others:%a &+Cwelcomes &n%t.
+
+:whew a
+me:You throw your hands up in the air and say &+Y'Whew! That was close!'
+all:%a throws %^ hands up in the air and says &+B'Whew! &That was close!'
+
+:whine a
+me:Oh &+Bbitch bitch&+M moan moan&n...
+all:%a &+Rwhines&n annoyingly.
+
+:whyme a
+all:%a looking confused holds out %s hands, looks up, and says, "Why me?"
+me:Asking the age old question, huh?
+
+:witch s
+target:%a points at you and shouts 'A &+Bwitch&n! A &+Bwitch&n! &+RBURN &n%#!'
+sender:Why that lowdown, magic-using, wartfaced, long-nosed...
+others:%a points at %t and shouts 'A &+Bwitch&n! A &+Bwitch&n!&+R BURN&n %#!'
+
+:wtears s
+target:%a gently wipes the tears from your eyes.
+sender:You wipe the tears away from %t's eyes.
+
+:woohoo as
+target:%a looks at you and lets out an energetic, 'WOO HOO!'
+sender:Mass!
+others:%a looks at %t and lets out an energetic, 'WOO HOO!'
+all:%a lets out an energetic, 'WOO HOO!'
+me:WOO HOO!
+
+:zerbert si
+target:%a gives you a playful &+Gzerbert&n, right on the tummy!
+sender:You give %t a playful &+Gzerbert&n, right on the tummy!
+others:%a gives %t a playful &+Gzerbert&n, right on the tummy!
+
+# These two lines must be left at the end of this file.
+# Terrible things could happen if they're missing.
+

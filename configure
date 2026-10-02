@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# Autoconfigure script - CDirt - G. Castrataro, 1999
+
+gcc -o .config config.c -lcrypt
+
+./.config
+mv .config.pri.tmp .config.pri
+mv .config.mkfile.tmp .config.mkfile
+cat .config.pri .config.sec >include/config.h
+cat .config.mkfile .makefile.in >src/Makefile
+
+echo -n [Enter/Compile, CTRL-C/abort] 
+read
+
+cd src ; make clean ; make depend ; make all ; cd ..
+mv bin/aberd.new bin/aberd
+
+echo -n [Enter/Run, CTRL-C/abort]
+read
+
+cd bin
+./dns-serv
+sleep 1
+./aberd
+
+

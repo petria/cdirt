@@ -1,0 +1,22 @@
+&+MGod/Master User Commands
+&+B-------------------------------------------------------------------------------
+&+WPLOC		&+wChange a players location without them knowing.
+&+WCRASH		&+wLike the SHUTDOWN command, but kills the iDIRT Daemon
+&+WUPPER		&+wCommunication channel for Upper Gods.
+&+WNOUPPER		&+wToggle listening to the Upper God channel.
+&+WFLIST		&+wLook at a players forget list.
+&+WSOCKET		&+wView/edit file descriptors.
+&+WSEESOCKET	&+wToggle the viewing of socket messages.
+&+WEFLAGS		&+wView/edit a players eflags.
+&+WNOBEEP		&+wDisable beeps.
+&+WSEEIDLE		&+wSee real idle times.
+&+WCODING		&+wToggle the CODING flag.
+&+WTEXTRAW		&+wRAW with a specific word in the brackets.
+&+WVIEWCOM		&+wView player's input handlers.
+&+WSIGNAL		&+wSend a signal to the iDIRT Daemon.
+&+WREBOOT		&+wReboot the MUD.
+&+WBRESET		&+wFlag the MUD for reboot upon next reset.
+&+WUPDATE		&+wUpdate the MUD
+&+WPZAP		&+wPretend-Zap a player.
+&+WNOPUNT		&+wFlag yourself as unpuntable.
+&+B-------------------------------------------------------------------------------

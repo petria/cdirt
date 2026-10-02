@@ -1,0 +1,49 @@
+#!/bin/sh
+#
+# Print a table showing how many players are at each level.
+# Read the first argument, or Dump's default player-file if none is given.
+#
+# -Nicknack
+
+../bin/dump $1 | gawk '
+
+             BEGIN         { sort = "sort -n"
+                   
+                        AppWiz = 12; Emeriti = 250; Wizard = 500
+                        Istari = 10000; ArchWiz = 45000; Demi = 68000
+			Shalafi = 75000; God = 90000 
+
+                             name[1] = "Novice"; name[2] = "Adventurer"
+                             name[3] = "Hero";   name[4] = "Warrior"
+			     name[5] = "Champion"; name[6] = "Conjurer"
+                             name[7] = "Magician"; name[8] = "Enchanter"
+                             name[9] = "Sorceror"; name[10] = "Warlock"
+                             name[11] = "Legend"; name[AppWiz] = "AppWiz" 
+			     name[Wizard] = "Wizard"; name[Istari] = "Istari"
+	          	     name[ArchWiz] = "ArchWiz"; name[Demi] = "Demigod"
+      			     name[Shalafi] = "Shalafi"; name[God] = "God"
+                             name[God] = "God"
+                           }
+
+                           { ++players; }
+             $3 < AppWiz   { ++n[$3]; next }
+	     $3 < Emeriti  { ++n[AppWiz]; next}
+	     $3 < Wizard   { ++n[Emeriti]; next }
+             $3 < Istari   { ++n[Wizard]; next }
+             $3 < ArchWiz  { ++n[Istari]; next }
+	     $3 < Demi     { ++n[ArchWiz]; next }
+	     $3 < Shalafi  { ++n[Demi]; next }
+             $3 < God      { ++n[Shalafi]; next }
+                           { ++n[God] }
+
+             END           { print "Level      Name     #\n" \
+				   "------------------------"
+
+                             for (i in name)
+	 			 printf( "%5d  %10s  %d\n", i, name[i], n[i]) \
+				 | sort
+
+			     close(sort);
+                             print "\nTotal: " players 
+                           }'
+

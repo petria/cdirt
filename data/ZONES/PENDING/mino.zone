@@ -1,0 +1,376 @@
+
+
+#include "exits.h"
+#include "cflags.h"
+#include "undef.h"
+
+
+%mobiles
+
+Name 		= 
+PName		= 
+Location	= 
+Strength	= 
+Damage		= 
+Armor		= 
+Aggression	= 
+Speed		= 
+Description	= 
+End		= 
+
+
+%objects	  
+
+Name            = 
+Location	= IN_ROOM:mino
+OFlags		{
+Size		= 
+Weight		= 
+BValue		= 
+State		= 
+Maxstate 	= 
+Desc[0]		= 
+Desc[1]		= 
+end		= 
+
+
+%locations
+
+
+minotaur1 s:minotaur2; 
+
+minotaur2 w:minotaur68 s:minotaur7 e:minotaur3 n:minotaur1;
+
+minotaur3 w:minotaur2 e:minotaur4;
+
+minotaur4 s:minotaur9 e:minotaur5 w:minotaur3;
+
+minotaur5 w:minotaur4 e:minotaur6 s:minotaur10;
+
+minotaur6 w:minotaur5;
+
+minotaur7 n:minotaur2 s:minotaur12;
+
+minotaur8 e:minotaur9 s:minotaur13;
+
+minotaur9 n:minotaur4 w:minotaur8;
+
+minotaur10 n:minotaur5 w:minotaur8;
+
+minotaur11 w:minotaur10 e:minotaur79 s:minotaur15;
+
+minotaur12 n:minotaur7 s:minotaur16;
+
+minotaur13 n:minotaur8;
+
+minotaur14 n:minotaur10 s:minotaur19;
+
+minotaur15 n:minotaur11;
+
+minotaur16 n:minotaur12 e:minotaur17;
+
+minotaur17 w:minotaur16 e:minotaur18;
+
+minotaur18 w:minotaur17 e:minotaur19 s:minotaur21;
+
+minotaur19 w:minotaur18 e:minotaur20 n:minotaur14;
+
+minotaur20 w:minotaur19 s:minotaur22;
+  
+minotaur21 n:minotaur18 s:minotaur25;
+
+minotaur22 n:minotaur20;
+
+minotaur23 e:minotaur24;
+
+minotaur24 w:minotaur23 e:minotaur25;
+
+minotaur25 w:minotaur24 e:minotaur26;
+
+minotaur26 w:minotaur25 e:minotaur27;
+
+minotaur27 w:minotaur26 e:minotaur27;
+
+minotaur28 n:minotaur25 s:minotaur29;
+
+minotaur29 n:minotaur28;
+
+minotaur30 n:minotaur27;
+
+minotaur31 e:minotaur32;
+
+minotaur32 w:minotaur31 d:minotaur33;
+
+minotaur33 u:minotaur32 s:minotaur35;
+
+minotaur34 e:minotaur35;
+
+minotaur35 n:minotaur33 s:minotaur38 e:minotaur36 w:minotaur34
+
+minotaur36 w:minotaur35;
+
+minotaur37 w:minotaur46 e:minotaur38;
+
+minotaur38 w:minotaur37 e:minotaur39 n:minotaur35 s:minotaur41;
+
+minotaur39 w:minotaur38;
+
+minotaur40 e:minotaur47;
+
+minotaur41 w:minotaur40 e:minotaur42 n:minotaur38 s:minotaur44; 
+
+minotaur42 w:minotaur41;
+
+minotaur43 e:minotaur44;
+
+minotaur44 w:minotaur43 e:minotaur45 n:minotaur41;
+
+minotaur45 w:minotaur44;
+
+minotaur46 e:minotaur37 w:minotaur47;
+
+minotaur47 w:minotaur48 e:minotaur46;
+
+minotaur48 e:minotaur47 n:minotaur49;
+
+minotaur49 s:minotaur48 n:minotaur50;
+
+minotaur50 s:minotaur49 n:minotaur51;
+
+minotaur51 w:minotaur52 s:minotaur50;
+
+minotaur52 w:minotaur53 e:minotaur51;
+
+minotaur53 w:minotaur54 e:minotaur52;
+
+minotaur54 w:minotaur55 e:minotaur53;
+
+minotaur55 n:minotaur56 e:minotaur54 w:minotaur69;
+
+minotaur56 s:minotaur55 u:minotaur57;
+
+minotaur57 d:minotaur56 n:minotaur58; 
+
+minotaur58 n:minotaur59 s:minotaur57;
+
+minotaur59 w:minotaur60 n:minotaur63 e:minotaur61 s:minotaur58;
+
+minotaur60 e:minotaur59;
+
+minotaur61 n:minotaur62 w:minotaur59;
+
+minotaur62 s:minotaur61 n:minotaur67 w:minotaur63;
+
+minotaur63 n:minotaur66 e:minotaur62 w:minotaur69 s:minotaur59;
+
+minotaur64 n:minotaur65 e:minotaur63 w:minotaur122;
+
+minotaur65 e:minotaur66 s:minotaur64;
+
+minotaur66 w:minotaur65 e:minotaur67 s:minotaur63;
+
+minotaur67 w:minotaur66 e:minotaur68 s:minotaur62;
+
+minotaur68 w:minotaur67 e:minotaur2;
+
+minotaur69 e:minotaur55 w:minotaur70;
+
+minotaur70 u:minotaur71 e:minotaur69;
+
+minotaur71 d:minotaur70 e:minotaur72;
+
+minotaur72 w:minotaur71 s:minotaur73;
+
+minotaur73 n:minotaur72 e:minotaur74;
+
+minotaur74 w:minotaur73 e:minotaur74 s:minotaur77;
+
+minotaur75 w:minotaur75 s:minotaur76;
+
+minotaur76 n:minotaur75 s:minotaur78 w:minotaur77;
+
+minotaur77 n:minotaur74 e:minotaur76 s:minotaur79;
+
+minotaur78 n:minotaur76;
+
+minotaur79 w:minotaur11  e:minotaur80;
+
+minotaur80 w:minotaur79 e:minotaur81;
+
+minotaur81 w:minotaur80 s:minotaur82;
+
+minotaur82 w:minotaur81 s:minotaur83;
+
+minotaur83 n:minotaur83 d:minotaur84;
+
+minotaur84 n:minotaur83 w:minotaur85 e:minotaur88;
+
+minotaur85 
+
+minotaur86 
+
+minotaur87 
+
+minotaur88 
+
+minotaur89 
+
+minotaur90 
+
+minotaur91 
+
+minotaur92 
+
+minotaur93 
+
+minotaur94 
+
+minotaur95 
+
+minotaur96 
+
+minotaur97
+
+minotaur98
+
+minotaur99
+
+minotaur100
+
+minotaur101
+
+minotaur102
+
+minotaur103
+
+minotaur104
+
+minotaur105
+
+minotaur106
+
+minotaur107
+
+minotaur108
+
+minotaur109
+
+minotaur110
+
+minotaur111
+
+minotaur112
+
+minotaur113
+
+minotaur114
+
+minotaur115
+
+minotaur116
+
+minotaur117
+
+minotaur118
+
+minotaur119
+
+minotaur120
+
+minotaur121
+
+minotaur122
+
+minotaur123
+
+minotaur124
+
+minotaur125
+
+minotaur126
+
+minotaur127
+
+minotaur128
+
+minotaur129
+
+minotaur130
+
+minotaur131
+
+minotaur132
+
+minotaur133
+
+minotaur134
+
+minotaur135
+
+minotaur136
+
+minotaur137
+
+minotaur138
+
+minotaur139
+
+minotaur140
+
+minotaur141
+
+minotaur142
+
+minotaur143
+
+minotaur144
+
+minotaur145
+
+minotaur146
+
+minotaur147
+
+minotaur148
+
+minotaur149
+
+minotaur150
+
+minotaur151
+
+minotaur152
+
+minotaur153
+
+minotaur154
+
+minotaur155
+
+minotaur156
+
+minotaur157
+
+minotaur158
+
+
+minotaur159
+
+minotaur160
+
+minotaur161
+
+minotaur162
+
+minotaur163
+
+minotaur164
+
+minotaur165
+
+minotaur166
+
+minotaur167
+
+minotaur168
+

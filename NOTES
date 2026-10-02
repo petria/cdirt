@@ -1,0 +1,22 @@
+General notes for CDirt 3.0
+=============================================================================
+
+Crippled mobiles (and mortals) can't walk
+Mute mobiles (and mortals) won't cast spells, and can't talk
+Blind mobiles won't attack because they can't see
+Blind players can't see
+Deaf players can't hear
+Added smart mflag, to allow mobiles to be choosy about what they pick up
+System will now load all zones at bootup, eliminating mkdata
+System will store wiz zones as the regular zone format for easy integration
+Timed booting was disabled, use cron daemon instead
+Pfilter for help was eliminated; it was silly
+Crash and Shutdown have been merged to simply crash the game
+Restart daemon deleted; it serves no purpose on a mostly stable game
+Lflags displayed properly at each room
+Cloned objects will no longer complete quests
+Update saves changes to locations (shouldn't strand players)
+Made master user pass automatically encrypted during setup script
+Made master user automatically get all Pflags and Mask bits on frob or create
+Code simplified in many areas; moved around to make it more logical
+

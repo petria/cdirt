@@ -1,0 +1,81 @@
+---------------------------------------------------------------------
+USING THE MUD PARSER
+---------------------------------------------------------------------
+
+Thought i would include this little file to explain the parser the mud
+uses, because i rewrote it and noticed my new one may be different from
+the old one....
+
+
+Parse stage 1: 
+
+Macros are expanded, and other misc. functions are run.
+(example: !, 0-7, ', :...)
+
+Parse stage 2:
+
+When the parser assigns pl1, pl2, ob1, ob2, item1 & item2, it looks up
+the player's current pronouns and uses the correct values.  Thus give
+him longsword will expand to give <player> longsowrd.  also, the parser
+will autmagically skip prepositions {to from out of...}
+
+
+mkglobals
+---------------
+
+<verb> <word1> <word2> <remainder>
+
+example: 'chat I am the Lizard king'
+
+verb: number taken from the verb list (20 or whatever)
+txt1: assigned to beginning of word1  ("I am the lizard king")
+txt2: assigned to beginning of word2  ("am the lizard king")
+item1: assigned to word1 ("I")
+item2: assigned to word2 ("am")
+ob1: word1's object number or -1  ("am" == -1)
+ob2: word2's object number or -1  ("the" == -1)
+pl1: word1's player number or -1  ("am" == -1)
+pl2: word2's player number or -1  ("the" == 1)
+
+
+----------------------------------------------------------------------------
+PLAYER INDEX FUNCTIONS
+----------------------------------------------------------------------------
+
+In addition, fpbns (find player by name short) and fpbn (find player by name)
+have been rewritten into two functions, fmbn (find mob/player by name) &
+fpbn (find player by name).
+
+fpbn will only check players
+fmbn will check players & mobiles
+player names in both of these functions may be abbreviated
+
+
+----------------------------------------------------------------------------
+USING INTSET NUMBERS
+----------------------------------------------------------------------------
+
+Intsets aren't really that complicated.  They are basically the following:
+
+p->len    [an integer describing the length of list]
+p->list   [the list of numbers, a malloc'd array of characters]
+p->maxlen [the max length of the list before a resize is needed]
+
+So the values go into p->list[0]... p->list[p->len - 1]
+You can reference things in intsets by doing something like the following:
+
+for (i = 0; i < lnumchars(ploc(mob)); i++)
+  bprintf("Mob number = %d.\n", lmob_nr(i, ploc(mob)));
+
+So it is's a basic loop done to each of the characters in the 
+mob-intset for the room of the mobile.  lmob_nr(i, ploc(mob)) goes
+to the room data and picks out the i-th mobile's number.  the same
+sort of thing is done with inventories and zones too... pnumobs()
+pobj_nr...
+
+The advantage to doing it this way is that lnumchars is recalculated
+each time, and it allows you to delete things effectively.  the
+current value was removed.
+
+-G. Castrataro
+

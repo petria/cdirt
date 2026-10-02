@@ -1,0 +1,39 @@
+make it so that the mud forces people to compile before running update.
+(so that the game can precompile zones) perhaps store the zone name
+and last modification date, which forces the game to recompile
+modified or new zones.
+
+fix comparecom to not show item #s to mortals
+work on untiecom and tiecom, make them work properly when zones removed
+also make throwcom look better
+get rid of brkword
+put in altnames for mobiles
+indent code with indent
+make a stdinc.h file which includes standard headers which are needed
+in files that bring up errors when they are included normally.
+make stat look more like show
+store as an lflag?
+make fobn and fpbn understand the "@" character
+make it so that you can't abbreviate zones (stupid)
+make it so that you can goto defender2 (2nd mobile
+make all mud data loaded from "extern.h" and "global.h"
+put in timestats for some reason
+make start locations changeable for objects & mobiles
+make bootstrap allow an extra space after flagset, and recover from more errs
+migrate over remaining things from bootstrap (done?)
+put in trace command
+make classes work again (ex foods etc)
+redo directory structure to make a system and user directory
+WHY DOES THE ORDER MATTER IN THE INCLUDE LINE??
+put in wall command
+thryannen not in
+make player booleans part of internal flagset IFLAGS
+add flag to allow player to destruct other's clones (and get owner working
+right - test that part too)
+
+add a frontend to clone to allow you to :
+CREATE OBJECT Sword
+CREATE LOCATION blah
+CREATE MOBILE schwag
+
+

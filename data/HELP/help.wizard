@@ -1,0 +1,23 @@
+&+MWizard Commands (Please get help on a command before using it)
+&+B///////////////////////////////////////////////////////////////////////////////
+&+WUtility					   &+B| &+WCommunication
+&+GALIAS	CHANGE	ZAP	QUIET	SETSTART   &+B| &+CWIZ	NOWIZ	NOSHOUT	NOWISH
+&+GRESET	SET	GOTO	IN/AT	EXORCISE   &+B| &+CECHO	ECHOTO	ECHOALL	LEVECHO
+&+GTRACE	MASK	NOSLAIN	PUNT	RESURRECT  &+B|--------------------------------
+&+GFIND	SILENT	SAVEALL	SHALL	WAR/PEACE  &+B| &+WWeather Control&+B (WEATHER <type>)
+&+GTOUT	MFLAGS	PFLAGS	LFLAGS	STOP/START &+B| CLEAR	RAIN	SHOWERS
+&+GSEEEXT	WBULL	SIC	CFR	FAKEQUIT   &+B| HAILING	SNOW	DRIZZLE
+&+GATVIS	FREAQ			   	   &+B| STORMY	BLIZZARD
+&+B-------------------------------------------|--------------------------------
+&+WSpells (Combat spells kill mortals!)	   &+B| &+WTravel Messages (auto-save)
+&+RBANG	BLIND	CRIPPLE	CURE	DEAFEN	   &+B| &+gREVIEW  PROMPT  SETMIN
+&+RHEAL	HEALALL	FORCE	LIT	FORCEALL   &+B| &+gSETIN   SETVIN  SETMOUT
+&+RMUTE	POSE	WHERE	SUMMON	INVIS/VIS  &+B| &+gSETOUT  SETVOUT SETSUM
+&+RHEALALL	FORCEALL                           &+B| &+gSETQIN  SETSIT  SETSIN
+					    &+B| &+gSETQOUT SETSTND SETSOUT
+&+B-------------------------------------------|--------------------------------
+&+WInformational				   &+B| &+WCreation
+&+YMWHO	ZONES	OBJECTS	MOBILES	GLOBAL	   &+B| &+yCLONE	DESTRUCT
+&+YSTATS	MSTAT	SHOW	ACCT	FOLLIST	   &+B| &+yLOAD	STORE	MAXSTATE
+&+B///////////////////////////////////////////////////////////////////////////////
+&+YType HELP <command> for detailed help on a command.

@@ -1,0 +1,13 @@
+#! /bin/sh
+echo -n "Cleaning up files..."
+cd src
+make distro
+cd ../..
+echo
+echo -n "Archiving..."
+tar cf cdirt.tar cdirt/* cdirt/.config* cdirt/.makefile.in
+echo
+echo -n "Compressing..."
+gzip -f -9 cdirt.tar
+echo
+

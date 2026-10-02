@@ -1,0 +1,26 @@
+                             &=WmMortal Commands
+&+B-------------------------------------------------------------------------------
+&+WMovement Commands                      &+G /   &+WCombat Commands
+&+gNORTH    SOUTH    EAST     WEST         \   &+yKILL     WIELD    FLEE    LOOT
+&+GUP       DOWN     STAND    JUMP         /   &+YEQU      GROUP    PROMOTE
+&+gLOOK     EXITS    SIT      STAND        \   &+yLOSE     BACKSTAB CHALLENGE
+&+B-------------------------------------------------------------------------------
+&+WItem Manipulation Commands             &+m /   &+WInformational Commands
+&+MGET      DROP     REMOVE   WEAR/WEARALL \   &+BQINFO    TIME     UPTIME  COUPLES
+&+mGIVE     STEAL    INVEN    PUT          /   &+bHELP     INFO     WHO     WHON
+&+MEXAMINE  LIGHT    UNLIGHT  PLAY         \   &+BVERSION  CREDITS  PN      VALUE
+&+mPUSH     TURN     OPEN     CLOSE        /   &+bWIZLIST  ACTIONS  BULL    POLICY
+&+MLOCK     UNLOCK   EAT      EMPTY        \   &+BUSERS    LEVELS   QLIST   COMPARE
+&+mTIE      UNTIE    DRINK    THROW        /   &+bAWHO     AWAY     SPELLS
+&+MRUB      FILL                           \   &+BAMUDLIST 
+&+B-------------------------------------------------------------------------------
+&+WCommunication Commands                  &+c/   &+WUtility Commands
+&+CSAY      SHOUT    TELL     WISH         \   &+R!        BECOME   BUG     QUIT
+&+cMAIL     ANON     NOANON   CONVERSE     /   &+rSAVE     TYPO     QUESTS  FORGET
+&+CGCHAT    CHANNEL  EMOTE    EMOTETO      \   &+RCLEAR    KLOCK    OPTIONS SCORE
+&+cCHAT     NOCHAT   ACHAT    ATELL        /   &+rLASTON   CHANGE   BEEP    DESC
+&+CGTELL    REPORT   ICHAT                 \   &+RSUGGEST  
+&+B-------------------------------------------------------------------------------
+&+WTopics &+W(&+YFor detailed help on a command or topic, type HELP <command/topic>&+W) 
+&+YMAGIC   TOGGLE    LANGUAGE
+&+B-------------------------------------------------------------------------------

@@ -1,0 +1,20 @@
+
+DONE change_weather() is called every two seconds to adjust weather.
+show_weather() uses mynum to show weather when you walk into a room.
+adjust_weather(): tells users about a change in weather.
+modify_weather(): re-write to base on location (like now.  :)) 
+DONE weathercom() is game weather command.
+
+season_name() returns the name of the eason.
+ctime (climatetime()) is a game command that tells about the season/time/etc.
+
+climate_split_time*(
+weather_desc(): one word desc of weather.  (delete)
+climate_desc()L:  short desc (delete)
+move_time() updates the time (for weather) and is called every two seconds.
+which_season() updates the season and is called several places including main.c
+_set_time is called by main to set the "mud" date.  
+settimecom() is used to set the time.  Just remove this.
+climate_day can be removed.
+climate_time can be removed.
+

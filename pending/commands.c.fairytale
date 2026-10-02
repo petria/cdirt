@@ -1,0 +1,112 @@
+From interaccess.com!knappenp Thu Feb 22 14:46:00 1996
+Return-Path: <knappenp@interaccess.com>
+Received: from roatan.ucs.indiana.edu (roatan.ucs.indiana.edu [129.79.1.65]) by copper.ucs.indiana.edu (8.6.11/8.6.11) with ESMTP id OAA29801 for <gcastrat@copper.ucs.indiana.edu>; Thu, 22 Feb 1996 14:46:21 -0500
+Received: from flowbee.interaccess.com (knappenp@flowbee.interaccess.com [198.80.0.32]) by roatan.ucs.indiana.edu (8.7.3/8.7.3/1.10IUPO) with ESMTP id OAA25811 for <gcastrat@copper.ucs.indiana.edu>; Thu, 22 Feb 1996 14:46:32 -0500 (EST)
+Received: (from knappenp@localhost) by flowbee.interaccess.com (8.7.2/8.6.9) id NAA29413 for gcastrat@copper.ucs.indiana.edu; Thu, 22 Feb 1996 13:45:17 -0600 (CST)
+Date: Thu, 22 Feb 1996 13:45:17 -0600 (CST)
+From: Paul Knappenberger <knappenp@interaccess.com>
+Message-Id: <199602221945.NAA29413@flowbee.interaccess.com>
+To: gcastrat@copper.ucs.indiana.edu
+Status: RO
+
+commands.c for fairytale.zone (for real)
+
+  if (pvis(max_players + MOB_FAIRYTALE_SLEEPING_BEAUTY) < 4 || 
+      alive(max_players + MOB_FAIRYTALE_SLEEPING_BEAUTY) == -1)
+    {
+      bprintf("\t%s\n", Quests[Q_FAIRYTALE]);
+      counter += 1;
+    }
+
+  
+void pushcom(void)
+
+
+  /* If it's the original object (only), not a copy:
+   */
+  switch (x) {
+
+#ifdef LOCMIN_FAIRYTALE
+  case OBJ_FAIRYTALE_NULL_DRAWBRIDGE:
+    if (state(x) == 1)
+      {
+	setobjstate(x, 0);
+	sendf(oloc(x), "The drawbridge is extended with a mighty shove.\n");
+      }
+    else
+      {
+	setobjstate(x, 1);
+	sendf(oloc(x), "The drawbridge is retracted with a mighty heave.\n");
+      }
+    return;
+    break;
+#endif
+
+
+void opencom()
+
+#ifdef LOCMIN_FAIRYTALE
+/*
+ * open Sleeping Beauty's coffin.  Sleeping Beauty has to move to the room, unless she's dead.
+ * She also has to be "sleeping," and will wake with a prince's kiss. 
+*/
+  case OBJ_FAIRYTALE_BEAUTY_COFFIN:
+    if (alive(max_players + MOB_FAIRYTALE_SLEEPING_BEAUTY) != -1 && 
+	pvis(max_players + MOB_FAIRYTALE_SLEEPING_BEAUTY) > 2)
+      {
+	bprintf("You open the coffin to reveal a sleeping beauty.\n");
+	setploc(max_players + MOB_FAIRYTALE_SLEEPING_BEAUTY, ploc(mynum));
+	setobjstate(OBJ_FAIRYTALE_BEAUTY_COFFIN, 0);
+	return;
+      }
+    break;
+#endif
+  }
+}
+
+
+  
+#ifdef LOCMIN_FAIRYTALE
+  if (snoggie == max_players + MOB_FAIRYTALE_SLEEPING_BEAUTY && ploc(snogger) == oloc(OBJ_FAIRYTALE_BEAUTY_COFFIN))
+    {
+      if (!ststflg(mynum, SFL_FEMALE))
+	{
+	  char coffin_text[BUFSIZ];
+	  char **q;
+
+	  /* This bit needs work */
+	  sprintf(coffin_text, "The coffin is open.");
+	  q = &olongt(onum(OBJ_FAIRYTALE_BEAUTY_COFFIN), 0);
+	  if (*q != NULL) free(*q);
+	
+	  *q = COPY(coffin_text);
+
+	  pvis(snoggie) = 0;
+	  sendf(ploc(mynum),
+		"Sleeping Beauty awakes. She climbs from her coffin "
+		"and stands before you in her radiance, then smiles and retreats from "
+		"her chambers to rule her kingdom.\n");
+
+	  /* send her someplace else */
+	  setploc(max_players + MOB_FAIRYTALE_SLEEPING_BEAUTY, LOC_FAIRYTALE_FAIRYTALE136);
+
+#if QUEST_SYSTEM
+	  if (plev(mynum) >= QUEST_LEVEL)
+	    {
+	      qsetflg(mynum, Q_FAIRYTALE);
+	    }
+#else
+	  qsetflg(mynum, Q_FAIRYTALE);
+#endif
+	}
+      else
+	{
+	  bprintf("She doesn't want to be kissed by you!\n");
+	}
+    return 1;
+    }
+  return 0;
+#endif
+}
+
+

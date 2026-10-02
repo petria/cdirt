@@ -1,0 +1,51 @@
+The send_msg function is a generalized way of sending a message to a
+player/mob, player/mobs in a room, or an object's owner.  The syntax is
+described below...
+
+
+send_msg(int dest, int mode, int min, int max, int x1, 
+         int x2, char *format,...);
+
+----
+DEST is a mud-index for an object, player/mob, or location.  int2idx is
+called in order to make the transformation, or you may use the macro
+sendloc(plr) for player's locations.  It may also be assigned the value
+DEST_ALL, which means to send it to everybody in the game.
+
+----
+MODE is one of { MODE_SFLAG, MODE_NSFLAG, MODE_PFLAG, MODE_NPFLAG, 
+                 MODE_LANG, MODE_LANG, MODE_NLANG, MODE_QUIET, 0 }
+
+MODE_SFLAG, and MODE_PFLAG can be OR'd (|) with any sflag or pflag.
+MODE_NSFLAG and MODE_NPFLAG are the exact same except they require
+that the person does not have that flag.  If you would like to
+not have any special requirements, you may use a 0.
+
+---
+MIN and MAX are minimum and maximum levels for the message.
+
+---
+X1 and X2 are players to not send the messages to, or the keyword NOBODY
+
+---
+FORMAT has the usual meaning, same as printf but with color codes :)
+
+
+Example:
+
+    send_msg (DEST_ALL, MODE_SFLAG | MS (SFL_SEEEXT), max (pvis (mynum),
+               LVL_WIZARD), LVL_MAX, mynum, NOBODY, "&+B[&+WChange &*(Sex: "
+              "%s): &+W%s &*changed &+W%s&+B]\n",
+              psex (a) ? "Female" : "Male", pname (mynum), pname (a));
+
+Will send out a message to everyone who has the SEEEXT sflag set, with
+the minimum level being either the player's visibility or WIZARD.  It
+will not send the message to the person who typed the command, mynum.
+
+
+The two remaining functions, sendf and sendl, are for mobiles/players, and
+locations respectively.  Examples:
+
+sendf(plx, "Hello.\n");
+sendl(ploc(plx), "Hello again.\n");
+
