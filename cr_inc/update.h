@@ -5,7 +5,7 @@
 #define FLUSH_TIMEOUT 5
 
 typedef struct _reboot_record {
-  char		version[10];
+  char		version[sizeof(VERSION)];
   int		main_socket;
   time_t	last_startup;
   int		numresets;

@@ -90,6 +90,10 @@ void setpfighting (int x, int y) {
 Boolean set_weapon (int plr, int wpn) {
   int owpn, i;
 
+  /* setoloc uses -1 as a temporary location while removing objects. */
+  if (plr < 0 || plr >= numchars)
+    return False;
+
   /* Erase any weapon we were allready wielding */
 
   if ((owpn = pwpn (plr)) != -1 && oloc (owpn) == plr) {

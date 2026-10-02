@@ -1514,10 +1514,15 @@ void setoloc (int obj, int loc, int c) {
     break;
   }
 
-  if (c >= WIELDED_BY)
-    set_weapon(loc, obj);
-  if (c == WORN_BY || c == BOTH_BY)
-    wear_item(obj, loc);
+  /* loc may be -1 while destruct_object compacts the object array.  Such an
+   * object is not being assigned to a character, so do not index player or
+   * equipment state with that sentinel. */
+  if (loc >= 0 && loc < numchars) {
+    if (c >= WIELDED_BY)
+      set_weapon(loc, obj);
+    if (c == WORN_BY || c == BOTH_BY)
+      wear_item(obj, loc);
+  }
 
   oloc (obj) = loc;   /* needs to come after, because set_weapon & */
   ocarrf (obj) = c;   /* wear_item will mess up BOTH_BY            */

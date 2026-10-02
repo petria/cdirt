@@ -143,7 +143,7 @@ void run_reboot (Boolean crash, Boolean will_update) {
     if (players[i].iamon)
       nplayers++;
 
-  strcpy (reboot_rec.version, VERSION);
+  snprintf (reboot_rec.version, sizeof (reboot_rec.version), "%s", VERSION);
   reboot_rec.main_socket = main_socket;
   reboot_rec.last_startup = last_startup;
   reboot_rec.numresets = numresets;

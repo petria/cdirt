@@ -49,5 +49,7 @@ data/mkdata.log
 
 # Temporary editor and operating-system files
 **/.#*
+**/.~lock.*
 **/*~
 .DS_Store
+.idea/

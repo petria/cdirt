@@ -1,6 +1,7 @@
 .git
 .gitignore
 .dockerignore
+.idea
 .config
 .config.pri
 .config.pri.tmp
