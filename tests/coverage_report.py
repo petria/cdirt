@@ -17,28 +17,28 @@ def main() -> None:
     scenarios = json.loads((TESTS / "scenarios.json").read_text())
     quest_scenarios = json.loads((TESTS / "quest_scenarios.json").read_text())
 
-    runtime_verbs = {word for scenario in scenarios for word in scenario["verbs"]}
-    # docker_smoke.py also exercises every source-routed default fallback.
-    runtime_verbs.update(entry["word"] for entry in verbs["entries"]
-                         if entry["dispatch_kind"] == "doverb-default")
+    # Declarations are plans, not execution evidence. Only a matching run report
+    # can establish that a word, branch, state assertion, or audience check passed.
+    from docker_verb_audit import fingerprint
+    report_path = Path("/tmp/cdirt-verb-audit/report.json")
+    if "--audit-report" in sys.argv:
+        report_path = Path(sys.argv[sys.argv.index("--audit-report") + 1])
+    report = json.loads(report_path.read_text()) if report_path.exists() else {}
+    valid_report = report.get("fingerprint") == fingerprint()
+    if report and not valid_report:
+        print(f"Audit report is stale: {report_path}; no runtime credit")
+    steps = [step for case in report.get("cases", []) for step in case["steps"]
+             if valid_report and step.get("passed") and step.get("output_asserted")]
+    runtime_verbs = {step["word"] for step in steps if step.get("word")}
     missing_verbs = [entry for entry in verbs["entries"]
                      if entry["word"] not in runtime_verbs]
     handlers = {entry["primary_handler"] for entry in verbs["entries"]
-                if entry["dispatch_kind"] == "c-handler"}
-    covered_handlers = {
-        entry["primary_handler"]
-        for scenario in scenarios
-        for word in scenario["verbs"]
-        for entry in verbs["entries"]
-        if entry["word"] == word and entry["dispatch_kind"] == "c-handler"
-    }
+                if entry["route_kind"] == "handler"}
+    covered_handlers = {step["handler"] for step in steps if step.get("handler") in handlers}
     missing_handlers = sorted(handlers - covered_handlers)
-    branch_cases = {
-        (handler, branch)
-        for scenario in scenarios
-        for handler, branches in scenario.get("branch_cases", {}).items()
-        for branch in branches
-    }
+    branch_cases = {(step.get("route"), step["case"]) for step in steps}
+    contracts = json.loads((TESTS / "verb_contracts.json").read_text())
+    pending_routes = [route for route in contracts["routes"] if route["status"] != "reviewed"]
     active_quests = {entry["symbol"] for entry in world["quests"]}
     runtime_quest_scenarios = [scenario for scenario in quest_scenarios
                                if scenario.get("status") == "runtime"]
@@ -52,11 +52,13 @@ def main() -> None:
     linked_count = sum(target.startswith("^") for room in rooms
                        for target in room["exits"].values())
 
-    print(f"Verb inputs with runtime cases: {len(runtime_verbs & {e['word'] for e in verbs['entries']})}/"
+    print(f"Verb inputs with passing runtime evidence: {len(runtime_verbs & {e['word'] for e in verbs['entries']})}/"
           f"{verbs['verb_count']}")
     print(f"C handlers with runtime cases: {len(covered_handlers)}/{len(handlers)}")
     print(f"Named handler branch cases: {len(branch_cases)}")
-    print(f"Active quests with runtime cases: {len(covered_quests & active_quests)}/{len(active_quests)}")
+    print(f"Passing steps with state assertions: {sum(bool(step.get('state_asserted')) for step in steps)}")
+    print(f"Routes awaiting complete branch review: {len(pending_routes)}/{len(contracts['routes'])}")
+    print(f"Active quests with declared scenarios: {len(covered_quests & active_quests)}/{len(active_quests)}")
     print(f"Quest route zones referenced by runtime quest cases: {len(covered_zones)}")
     print(f"Zone walk inventory: {room_count} rooms and {exit_count} declared exits "
           f"({linked_count} linked/stateful exits)")
@@ -78,7 +80,7 @@ def main() -> None:
                 sites = ", ".join(f"{site['file']}:{site['line']}"
                                    for site in quest["trigger_sites"])
                 print(f"  {quest['symbol']} ({quest['name']}): {sites}")
-    strict_failure = (("--strict" in sys.argv and (missing_verbs or missing_quests))
+    strict_failure = (("--strict" in sys.argv and (missing_verbs or missing_quests or pending_routes))
                       or ("--strict-handlers" in sys.argv and missing_handlers))
     if strict_failure:
         raise SystemExit(1)

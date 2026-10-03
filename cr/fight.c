@@ -49,7 +49,7 @@ void __generalmsg(int attacker, int victim, Bodypart *area, char *msg)
    sendf(victim, buff);
 
    CODES(buff, OTHER, msg);
-   send_msg(ploc(attacker), MODE_NSFLAG | MS(SFL_NOFIGHT),
+   send_msg(sendloc(attacker), MODE_NSFLAG | MS(SFL_NOFIGHT),
             LVL_MIN, LVL_MAX, attacker, victim, buff);
  }
 
@@ -140,7 +140,7 @@ void wieldcom (void) {
   }
   set_weapon (mynum, a);
 
-  send_msg (ploc (mynum), 0, pvis (mynum), LVL_MAX, mynum, NOBODY,
+  send_msg (sendloc(mynum), 0, pvis (mynum), LVL_MAX, mynum, NOBODY,
             "%s wields the %s.\n", pname (mynum), oname (a));
 
   bprintf ("You are now wielding the %s.\n", oname (a));
@@ -920,7 +920,7 @@ void removeobj(Boolean echo, int ob, int plx) {
 
   if (echo) {
     sendf(plx, "You remove the %s.\n", oname(ob)); 
-    send_msg (ploc(plx), 0, pvis (plx), LVL_MAX, plx, NOBODY,
+    send_msg (sendloc(plx), 0, pvis (plx), LVL_MAX, plx, NOBODY,
             "%s removes the %s.\n", pname(plx), oname(ob1));
   }
 
@@ -945,7 +945,7 @@ void wearcom(int plr, int item) {
   else {
     if (test_wear(plr, a)) {
       wear_item(a, plr);
-      send_msg(ploc(plr), 0, pvis(plr), LVL_MAX, plr, NOBODY,
+      send_msg(sendloc(plr), 0, pvis(plr), LVL_MAX, plr, NOBODY,
         "\001p%s\003 wears the %s.\n", pname(plr), oname(a));
     }
   }
@@ -1375,7 +1375,7 @@ void check_parts(int victim, int attacker, Bodypart *area, Boolean sever)
   }
   else if (vital(neck(victim)) == -1) {
     sendf(attacker, "You have decapitated %s!\n", pname(victim));
-    send_msg(ploc(attacker), 0, LVL_MIN, LVL_MAX, attacker, victim,
+    send_msg(sendloc(attacker), 0, LVL_MIN, LVL_MAX, attacker, victim,
       "\001p%s\003 has decapitated \001p%s\003!!\n", 
            pname(attacker), pname(victim));
     sendf(victim,"Your head is severed off and your see your body "
@@ -1453,7 +1453,7 @@ void flee (int plr, Boolean check_dir) {
     setpfighting (mynum, -1);
     drop_some_objects (mynum);
  
-    send_msg (ploc (mynum), 0, pvis (mynum), LVL_MAX, mynum, NOBODY,
+    send_msg (sendloc(mynum), 0, pvis (mynum), LVL_MAX, mynum, NOBODY,
               "%s drops things as %s make a frantic attempt to escape.\n",
               pname (mynum), psex (mynum) ? "she" : "he");
 

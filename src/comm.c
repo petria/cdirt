@@ -228,6 +228,10 @@ saytocom (void)
     bprintf ("What do you want to say?\n");
     return;
   }
+  if (ststflg(mynum, SFL_DUMB)) {
+    bprintf("You're a mute now, sorry.\n");
+    return;
+  }
   sprintf (lang, " in &+C%s&+w", Nflags[plang (mynum)]);
 
   lsend_msg(sendloc(mynum), MODE_LANG | ML (plang (mynum)), 

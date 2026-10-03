@@ -24,7 +24,7 @@ def run_case(case: dict) -> str:
     container = f"cdirt-quest-{suffix}"
     port = available_port()
     subprocess.run(
-        ["docker", "run", "--detach", "--rm", "--name", container,
+        ["docker", "run", "--detach", "--name", container,
          "--publish", f"127.0.0.1:{port}:6715", IMAGE],
         check=True, stdout=subprocess.DEVNULL,
     )
@@ -71,7 +71,7 @@ def run_case(case: dict) -> str:
     finally:
         if actor is not None:
             actor.close()
-        subprocess.run(["docker", "stop", container], check=False,
+        subprocess.run(["docker", "rm", "--force", container], check=False,
                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 

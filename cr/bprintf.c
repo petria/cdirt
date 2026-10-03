@@ -7,6 +7,7 @@
 #include "mud.h"
 #include "rooms.h"
 #include "bprintf.h"
+#include "audit.h"
 
 char color_table[] =
 {                               /* Not beautiful, but efficient :) */
@@ -205,7 +206,17 @@ void strformat (char *srcs, Boolean has_color) {
   register unsigned char *src = srcs;
   Boolean is_color = False;
   
+#ifdef CDIRT_AUDIT
+  static int audit_format_depth;
+  int audit_player = real_mynum;
+  size_t audit_offset;
+#endif
+
   init_memory();
+#ifdef CDIRT_AUDIT
+  audit_offset = dest - out_buffer(audit_player);
+  audit_format_depth++;
+#endif
 
   while (*src != 0) {
     if (*src != '&' && !(iscntrl(*src)))                /* normal case */
@@ -229,6 +240,11 @@ void strformat (char *srcs, Boolean has_color) {
     dest += 9;
   }
   *dest = 0;
+#ifdef CDIRT_AUDIT
+  if (!--audit_format_depth)
+    audit_output(audit_player, out_buffer(audit_player) + audit_offset,
+                 dest - out_buffer(audit_player) - audit_offset);
+#endif
 }
 
 char * do_colorcode(char *srcs, Boolean *is_color, Boolean has_color) 
@@ -552,5 +568,3 @@ void pfilter (char *arg, Boolean has_color) {
     *dest = 0;
   }
 }
-
-

@@ -50,7 +50,9 @@ class VerbCatalogTests(unittest.TestCase):
             with self.subTest(word=entry["word"]):
                 self.assertTrue(entry["dispatch"])
                 self.assertIn(entry["dispatch_kind"], {"c-handler", "doverb-default"})
-                expected_handler = entry["dispatch"][-1]
+                expected_handler = (entry["handlers"][0] if len(entry["handlers"]) == 1
+                                    else "inline:" + entry["dispatch_source_word"].lower()
+                                    if entry["route_kind"] == "inline" else "doverb_default")
                 self.assertEqual(entry["primary_handler"], expected_handler)
 
     def test_aliases_share_their_verb_number(self) -> None:

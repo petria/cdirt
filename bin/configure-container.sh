@@ -21,7 +21,7 @@ printf '%s\n' \
   'mud@localhost' \
   'gcc' \
   "$CDIRT_CFLAGS" \
-  '-lm -lcrypt' \
+  "${CDIRT_LDFLAGS:--lm -lcrypt}" \
   'N' \
   | /mud/.config
 

@@ -17,6 +17,23 @@ OUT = ROOT / "tests" / "verb_catalog.json"
 SCENARIOS = ROOT / "tests" / "scenarios.json"
 
 CONTROL = {"if", "else", "for", "while", "switch", "return", "sizeof"}
+HELPERS = {"bprintf", "erreval", "mudlog", "trapch", "send_msg", "sendl",
+           "sendf", "setup_globals", "getreinput", "getinput", "strcpy",
+           "strcat", "sprintf", "free", "malloc"}
+
+
+def function_sources() -> dict[str, dict[str, object]]:
+    """Index actual definitions, so macros and output helpers are not handlers."""
+    result = {}
+    pattern = re.compile(r"^(?:static\s+)?(?:void|Boolean|int|char\s*\*|long(?:\s+int)?)\s+"
+                         r"([A-Za-z_]\w*)\s*\([^;{}]*\)\s*\{", re.M)
+    for directory in ("src", "cr"):
+        for path in sorted((ROOT / directory).glob("*.c")):
+            source = path.read_text()
+            for match in pattern.finditer(source):
+                result[match.group(1)] = {"file": str(path.relative_to(ROOT)),
+                                         "line": source.count("\n", 0, match.start()) + 1}
+    return result
 
 
 def read_verbs() -> list[dict[str, object]]:
@@ -89,8 +106,9 @@ def direct_calls(block: str) -> list[str]:
     return names
 
 
-def read_routes() -> dict[str, list[str]]:
-    body = switch_body(PARSE.read_text())
+def read_routes(sources: dict[str, str] | None = None) -> dict[str, list[str]]:
+    sources = sources or {}
+    body = switch_body(sources.get("src/parse.c", PARSE.read_text()))
     labels = list(re.finditer(r"\bcase\s+VERB_([A-Z0-9_]+)\s*:", body))
     routes: dict[str, list[str]] = {}
     pending: list[str] = []
@@ -106,15 +124,15 @@ def read_routes() -> dict[str, list[str]]:
         routes[verb] = []
 
     # These commands are consumed before the main doverb switch.
-    routes.update(read_switch_routes(CLIENT, "Boolean aberchat_parse"))
-    routes.update(read_switch_routes(FLAGS, "Boolean flags_parse"))
+    routes.update(read_switch_routes(CLIENT, "Boolean aberchat_parse", sources.get("cr/client.c")))
+    routes.update(read_switch_routes(FLAGS, "Boolean flags_parse", sources.get("cr/flags.c")))
     for direction in ("NORTH", "EAST", "SOUTH", "WEST", "UP", "DOWN"):
         routes[direction] = ["dodirn"]
     return routes
 
 
-def read_switch_routes(path: Path, function_signature: str) -> dict[str, list[str]]:
-    source = path.read_text()
+def read_switch_routes(path: Path, function_signature: str, source: str | None = None) -> dict[str, list[str]]:
+    source = path.read_text() if source is None else source
     start = source.index(function_signature)
     opening = source.index("{", start)
     depth = 0
@@ -148,6 +166,7 @@ def read_switch_routes(path: Path, function_signature: str) -> dict[str, list[st
 def main() -> None:
     entries = read_verbs()
     routes = read_routes()
+    functions = function_sources()
     scenarios = json.loads(SCENARIOS.read_text())
     scenarios_by_word: dict[str, list[str]] = {}
     for scenario in scenarios:
@@ -162,7 +181,15 @@ def main() -> None:
         macro = str(entry["word"]).upper()
         source_word, calls = id_routes.get(int(entry["verb_id"]), (macro, []))
         entry["dispatch"] = calls or ["doverb_default"]
-        entry["primary_handler"] = calls[-1] if calls else "doverb_default"
+        handlers = [name for name in calls if name in functions and name not in HELPERS]
+        entry["handlers"] = handlers
+        entry["primary_handler"] = (handlers[0] if len(handlers) == 1
+                                    else f"inline:{source_word.lower()}" if calls
+                                    else "doverb_default")
+        entry["route_id"] = (f"verb:{int(entry['verb_id'])}" if calls else "doverb_default")
+        entry["route_kind"] = ("handler" if len(handlers) == 1 else "inline" if calls
+                               else "fallback")
+        entry["handler_sources"] = {name: functions[name] for name in handlers}
         entry["dispatch_source_word"] = source_word if calls else "DEFAULT"
         entry["dispatch_kind"] = "c-handler" if calls else "doverb-default"
         entry["test_cases"] = scenarios_by_word.get(str(entry["word"]), [])

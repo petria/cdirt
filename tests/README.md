@@ -96,3 +96,45 @@ actor, target, same-room witnesses, and excluded remote players. Quest cases
 must start from clean world state and assert prerequisites, each trigger,
 completion/reward state, repeat behavior, and reset/reload behavior. Keep a
 failing sequence as a regression case before changing the game code.
+
+## Exact verb behavior runner
+
+Build the diagnostic profile using the same supported image name:
+
+```sh
+docker build -t cdirt:latest \
+  --build-arg 'CDIRT_CFLAGS=-O0 -g3 -fno-omit-frame-pointer -fcommon -DCDIRT_DOCKER -DCDIRT_AUDIT --coverage -DCDIRT_COVERAGE' \
+  --build-arg 'CDIRT_LDFLAGS=-lm -lcrypt --coverage' .
+python3 -m unittest discover -s tests -v
+python3 tests/docker_verb_audit.py
+python3 tests/handler_branch_report.py
+python3 tests/coverage_report.py --verbose
+```
+
+`--case <scenario-id>` selects one or more scenarios. The default report is
+`/tmp/cdirt-verb-audit/report.json`; its adjacent scenario folders hold the exact
+receipts, snapshots, raw socket captures, active preprocessed sources, coverage,
+and server log. `--strict` is an eventual completeness gate, and intentionally
+fails while complete branch review or registered input evidence is missing.
+Declarations and alias names never substitute for executed commands. Prefix
+commands record their resolved route without crediting an unexecuted full word.
+
+The audit control is compiled only with `CDIRT_AUDIT` and enabled only when
+`CDIRT_AUDIT_SOCKET` is set. It uses a UNIX socket in a private temporary host
+folder; no network port or wizard command exposes fixtures. The regular build
+has no audit control, captures, or timer override.
+
+A sanitizer profile can add `-fsanitize=address,undefined` to both CFLAGS and
+LDFLAGS, with `-fno-sanitize-recover=all` in CFLAGS. Add
+`--build-arg CDIRT_ASAN_OPTIONS=detect_leaks=0` to separate generator lifetime
+allocations from memory access failures. This option applies to `make gen` only.
+Keep `--coverage -DCDIRT_COVERAGE` for this runner. Run diagnostic
+profiles sequentially and restore the regular image afterward:
+
+```sh
+docker build -t cdirt:latest .
+```
+
+See [VERB_AUDIT.md](VERB_AUDIT.md) for findings and review limits. Refresh the
+route contracts with `python3 tests/build_verb_contracts.py` after regenerating
+the verb catalog; authored scenarios and review notes are preserved.

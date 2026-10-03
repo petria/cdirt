@@ -167,34 +167,37 @@ Boolean int_is_on_table(int *table, int object) {
 /* matches wildcards on p in the form of <*blah> and <blah*> */
 
 Boolean match (char *a, const char *b) {
-  char *ptr, p[100], q[100];
-  int len;
+  char *ptr, *p, *q;
+  size_t len;
+  Boolean result = False;
 
-  strcpy(p, a);                               /* ignore case */
-  strcpy(q, b);
+  p = strdup(a);                              /* ignore case */
+  q = strdup(b);
+  if (!p || !q) { free(p); free(q); return False; }
   for (ptr = p ; *ptr ; ptr++)
-    *ptr = tolower(*ptr);
+    *ptr = tolower((unsigned char)*ptr);
   for (ptr = q ; *ptr ; ptr++)
-    *ptr = tolower(*ptr);
+    *ptr = tolower((unsigned char)*ptr);
 
   len = strlen(p);
-  if (*(p + len - 1) == '\n') {               /* remove newline */
+  if (len && *(p + len - 1) == '\n') {        /* remove newline */
     *(p + len - 1) = 0;
     len--;
   }
   if (*p == '*') {                            /* (*blah) */
     ptr = strstr(q, p + 1);
     if (ptr && strlen(ptr) == len - 1)        /* lengths match */
-      return True;
+      result = True;
   }
-  else if (*(p + len - 1) == '*') {           /* (blah*) */
+  else if (len && *(p + len - 1) == '*') {     /* (blah*) */
     *(p + len) = 0;
     if (!strncmp(q, p, len - 1))
-      return True;
+      result = True;
   }
   else if (!strcmp(q, p))
-    return True;
-  return False;
+    result = True;
+  free(p); free(q);
+  return result;
 }
 
 #ifdef SYS_EQBUG
@@ -648,4 +651,3 @@ int idx2int(int n, int type) {
   }
   return(-1);
 }
-

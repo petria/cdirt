@@ -49,9 +49,9 @@ void p_sendto (int to, char *text) {
 
 /*
  * Values for destination:
- * negative values:            room number.
- * 0..max_players - 1          player with specified index.
- * max_players..numchars - 1   mobile with specified index.
+ * Unified identifiers from int2idx(index, LOC/CHAR/OBJ).
+ * For a character room use sendloc(character), not the raw ploc index.
+ * sendf and sendl accept raw indexes and encode them internally.
  * DEST_ALL                    all players and mobiles.
  */
 

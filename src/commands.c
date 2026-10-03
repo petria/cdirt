@@ -1635,16 +1635,26 @@ void blowcom (void) {
 }
 
 
+static int light_target(void) {
+  if (EMPTY(item1)) {
+    bprintf("Tell me more?\n");
+    return -1;
+  }
+  if (ob1 < 0 || ob1 >= numobs || (!ishere(ob1) && !iscarrby(ob1, mynum))) {
+    bprintf("It isn't here.\n");
+    return -1;
+  }
+  return ob1;
+}
+
 void lightcom () {
   int a;
 #ifdef LOCMIN_EFOREST
   char s[100];
 #endif
 
-  if (!ishere(ob1) && !iscarrby(ob1, mynum))
+  if ((a = light_target()) == -1)
     return;
-  else
-    a = ob1;
 
   if (!hasobjtype(mynum, OFL_LIT) && !ststflg (mynum, SFL_LIT)) {
     bprintf ("You have nothing to light things from.\n");
@@ -1697,17 +1707,15 @@ void lightcom () {
 void extinguishcom () {
   int a;
 
-  if (!ishere(ob1) && !iscarrby(ob1, mynum))
+  if ((a = light_target()) == -1)
     return;
-  else
-    a = ob1;
 
   if (!otstbit (a, OFL_LIT))
     bprintf ("It\'s not lit!\n");
   else if (!otstbit (a, OFL_EXTINGUISH))
     bprintf ("You can\'t extinguish that!\n");
   else {
-    setobjstate (a, 1);
+    if (omaxstate(a) >= 1) setobjstate (a, 1);
     oclrbit (a, OFL_LIT);
     bprintf ("Ok\n");
   }

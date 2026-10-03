@@ -153,8 +153,10 @@ int find_free_player_slot (void) {
 int find_pl_index (int fd) {
   int plx;
 
+  if (fd < 0 || fd >= MAX_FDS)
+    return -1;
   plx = sock_fds[fd];
-  if (plx > max_players || fildes(plx) != fd)
+  if (plx < 0 || plx >= max_players || fildes(plx) != fd)
     return -1;
   else
     return plx;

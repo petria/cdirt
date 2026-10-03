@@ -88,7 +88,7 @@ def run(limit: int | None, start: int, report_path: Path | None, strict: bool) -
     suffix = "".join(secrets.choice(string.ascii_uppercase) for _ in range(6))
     container = f"cdirt-zone-walk-{suffix.lower()}"
     port = available_port()
-    subprocess.run(["docker", "run", "--detach", "--rm", "--name", container,
+    subprocess.run(["docker", "run", "--detach", "--name", container,
                     "--publish", f"127.0.0.1:{port}:6715", IMAGE], check=True,
                    stdout=subprocess.DEVNULL)
     time.sleep(2)  # Let the bundled DNS helper and game loop settle.
@@ -184,7 +184,7 @@ def run(limit: int | None, start: int, report_path: Path | None, strict: bool) -
     finally:
         if player:
             player.close()
-        subprocess.run(["docker", "stop", container], check=False,
+        subprocess.run(["docker", "rm", "--force", container], check=False,
                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 

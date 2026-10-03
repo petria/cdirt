@@ -4,6 +4,7 @@
  ****************************************************************/
 
 #include "main.h"
+#include "audit.h"
 
 void save_pid(void) {
   char pidfile[50];
@@ -360,6 +361,7 @@ void main_loop (int listen_socket) {
 #endif
 
   dnsboot();
+  audit_boot();
 
   while (1) {
     FD_ZERO(&input_set);                           /* zero out all fd_sets */
@@ -369,6 +371,7 @@ void main_loop (int listen_socket) {
     set_fd(listen_socket, False);
     set_fd(aberfd, aber_output);
     set_fd(dnsfd, dns_output);
+    set_fd(audit_descriptor(), False);
 
     for (plx = 0 ; plx < max_players ; plx++)      /* add player fds */
       if (is_conn(plx) && !linkdead(plx)) {
@@ -399,7 +402,7 @@ void main_loop (int listen_socket) {
     timeout.tv_sec = (slice.tv_sec + 1) % 2;
 
     if (!fds) {
-      on_timer();
+      if (!audit_manual_timer()) on_timer();
       continue;
     }
       
@@ -409,7 +412,9 @@ void main_loop (int listen_socket) {
 	fds--;
       }
       if (FD_ISSET (fd, &input_set)) {
-        if (fd == listen_socket)
+        if (fd == audit_descriptor())
+          audit_request();
+        else if (fd == listen_socket)
           new_connection(fd);
         else if (fd == aberfd)
           aberchat_readpacket(fd);

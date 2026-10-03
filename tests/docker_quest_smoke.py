@@ -33,7 +33,7 @@ def run() -> None:
     container = f"cdirt-quest-smoke-{suffix.lower()}"
     port = available_port()
     subprocess.run(
-        ["docker", "run", "--detach", "--rm", "--name", container,
+        ["docker", "run", "--detach", "--name", container,
          "--publish", f"127.0.0.1:{port}:6715", IMAGE],
         check=True, stdout=subprocess.DEVNULL,
     )
@@ -85,7 +85,7 @@ def run() -> None:
     finally:
         for player in players:
             player.close()
-        subprocess.run(["docker", "stop", container], check=False,
+        subprocess.run(["docker", "rm", "--force", container], check=False,
                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 

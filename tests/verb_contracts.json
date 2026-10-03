@@ -1,0 +1,7930 @@
+{
+  "version": 1,
+  "routes": [
+    {
+      "id": "verb:1",
+      "kind": "handler",
+      "words": [
+        "go",
+        "climb"
+      ],
+      "handlers": [
+        "dogocom"
+      ],
+      "source": {
+        "dogocom": {
+          "file": "src/move.c",
+          "line": 492
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:2",
+      "kind": "handler",
+      "words": [
+        "north"
+      ],
+      "handlers": [
+        "dodirn"
+      ],
+      "source": {
+        "dodirn": {
+          "file": "src/move.c",
+          "line": 40
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:3",
+      "kind": "handler",
+      "words": [
+        "east"
+      ],
+      "handlers": [
+        "dodirn"
+      ],
+      "source": {
+        "dodirn": {
+          "file": "src/move.c",
+          "line": 40
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:4",
+      "kind": "handler",
+      "words": [
+        "south"
+      ],
+      "handlers": [
+        "dodirn"
+      ],
+      "source": {
+        "dodirn": {
+          "file": "src/move.c",
+          "line": 40
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:5",
+      "kind": "handler",
+      "words": [
+        "west"
+      ],
+      "handlers": [
+        "dodirn"
+      ],
+      "source": {
+        "dodirn": {
+          "file": "src/move.c",
+          "line": 40
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:6",
+      "kind": "handler",
+      "words": [
+        "up"
+      ],
+      "handlers": [
+        "dodirn"
+      ],
+      "source": {
+        "dodirn": {
+          "file": "src/move.c",
+          "line": 40
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:7",
+      "kind": "handler",
+      "words": [
+        "down"
+      ],
+      "handlers": [
+        "dodirn"
+      ],
+      "source": {
+        "dodirn": {
+          "file": "src/move.c",
+          "line": 40
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:8",
+      "kind": "handler",
+      "words": [
+        "aboot"
+      ],
+      "handlers": [
+        "cmd_aboot"
+      ],
+      "source": {
+        "cmd_aboot": {
+          "file": "cr/client.c",
+          "line": 275
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:9",
+      "kind": "handler",
+      "words": [
+        "acct"
+      ],
+      "handlers": [
+        "acctcom"
+      ],
+      "source": {
+        "acctcom": {
+          "file": "src/acct.c",
+          "line": 18
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:10",
+      "kind": "handler",
+      "words": [
+        "actions"
+      ],
+      "handlers": [
+        "actionscom"
+      ],
+      "source": {
+        "actionscom": {
+          "file": "cr/actions.c",
+          "line": 120
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:11",
+      "kind": "handler",
+      "words": [
+        "advisor",
+        "demi"
+      ],
+      "handlers": [
+        "com_handler"
+      ],
+      "source": {
+        "com_handler": {
+          "file": "src/comm.c",
+          "line": 67
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:12",
+      "kind": "handler",
+      "words": [
+        "aid"
+      ],
+      "handlers": [
+        "spellcom"
+      ],
+      "source": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:13",
+      "kind": "handler",
+      "words": [
+        "ainfo"
+      ],
+      "handlers": [
+        "cmd_ainfo"
+      ],
+      "source": {
+        "cmd_ainfo": {
+          "file": "cr/client.c",
+          "line": 251
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:14",
+      "kind": "handler",
+      "words": [
+        "alias"
+      ],
+      "handlers": [
+        "aliascom"
+      ],
+      "source": {
+        "aliascom": {
+          "file": "src/commands.c",
+          "line": 1294
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:15",
+      "kind": "inline",
+      "words": [
+        "aloof"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:16",
+      "kind": "handler",
+      "words": [
+        "aflags"
+      ],
+      "handlers": [
+        "obj_flags"
+      ],
+      "source": {
+        "obj_flags": {
+          "file": "cr/flags.c",
+          "line": 322
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:17",
+      "kind": "handler",
+      "words": [
+        "achat"
+      ],
+      "handlers": [
+        "cmd_achat"
+      ],
+      "source": {
+        "cmd_achat": {
+          "file": "cr/client.c",
+          "line": 76
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:18",
+      "kind": "handler",
+      "words": [
+        "agod"
+      ],
+      "handlers": [
+        "cmd_achat"
+      ],
+      "source": {
+        "cmd_achat": {
+          "file": "cr/client.c",
+          "line": 76
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:19",
+      "kind": "handler",
+      "words": [
+        "acode"
+      ],
+      "handlers": [
+        "cmd_achat"
+      ],
+      "source": {
+        "cmd_achat": {
+          "file": "cr/client.c",
+          "line": 76
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:20",
+      "kind": "handler",
+      "words": [
+        "amudlist"
+      ],
+      "handlers": [
+        "cmd_amudlist"
+      ],
+      "source": {
+        "cmd_amudlist": {
+          "file": "cr/client.c",
+          "line": 315
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:21",
+      "kind": "handler",
+      "words": [
+        "amasslist"
+      ],
+      "handlers": [
+        "cmd_amasslist"
+      ],
+      "source": {
+        "cmd_amasslist": {
+          "file": "cr/client.c",
+          "line": 319
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:22",
+      "kind": "handler",
+      "words": [
+        "acopyright"
+      ],
+      "handlers": [
+        "cmd_acopyright"
+      ],
+      "source": {
+        "cmd_acopyright": {
+          "file": "cr/client.c",
+          "line": 353
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:23",
+      "kind": "handler",
+      "words": [
+        "apolicy"
+      ],
+      "handlers": [
+        "cmd_apolicy"
+      ],
+      "source": {
+        "cmd_apolicy": {
+          "file": "cr/client.c",
+          "line": 332
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:24",
+      "kind": "handler",
+      "words": [
+        "akick"
+      ],
+      "handlers": [
+        "cmd_akick"
+      ],
+      "source": {
+        "cmd_akick": {
+          "file": "cr/client.c",
+          "line": 140
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:25",
+      "kind": "handler",
+      "words": [
+        "aversion"
+      ],
+      "handlers": [
+        "cmd_aversion"
+      ],
+      "source": {
+        "cmd_aversion": {
+          "file": "cr/client.c",
+          "line": 386
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:26",
+      "kind": "handler",
+      "words": [
+        "anon"
+      ],
+      "handlers": [
+        "anoncom"
+      ],
+      "source": {
+        "anoncom": {
+          "file": "src/comm.c",
+          "line": 460
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:27",
+      "kind": "handler",
+      "words": [
+        "apply",
+        "wear"
+      ],
+      "handlers": [
+        "wearcom"
+      ],
+      "source": {
+        "wearcom": {
+          "file": "cr/fight.c",
+          "line": 930
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:28",
+      "kind": "handler",
+      "words": [
+        "armor"
+      ],
+      "handlers": [
+        "armorcom"
+      ],
+      "source": {
+        "armorcom": {
+          "file": "cr/fight.c",
+          "line": 853
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:29",
+      "kind": "handler",
+      "words": [
+        "ashutdown"
+      ],
+      "handlers": [
+        "cmd_ashutdown"
+      ],
+      "source": {
+        "cmd_ashutdown": {
+          "file": "cr/client.c",
+          "line": 297
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:30",
+      "kind": "handler",
+      "words": [
+        "ask",
+        "tell"
+      ],
+      "handlers": [
+        "tellcom"
+      ],
+      "source": {
+        "tellcom": {
+          "file": "src/comm.c",
+          "line": 305
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "fallback:asmortal",
+      "kind": "fallback",
+      "words": [
+        "asmortal"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "fallback-verbs",
+          "case": "fallback-asmortal"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:32",
+      "kind": "handler",
+      "words": [
+        "at"
+      ],
+      "handlers": [
+        "incom"
+      ],
+      "source": {
+        "incom": {
+          "file": "src/commands.c",
+          "line": 675
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:33",
+      "kind": "handler",
+      "words": [
+        "atell"
+      ],
+      "handlers": [
+        "cmd_atell"
+      ],
+      "source": {
+        "cmd_atell": {
+          "file": "cr/client.c",
+          "line": 92
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:34",
+      "kind": "handler",
+      "words": [
+        "areply"
+      ],
+      "handlers": [
+        "cmd_areply"
+      ],
+      "source": {
+        "cmd_areply": {
+          "file": "cr/client.c",
+          "line": 121
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:35",
+      "kind": "handler",
+      "words": [
+        "attack",
+        "break",
+        "hit",
+        "kill",
+        "smash"
+      ],
+      "handlers": [
+        "killcom"
+      ],
+      "source": {
+        "killcom": {
+          "file": "cr/fight.c",
+          "line": 1577
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:36",
+      "kind": "handler",
+      "words": [
+        "atvis"
+      ],
+      "handlers": [
+        "atviscom"
+      ],
+      "source": {
+        "atviscom": {
+          "file": "src/wizard.c",
+          "line": 1945
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:37",
+      "kind": "handler",
+      "words": [
+        "autoexit"
+      ],
+      "handlers": [
+        "togglecom"
+      ],
+      "source": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:38",
+      "kind": "inline",
+      "words": [
+        "away"
+      ],
+      "handlers": [
+        "awaymsgcom",
+        "togglecom"
+      ],
+      "source": {
+        "awaymsgcom": {
+          "file": "src/commands.c",
+          "line": 66
+        },
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:39",
+      "kind": "handler",
+      "words": [
+        "awho"
+      ],
+      "handlers": [
+        "cmd_awho"
+      ],
+      "source": {
+        "cmd_awho": {
+          "file": "cr/client.c",
+          "line": 372
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:40",
+      "kind": "handler",
+      "words": [
+        "awiz"
+      ],
+      "handlers": [
+        "com_handler"
+      ],
+      "source": {
+        "com_handler": {
+          "file": "src/comm.c",
+          "line": 67
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:41",
+      "kind": "handler",
+      "words": [
+        "babel"
+      ],
+      "handlers": [
+        "spellcom"
+      ],
+      "source": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:42",
+      "kind": "handler",
+      "words": [
+        "backstab"
+      ],
+      "handlers": [
+        "backstabcom"
+      ],
+      "source": {
+        "backstabcom": {
+          "file": "src/commands.c",
+          "line": 92
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:43",
+      "kind": "handler",
+      "words": [
+        "banlist"
+      ],
+      "handlers": [
+        "banlistcom"
+      ],
+      "source": {
+        "banlistcom": {
+          "file": "src/ban.c",
+          "line": 9
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:44",
+      "kind": "handler",
+      "words": [
+        "banhost"
+      ],
+      "handlers": [
+        "bancom"
+      ],
+      "source": {
+        "bancom": {
+          "file": "src/ban.c",
+          "line": 21
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:45",
+      "kind": "handler",
+      "words": [
+        "banchar"
+      ],
+      "handlers": [
+        "bancom"
+      ],
+      "source": {
+        "bancom": {
+          "file": "src/ban.c",
+          "line": 21
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:46",
+      "kind": "handler",
+      "words": [
+        "banacct"
+      ],
+      "handlers": [
+        "bancom"
+      ],
+      "source": {
+        "bancom": {
+          "file": "src/ban.c",
+          "line": 21
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:47",
+      "kind": "handler",
+      "words": [
+        "banwho"
+      ],
+      "handlers": [
+        "bancom"
+      ],
+      "source": {
+        "bancom": {
+          "file": "src/ban.c",
+          "line": 21
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:48",
+      "kind": "inline",
+      "words": [
+        "bang"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:49",
+      "kind": "handler",
+      "words": [
+        "bash"
+      ],
+      "handlers": [
+        "bashcom"
+      ],
+      "source": {
+        "bashcom": {
+          "file": "src/commands.c",
+          "line": 88
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:50",
+      "kind": "handler",
+      "words": [
+        "become"
+      ],
+      "handlers": [
+        "becom"
+      ],
+      "source": {
+        "becom": {
+          "file": "src/commands.c",
+          "line": 1372
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:51",
+      "kind": "handler",
+      "words": [
+        "beep"
+      ],
+      "handlers": [
+        "beepcom"
+      ],
+      "source": {
+        "beepcom": {
+          "file": "src/commands.c",
+          "line": 2131
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:52",
+      "kind": "handler",
+      "words": [
+        "bhands"
+      ],
+      "handlers": [
+        "spellcom"
+      ],
+      "source": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:53",
+      "kind": "handler",
+      "words": [
+        "blind"
+      ],
+      "handlers": [
+        "spellcom"
+      ],
+      "source": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:54",
+      "kind": "handler",
+      "words": [
+        "blow"
+      ],
+      "handlers": [
+        "blowcom"
+      ],
+      "source": {
+        "blowcom": {
+          "file": "src/commands.c",
+          "line": 1580
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:55",
+      "kind": "handler",
+      "words": [
+        "blur"
+      ],
+      "handlers": [
+        "spellcom"
+      ],
+      "source": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:56",
+      "kind": "handler",
+      "words": [
+        "bong"
+      ],
+      "handlers": [
+        "bongcom"
+      ],
+      "source": {
+        "bongcom": {
+          "file": "cr/bong.c",
+          "line": 27
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:57",
+      "kind": "handler",
+      "words": [
+        "bob"
+      ],
+      "handlers": [
+        "bobcom"
+      ],
+      "source": {
+        "bobcom": {
+          "file": "src/comm.c",
+          "line": 415
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:58",
+      "kind": "handler",
+      "words": [
+        "breset"
+      ],
+      "handlers": [
+        "bresetcom"
+      ],
+      "source": {
+        "bresetcom": {
+          "file": "src/god.c",
+          "line": 81
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:59",
+      "kind": "handler",
+      "words": [
+        "brief"
+      ],
+      "handlers": [
+        "togglecom"
+      ],
+      "source": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:60",
+      "kind": "handler",
+      "words": [
+        "bug"
+      ],
+      "handlers": [
+        "bugcom"
+      ],
+      "source": {
+        "bugcom": {
+          "file": "src/commands.c",
+          "line": 1018
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:61",
+      "kind": "handler",
+      "words": [
+        "burn"
+      ],
+      "handlers": [
+        "burncom"
+      ],
+      "source": {
+        "burncom": {
+          "file": "src/wizard.c",
+          "line": 1566
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:62",
+      "kind": "handler",
+      "words": [
+        "busy"
+      ],
+      "handlers": [
+        "togglecom"
+      ],
+      "source": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:63",
+      "kind": "handler",
+      "words": [
+        "buy"
+      ],
+      "handlers": [
+        "buycom"
+      ],
+      "source": {
+        "buycom": {
+          "file": "cr/store.c",
+          "line": 98
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:64",
+      "kind": "handler",
+      "words": [
+        "cfr"
+      ],
+      "handlers": [
+        "cfrcom"
+      ],
+      "source": {
+        "cfrcom": {
+          "file": "src/wizard.c",
+          "line": 120
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:65",
+      "kind": "handler",
+      "words": [
+        "change"
+      ],
+      "handlers": [
+        "changecom"
+      ],
+      "source": {
+        "changecom": {
+          "file": "src/change.c",
+          "line": 67
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:66",
+      "kind": "handler",
+      "words": [
+        "challenge"
+      ],
+      "handlers": [
+        "challengecom"
+      ],
+      "source": {
+        "challengecom": {
+          "file": "cr/fight.c",
+          "line": 302
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:67",
+      "kind": "handler",
+      "words": [
+        "channel"
+      ],
+      "handlers": [
+        "channelcom"
+      ],
+      "source": {
+        "channelcom": {
+          "file": "src/comm.c",
+          "line": 531
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:68",
+      "kind": "handler",
+      "words": [
+        "chat",
+        "gossip"
+      ],
+      "handlers": [
+        "com_handler"
+      ],
+      "source": {
+        "com_handler": {
+          "file": "src/comm.c",
+          "line": 67
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:69",
+      "kind": "inline",
+      "words": [
+        "clear"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "fallback:clevel",
+      "kind": "fallback",
+      "words": [
+        "clevel"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "fallback-verbs",
+          "case": "fallback-clevel"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:71",
+      "kind": "handler",
+      "words": [
+        "close",
+        "shut"
+      ],
+      "handlers": [
+        "closecom"
+      ],
+      "source": {
+        "closecom": {
+          "file": "src/objsys.c",
+          "line": 305
+        }
+      },
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "containers",
+          "case": "close-open"
+        },
+        {
+          "scenario": "containers",
+          "case": "close-already-closed"
+        },
+        {
+          "scenario": "containers",
+          "case": "close-non-openable"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:72",
+      "kind": "handler",
+      "words": [
+        "clone"
+      ],
+      "handlers": [
+        "clonecom"
+      ],
+      "source": {
+        "clonecom": {
+          "file": "src/clone.c",
+          "line": 476
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:73",
+      "kind": "inline",
+      "words": [
+        "color",
+        "monochrome"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:74",
+      "kind": "handler",
+      "words": [
+        "coding"
+      ],
+      "handlers": [
+        "togglecoding"
+      ],
+      "source": {
+        "togglecoding": {
+          "file": "src/god.c",
+          "line": 148
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:75",
+      "kind": "handler",
+      "words": [
+        "compare"
+      ],
+      "handlers": [
+        "comparecom"
+      ],
+      "source": {
+        "comparecom": {
+          "file": "src/commands.c",
+          "line": 2324
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:76",
+      "kind": "handler",
+      "words": [
+        "configure"
+      ],
+      "handlers": [
+        "configurecom"
+      ],
+      "source": {
+        "configurecom": {
+          "file": "cr/configure.c",
+          "line": 126
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:77",
+      "kind": "handler",
+      "words": [
+        "converse"
+      ],
+      "handlers": [
+        "conversecom"
+      ],
+      "source": {
+        "conversecom": {
+          "file": "src/comm.c",
+          "line": 682
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:78",
+      "kind": "inline",
+      "words": [
+        "couples"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:79",
+      "kind": "inline",
+      "words": [
+        "credits"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:80",
+      "kind": "handler",
+      "words": [
+        "cripple"
+      ],
+      "handlers": [
+        "spellcom"
+      ],
+      "source": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:81",
+      "kind": "handler",
+      "words": [
+        "crash"
+      ],
+      "handlers": [
+        "crashcom"
+      ],
+      "source": {
+        "crashcom": {
+          "file": "src/god.c",
+          "line": 47
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:82",
+      "kind": "handler",
+      "words": [
+        "crawl"
+      ],
+      "handlers": [
+        "crawlcom"
+      ],
+      "source": {
+        "crawlcom": {
+          "file": "cr/fight.c",
+          "line": 1762
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "fallback:ctime",
+      "kind": "fallback",
+      "words": [
+        "ctime"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "fallback-verbs",
+          "case": "fallback-ctime"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:84",
+      "kind": "handler",
+      "words": [
+        "cure"
+      ],
+      "handlers": [
+        "curecom"
+      ],
+      "source": {
+        "curecom": {
+          "file": "src/magic.c",
+          "line": 506
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "fallback:cut",
+      "kind": "fallback",
+      "words": [
+        "cut"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "fallback-verbs",
+          "case": "fallback-cut"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:86",
+      "kind": "handler",
+      "words": [
+        "damage"
+      ],
+      "handlers": [
+        "spellcom"
+      ],
+      "source": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:87",
+      "kind": "handler",
+      "words": [
+        "deafen"
+      ],
+      "handlers": [
+        "spellcom"
+      ],
+      "source": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:88",
+      "kind": "handler",
+      "words": [
+        "delete"
+      ],
+      "handlers": [
+        "deletecom"
+      ],
+      "source": {
+        "deletecom": {
+          "file": "src/god.c",
+          "line": 24
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:89",
+      "kind": "handler",
+      "words": [
+        "destruct"
+      ],
+      "handlers": [
+        "destructcom"
+      ],
+      "source": {
+        "destructcom": {
+          "file": "src/clone.c",
+          "line": 562
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:90",
+      "kind": "handler",
+      "words": [
+        "debug"
+      ],
+      "handlers": [
+        "debugcom"
+      ],
+      "source": {
+        "debugcom": {
+          "file": "src/wizard.c",
+          "line": 1117
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:91",
+      "kind": "handler",
+      "words": [
+        "description"
+      ],
+      "handlers": [
+        "change_desc"
+      ],
+      "source": {
+        "change_desc": {
+          "file": "src/change.c",
+          "line": 1001
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:92",
+      "kind": "handler",
+      "words": [
+        "dig"
+      ],
+      "handlers": [
+        "digcom"
+      ],
+      "source": {
+        "digcom": {
+          "file": "cr/digcom.c",
+          "line": 32
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:93",
+      "kind": "handler",
+      "words": [
+        "drink",
+        "eat"
+      ],
+      "handlers": [
+        "eatcom"
+      ],
+      "source": {
+        "eatcom": {
+          "file": "src/objsys.c",
+          "line": 683
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:94",
+      "kind": "handler",
+      "words": [
+        "drop"
+      ],
+      "handlers": [
+        "dropobjcom"
+      ],
+      "source": {
+        "dropobjcom": {
+          "file": "src/objsys.c",
+          "line": 1264
+        }
+      },
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "get-word-boundary",
+          "case": "drop-abbreviation-all"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:95",
+      "kind": "handler",
+      "words": [
+        "erasezone"
+      ],
+      "handlers": [
+        "erasezonecom"
+      ],
+      "source": {
+        "erasezonecom": {
+          "file": "src/clone.c",
+          "line": 820
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:96",
+      "kind": "handler",
+      "words": [
+        "echo"
+      ],
+      "handlers": [
+        "echocom"
+      ],
+      "source": {
+        "echocom": {
+          "file": "src/wizard.c",
+          "line": 253
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:97",
+      "kind": "handler",
+      "words": [
+        "echoall"
+      ],
+      "handlers": [
+        "echoallcom"
+      ],
+      "source": {
+        "echoallcom": {
+          "file": "src/wizard.c",
+          "line": 319
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:98",
+      "kind": "handler",
+      "words": [
+        "echoto"
+      ],
+      "handlers": [
+        "echotocom"
+      ],
+      "source": {
+        "echotocom": {
+          "file": "src/wizard.c",
+          "line": 373
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:99",
+      "kind": "handler",
+      "words": [
+        "edit"
+      ],
+      "handlers": [
+        "editcom"
+      ],
+      "source": {
+        "editcom": {
+          "file": "cr/edit.c",
+          "line": 9
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:100",
+      "kind": "handler",
+      "words": [
+        "eflags"
+      ],
+      "handlers": [
+        "mob_flags"
+      ],
+      "source": {
+        "mob_flags": {
+          "file": "cr/flags.c",
+          "line": 394
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:101",
+      "kind": "handler",
+      "words": [
+        "emote"
+      ],
+      "handlers": [
+        "emotecom"
+      ],
+      "source": {
+        "emotecom": {
+          "file": "src/wizard.c",
+          "line": 421
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:102",
+      "kind": "handler",
+      "words": [
+        "emoteall"
+      ],
+      "handlers": [
+        "emoteallcom"
+      ],
+      "source": {
+        "emoteallcom": {
+          "file": "src/wizard.c",
+          "line": 346
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:103",
+      "kind": "handler",
+      "words": [
+        "emoteto"
+      ],
+      "handlers": [
+        "emotetocom"
+      ],
+      "source": {
+        "emotetocom": {
+          "file": "src/wizard.c",
+          "line": 445
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:104",
+      "kind": "handler",
+      "words": [
+        "empty"
+      ],
+      "handlers": [
+        "emptycom"
+      ],
+      "source": {
+        "emptycom": {
+          "file": "src/commands.c",
+          "line": 1458
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:105",
+      "kind": "handler",
+      "words": [
+        "equipment"
+      ],
+      "handlers": [
+        "equcom"
+      ],
+      "source": {
+        "equcom": {
+          "file": "cr/fight.c",
+          "line": 857
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:106",
+      "kind": "handler",
+      "words": [
+        "examine",
+        "read",
+        "search"
+      ],
+      "handlers": [
+        "examcom"
+      ],
+      "source": {
+        "examcom": {
+          "file": "src/commands.c",
+          "line": 285
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:107",
+      "kind": "handler",
+      "words": [
+        "exits"
+      ],
+      "handlers": [
+        "exitcom"
+      ],
+      "source": {
+        "exitcom": {
+          "file": "src/rooms.c",
+          "line": 197
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:108",
+      "kind": "handler",
+      "words": [
+        "exorcise"
+      ],
+      "handlers": [
+        "exorcom"
+      ],
+      "source": {
+        "exorcom": {
+          "file": "src/wizard.c",
+          "line": 680
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:109",
+      "kind": "handler",
+      "words": [
+        "extinguish",
+        "unlight"
+      ],
+      "handlers": [
+        "extinguishcom"
+      ],
+      "source": {
+        "extinguishcom": {
+          "file": "src/commands.c",
+          "line": 1707
+        }
+      },
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "light-generic",
+          "case": "carried-extinguish"
+        },
+        {
+          "scenario": "light-generic",
+          "case": "already-unlit"
+        },
+        {
+          "scenario": "light-generic",
+          "case": "unlight-alias"
+        },
+        {
+          "scenario": "light-generic",
+          "case": "not-extinguishable"
+        },
+        {
+          "scenario": "light-generic",
+          "case": "missing-extinguish-target"
+        },
+        {
+          "scenario": "light-generic",
+          "case": "unknown-extinguish-target"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:110",
+      "kind": "handler",
+      "words": [
+        "fakequit"
+      ],
+      "handlers": [
+        "fakequitcom"
+      ],
+      "source": {
+        "fakequitcom": {
+          "file": "src/wizard.c",
+          "line": 1761
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:111",
+      "kind": "handler",
+      "words": [
+        "fdlist"
+      ],
+      "handlers": [
+        "fdlistcom"
+      ],
+      "source": {
+        "fdlistcom": {
+          "file": "cr/mudfd.c",
+          "line": 141
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:112",
+      "kind": "handler",
+      "words": [
+        "fill"
+      ],
+      "handlers": [
+        "fillcom"
+      ],
+      "source": {
+        "fillcom": {
+          "file": "src/commands.c",
+          "line": 165
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:113",
+      "kind": "handler",
+      "words": [
+        "find"
+      ],
+      "handlers": [
+        "findcom"
+      ],
+      "source": {
+        "findcom": {
+          "file": "src/wizard.c",
+          "line": 1671
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:114",
+      "kind": "handler",
+      "words": [
+        "fireball"
+      ],
+      "handlers": [
+        "spellcom"
+      ],
+      "source": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:115",
+      "kind": "handler",
+      "words": [
+        "flee"
+      ],
+      "handlers": [
+        "flee"
+      ],
+      "source": {
+        "flee": {
+          "file": "cr/fight.c",
+          "line": 1432
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:116",
+      "kind": "handler",
+      "words": [
+        "flist"
+      ],
+      "handlers": [
+        "forgetlist"
+      ],
+      "source": {
+        "forgetlist": {
+          "file": "src/god.c",
+          "line": 355
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:117",
+      "kind": "handler",
+      "words": [
+        "flowers"
+      ],
+      "handlers": [
+        "flowercom"
+      ],
+      "source": {
+        "flowercom": {
+          "file": "cr/actions.c",
+          "line": 368
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:118",
+      "kind": "handler",
+      "words": [
+        "flush"
+      ],
+      "handlers": [
+        "flushcom"
+      ],
+      "source": {
+        "flushcom": {
+          "file": "src/commands.c",
+          "line": 45
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:119",
+      "kind": "handler",
+      "words": [
+        "follow"
+      ],
+      "handlers": [
+        "followcom"
+      ],
+      "source": {
+        "followcom": {
+          "file": "src/commands.c",
+          "line": 2044
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:120",
+      "kind": "handler",
+      "words": [
+        "follist"
+      ],
+      "handlers": [
+        "follist"
+      ],
+      "source": {
+        "follist": {
+          "file": "src/wizard.c",
+          "line": 1619
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "fallback:foo",
+      "kind": "fallback",
+      "words": [
+        "foo"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "fallback-verbs",
+          "case": "fallback-foo"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:122",
+      "kind": "handler",
+      "words": [
+        "force"
+      ],
+      "handlers": [
+        "forcecom"
+      ],
+      "source": {
+        "forcecom": {
+          "file": "src/magic.c",
+          "line": 112
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:123",
+      "kind": "handler",
+      "words": [
+        "forceall"
+      ],
+      "handlers": [
+        "forceallcom"
+      ],
+      "source": {
+        "forceallcom": {
+          "file": "src/magic.c",
+          "line": 153
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:124",
+      "kind": "handler",
+      "words": [
+        "forget"
+      ],
+      "handlers": [
+        "forgetcom"
+      ],
+      "source": {
+        "forgetcom": {
+          "file": "src/comm.c",
+          "line": 617
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:125",
+      "kind": "handler",
+      "words": [
+        "freaq"
+      ],
+      "handlers": [
+        "freaqcom"
+      ],
+      "source": {
+        "freaqcom": {
+          "file": "src/wizard.c",
+          "line": 2002
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:126",
+      "kind": "handler",
+      "words": [
+        "frob"
+      ],
+      "handlers": [
+        "frobcom"
+      ],
+      "source": {
+        "frobcom": {
+          "file": "src/frob.c",
+          "line": 37
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:127",
+      "kind": "handler",
+      "words": [
+        "frost"
+      ],
+      "handlers": [
+        "spellcom"
+      ],
+      "source": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:128",
+      "kind": "handler",
+      "words": [
+        "gchat"
+      ],
+      "handlers": [
+        "chatcom"
+      ],
+      "source": {
+        "chatcom": {
+          "file": "src/comm.c",
+          "line": 503
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:129",
+      "kind": "handler",
+      "words": [
+        "get",
+        "take"
+      ],
+      "handlers": [
+        "getcom"
+      ],
+      "source": {
+        "getcom": {
+          "file": "src/objsys.c",
+          "line": 1116
+        }
+      },
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "containers",
+          "case": "get-open-container"
+        },
+        {
+          "scenario": "containers",
+          "case": "get-closed-container"
+        },
+        {
+          "scenario": "equipment-and-get",
+          "case": "get-ball-not-all"
+        },
+        {
+          "scenario": "get-word-boundary",
+          "case": "get-ball-not-all"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:130",
+      "kind": "handler",
+      "words": [
+        "give"
+      ],
+      "handlers": [
+        "givecom"
+      ],
+      "source": {
+        "givecom": {
+          "file": "src/objsys.c",
+          "line": 334
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:131",
+      "kind": "handler",
+      "words": [
+        "global"
+      ],
+      "handlers": [
+        "globalcom"
+      ],
+      "source": {
+        "globalcom": {
+          "file": "src/commands.c",
+          "line": 1227
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:132",
+      "kind": "handler",
+      "words": [
+        "goto"
+      ],
+      "handlers": [
+        "gotocom"
+      ],
+      "source": {
+        "gotocom": {
+          "file": "src/rooms.c",
+          "line": 126
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:133",
+      "kind": "handler",
+      "words": [
+        "god"
+      ],
+      "handlers": [
+        "com_handler"
+      ],
+      "source": {
+        "com_handler": {
+          "file": "src/comm.c",
+          "line": 67
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:134",
+      "kind": "handler",
+      "words": [
+        "group"
+      ],
+      "handlers": [
+        "group"
+      ],
+      "source": {
+        "group": {
+          "file": "src/group.c",
+          "line": 137
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:135",
+      "kind": "handler",
+      "words": [
+        "gtell"
+      ],
+      "handlers": [
+        "gtell"
+      ],
+      "source": {
+        "gtell": {
+          "file": "src/group.c",
+          "line": 225
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:136",
+      "kind": "handler",
+      "words": [
+        "glist"
+      ],
+      "handlers": [
+        "glist"
+      ],
+      "source": {
+        "glist": {
+          "file": "src/group.c",
+          "line": 73
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:137",
+      "kind": "handler",
+      "words": [
+        "heal"
+      ],
+      "handlers": [
+        "healcom"
+      ],
+      "source": {
+        "healcom": {
+          "file": "src/magic.c",
+          "line": 16
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:138",
+      "kind": "handler",
+      "words": [
+        "healall"
+      ],
+      "handlers": [
+        "healallcom"
+      ],
+      "source": {
+        "healallcom": {
+          "file": "src/magic.c",
+          "line": 72
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:139",
+      "kind": "handler",
+      "words": [
+        "hearback"
+      ],
+      "handlers": [
+        "togglecom"
+      ],
+      "source": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:140",
+      "kind": "handler",
+      "words": [
+        "help"
+      ],
+      "handlers": [
+        "helpcom"
+      ],
+      "source": {
+        "helpcom": {
+          "file": "src/commands.c",
+          "line": 1061
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:141",
+      "kind": "handler",
+      "words": [
+        "hosts",
+        "tty"
+      ],
+      "handlers": [
+        "hostscom"
+      ],
+      "source": {
+        "hostscom": {
+          "file": "cr/hostscom.c",
+          "line": 43
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:142",
+      "kind": "handler",
+      "words": [
+        "inventory"
+      ],
+      "handlers": [
+        "inventory"
+      ],
+      "source": {
+        "inventory": {
+          "file": "src/objsys.c",
+          "line": 759
+        }
+      },
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "equipment-and-get",
+          "case": "inventory-wielded"
+        },
+        {
+          "scenario": "equipment-and-get",
+          "case": "inventory-full-array-boundary"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:143",
+      "kind": "handler",
+      "words": [
+        "icestorm"
+      ],
+      "handlers": [
+        "spellcom"
+      ],
+      "source": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:144",
+      "kind": "handler",
+      "words": [
+        "idle"
+      ],
+      "handlers": [
+        "idlecom"
+      ],
+      "source": {
+        "idlecom": {
+          "file": "src/god.c",
+          "line": 97
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "fallback:iminvis",
+      "kind": "fallback",
+      "words": [
+        "iminvis"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "fallback-verbs",
+          "case": "fallback-iminvis"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:146",
+      "kind": "handler",
+      "words": [
+        "in"
+      ],
+      "handlers": [
+        "incom"
+      ],
+      "source": {
+        "incom": {
+          "file": "src/commands.c",
+          "line": 675
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:147",
+      "kind": "handler",
+      "words": [
+        "info"
+      ],
+      "handlers": [
+        "infocom"
+      ],
+      "source": {
+        "infocom": {
+          "file": "src/commands.c",
+          "line": 1182
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:148",
+      "kind": "handler",
+      "words": [
+        "invisible"
+      ],
+      "handlers": [
+        "inviscom"
+      ],
+      "source": {
+        "inviscom": {
+          "file": "src/magic.c",
+          "line": 411
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:149",
+      "kind": "handler",
+      "words": [
+        "istari",
+        "prophet"
+      ],
+      "handlers": [
+        "com_handler"
+      ],
+      "source": {
+        "com_handler": {
+          "file": "src/comm.c",
+          "line": 67
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:150",
+      "kind": "handler",
+      "words": [
+        "jump"
+      ],
+      "handlers": [
+        "jumpcom"
+      ],
+      "source": {
+        "jumpcom": {
+          "file": "src/mobile.c",
+          "line": 1879
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:151",
+      "kind": "handler",
+      "words": [
+        "klock"
+      ],
+      "handlers": [
+        "klockcom"
+      ],
+      "source": {
+        "klockcom": {
+          "file": "src/commands.c",
+          "line": 2295
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "fallback:knot",
+      "kind": "fallback",
+      "words": [
+        "knot"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "fallback-verbs",
+          "case": "fallback-knot"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:153",
+      "kind": "handler",
+      "words": [
+        "look"
+      ],
+      "handlers": [
+        "lookcom"
+      ],
+      "source": {
+        "lookcom": {
+          "file": "src/commands.c",
+          "line": 224
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:154",
+      "kind": "handler",
+      "words": [
+        "link"
+      ],
+      "handlers": [
+        "linkcom"
+      ],
+      "source": {
+        "linkcom": {
+          "file": "src/clone.c",
+          "line": 796
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:155",
+      "kind": "handler",
+      "words": [
+        "laston"
+      ],
+      "handlers": [
+        "lastoncom"
+      ],
+      "source": {
+        "lastoncom": {
+          "file": "src/commands.c",
+          "line": 2174
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:156",
+      "kind": "handler",
+      "words": [
+        "lang"
+      ],
+      "handlers": [
+        "langcom"
+      ],
+      "source": {
+        "langcom": {
+          "file": "src/comm.c",
+          "line": 657
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:157",
+      "kind": "handler",
+      "words": [
+        "levels"
+      ],
+      "handlers": [
+        "levelscom"
+      ],
+      "source": {
+        "levelscom": {
+          "file": "cr/level.c",
+          "line": 527
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:158",
+      "kind": "handler",
+      "words": [
+        "levecho"
+      ],
+      "handlers": [
+        "levechocom"
+      ],
+      "source": {
+        "levechocom": {
+          "file": "src/wizard.c",
+          "line": 280
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:159",
+      "kind": "handler",
+      "words": [
+        "lflags"
+      ],
+      "handlers": [
+        "loc_flags"
+      ],
+      "source": {
+        "loc_flags": {
+          "file": "cr/flags.c",
+          "line": 358
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:160",
+      "kind": "handler",
+      "words": [
+        "lift",
+        "open"
+      ],
+      "handlers": [
+        "opencom"
+      ],
+      "source": {
+        "opencom": {
+          "file": "src/objsys.c",
+          "line": 155
+        }
+      },
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "containers",
+          "case": "open-missing"
+        },
+        {
+          "scenario": "containers",
+          "case": "open-unknown"
+        },
+        {
+          "scenario": "containers",
+          "case": "open-already-open"
+        },
+        {
+          "scenario": "containers",
+          "case": "open-closed"
+        },
+        {
+          "scenario": "containers",
+          "case": "open-non-openable"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:161",
+      "kind": "handler",
+      "words": [
+        "light"
+      ],
+      "handlers": [
+        "lightcom"
+      ],
+      "source": {
+        "lightcom": {
+          "file": "src/commands.c",
+          "line": 1650
+        }
+      },
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "light-generic",
+          "case": "carried-with-room-fire"
+        },
+        {
+          "scenario": "light-generic",
+          "case": "already-lit"
+        },
+        {
+          "scenario": "light-generic",
+          "case": "not-lightable"
+        },
+        {
+          "scenario": "light-generic",
+          "case": "floor-light"
+        },
+        {
+          "scenario": "light-generic",
+          "case": "no-source"
+        },
+        {
+          "scenario": "light-generic",
+          "case": "player-source"
+        },
+        {
+          "scenario": "light-generic",
+          "case": "missing-light-target"
+        },
+        {
+          "scenario": "light-generic",
+          "case": "unknown-light-target"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:162",
+      "kind": "inline",
+      "words": [
+        "lit"
+      ],
+      "handlers": [
+        "spellcom",
+        "litcom"
+      ],
+      "source": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        },
+        "litcom": {
+          "file": "src/wizard.c",
+          "line": 1436
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:163",
+      "kind": "handler",
+      "words": [
+        "load"
+      ],
+      "handlers": [
+        "loadcom"
+      ],
+      "source": {
+        "loadcom": {
+          "file": "src/clone.c",
+          "line": 761
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:164",
+      "kind": "handler",
+      "words": [
+        "locations"
+      ],
+      "handlers": [
+        "locationscom"
+      ],
+      "source": {
+        "locationscom": {
+          "file": "src/zones.c",
+          "line": 212
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:165",
+      "kind": "handler",
+      "words": [
+        "lock"
+      ],
+      "handlers": [
+        "lockcom"
+      ],
+      "source": {
+        "lockcom": {
+          "file": "src/objsys.c",
+          "line": 133
+        }
+      },
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "containers",
+          "case": "lock-without-key"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:166",
+      "kind": "handler",
+      "words": [
+        "log"
+      ],
+      "handlers": [
+        "writelog"
+      ],
+      "source": {
+        "writelog": {
+          "file": "src/wizard.c",
+          "line": 1984
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:167",
+      "kind": "handler",
+      "words": [
+        "loot"
+      ],
+      "handlers": [
+        "lootcom"
+      ],
+      "source": {
+        "lootcom": {
+          "file": "cr/fight.c",
+          "line": 357
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:168",
+      "kind": "handler",
+      "words": [
+        "lose"
+      ],
+      "handlers": [
+        "losecom"
+      ],
+      "source": {
+        "losecom": {
+          "file": "src/commands.c",
+          "line": 2086
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:169",
+      "kind": "handler",
+      "words": [
+        "lsay"
+      ],
+      "handlers": [
+        "lsaycom"
+      ],
+      "source": {
+        "lsaycom": {
+          "file": "src/comm.c",
+          "line": 262
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:170",
+      "kind": "handler",
+      "words": [
+        "mail"
+      ],
+      "handlers": [
+        "mailcom"
+      ],
+      "source": {
+        "mailcom": {
+          "file": "cr/mail.c",
+          "line": 12
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:171",
+      "kind": "handler",
+      "words": [
+        "makepig"
+      ],
+      "handlers": [
+        "spellcom"
+      ],
+      "source": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:172",
+      "kind": "handler",
+      "words": [
+        "mask"
+      ],
+      "handlers": [
+        "mob_flags"
+      ],
+      "source": {
+        "mob_flags": {
+          "file": "cr/flags.c",
+          "line": 394
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:173",
+      "kind": "handler",
+      "words": [
+        "maxstate"
+      ],
+      "handlers": [
+        "maxstatecom"
+      ],
+      "source": {
+        "maxstatecom": {
+          "file": "src/clone.c",
+          "line": 850
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:174",
+      "kind": "inline",
+      "words": [
+        "meditate"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:175",
+      "kind": "handler",
+      "words": [
+        "mflags"
+      ],
+      "handlers": [
+        "mob_flags"
+      ],
+      "source": {
+        "mob_flags": {
+          "file": "cr/flags.c",
+          "line": 394
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:176",
+      "kind": "handler",
+      "words": [
+        "missile"
+      ],
+      "handlers": [
+        "spellcom"
+      ],
+      "source": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:177",
+      "kind": "handler",
+      "words": [
+        "mobiles"
+      ],
+      "handlers": [
+        "mobilecom"
+      ],
+      "source": {
+        "mobilecom": {
+          "file": "src/mobile.c",
+          "line": 684
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:178",
+      "kind": "handler",
+      "words": [
+        "move",
+        "press",
+        "pull",
+        "push",
+        "shove",
+        "touch",
+        "turn"
+      ],
+      "handlers": [
+        "pushcom"
+      ],
+      "source": {
+        "pushcom": {
+          "file": "src/commands.c",
+          "line": 1727
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:179",
+      "kind": "handler",
+      "words": [
+        "mstat"
+      ],
+      "handlers": [
+        "muserscom"
+      ],
+      "source": {
+        "muserscom": {
+          "file": "cr/muserscom.c",
+          "line": 32
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:180",
+      "kind": "handler",
+      "words": [
+        "mute"
+      ],
+      "handlers": [
+        "spellcom"
+      ],
+      "source": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:181",
+      "kind": "handler",
+      "words": [
+        "musers"
+      ],
+      "handlers": [
+        "muserscom"
+      ],
+      "source": {
+        "muserscom": {
+          "file": "cr/muserscom.c",
+          "line": 32
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:182",
+      "kind": "handler",
+      "words": [
+        "mwho"
+      ],
+      "handlers": [
+        "mwhocom"
+      ],
+      "source": {
+        "mwhocom": {
+          "file": "src/mobile.c",
+          "line": 395
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:183",
+      "kind": "handler",
+      "words": [
+        "newstyle"
+      ],
+      "handlers": [
+        "togglecom"
+      ],
+      "source": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:184",
+      "kind": "handler",
+      "words": [
+        "nflags"
+      ],
+      "handlers": [
+        "mob_flags"
+      ],
+      "source": {
+        "mob_flags": {
+          "file": "cr/flags.c",
+          "line": 394
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:185",
+      "kind": "handler",
+      "words": [
+        "noadv",
+        "ndgod"
+      ],
+      "handlers": [
+        "nolinecom"
+      ],
+      "source": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:186",
+      "kind": "handler",
+      "words": [
+        "noanon"
+      ],
+      "handlers": [
+        "nolinecom"
+      ],
+      "source": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:187",
+      "kind": "handler",
+      "words": [
+        "noawiz"
+      ],
+      "handlers": [
+        "nolinecom"
+      ],
+      "source": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:188",
+      "kind": "handler",
+      "words": [
+        "nobeep"
+      ],
+      "handlers": [
+        "togglecom"
+      ],
+      "source": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:189",
+      "kind": "handler",
+      "words": [
+        "noblink"
+      ],
+      "handlers": [
+        "togglecom"
+      ],
+      "source": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:190",
+      "kind": "handler",
+      "words": [
+        "nochat",
+        "nogossip"
+      ],
+      "handlers": [
+        "nolinecom"
+      ],
+      "source": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:191",
+      "kind": "handler",
+      "words": [
+        "nofight"
+      ],
+      "handlers": [
+        "togglecom"
+      ],
+      "source": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:192",
+      "kind": "handler",
+      "words": [
+        "noflag"
+      ],
+      "handlers": [
+        "togglecom"
+      ],
+      "source": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:193",
+      "kind": "handler",
+      "words": [
+        "nogod"
+      ],
+      "handlers": [
+        "nolinecom"
+      ],
+      "source": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:194",
+      "kind": "handler",
+      "words": [
+        "noistari",
+        "noprophet"
+      ],
+      "handlers": [
+        "nolinecom"
+      ],
+      "source": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:195",
+      "kind": "handler",
+      "words": [
+        "noinv"
+      ],
+      "handlers": [
+        "togglecom"
+      ],
+      "source": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:196",
+      "kind": "inline",
+      "words": [
+        "noisy",
+        "quiet"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:197",
+      "kind": "handler",
+      "words": [
+        "nooracle"
+      ],
+      "handlers": [
+        "togglecom"
+      ],
+      "source": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:198",
+      "kind": "handler",
+      "words": [
+        "nopig"
+      ],
+      "handlers": [
+        "nolinecom"
+      ],
+      "source": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:199",
+      "kind": "handler",
+      "words": [
+        "nopuff"
+      ],
+      "handlers": [
+        "togglecom"
+      ],
+      "source": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:200",
+      "kind": "handler",
+      "words": [
+        "nopunt"
+      ],
+      "handlers": [
+        "nopuntcom"
+      ],
+      "source": {
+        "nopuntcom": {
+          "file": "src/wizard.c",
+          "line": 1745
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:201",
+      "kind": "handler",
+      "words": [
+        "norun"
+      ],
+      "handlers": [
+        "noruncom"
+      ],
+      "source": {
+        "noruncom": {
+          "file": "src/god.c",
+          "line": 381
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:202",
+      "kind": "handler",
+      "words": [
+        "noshout"
+      ],
+      "handlers": [
+        "noshoutcom"
+      ],
+      "source": {
+        "noshoutcom": {
+          "file": "src/wizard.c",
+          "line": 801
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:203",
+      "kind": "handler",
+      "words": [
+        "noslain"
+      ],
+      "handlers": [
+        "noslaincom"
+      ],
+      "source": {
+        "noslaincom": {
+          "file": "src/wizard.c",
+          "line": 1221
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:204",
+      "kind": "handler",
+      "words": [
+        "noswear"
+      ],
+      "handlers": [
+        "togglecom"
+      ],
+      "source": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:205",
+      "kind": "handler",
+      "words": [
+        "noupper"
+      ],
+      "handlers": [
+        "nolinecom"
+      ],
+      "source": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:206",
+      "kind": "handler",
+      "words": [
+        "nowet"
+      ],
+      "handlers": [
+        "togglecom"
+      ],
+      "source": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:207",
+      "kind": "handler",
+      "words": [
+        "nowiz"
+      ],
+      "handlers": [
+        "nolinecom"
+      ],
+      "source": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:208",
+      "kind": "handler",
+      "words": [
+        "nowish"
+      ],
+      "handlers": [
+        "nowishcom"
+      ],
+      "source": {
+        "nowishcom": {
+          "file": "src/wizard.c",
+          "line": 1167
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:209",
+      "kind": "handler",
+      "words": [
+        "objects"
+      ],
+      "handlers": [
+        "objectscom"
+      ],
+      "source": {
+        "objectscom": {
+          "file": "src/acct.c",
+          "line": 233
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:210",
+      "kind": "handler",
+      "words": [
+        "oflags"
+      ],
+      "handlers": [
+        "obj_flags"
+      ],
+      "source": {
+        "obj_flags": {
+          "file": "cr/flags.c",
+          "line": 322
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:211",
+      "kind": "handler",
+      "words": [
+        "options"
+      ],
+      "handlers": [
+        "optionscom"
+      ],
+      "source": {
+        "optionscom": {
+          "file": "src/commands.c",
+          "line": 2233
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:212",
+      "kind": "handler",
+      "words": [
+        "pager"
+      ],
+      "handlers": [
+        "setpager"
+      ],
+      "source": {
+        "setpager": {
+          "file": "src/commands.c",
+          "line": 2205
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:213",
+      "kind": "handler",
+      "words": [
+        "pat",
+        "pet"
+      ],
+      "handlers": [
+        "petcom"
+      ],
+      "source": {
+        "petcom": {
+          "file": "cr/actions.c",
+          "line": 403
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:214",
+      "kind": "handler",
+      "words": [
+        "peace"
+      ],
+      "handlers": [
+        "peacecom"
+      ],
+      "source": {
+        "peacecom": {
+          "file": "src/wizard.c",
+          "line": 994
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:215",
+      "kind": "handler",
+      "words": [
+        "people",
+        "players",
+        "users",
+        "ustats"
+      ],
+      "handlers": [
+        "usercom"
+      ],
+      "source": {
+        "usercom": {
+          "file": "src/mobile.c",
+          "line": 457
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:216",
+      "kind": "handler",
+      "words": [
+        "pflags"
+      ],
+      "handlers": [
+        "mob_flags"
+      ],
+      "source": {
+        "mob_flags": {
+          "file": "cr/flags.c",
+          "line": 394
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:217",
+      "kind": "handler",
+      "words": [
+        "pick"
+      ],
+      "handlers": [
+        "pickcom"
+      ],
+      "source": {
+        "pickcom": {
+          "file": "src/commands.c",
+          "line": 123
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:218",
+      "kind": "handler",
+      "words": [
+        "pig"
+      ],
+      "handlers": [
+        "pigcom"
+      ],
+      "source": {
+        "pigcom": {
+          "file": "cr/pig.c",
+          "line": 89
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:219",
+      "kind": "handler",
+      "words": [
+        "play"
+      ],
+      "handlers": [
+        "playcom"
+      ],
+      "source": {
+        "playcom": {
+          "file": "src/commands.c",
+          "line": 1564
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:220",
+      "kind": "handler",
+      "words": [
+        "ploc"
+      ],
+      "handlers": [
+        "ploccom"
+      ],
+      "source": {
+        "ploccom": {
+          "file": "src/god.c",
+          "line": 222
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:221",
+      "kind": "handler",
+      "words": [
+        "pn"
+      ],
+      "handlers": [
+        "pncom"
+      ],
+      "source": {
+        "pncom": {
+          "file": "src/commands.c",
+          "line": 999
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:222",
+      "kind": "handler",
+      "words": [
+        "policy"
+      ],
+      "handlers": [
+        "policycom"
+      ],
+      "source": {
+        "policycom": {
+          "file": "src/commands.c",
+          "line": 1206
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:223",
+      "kind": "handler",
+      "words": [
+        "pose"
+      ],
+      "handlers": [
+        "posecom"
+      ],
+      "source": {
+        "posecom": {
+          "file": "src/magic.c",
+          "line": 617
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:224",
+      "kind": "handler",
+      "words": [
+        "pray"
+      ],
+      "handlers": [
+        "praycom"
+      ],
+      "source": {
+        "praycom": {
+          "file": "cr/actions.c",
+          "line": 481
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "fallback:privs",
+      "kind": "fallback",
+      "words": [
+        "privs"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "fallback-verbs",
+          "case": "fallback-privs"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:226",
+      "kind": "handler",
+      "words": [
+        "probation"
+      ],
+      "handlers": [
+        "probationcom"
+      ],
+      "source": {
+        "probationcom": {
+          "file": "src/god.c",
+          "line": 263
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:227",
+      "kind": "handler",
+      "words": [
+        "prompt"
+      ],
+      "handlers": [
+        "promptcom"
+      ],
+      "source": {
+        "promptcom": {
+          "file": "src/commands.c",
+          "line": 1543
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:228",
+      "kind": "handler",
+      "words": [
+        "promote"
+      ],
+      "handlers": [
+        "promote"
+      ],
+      "source": {
+        "promote": {
+          "file": "src/group.c",
+          "line": 280
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:229",
+      "kind": "handler",
+      "words": [
+        "protect"
+      ],
+      "handlers": [
+        "spellcom"
+      ],
+      "source": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:230",
+      "kind": "handler",
+      "words": [
+        "punt"
+      ],
+      "handlers": [
+        "puntcom"
+      ],
+      "source": {
+        "puntcom": {
+          "file": "src/wizard.c",
+          "line": 1239
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:231",
+      "kind": "handler",
+      "words": [
+        "puntall"
+      ],
+      "handlers": [
+        "puntallcom"
+      ],
+      "source": {
+        "puntallcom": {
+          "file": "src/wizard.c",
+          "line": 1360
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:232",
+      "kind": "handler",
+      "words": [
+        "put"
+      ],
+      "handlers": [
+        "putcom"
+      ],
+      "source": {
+        "putcom": {
+          "file": "src/objsys.c",
+          "line": 632
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:233",
+      "kind": "handler",
+      "words": [
+        "pzap"
+      ],
+      "handlers": [
+        "pzapcom"
+      ],
+      "source": {
+        "pzapcom": {
+          "file": "src/wizard.c",
+          "line": 1063
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:234",
+      "kind": "handler",
+      "words": [
+        "qinfo"
+      ],
+      "handlers": [
+        "qinfocom"
+      ],
+      "source": {
+        "qinfocom": {
+          "file": "src/commands.c",
+          "line": 1160
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:235",
+      "kind": "handler",
+      "words": [
+        "qlist"
+      ],
+      "handlers": [
+        "qlistcom"
+      ],
+      "source": {
+        "qlistcom": {
+          "file": "src/quests.c",
+          "line": 137
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:236",
+      "kind": "handler",
+      "words": [
+        "quests"
+      ],
+      "handlers": [
+        "questcom"
+      ],
+      "source": {
+        "questcom": {
+          "file": "src/quests.c",
+          "line": 284
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:237",
+      "kind": "handler",
+      "words": [
+        "quit"
+      ],
+      "handlers": [
+        "quit_game"
+      ],
+      "source": {
+        "quit_game": {
+          "file": "src/parse.c",
+          "line": 1425
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:238",
+      "kind": "handler",
+      "words": [
+        "raw"
+      ],
+      "handlers": [
+        "rawcom"
+      ],
+      "source": {
+        "rawcom": {
+          "file": "src/wizard.c",
+          "line": 137
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:239",
+      "kind": "handler",
+      "words": [
+        "reboot"
+      ],
+      "handlers": [
+        "rebootcom"
+      ],
+      "source": {
+        "rebootcom": {
+          "file": "cr/update.c",
+          "line": 40
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:240",
+      "kind": "handler",
+      "words": [
+        "remove"
+      ],
+      "handlers": [
+        "removecom"
+      ],
+      "source": {
+        "removecom": {
+          "file": "cr/fight.c",
+          "line": 896
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:241",
+      "kind": "handler",
+      "words": [
+        "reply"
+      ],
+      "handlers": [
+        "replycom"
+      ],
+      "source": {
+        "replycom": {
+          "file": "src/comm.c",
+          "line": 711
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:242",
+      "kind": "handler",
+      "words": [
+        "report"
+      ],
+      "handlers": [
+        "reportcom"
+      ],
+      "source": {
+        "reportcom": {
+          "file": "src/group.c",
+          "line": 25
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:243",
+      "kind": "handler",
+      "words": [
+        "resurrect"
+      ],
+      "handlers": [
+        "resurcom"
+      ],
+      "source": {
+        "resurcom": {
+          "file": "src/magic.c",
+          "line": 458
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:244",
+      "kind": "handler",
+      "words": [
+        "reset"
+      ],
+      "handlers": [
+        "resetcom"
+      ],
+      "source": {
+        "resetcom": {
+          "file": "src/commands.c",
+          "line": 736
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:245",
+      "kind": "handler",
+      "words": [
+        "restore"
+      ],
+      "handlers": [
+        "restorecom"
+      ],
+      "source": {
+        "restorecom": {
+          "file": "cr/fight.c",
+          "line": 171
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:246",
+      "kind": "handler",
+      "words": [
+        "review"
+      ],
+      "handlers": [
+        "reviewcom"
+      ],
+      "source": {
+        "reviewcom": {
+          "file": "src/commands.c",
+          "line": 880
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:247",
+      "kind": "handler",
+      "words": [
+        "ring"
+      ],
+      "handlers": [
+        "ringcom"
+      ],
+      "source": {
+        "ringcom": {
+          "file": "src/commands.c",
+          "line": 971
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:248",
+      "kind": "handler",
+      "words": [
+        "roll"
+      ],
+      "handlers": [
+        "rollcom"
+      ],
+      "source": {
+        "rollcom": {
+          "file": "src/commands.c",
+          "line": 1439
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:249",
+      "kind": "handler",
+      "words": [
+        "rose"
+      ],
+      "handlers": [
+        "rosecom"
+      ],
+      "source": {
+        "rosecom": {
+          "file": "cr/actions.c",
+          "line": 451
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:250",
+      "kind": "handler",
+      "words": [
+        "rub"
+      ],
+      "handlers": [
+        "rubcom"
+      ],
+      "source": {
+        "rubcom": {
+          "file": "src/commands.c",
+          "line": 170
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:251",
+      "kind": "handler",
+      "words": [
+        "say"
+      ],
+      "handlers": [
+        "saycom"
+      ],
+      "source": {
+        "saycom": {
+          "file": "src/comm.c",
+          "line": 172
+        }
+      },
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "communication",
+          "case": "say-room-audience"
+        },
+        {
+          "scenario": "communication",
+          "case": "say-missing"
+        },
+        {
+          "scenario": "communication",
+          "case": "say-mute"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:252",
+      "kind": "handler",
+      "words": [
+        "sayto"
+      ],
+      "handlers": [
+        "saytocom"
+      ],
+      "source": {
+        "saytocom": {
+          "file": "src/comm.c",
+          "line": 209
+        }
+      },
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "communication",
+          "case": "sayto-mute"
+        },
+        {
+          "scenario": "communication",
+          "case": "sayto-room-audience"
+        },
+        {
+          "scenario": "communication",
+          "case": "sayto-missing"
+        },
+        {
+          "scenario": "communication",
+          "case": "sayto-no-text"
+        },
+        {
+          "scenario": "communication",
+          "case": "sayto-self"
+        },
+        {
+          "scenario": "communication",
+          "case": "sayto-remote"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:253",
+      "kind": "handler",
+      "words": [
+        "save"
+      ],
+      "handlers": [
+        "saveother"
+      ],
+      "source": {
+        "saveother": {
+          "file": "cr/uaf.c",
+          "line": 265
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:254",
+      "kind": "handler",
+      "words": [
+        "saveall"
+      ],
+      "handlers": [
+        "saveallcom"
+      ],
+      "source": {
+        "saveallcom": {
+          "file": "cr/uaf.c",
+          "line": 307
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:255",
+      "kind": "handler",
+      "words": [
+        "score"
+      ],
+      "handlers": [
+        "xrscorecom"
+      ],
+      "source": {
+        "xrscorecom": {
+          "file": "cr/score.c",
+          "line": 92
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:256",
+      "kind": "handler",
+      "words": [
+        "seeext"
+      ],
+      "handlers": [
+        "toggleseeext"
+      ],
+      "source": {
+        "toggleseeext": {
+          "file": "src/wizard.c",
+          "line": 1653
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:257",
+      "kind": "handler",
+      "words": [
+        "seeidle"
+      ],
+      "handlers": [
+        "seeidlecom"
+      ],
+      "source": {
+        "seeidlecom": {
+          "file": "src/god.c",
+          "line": 114
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:258",
+      "kind": "handler",
+      "words": [
+        "seesocket"
+      ],
+      "handlers": [
+        "toggleseesocket"
+      ],
+      "source": {
+        "toggleseesocket": {
+          "file": "src/god.c",
+          "line": 132
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:259",
+      "kind": "handler",
+      "words": [
+        "set"
+      ],
+      "handlers": [
+        "setcom"
+      ],
+      "source": {
+        "setcom": {
+          "file": "src/wizard.c",
+          "line": 519
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:260",
+      "kind": "handler",
+      "words": [
+        "setin"
+      ],
+      "handlers": [
+        "set_msg"
+      ],
+      "source": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "fallback:setlook",
+      "kind": "fallback",
+      "words": [
+        "setlook"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "fallback-verbs",
+          "case": "fallback-setlook"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:262",
+      "kind": "handler",
+      "words": [
+        "setmin"
+      ],
+      "handlers": [
+        "set_msg"
+      ],
+      "source": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:263",
+      "kind": "handler",
+      "words": [
+        "setmout"
+      ],
+      "handlers": [
+        "set_msg"
+      ],
+      "source": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:264",
+      "kind": "handler",
+      "words": [
+        "setout"
+      ],
+      "handlers": [
+        "set_msg"
+      ],
+      "source": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:265",
+      "kind": "handler",
+      "words": [
+        "setsin"
+      ],
+      "handlers": [
+        "set_msg"
+      ],
+      "source": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:266",
+      "kind": "handler",
+      "words": [
+        "setsit"
+      ],
+      "handlers": [
+        "set_msg"
+      ],
+      "source": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:267",
+      "kind": "handler",
+      "words": [
+        "setsout"
+      ],
+      "handlers": [
+        "set_msg"
+      ],
+      "source": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:268",
+      "kind": "handler",
+      "words": [
+        "setstart"
+      ],
+      "handlers": [
+        "setstart"
+      ],
+      "source": {
+        "setstart": {
+          "file": "src/wizard.c",
+          "line": 730
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:269",
+      "kind": "handler",
+      "words": [
+        "setstnd"
+      ],
+      "handlers": [
+        "set_msg"
+      ],
+      "source": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:270",
+      "kind": "handler",
+      "words": [
+        "setsum"
+      ],
+      "handlers": [
+        "set_msg"
+      ],
+      "source": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "fallback:settime",
+      "kind": "fallback",
+      "words": [
+        "settime"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "fallback-verbs",
+          "case": "fallback-settime"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:272",
+      "kind": "handler",
+      "words": [
+        "setvin"
+      ],
+      "handlers": [
+        "set_msg"
+      ],
+      "source": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:273",
+      "kind": "handler",
+      "words": [
+        "setvout"
+      ],
+      "handlers": [
+        "set_msg"
+      ],
+      "source": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:274",
+      "kind": "handler",
+      "words": [
+        "setqin"
+      ],
+      "handlers": [
+        "set_msg"
+      ],
+      "source": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:275",
+      "kind": "handler",
+      "words": [
+        "setqout"
+      ],
+      "handlers": [
+        "set_msg"
+      ],
+      "source": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:276",
+      "kind": "handler",
+      "words": [
+        "sflags"
+      ],
+      "handlers": [
+        "mob_flags"
+      ],
+      "source": {
+        "mob_flags": {
+          "file": "cr/flags.c",
+          "line": 394
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:277",
+      "kind": "inline",
+      "words": [
+        "shall"
+      ],
+      "handlers": [
+        "healallcom",
+        "saveallcom"
+      ],
+      "source": {
+        "healallcom": {
+          "file": "src/magic.c",
+          "line": 72
+        },
+        "saveallcom": {
+          "file": "cr/uaf.c",
+          "line": 307
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:278",
+      "kind": "handler",
+      "words": [
+        "shock"
+      ],
+      "handlers": [
+        "spellcom"
+      ],
+      "source": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:279",
+      "kind": "handler",
+      "words": [
+        "shout",
+        "yell"
+      ],
+      "handlers": [
+        "shoutcom"
+      ],
+      "source": {
+        "shoutcom": {
+          "file": "src/comm.c",
+          "line": 149
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:280",
+      "kind": "handler",
+      "words": [
+        "show"
+      ],
+      "handlers": [
+        "showitem"
+      ],
+      "source": {
+        "showitem": {
+          "file": "src/wizard.c",
+          "line": 897
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:281",
+      "kind": "handler",
+      "words": [
+        "sit"
+      ],
+      "handlers": [
+        "sitcom"
+      ],
+      "source": {
+        "sitcom": {
+          "file": "src/commands.c",
+          "line": 943
+        }
+      },
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "posture",
+          "case": "sit-success"
+        },
+        {
+          "scenario": "posture",
+          "case": "sit-already"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:282",
+      "kind": "handler",
+      "words": [
+        "sic"
+      ],
+      "handlers": [
+        "siccom"
+      ],
+      "source": {
+        "siccom": {
+          "file": "src/wizard.c",
+          "line": 1891
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:283",
+      "kind": "handler",
+      "words": [
+        "signal"
+      ],
+      "handlers": [
+        "signalcom"
+      ],
+      "source": {
+        "signalcom": {
+          "file": "src/exit.c",
+          "line": 128
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:284",
+      "kind": "handler",
+      "words": [
+        "silent"
+      ],
+      "handlers": [
+        "silentcom"
+      ],
+      "source": {
+        "silentcom": {
+          "file": "src/god.c",
+          "line": 206
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:285",
+      "kind": "handler",
+      "words": [
+        "sneak"
+      ],
+      "handlers": [
+        "sneakcom"
+      ],
+      "source": {
+        "sneakcom": {
+          "file": "src/commands.c",
+          "line": 144
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:286",
+      "kind": "handler",
+      "words": [
+        "snoop"
+      ],
+      "handlers": [
+        "snoopcom"
+      ],
+      "source": {
+        "snoopcom": {
+          "file": "src/wizard.c",
+          "line": 39
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:287",
+      "kind": "handler",
+      "words": [
+        "socket"
+      ],
+      "handlers": [
+        "socketcom"
+      ],
+      "source": {
+        "socketcom": {
+          "file": "src/wizard.c",
+          "line": 1452
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:288",
+      "kind": "handler",
+      "words": [
+        "spells"
+      ],
+      "handlers": [
+        "spellscom"
+      ],
+      "source": {
+        "spellscom": {
+          "file": "src/spell.c",
+          "line": 19
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:289",
+      "kind": "handler",
+      "words": [
+        "stand"
+      ],
+      "handlers": [
+        "standcom"
+      ],
+      "source": {
+        "standcom": {
+          "file": "src/commands.c",
+          "line": 984
+        }
+      },
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "posture",
+          "case": "stand-already"
+        },
+        {
+          "scenario": "posture",
+          "case": "stand-success"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:290",
+      "kind": "handler",
+      "words": [
+        "start"
+      ],
+      "handlers": [
+        "startcom"
+      ],
+      "source": {
+        "startcom": {
+          "file": "src/mobile.c",
+          "line": 1040
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:291",
+      "kind": "handler",
+      "words": [
+        "stats"
+      ],
+      "handlers": [
+        "showplayer"
+      ],
+      "source": {
+        "showplayer": {
+          "file": "src/mobile.c",
+          "line": 545
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:292",
+      "kind": "handler",
+      "words": [
+        "steal"
+      ],
+      "handlers": [
+        "stealcom"
+      ],
+      "source": {
+        "stealcom": {
+          "file": "src/objsys.c",
+          "line": 438
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:293",
+      "kind": "handler",
+      "words": [
+        "stop"
+      ],
+      "handlers": [
+        "stopcom"
+      ],
+      "source": {
+        "stopcom": {
+          "file": "src/mobile.c",
+          "line": 1027
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:294",
+      "kind": "handler",
+      "words": [
+        "store"
+      ],
+      "handlers": [
+        "storecom"
+      ],
+      "source": {
+        "storecom": {
+          "file": "src/clone.c",
+          "line": 619
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:295",
+      "kind": "handler",
+      "words": [
+        "summon"
+      ],
+      "handlers": [
+        "sumcom"
+      ],
+      "source": {
+        "sumcom": {
+          "file": "src/magic.c",
+          "line": 182
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:296",
+      "kind": "handler",
+      "words": [
+        "suggest"
+      ],
+      "handlers": [
+        "suggestcom"
+      ],
+      "source": {
+        "suggestcom": {
+          "file": "src/commands.c",
+          "line": 1031
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:297",
+      "kind": "handler",
+      "words": [
+        "syslog"
+      ],
+      "handlers": [
+        "syslogcom"
+      ],
+      "source": {
+        "syslogcom": {
+          "file": "src/wizard.c",
+          "line": 190
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:298",
+      "kind": "handler",
+      "words": [
+        "system"
+      ],
+      "handlers": [
+        "systemcom"
+      ],
+      "source": {
+        "systemcom": {
+          "file": "src/wizard.c",
+          "line": 101
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:299",
+      "kind": "handler",
+      "words": [
+        "throw"
+      ],
+      "handlers": [
+        "throwcom"
+      ],
+      "source": {
+        "throwcom": {
+          "file": "cr/throwcom.c",
+          "line": 29
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:300",
+      "kind": "handler",
+      "words": [
+        "tickle"
+      ],
+      "handlers": [
+        "ticklecom"
+      ],
+      "source": {
+        "ticklecom": {
+          "file": "cr/actions.c",
+          "line": 381
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:301",
+      "kind": "handler",
+      "words": [
+        "tie"
+      ],
+      "handlers": [
+        "tiecom"
+      ],
+      "source": {
+        "tiecom": {
+          "file": "cr/tiecom.c",
+          "line": 29
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:302",
+      "kind": "handler",
+      "words": [
+        "time"
+      ],
+      "handlers": [
+        "timecom"
+      ],
+      "source": {
+        "timecom": {
+          "file": "src/timing.c",
+          "line": 63
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:303",
+      "kind": "handler",
+      "words": [
+        "tiptoe"
+      ],
+      "handlers": [
+        "gotocom"
+      ],
+      "source": {
+        "gotocom": {
+          "file": "src/rooms.c",
+          "line": 126
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:304",
+      "kind": "handler",
+      "words": [
+        "title"
+      ],
+      "handlers": [
+        "change_title"
+      ],
+      "source": {
+        "change_title": {
+          "file": "src/change.c",
+          "line": 645
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:305",
+      "kind": "handler",
+      "words": [
+        "tournament"
+      ],
+      "handlers": [
+        "tournamentcom"
+      ],
+      "source": {
+        "tournamentcom": {
+          "file": "src/wizard.c",
+          "line": 170
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:306",
+      "kind": "handler",
+      "words": [
+        "tout"
+      ],
+      "handlers": [
+        "toutcom"
+      ],
+      "source": {
+        "toutcom": {
+          "file": "src/wizard.c",
+          "line": 1123
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:307",
+      "kind": "inline",
+      "words": [
+        "trace"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:308",
+      "kind": "handler",
+      "words": [
+        "translocate"
+      ],
+      "handlers": [
+        "sumcom"
+      ],
+      "source": {
+        "sumcom": {
+          "file": "src/magic.c",
+          "line": 182
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:309",
+      "kind": "handler",
+      "words": [
+        "treasures"
+      ],
+      "handlers": [
+        "treasurecom"
+      ],
+      "source": {
+        "treasurecom": {
+          "file": "src/commands.c",
+          "line": 1520
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:310",
+      "kind": "handler",
+      "words": [
+        "txtraw"
+      ],
+      "handlers": [
+        "textrawcom"
+      ],
+      "source": {
+        "textrawcom": {
+          "file": "src/wizard.c",
+          "line": 152
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:311",
+      "kind": "handler",
+      "words": [
+        "typo"
+      ],
+      "handlers": [
+        "typocom"
+      ],
+      "source": {
+        "typocom": {
+          "file": "src/commands.c",
+          "line": 1046
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "fallback:unban",
+      "kind": "fallback",
+      "words": [
+        "unban"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "fallback-verbs",
+          "case": "fallback-unban"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:313",
+      "kind": "handler",
+      "words": [
+        "unlock"
+      ],
+      "handlers": [
+        "unlockcom"
+      ],
+      "source": {
+        "unlockcom": {
+          "file": "src/objsys.c",
+          "line": 282
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:314",
+      "kind": "handler",
+      "words": [
+        "untie"
+      ],
+      "handlers": [
+        "untiecom"
+      ],
+      "source": {
+        "untiecom": {
+          "file": "cr/untiecom.c",
+          "line": 36
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:315",
+      "kind": "handler",
+      "words": [
+        "unveil"
+      ],
+      "handlers": [
+        "unveilcom"
+      ],
+      "source": {
+        "unveilcom": {
+          "file": "src/commands.c",
+          "line": 835
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:316",
+      "kind": "handler",
+      "words": [
+        "upper"
+      ],
+      "handlers": [
+        "com_handler"
+      ],
+      "source": {
+        "com_handler": {
+          "file": "src/comm.c",
+          "line": 67
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:317",
+      "kind": "handler",
+      "words": [
+        "update"
+      ],
+      "handlers": [
+        "updatecom"
+      ],
+      "source": {
+        "updatecom": {
+          "file": "cr/update.c",
+          "line": 48
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:318",
+      "kind": "handler",
+      "words": [
+        "uptime"
+      ],
+      "handlers": [
+        "uptimecom"
+      ],
+      "source": {
+        "uptimecom": {
+          "file": "src/timing.c",
+          "line": 72
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:319",
+      "kind": "handler",
+      "words": [
+        "use"
+      ],
+      "handlers": [
+        "usecom"
+      ],
+      "source": {
+        "usecom": {
+          "file": "src/objsys.c",
+          "line": 49
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:320",
+      "kind": "handler",
+      "words": [
+        "value"
+      ],
+      "handlers": [
+        "valuecom"
+      ],
+      "source": {
+        "valuecom": {
+          "file": "src/objsys.c",
+          "line": 606
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:321",
+      "kind": "inline",
+      "words": [
+        "version"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:322",
+      "kind": "handler",
+      "words": [
+        "visible"
+      ],
+      "handlers": [
+        "viscom"
+      ],
+      "source": {
+        "viscom": {
+          "file": "src/magic.c",
+          "line": 398
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:323",
+      "kind": "handler",
+      "words": [
+        "viewcom"
+      ],
+      "handlers": [
+        "viewcom"
+      ],
+      "source": {
+        "viewcom": {
+          "file": "src/viewcom.c",
+          "line": 17
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:324",
+      "kind": "handler",
+      "words": [
+        "vote"
+      ],
+      "handlers": [
+        "votecom"
+      ],
+      "source": {
+        "votecom": {
+          "file": "cr/vote.c",
+          "line": 35
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:325",
+      "kind": "handler",
+      "words": [
+        "vtouch"
+      ],
+      "handlers": [
+        "spellcom"
+      ],
+      "source": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "fallback:wall",
+      "kind": "fallback",
+      "words": [
+        "wall"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "fallback-verbs",
+          "case": "fallback-wall"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:327",
+      "kind": "handler",
+      "words": [
+        "who"
+      ],
+      "handlers": [
+        "whocom"
+      ],
+      "source": {
+        "whocom": {
+          "file": "src/mobile.c",
+          "line": 136
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:328",
+      "kind": "handler",
+      "words": [
+        "whon"
+      ],
+      "handlers": [
+        "whoncom"
+      ],
+      "source": {
+        "whoncom": {
+          "file": "src/mobile.c",
+          "line": 309
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:329",
+      "kind": "handler",
+      "words": [
+        "war"
+      ],
+      "handlers": [
+        "warcom"
+      ],
+      "source": {
+        "warcom": {
+          "file": "src/wizard.c",
+          "line": 982
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:330",
+      "kind": "handler",
+      "words": [
+        "wave"
+      ],
+      "handlers": [
+        "wavecom"
+      ],
+      "source": {
+        "wavecom": {
+          "file": "cr/actions.c",
+          "line": 422
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:331",
+      "kind": "handler",
+      "words": [
+        "wearall"
+      ],
+      "handlers": [
+        "wearall"
+      ],
+      "source": {
+        "wearall": {
+          "file": "src/objsys.c",
+          "line": 1744
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:332",
+      "kind": "handler",
+      "words": [
+        "weather"
+      ],
+      "handlers": [
+        "weathercom"
+      ],
+      "source": {
+        "weathercom": {
+          "file": "cr/weather.c",
+          "line": 83
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:333",
+      "kind": "handler",
+      "words": [
+        "where"
+      ],
+      "handlers": [
+        "wherecom"
+      ],
+      "source": {
+        "wherecom": {
+          "file": "src/magic.c",
+          "line": 532
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:334",
+      "kind": "handler",
+      "words": [
+        "wield"
+      ],
+      "handlers": [
+        "wieldcom"
+      ],
+      "source": {
+        "wieldcom": {
+          "file": "cr/fight.c",
+          "line": 127
+        }
+      },
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "equipment-and-get",
+          "case": "wield-room-audience"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:335",
+      "kind": "handler",
+      "words": [
+        "wipe"
+      ],
+      "handlers": [
+        "wipecom"
+      ],
+      "source": {
+        "wipecom": {
+          "file": "cr/actions.c",
+          "line": 527
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:336",
+      "kind": "handler",
+      "words": [
+        "wish"
+      ],
+      "handlers": [
+        "wishcom"
+      ],
+      "source": {
+        "wishcom": {
+          "file": "src/comm.c",
+          "line": 474
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:337",
+      "kind": "handler",
+      "words": [
+        "wiz"
+      ],
+      "handlers": [
+        "com_handler"
+      ],
+      "source": {
+        "com_handler": {
+          "file": "src/comm.c",
+          "line": 67
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:338",
+      "kind": "handler",
+      "words": [
+        "wizlist"
+      ],
+      "handlers": [
+        "wizlistcom"
+      ],
+      "source": {
+        "wizlistcom": {
+          "file": "src/wizlist.c",
+          "line": 218
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:339",
+      "kind": "handler",
+      "words": [
+        "wizlock"
+      ],
+      "handlers": [
+        "wizlock"
+      ],
+      "source": {
+        "wizlock": {
+          "file": "src/wizard.c",
+          "line": 956
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:340",
+      "kind": "handler",
+      "words": [
+        "wload"
+      ],
+      "handlers": [
+        "wloadcom"
+      ],
+      "source": {
+        "wloadcom": {
+          "file": "src/god.c",
+          "line": 168
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:341",
+      "kind": "handler",
+      "words": [
+        "zap"
+      ],
+      "handlers": [
+        "zapcom"
+      ],
+      "source": {
+        "zapcom": {
+          "file": "src/wizard.c",
+          "line": 1010
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:342",
+      "kind": "handler",
+      "words": [
+        "zones"
+      ],
+      "handlers": [
+        "zonescom"
+      ],
+      "source": {
+        "zonescom": {
+          "file": "src/zones.c",
+          "line": 158
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:343",
+      "kind": "handler",
+      "words": [
+        "seenumbers"
+      ],
+      "handlers": [
+        "togglecom"
+      ],
+      "source": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:344",
+      "kind": "handler",
+      "words": [
+        "awaymsg"
+      ],
+      "handlers": [
+        "awaymsgcom"
+      ],
+      "source": {
+        "awaymsgcom": {
+          "file": "src/commands.c",
+          "line": 66
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:345",
+      "kind": "handler",
+      "words": [
+        "awaybeeps"
+      ],
+      "handlers": [
+        "togglecom"
+      ],
+      "source": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:346",
+      "kind": "handler",
+      "words": [
+        "iusers"
+      ],
+      "handlers": [
+        "iuserscom"
+      ],
+      "source": {
+        "iuserscom": {
+          "file": "cr/muserscom.c",
+          "line": 100
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "fallback:unusede",
+      "kind": "fallback",
+      "words": [
+        "unusede"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "fallback-verbs",
+          "case": "fallback-unusede"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "fallback:unusedf",
+      "kind": "fallback",
+      "words": [
+        "unusedf"
+      ],
+      "handlers": [],
+      "source": {},
+      "status": "partial",
+      "branches": [
+        {
+          "scenario": "fallback-verbs",
+          "case": "fallback-unusedf"
+        }
+      ],
+      "notes": "Authored regression branches; complete handler and special-hook review still required."
+    },
+    {
+      "id": "verb:349",
+      "kind": "handler",
+      "words": [
+        "noachat"
+      ],
+      "handlers": [
+        "cmd_noachat"
+      ],
+      "source": {
+        "cmd_noachat": {
+          "file": "cr/client.c",
+          "line": 216
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:350",
+      "kind": "handler",
+      "words": [
+        "noacode"
+      ],
+      "handlers": [
+        "cmd_noacode"
+      ],
+      "source": {
+        "cmd_noacode": {
+          "file": "cr/client.c",
+          "line": 223
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:351",
+      "kind": "handler",
+      "words": [
+        "noagod"
+      ],
+      "handlers": [
+        "cmd_noagod"
+      ],
+      "source": {
+        "cmd_noagod": {
+          "file": "cr/client.c",
+          "line": 230
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:352",
+      "kind": "handler",
+      "words": [
+        "noainfo"
+      ],
+      "handlers": [
+        "cmd_noainfo"
+      ],
+      "source": {
+        "cmd_noainfo": {
+          "file": "cr/client.c",
+          "line": 237
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:353",
+      "kind": "handler",
+      "words": [
+        "noatell"
+      ],
+      "handlers": [
+        "cmd_noatell"
+      ],
+      "source": {
+        "cmd_noatell": {
+          "file": "cr/client.c",
+          "line": 244
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:354",
+      "kind": "handler",
+      "words": [
+        "noaberchat"
+      ],
+      "handlers": [
+        "cmd_noaberchat"
+      ],
+      "source": {
+        "cmd_noaberchat": {
+          "file": "cr/client.c",
+          "line": 209
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:355",
+      "kind": "handler",
+      "words": [
+        "aautocon"
+      ],
+      "handlers": [
+        "cmd_aautocon"
+      ],
+      "source": {
+        "cmd_aautocon": {
+          "file": "cr/client.c",
+          "line": 265
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    },
+    {
+      "id": "verb:356",
+      "kind": "handler",
+      "words": [
+        "acommstats"
+      ],
+      "handlers": [
+        "cmd_acommstats"
+      ],
+      "source": {
+        "cmd_acommstats": {
+          "file": "cr/client.c",
+          "line": 155
+        }
+      },
+      "status": "unreviewed",
+      "branches": []
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "light-generic",
+      "authority": [
+        "src/commands.c:lightcom",
+        "src/commands.c:extinguishcom",
+        "idirt/src/objsys.c:ohereandget"
+      ],
+      "prepare": [
+        [
+          "object",
+          "stick@sherwood",
+          "carrier",
+          "{actor}"
+        ],
+        [
+          "object",
+          "fire@nibelung",
+          "room",
+          "sherwood4@sherwood"
+        ]
+      ],
+      "steps": [
+        {
+          "case": "carried-with-room-fire",
+          "command": "light stick",
+          "output": {
+            "actor": "Ok\n"
+          },
+          "prepare": [],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "stick@sherwood"
+              ],
+              "expect": {
+                "oflags": {
+                  "contains": [
+                    "Lit"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "case": "already-lit",
+          "command": "light stick",
+          "output": {
+            "actor": "It's already lit.\n"
+          },
+          "prepare": [],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "stick@sherwood"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ]
+        },
+        {
+          "case": "not-lightable",
+          "command": "light fire",
+          "output": {
+            "actor": "You can't light that!\n"
+          },
+          "prepare": [],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "fire@nibelung"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ]
+        },
+        {
+          "case": "carried-extinguish",
+          "command": "extinguish stick",
+          "output": {
+            "actor": "Ok\n"
+          },
+          "prepare": [],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "stick@sherwood"
+              ],
+              "expect": {
+                "oflags": {
+                  "excludes": [
+                    "Lit"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "case": "already-unlit",
+          "command": "extinguish stick",
+          "output": {
+            "actor": "It's not lit!\n"
+          },
+          "prepare": [],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "stick@sherwood"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ]
+        },
+        {
+          "case": "floor-light",
+          "command": "light stick",
+          "output": {
+            "actor": "Ok\n"
+          },
+          "prepare": [
+            [
+              "object",
+              "stick@sherwood",
+              "room",
+              "sherwood4@sherwood"
+            ]
+          ],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "stick@sherwood"
+              ],
+              "expect": {
+                "oflags": {
+                  "contains": [
+                    "Lit"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "case": "unlight-alias",
+          "command": "unlight stick",
+          "output": {
+            "actor": "Ok\n"
+          },
+          "prepare": [],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "stick@sherwood"
+              ],
+              "expect": {
+                "oflags": {
+                  "excludes": [
+                    "Lit"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "case": "not-extinguishable",
+          "command": "extinguish fire",
+          "output": {
+            "actor": "You can't extinguish that!\n"
+          },
+          "prepare": [],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "fire@nibelung"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ]
+        },
+        {
+          "case": "no-source",
+          "command": "light stick",
+          "output": {
+            "actor": "You have nothing to light things from.\n"
+          },
+          "prepare": [
+            [
+              "object",
+              "fire@nibelung",
+              "room",
+              "sherwood3@sherwood"
+            ]
+          ],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "stick@sherwood"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ]
+        },
+        {
+          "case": "player-source",
+          "command": "light stick",
+          "output": {
+            "actor": "Ok\n"
+          },
+          "prepare": [
+            [
+              "player",
+              "{actor}",
+              "sflag:Lit",
+              1
+            ]
+          ],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "stick@sherwood"
+              ],
+              "expect": {
+                "oflags": {
+                  "contains": [
+                    "Lit"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "case": "missing-light-target",
+          "command": "light",
+          "output": {
+            "actor": "Tell me more?\n"
+          },
+          "prepare": [],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "stick@sherwood"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ]
+        },
+        {
+          "case": "unknown-light-target",
+          "command": "light zzzunknown",
+          "output": {
+            "actor": "It isn't here.\n"
+          },
+          "prepare": [],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "stick@sherwood"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ]
+        },
+        {
+          "case": "missing-extinguish-target",
+          "command": "extinguish",
+          "output": {
+            "actor": "Tell me more?\n"
+          },
+          "prepare": [],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "stick@sherwood"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ]
+        },
+        {
+          "case": "unknown-extinguish-target",
+          "command": "extinguish zzzunknown",
+          "output": {
+            "actor": "It isn't here.\n"
+          },
+          "prepare": [],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "stick@sherwood"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "containers",
+      "authority": [
+        "src/objsys.c:opencom",
+        "src/objsys.c:closecom",
+        "src/objsys.c:get1objfrom"
+      ],
+      "prepare": [
+        [
+          "object",
+          "casket@labyrinth",
+          "room",
+          "sherwood4@sherwood"
+        ],
+        [
+          "object",
+          "horn@labyrinth",
+          "container",
+          "casket@labyrinth"
+        ],
+        [
+          "object",
+          "amethyst@labyrinth",
+          "container",
+          "casket@labyrinth"
+        ],
+        [
+          "object",
+          "stick@sherwood",
+          "carrier",
+          "{actor}"
+        ]
+      ],
+      "steps": [
+        {
+          "case": "open-missing",
+          "command": "open",
+          "output": {
+            "actor": "Open what?\n"
+          },
+          "prepare": [],
+          "state": []
+        },
+        {
+          "case": "open-unknown",
+          "command": "open zzzunknown",
+          "output": {
+            "actor": "I don't know how to open one of those.\n"
+          },
+          "prepare": [],
+          "state": []
+        },
+        {
+          "case": "open-already-open",
+          "command": "open casket",
+          "output": {
+            "actor": "It's already open.\n"
+          },
+          "prepare": [],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "casket@labyrinth"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ]
+        },
+        {
+          "case": "close-open",
+          "command": "close casket",
+          "output": {
+            "actor": "The Casket is now closed.\n"
+          },
+          "prepare": [],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "casket@labyrinth"
+              ],
+              "expect": {
+                "state": 1
+              }
+            }
+          ]
+        },
+        {
+          "case": "close-already-closed",
+          "command": "close casket",
+          "output": {
+            "actor": "It's already closed.\n"
+          },
+          "prepare": [],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "casket@labyrinth"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ]
+        },
+        {
+          "case": "open-closed",
+          "command": "open casket",
+          "output": {
+            "actor": "Done.\n"
+          },
+          "prepare": [],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "casket@labyrinth"
+              ],
+              "expect": {
+                "state": 0
+              }
+            }
+          ]
+        },
+        {
+          "case": "open-non-openable",
+          "command": "open stick",
+          "output": {
+            "actor": "You can't open that!\n"
+          },
+          "prepare": [],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "stick@sherwood"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ]
+        },
+        {
+          "case": "close-non-openable",
+          "command": "close stick",
+          "output": {
+            "actor": "You can't close that!\n"
+          },
+          "prepare": [],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "stick@sherwood"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ]
+        },
+        {
+          "case": "lock-without-key",
+          "command": "lock casket",
+          "output": {
+            "actor": "You have no key.\n"
+          },
+          "prepare": [],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "casket@labyrinth"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ]
+        },
+        {
+          "case": "get-open-container",
+          "command": "get horn from casket",
+          "output": {
+            "actor": "You take the Horn from the Casket.\n"
+          },
+          "prepare": [],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "horn@labyrinth"
+              ],
+              "expect": {
+                "carry": 2,
+                "location": {
+                  "ref": [
+                    "player",
+                    "{actor}",
+                    "id"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "case": "get-closed-container",
+          "command": "get horn from casket",
+          "output": {
+            "actor": "You open the Casket.\nYou take the Horn from the Casket.\n"
+          },
+          "prepare": [
+            [
+              "object",
+              "horn@labyrinth",
+              "container",
+              "casket@labyrinth"
+            ],
+            [
+              "object",
+              "casket@labyrinth",
+              "state",
+              1
+            ]
+          ],
+          "state": [
+            {
+              "entity": [
+                "object",
+                "horn@labyrinth"
+              ],
+              "expect": {
+                "carry": 2,
+                "location": {
+                  "ref": [
+                    "player",
+                    "{actor}",
+                    "id"
+                  ]
+                }
+              }
+            },
+            {
+              "entity": [
+                "object",
+                "casket@labyrinth"
+              ],
+              "expect": {
+                "state": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "communication",
+      "authority": [
+        "src/comm.c:saycom",
+        "src/comm.c:saytocom",
+        "src/sendsys.c:p_sendto"
+      ],
+      "prepare": [
+        [
+          "player",
+          "{actor}",
+          "sflag:HearBack",
+          1
+        ]
+      ],
+      "steps": [
+        {
+          "case": "say-room-audience",
+          "command": "say hello",
+          "output": {
+            "actor": "You say, \"hello\"\n",
+            "target": "\r{actor} says, \"hello\"\n\rC: ",
+            "witness": "\r{actor} says, \"hello\"\n\rC: "
+          },
+          "prepare": [],
+          "state": []
+        },
+        {
+          "case": "say-missing",
+          "command": "say",
+          "output": {
+            "actor": "What do you want to say?\n"
+          },
+          "prepare": [],
+          "state": []
+        },
+        {
+          "case": "say-mute",
+          "command": "say hello",
+          "output": {
+            "actor": "You're a mute now, sorry.\n"
+          },
+          "prepare": [
+            [
+              "player",
+              "{actor}",
+              "sflag:Dumb",
+              1
+            ]
+          ],
+          "state": []
+        },
+        {
+          "case": "sayto-mute",
+          "command": "sayto {target} hello",
+          "output": {
+            "actor": "You're a mute now, sorry.\n"
+          },
+          "prepare": [],
+          "state": []
+        },
+        {
+          "case": "sayto-room-audience",
+          "command": "sayto {target} hello",
+          "output": {
+            "actor": "You say to {target}, \"hello\"\n",
+            "target": "\r{actor} says to you \"hello\"\n\rC: ",
+            "witness": "\r{actor} says to {target}, \"hello\"\n\rC: "
+          },
+          "prepare": [
+            [
+              "player",
+              "{actor}",
+              "sflag:Dumb",
+              0
+            ]
+          ],
+          "state": []
+        },
+        {
+          "case": "sayto-missing",
+          "command": "sayto",
+          "output": {
+            "actor": "Say what to who?\n"
+          },
+          "prepare": [],
+          "state": []
+        },
+        {
+          "case": "sayto-no-text",
+          "command": "sayto {target}",
+          "output": {
+            "actor": "What do you want to say?\n"
+          },
+          "prepare": [],
+          "state": []
+        },
+        {
+          "case": "sayto-self",
+          "command": "sayto {actor} hello",
+          "output": {
+            "actor": "You mumble to yourself.\n"
+          },
+          "prepare": [],
+          "state": []
+        },
+        {
+          "case": "sayto-remote",
+          "command": "sayto {remote} hello",
+          "output": {
+            "actor": "They aren't here.\n"
+          },
+          "prepare": [],
+          "state": []
+        }
+      ]
+    },
+    {
+      "id": "equipment-and-get",
+      "authority": [
+        "cr/fight.c:wieldcom",
+        "src/sendsys.c:send_g_msg",
+        "src/objsys.c:getcom"
+      ],
+      "prepare": [
+        [
+          "object",
+          "stick@sherwood",
+          "carrier",
+          "{actor}"
+        ],
+        [
+          "object",
+          "ball@blizzard",
+          "room",
+          "sherwood4@sherwood"
+        ]
+      ],
+      "steps": [
+        {
+          "case": "wield-room-audience",
+          "command": "wield stick",
+          "output": {
+            "actor": "You are now wielding the Stick.\n",
+            "target": "\r{actor} wields the Stick.\n\rC: ",
+            "witness": "\r{actor} wields the Stick.\n\rC: "
+          },
+          "state": [
+            {
+              "entity": [
+                "object",
+                "stick@sherwood"
+              ],
+              "expect": {
+                "carry": 4,
+                "location": {
+                  "ref": [
+                    "player",
+                    "{actor}",
+                    "id"
+                  ]
+                }
+              }
+            },
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {
+                "weapon": {
+                  "ref": [
+                    "object",
+                    "stick@sherwood",
+                    "id"
+                  ]
+                }
+              }
+            }
+          ],
+          "prepare": []
+        },
+        {
+          "case": "inventory-wielded",
+          "command": "inventory",
+          "output": {
+            "actor": "Your backpack contains:\nStick <weapon> <wielded> \n",
+            "target": "\r{actor} rummages through his backpack.\n\rC: ",
+            "witness": "\r{actor} rummages through his backpack.\n\rC: "
+          },
+          "state": [],
+          "prepare": []
+        },
+        {
+          "case": "get-ball-not-all",
+          "command": "get ball",
+          "output": {
+            "actor": "Ok\n",
+            "target": "\r{actor} takes the Ball.\n\rC: ",
+            "witness": "\r{actor} takes the Ball.\n\rC: "
+          },
+          "state": [
+            {
+              "entity": [
+                "object",
+                "ball@blizzard"
+              ],
+              "expect": {
+                "carry": 2,
+                "location": {
+                  "ref": [
+                    "player",
+                    "{actor}",
+                    "id"
+                  ]
+                }
+              }
+            }
+          ],
+          "prepare": []
+        },
+        {
+          "case": "inventory-full-array-boundary",
+          "command": "inventory",
+          "output": {
+            "actor": "Your backpack contains:\nStick <weapon> <wielded> Ball \n",
+            "target": "\r{actor} rummages through his backpack.\n\rC: ",
+            "witness": "\r{actor} rummages through his backpack.\n\rC: "
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": []
+        }
+      ]
+    },
+    {
+      "id": "get-word-boundary",
+      "authority": [
+        "cr/fight.c:wieldcom",
+        "src/sendsys.c:send_g_msg",
+        "src/objsys.c:getcom"
+      ],
+      "prepare": [
+        [
+          "object",
+          "stick@sherwood",
+          "carrier",
+          "{actor}"
+        ],
+        [
+          "object",
+          "ball@blizzard",
+          "room",
+          "sherwood4@sherwood"
+        ]
+      ],
+      "steps": [
+        {
+          "case": "get-ball-not-all",
+          "command": "get ball",
+          "output": {
+            "actor": "Ok\n",
+            "target": "\r{actor} takes the Ball.\n\rC: ",
+            "witness": "\r{actor} takes the Ball.\n\rC: "
+          },
+          "state": [
+            {
+              "entity": [
+                "object",
+                "ball@blizzard"
+              ],
+              "expect": {
+                "carry": 2,
+                "location": {
+                  "ref": [
+                    "player",
+                    "{actor}",
+                    "id"
+                  ]
+                }
+              }
+            }
+          ],
+          "prepare": []
+        },
+        {
+          "case": "drop-abbreviation-all",
+          "command": "dro all",
+          "output": {
+            "actor": "Ball: Ok\n",
+            "target": "\r{actor} drops the Ball.\n\rC: ",
+            "witness": "\r{actor} drops the Ball.\n\rC: "
+          },
+          "state": [
+            {
+              "entity": [
+                "object",
+                "ball@blizzard"
+              ],
+              "expect": {
+                "carry": 0,
+                "location": {
+                  "ref": [
+                    "room",
+                    "sherwood4@sherwood",
+                    "id"
+                  ]
+                }
+              }
+            }
+          ],
+          "prepare": [
+            [
+              "object",
+              "stick@sherwood",
+              "room",
+              "sherwood3@sherwood"
+            ]
+          ],
+          "verb": "drop"
+        }
+      ]
+    },
+    {
+      "id": "posture",
+      "authority": [
+        "src/commands.c:sitcom",
+        "src/commands.c:standcom"
+      ],
+      "prepare": [],
+      "steps": [
+        {
+          "case": "stand-already",
+          "command": "stand",
+          "output": {
+            "actor": "You're already standing.\n"
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": []
+        },
+        {
+          "case": "sit-success",
+          "command": "sit",
+          "output": {
+            "actor": "You assume the lotus position.\n",
+            "target": "\r{actor} sits down.\n\rC: ",
+            "witness": "\r{actor} sits down.\n\rC: "
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {
+                "sitting": 1
+              }
+            }
+          ],
+          "prepare": []
+        },
+        {
+          "case": "sit-already",
+          "command": "sit",
+          "output": {
+            "actor": "You're already sitting.\n"
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": []
+        },
+        {
+          "case": "stand-success",
+          "command": "stand",
+          "output": {
+            "actor": "You clamber to your feet.\n",
+            "target": "\r{actor} clambers to his feet.\n\rC: ",
+            "witness": "\r{actor} clambers to his feet.\n\rC: "
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {
+                "sitting": 0
+              }
+            }
+          ],
+          "prepare": []
+        }
+      ]
+    },
+    {
+      "id": "social-audiences",
+      "authority": [
+        "data/actions:smile and hug",
+        "cr/actions.c:do_action"
+      ],
+      "prepare": [],
+      "steps": [
+        {
+          "case": "smile-all",
+          "command": "smile",
+          "output": {
+            "actor": "You smile happily.\n",
+            "target": "\r{actor} smiles happily.\n\rC: ",
+            "witness": "\r{actor} smiles happily.\n\rC: "
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": [],
+          "action": "smile"
+        },
+        {
+          "case": "smile-target",
+          "command": "smile {target}",
+          "output": {
+            "actor": "You smile at {target}.\n",
+            "target": "\r{actor} smiles at you.\n\rC: ",
+            "witness": "\r{actor} smiles at {target}.\n\rC: "
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": [],
+          "action": "smile"
+        },
+        {
+          "case": "smile-self",
+          "command": "smile {actor}",
+          "output": {
+            "actor": "Good trick, that.\n"
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": [],
+          "action": "smile"
+        },
+        {
+          "case": "hug-needs-target",
+          "command": "hug",
+          "output": {
+            "actor": "That action requires a target player.\n"
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": [],
+          "action": "hug"
+        }
+      ]
+    },
+    {
+      "id": "fallback-verbs",
+      "authority": [
+        "src/parse.c:doverb default"
+      ],
+      "prepare": [],
+      "steps": [
+        {
+          "case": "fallback-asmortal",
+          "command": "asmortal",
+          "output": {
+            "actor": "You can't do that now.\n"
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": []
+        },
+        {
+          "case": "fallback-clevel",
+          "command": "clevel",
+          "output": {
+            "actor": "You can't do that now.\n"
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": []
+        },
+        {
+          "case": "fallback-ctime",
+          "command": "ctime",
+          "output": {
+            "actor": "You can't do that now.\n"
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": []
+        },
+        {
+          "case": "fallback-cut",
+          "command": "cut",
+          "output": {
+            "actor": "You can't do that now.\n"
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": []
+        },
+        {
+          "case": "fallback-foo",
+          "command": "foo",
+          "output": {
+            "actor": "You can't do that now.\n"
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": []
+        },
+        {
+          "case": "fallback-iminvis",
+          "command": "iminvis",
+          "output": {
+            "actor": "You can't do that now.\n"
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": []
+        },
+        {
+          "case": "fallback-knot",
+          "command": "knot",
+          "output": {
+            "actor": "You can't do that now.\n"
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": []
+        },
+        {
+          "case": "fallback-privs",
+          "command": "privs",
+          "output": {
+            "actor": "You can't do that now.\n"
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": []
+        },
+        {
+          "case": "fallback-setlook",
+          "command": "setlook",
+          "output": {
+            "actor": "You can't do that now.\n"
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": []
+        },
+        {
+          "case": "fallback-settime",
+          "command": "settime",
+          "output": {
+            "actor": "You can't do that now.\n"
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": []
+        },
+        {
+          "case": "fallback-unban",
+          "command": "unban",
+          "output": {
+            "actor": "You can't do that now.\n"
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": []
+        },
+        {
+          "case": "fallback-wall",
+          "command": "wall",
+          "output": {
+            "actor": "You can't do that now.\n"
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": []
+        },
+        {
+          "case": "fallback-unusede",
+          "command": "unusede",
+          "output": {
+            "actor": "You can't do that now.\n"
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": []
+        },
+        {
+          "case": "fallback-unusedf",
+          "command": "unusedf",
+          "output": {
+            "actor": "You can't do that now.\n"
+          },
+          "state": [
+            {
+              "entity": [
+                "player",
+                "{actor}"
+              ],
+              "expect": {},
+              "same": true
+            }
+          ],
+          "prepare": []
+        }
+      ]
+    }
+  ]
+}

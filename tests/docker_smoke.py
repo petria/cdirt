@@ -214,7 +214,7 @@ def run_smoke() -> None:
     suffix = "".join(secrets.choice(string.ascii_uppercase) for _ in range(6))
     container = f"cdirt-verb-smoke-{suffix.lower()}"
     port = available_port()
-    subprocess.run(["docker", "run", "--detach", "--rm", "--name", container,
+    subprocess.run(["docker", "run", "--detach", "--name", container,
                     "--publish", f"127.0.0.1:{port}:6715", IMAGE],
                    check=True, stdout=subprocess.DEVNULL)
     time.sleep(2)  # Let the DNS helper and MUD event loop settle.
@@ -255,7 +255,7 @@ def run_smoke() -> None:
     finally:
         for player in players:
             player.close()
-        subprocess.run(["docker", "stop", container], check=False,
+        subprocess.run(["docker", "rm", "--force", container], check=False,
                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 

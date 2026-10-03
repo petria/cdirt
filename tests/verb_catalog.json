@@ -6,7 +6,7 @@
   "verb_count": 390,
   "unique_verb_ids": 356,
   "output_api_call_sites": {
-    "bprintf": 2147,
+    "bprintf": 2150,
     "sendf": 242,
     "sendl": 37,
     "send_msg": 255,
@@ -25,7 +25,18 @@
         "pfollow",
         "dogocom"
       ],
+      "handlers": [
+        "dogocom"
+      ],
       "primary_handler": "dogocom",
+      "route_id": "verb:1",
+      "route_kind": "handler",
+      "handler_sources": {
+        "dogocom": {
+          "file": "src/move.c",
+          "line": 492
+        }
+      },
       "dispatch_source_word": "GO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -39,7 +50,18 @@
       "dispatch": [
         "dodirn"
       ],
+      "handlers": [
+        "dodirn"
+      ],
       "primary_handler": "dodirn",
+      "route_id": "verb:2",
+      "route_kind": "handler",
+      "handler_sources": {
+        "dodirn": {
+          "file": "src/move.c",
+          "line": 40
+        }
+      },
       "dispatch_source_word": "NORTH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -53,7 +75,18 @@
       "dispatch": [
         "dodirn"
       ],
+      "handlers": [
+        "dodirn"
+      ],
       "primary_handler": "dodirn",
+      "route_id": "verb:3",
+      "route_kind": "handler",
+      "handler_sources": {
+        "dodirn": {
+          "file": "src/move.c",
+          "line": 40
+        }
+      },
       "dispatch_source_word": "EAST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -67,7 +100,18 @@
       "dispatch": [
         "dodirn"
       ],
+      "handlers": [
+        "dodirn"
+      ],
       "primary_handler": "dodirn",
+      "route_id": "verb:4",
+      "route_kind": "handler",
+      "handler_sources": {
+        "dodirn": {
+          "file": "src/move.c",
+          "line": 40
+        }
+      },
       "dispatch_source_word": "SOUTH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -81,7 +125,18 @@
       "dispatch": [
         "dodirn"
       ],
+      "handlers": [
+        "dodirn"
+      ],
       "primary_handler": "dodirn",
+      "route_id": "verb:5",
+      "route_kind": "handler",
+      "handler_sources": {
+        "dodirn": {
+          "file": "src/move.c",
+          "line": 40
+        }
+      },
       "dispatch_source_word": "WEST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -95,7 +150,18 @@
       "dispatch": [
         "dodirn"
       ],
+      "handlers": [
+        "dodirn"
+      ],
       "primary_handler": "dodirn",
+      "route_id": "verb:6",
+      "route_kind": "handler",
+      "handler_sources": {
+        "dodirn": {
+          "file": "src/move.c",
+          "line": 40
+        }
+      },
       "dispatch_source_word": "UP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -109,7 +175,18 @@
       "dispatch": [
         "dodirn"
       ],
+      "handlers": [
+        "dodirn"
+      ],
       "primary_handler": "dodirn",
+      "route_id": "verb:7",
+      "route_kind": "handler",
+      "handler_sources": {
+        "dodirn": {
+          "file": "src/move.c",
+          "line": 40
+        }
+      },
       "dispatch_source_word": "DOWN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -123,7 +200,18 @@
       "dispatch": [
         "cmd_aboot"
       ],
+      "handlers": [
+        "cmd_aboot"
+      ],
       "primary_handler": "cmd_aboot",
+      "route_id": "verb:8",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_aboot": {
+          "file": "cr/client.c",
+          "line": 275
+        }
+      },
       "dispatch_source_word": "ABOOT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -137,7 +225,18 @@
       "dispatch": [
         "acctcom"
       ],
+      "handlers": [
+        "acctcom"
+      ],
       "primary_handler": "acctcom",
+      "route_id": "verb:9",
+      "route_kind": "handler",
+      "handler_sources": {
+        "acctcom": {
+          "file": "src/acct.c",
+          "line": 18
+        }
+      },
       "dispatch_source_word": "ACCT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -151,7 +250,18 @@
       "dispatch": [
         "actionscom"
       ],
+      "handlers": [
+        "actionscom"
+      ],
       "primary_handler": "actionscom",
+      "route_id": "verb:10",
+      "route_kind": "handler",
+      "handler_sources": {
+        "actionscom": {
+          "file": "cr/actions.c",
+          "line": 120
+        }
+      },
       "dispatch_source_word": "ACTIONS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -165,7 +275,18 @@
       "dispatch": [
         "com_handler"
       ],
+      "handlers": [
+        "com_handler"
+      ],
       "primary_handler": "com_handler",
+      "route_id": "verb:11",
+      "route_kind": "handler",
+      "handler_sources": {
+        "com_handler": {
+          "file": "src/comm.c",
+          "line": 67
+        }
+      },
       "dispatch_source_word": "DEMI",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -179,7 +300,18 @@
       "dispatch": [
         "spellcom"
       ],
+      "handlers": [
+        "spellcom"
+      ],
       "primary_handler": "spellcom",
+      "route_id": "verb:12",
+      "route_kind": "handler",
+      "handler_sources": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
       "dispatch_source_word": "AID",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -193,7 +325,18 @@
       "dispatch": [
         "cmd_ainfo"
       ],
+      "handlers": [
+        "cmd_ainfo"
+      ],
       "primary_handler": "cmd_ainfo",
+      "route_id": "verb:13",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_ainfo": {
+          "file": "cr/client.c",
+          "line": 251
+        }
+      },
       "dispatch_source_word": "AINFO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -207,7 +350,18 @@
       "dispatch": [
         "aliascom"
       ],
+      "handlers": [
+        "aliascom"
+      ],
       "primary_handler": "aliascom",
+      "route_id": "verb:14",
+      "route_kind": "handler",
+      "handler_sources": {
+        "aliascom": {
+          "file": "src/commands.c",
+          "line": 1294
+        }
+      },
       "dispatch_source_word": "ALIAS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -224,7 +378,11 @@
         "sclrflg",
         "ssetflg"
       ],
-      "primary_handler": "ssetflg",
+      "handlers": [],
+      "primary_handler": "inline:aloof",
+      "route_id": "verb:15",
+      "route_kind": "inline",
+      "handler_sources": {},
       "dispatch_source_word": "ALOOF",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -239,7 +397,18 @@
         "bprintf",
         "obj_flags"
       ],
+      "handlers": [
+        "obj_flags"
+      ],
       "primary_handler": "obj_flags",
+      "route_id": "verb:16",
+      "route_kind": "handler",
+      "handler_sources": {
+        "obj_flags": {
+          "file": "cr/flags.c",
+          "line": 322
+        }
+      },
       "dispatch_source_word": "AFLAGS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -253,7 +422,18 @@
       "dispatch": [
         "cmd_achat"
       ],
+      "handlers": [
+        "cmd_achat"
+      ],
       "primary_handler": "cmd_achat",
+      "route_id": "verb:17",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_achat": {
+          "file": "cr/client.c",
+          "line": 76
+        }
+      },
       "dispatch_source_word": "ACHAT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -267,7 +447,18 @@
       "dispatch": [
         "cmd_achat"
       ],
+      "handlers": [
+        "cmd_achat"
+      ],
       "primary_handler": "cmd_achat",
+      "route_id": "verb:18",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_achat": {
+          "file": "cr/client.c",
+          "line": 76
+        }
+      },
       "dispatch_source_word": "AGOD",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -281,7 +472,18 @@
       "dispatch": [
         "cmd_achat"
       ],
+      "handlers": [
+        "cmd_achat"
+      ],
       "primary_handler": "cmd_achat",
+      "route_id": "verb:19",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_achat": {
+          "file": "cr/client.c",
+          "line": 76
+        }
+      },
       "dispatch_source_word": "ACODE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -295,7 +497,18 @@
       "dispatch": [
         "cmd_amudlist"
       ],
+      "handlers": [
+        "cmd_amudlist"
+      ],
       "primary_handler": "cmd_amudlist",
+      "route_id": "verb:20",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_amudlist": {
+          "file": "cr/client.c",
+          "line": 315
+        }
+      },
       "dispatch_source_word": "AMUDLIST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -309,7 +522,18 @@
       "dispatch": [
         "cmd_amasslist"
       ],
+      "handlers": [
+        "cmd_amasslist"
+      ],
       "primary_handler": "cmd_amasslist",
+      "route_id": "verb:21",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_amasslist": {
+          "file": "cr/client.c",
+          "line": 319
+        }
+      },
       "dispatch_source_word": "AMASSLIST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -323,7 +547,18 @@
       "dispatch": [
         "cmd_acopyright"
       ],
+      "handlers": [
+        "cmd_acopyright"
+      ],
       "primary_handler": "cmd_acopyright",
+      "route_id": "verb:22",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_acopyright": {
+          "file": "cr/client.c",
+          "line": 353
+        }
+      },
       "dispatch_source_word": "ACOPYRIGHT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -337,7 +572,18 @@
       "dispatch": [
         "cmd_apolicy"
       ],
+      "handlers": [
+        "cmd_apolicy"
+      ],
       "primary_handler": "cmd_apolicy",
+      "route_id": "verb:23",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_apolicy": {
+          "file": "cr/client.c",
+          "line": 332
+        }
+      },
       "dispatch_source_word": "APOLICY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -351,7 +597,18 @@
       "dispatch": [
         "cmd_akick"
       ],
+      "handlers": [
+        "cmd_akick"
+      ],
       "primary_handler": "cmd_akick",
+      "route_id": "verb:24",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_akick": {
+          "file": "cr/client.c",
+          "line": 140
+        }
+      },
       "dispatch_source_word": "AKICK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -365,7 +622,18 @@
       "dispatch": [
         "cmd_aversion"
       ],
+      "handlers": [
+        "cmd_aversion"
+      ],
       "primary_handler": "cmd_aversion",
+      "route_id": "verb:25",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_aversion": {
+          "file": "cr/client.c",
+          "line": 386
+        }
+      },
       "dispatch_source_word": "AVERSION",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -379,7 +647,18 @@
       "dispatch": [
         "anoncom"
       ],
+      "handlers": [
+        "anoncom"
+      ],
       "primary_handler": "anoncom",
+      "route_id": "verb:26",
+      "route_kind": "handler",
+      "handler_sources": {
+        "anoncom": {
+          "file": "src/comm.c",
+          "line": 460
+        }
+      },
       "dispatch_source_word": "ANON",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -393,7 +672,18 @@
       "dispatch": [
         "wearcom"
       ],
+      "handlers": [
+        "wearcom"
+      ],
       "primary_handler": "wearcom",
+      "route_id": "verb:27",
+      "route_kind": "handler",
+      "handler_sources": {
+        "wearcom": {
+          "file": "cr/fight.c",
+          "line": 930
+        }
+      },
       "dispatch_source_word": "WEAR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -407,7 +697,18 @@
       "dispatch": [
         "armorcom"
       ],
+      "handlers": [
+        "armorcom"
+      ],
       "primary_handler": "armorcom",
+      "route_id": "verb:28",
+      "route_kind": "handler",
+      "handler_sources": {
+        "armorcom": {
+          "file": "cr/fight.c",
+          "line": 853
+        }
+      },
       "dispatch_source_word": "ARMOR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -421,7 +722,18 @@
       "dispatch": [
         "cmd_ashutdown"
       ],
+      "handlers": [
+        "cmd_ashutdown"
+      ],
       "primary_handler": "cmd_ashutdown",
+      "route_id": "verb:29",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_ashutdown": {
+          "file": "cr/client.c",
+          "line": 297
+        }
+      },
       "dispatch_source_word": "ASHUTDOWN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -435,7 +747,18 @@
       "dispatch": [
         "tellcom"
       ],
+      "handlers": [
+        "tellcom"
+      ],
       "primary_handler": "tellcom",
+      "route_id": "verb:30",
+      "route_kind": "handler",
+      "handler_sources": {
+        "tellcom": {
+          "file": "src/comm.c",
+          "line": 305
+        }
+      },
       "dispatch_source_word": "TELL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -449,7 +772,11 @@
       "dispatch": [
         "doverb_default"
       ],
+      "handlers": [],
       "primary_handler": "doverb_default",
+      "route_id": "doverb_default",
+      "route_kind": "fallback",
+      "handler_sources": {},
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -463,7 +790,18 @@
       "dispatch": [
         "incom"
       ],
+      "handlers": [
+        "incom"
+      ],
       "primary_handler": "incom",
+      "route_id": "verb:32",
+      "route_kind": "handler",
+      "handler_sources": {
+        "incom": {
+          "file": "src/commands.c",
+          "line": 675
+        }
+      },
       "dispatch_source_word": "AT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -477,7 +815,18 @@
       "dispatch": [
         "cmd_atell"
       ],
+      "handlers": [
+        "cmd_atell"
+      ],
       "primary_handler": "cmd_atell",
+      "route_id": "verb:33",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_atell": {
+          "file": "cr/client.c",
+          "line": 92
+        }
+      },
       "dispatch_source_word": "ATELL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -491,7 +840,18 @@
       "dispatch": [
         "cmd_areply"
       ],
+      "handlers": [
+        "cmd_areply"
+      ],
       "primary_handler": "cmd_areply",
+      "route_id": "verb:34",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_areply": {
+          "file": "cr/client.c",
+          "line": 121
+        }
+      },
       "dispatch_source_word": "AREPLY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -505,7 +865,18 @@
       "dispatch": [
         "killcom"
       ],
+      "handlers": [
+        "killcom"
+      ],
       "primary_handler": "killcom",
+      "route_id": "verb:35",
+      "route_kind": "handler",
+      "handler_sources": {
+        "killcom": {
+          "file": "cr/fight.c",
+          "line": 1577
+        }
+      },
       "dispatch_source_word": "KILL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -519,7 +890,18 @@
       "dispatch": [
         "atviscom"
       ],
+      "handlers": [
+        "atviscom"
+      ],
       "primary_handler": "atviscom",
+      "route_id": "verb:36",
+      "route_kind": "handler",
+      "handler_sources": {
+        "atviscom": {
+          "file": "src/wizard.c",
+          "line": 1945
+        }
+      },
       "dispatch_source_word": "ATVIS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -533,7 +915,18 @@
       "dispatch": [
         "togglecom"
       ],
+      "handlers": [
+        "togglecom"
+      ],
       "primary_handler": "togglecom",
+      "route_id": "verb:37",
+      "route_kind": "handler",
+      "handler_sources": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
       "dispatch_source_word": "AUTOEXIT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -550,7 +943,23 @@
         "togglecom",
         "bprintf"
       ],
-      "primary_handler": "bprintf",
+      "handlers": [
+        "awaymsgcom",
+        "togglecom"
+      ],
+      "primary_handler": "inline:away",
+      "route_id": "verb:38",
+      "route_kind": "inline",
+      "handler_sources": {
+        "awaymsgcom": {
+          "file": "src/commands.c",
+          "line": 66
+        },
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
       "dispatch_source_word": "AWAY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -564,7 +973,18 @@
       "dispatch": [
         "cmd_awho"
       ],
+      "handlers": [
+        "cmd_awho"
+      ],
       "primary_handler": "cmd_awho",
+      "route_id": "verb:39",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_awho": {
+          "file": "cr/client.c",
+          "line": 372
+        }
+      },
       "dispatch_source_word": "AWHO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -578,7 +998,18 @@
       "dispatch": [
         "com_handler"
       ],
+      "handlers": [
+        "com_handler"
+      ],
       "primary_handler": "com_handler",
+      "route_id": "verb:40",
+      "route_kind": "handler",
+      "handler_sources": {
+        "com_handler": {
+          "file": "src/comm.c",
+          "line": 67
+        }
+      },
       "dispatch_source_word": "AWIZ",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -592,7 +1023,18 @@
       "dispatch": [
         "spellcom"
       ],
+      "handlers": [
+        "spellcom"
+      ],
       "primary_handler": "spellcom",
+      "route_id": "verb:41",
+      "route_kind": "handler",
+      "handler_sources": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
       "dispatch_source_word": "BABEL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -606,7 +1048,18 @@
       "dispatch": [
         "backstabcom"
       ],
+      "handlers": [
+        "backstabcom"
+      ],
       "primary_handler": "backstabcom",
+      "route_id": "verb:42",
+      "route_kind": "handler",
+      "handler_sources": {
+        "backstabcom": {
+          "file": "src/commands.c",
+          "line": 92
+        }
+      },
       "dispatch_source_word": "BACKSTAB",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -620,7 +1073,18 @@
       "dispatch": [
         "banlistcom"
       ],
+      "handlers": [
+        "banlistcom"
+      ],
       "primary_handler": "banlistcom",
+      "route_id": "verb:43",
+      "route_kind": "handler",
+      "handler_sources": {
+        "banlistcom": {
+          "file": "src/ban.c",
+          "line": 9
+        }
+      },
       "dispatch_source_word": "BANLIST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -634,7 +1098,18 @@
       "dispatch": [
         "bancom"
       ],
+      "handlers": [
+        "bancom"
+      ],
       "primary_handler": "bancom",
+      "route_id": "verb:44",
+      "route_kind": "handler",
+      "handler_sources": {
+        "bancom": {
+          "file": "src/ban.c",
+          "line": 21
+        }
+      },
       "dispatch_source_word": "BANHOST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -648,7 +1123,18 @@
       "dispatch": [
         "bancom"
       ],
+      "handlers": [
+        "bancom"
+      ],
       "primary_handler": "bancom",
+      "route_id": "verb:45",
+      "route_kind": "handler",
+      "handler_sources": {
+        "bancom": {
+          "file": "src/ban.c",
+          "line": 21
+        }
+      },
       "dispatch_source_word": "BANCHAR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -662,7 +1148,18 @@
       "dispatch": [
         "bancom"
       ],
+      "handlers": [
+        "bancom"
+      ],
       "primary_handler": "bancom",
+      "route_id": "verb:46",
+      "route_kind": "handler",
+      "handler_sources": {
+        "bancom": {
+          "file": "src/ban.c",
+          "line": 21
+        }
+      },
       "dispatch_source_word": "BANACCT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -676,7 +1173,18 @@
       "dispatch": [
         "bancom"
       ],
+      "handlers": [
+        "bancom"
+      ],
       "primary_handler": "bancom",
+      "route_id": "verb:47",
+      "route_kind": "handler",
+      "handler_sources": {
+        "bancom": {
+          "file": "src/ban.c",
+          "line": 21
+        }
+      },
       "dispatch_source_word": "BANWHO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -691,7 +1199,11 @@
         "erreval",
         "broad"
       ],
-      "primary_handler": "broad",
+      "handlers": [],
+      "primary_handler": "inline:bang",
+      "route_id": "verb:48",
+      "route_kind": "inline",
+      "handler_sources": {},
       "dispatch_source_word": "BANG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -705,7 +1217,18 @@
       "dispatch": [
         "bashcom"
       ],
+      "handlers": [
+        "bashcom"
+      ],
       "primary_handler": "bashcom",
+      "route_id": "verb:49",
+      "route_kind": "handler",
+      "handler_sources": {
+        "bashcom": {
+          "file": "src/commands.c",
+          "line": 88
+        }
+      },
       "dispatch_source_word": "BASH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -719,7 +1242,18 @@
       "dispatch": [
         "becom"
       ],
+      "handlers": [
+        "becom"
+      ],
       "primary_handler": "becom",
+      "route_id": "verb:50",
+      "route_kind": "handler",
+      "handler_sources": {
+        "becom": {
+          "file": "src/commands.c",
+          "line": 1372
+        }
+      },
       "dispatch_source_word": "BECOME",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -733,7 +1267,18 @@
       "dispatch": [
         "beepcom"
       ],
+      "handlers": [
+        "beepcom"
+      ],
       "primary_handler": "beepcom",
+      "route_id": "verb:51",
+      "route_kind": "handler",
+      "handler_sources": {
+        "beepcom": {
+          "file": "src/commands.c",
+          "line": 2131
+        }
+      },
       "dispatch_source_word": "BEEP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -747,7 +1292,18 @@
       "dispatch": [
         "spellcom"
       ],
+      "handlers": [
+        "spellcom"
+      ],
       "primary_handler": "spellcom",
+      "route_id": "verb:52",
+      "route_kind": "handler",
+      "handler_sources": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
       "dispatch_source_word": "BHANDS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -761,7 +1317,18 @@
       "dispatch": [
         "spellcom"
       ],
+      "handlers": [
+        "spellcom"
+      ],
       "primary_handler": "spellcom",
+      "route_id": "verb:53",
+      "route_kind": "handler",
+      "handler_sources": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
       "dispatch_source_word": "BLIND",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -775,7 +1342,18 @@
       "dispatch": [
         "blowcom"
       ],
+      "handlers": [
+        "blowcom"
+      ],
       "primary_handler": "blowcom",
+      "route_id": "verb:54",
+      "route_kind": "handler",
+      "handler_sources": {
+        "blowcom": {
+          "file": "src/commands.c",
+          "line": 1580
+        }
+      },
       "dispatch_source_word": "BLOW",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -789,7 +1367,18 @@
       "dispatch": [
         "spellcom"
       ],
+      "handlers": [
+        "spellcom"
+      ],
       "primary_handler": "spellcom",
+      "route_id": "verb:55",
+      "route_kind": "handler",
+      "handler_sources": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
       "dispatch_source_word": "BLUR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -803,7 +1392,18 @@
       "dispatch": [
         "bongcom"
       ],
+      "handlers": [
+        "bongcom"
+      ],
       "primary_handler": "bongcom",
+      "route_id": "verb:56",
+      "route_kind": "handler",
+      "handler_sources": {
+        "bongcom": {
+          "file": "cr/bong.c",
+          "line": 27
+        }
+      },
       "dispatch_source_word": "BONG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -817,7 +1417,18 @@
       "dispatch": [
         "bobcom"
       ],
+      "handlers": [
+        "bobcom"
+      ],
       "primary_handler": "bobcom",
+      "route_id": "verb:57",
+      "route_kind": "handler",
+      "handler_sources": {
+        "bobcom": {
+          "file": "src/comm.c",
+          "line": 415
+        }
+      },
       "dispatch_source_word": "BOB",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -831,7 +1442,18 @@
       "dispatch": [
         "killcom"
       ],
+      "handlers": [
+        "killcom"
+      ],
       "primary_handler": "killcom",
+      "route_id": "verb:35",
+      "route_kind": "handler",
+      "handler_sources": {
+        "killcom": {
+          "file": "cr/fight.c",
+          "line": 1577
+        }
+      },
       "dispatch_source_word": "KILL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -845,7 +1467,18 @@
       "dispatch": [
         "bresetcom"
       ],
+      "handlers": [
+        "bresetcom"
+      ],
       "primary_handler": "bresetcom",
+      "route_id": "verb:58",
+      "route_kind": "handler",
+      "handler_sources": {
+        "bresetcom": {
+          "file": "src/god.c",
+          "line": 81
+        }
+      },
       "dispatch_source_word": "BRESET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -859,7 +1492,18 @@
       "dispatch": [
         "togglecom"
       ],
+      "handlers": [
+        "togglecom"
+      ],
       "primary_handler": "togglecom",
+      "route_id": "verb:59",
+      "route_kind": "handler",
+      "handler_sources": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
       "dispatch_source_word": "BRIEF",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -873,7 +1517,18 @@
       "dispatch": [
         "bugcom"
       ],
+      "handlers": [
+        "bugcom"
+      ],
       "primary_handler": "bugcom",
+      "route_id": "verb:60",
+      "route_kind": "handler",
+      "handler_sources": {
+        "bugcom": {
+          "file": "src/commands.c",
+          "line": 1018
+        }
+      },
       "dispatch_source_word": "BUG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -887,7 +1542,18 @@
       "dispatch": [
         "burncom"
       ],
+      "handlers": [
+        "burncom"
+      ],
       "primary_handler": "burncom",
+      "route_id": "verb:61",
+      "route_kind": "handler",
+      "handler_sources": {
+        "burncom": {
+          "file": "src/wizard.c",
+          "line": 1566
+        }
+      },
       "dispatch_source_word": "BURN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -901,7 +1567,18 @@
       "dispatch": [
         "togglecom"
       ],
+      "handlers": [
+        "togglecom"
+      ],
       "primary_handler": "togglecom",
+      "route_id": "verb:62",
+      "route_kind": "handler",
+      "handler_sources": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
       "dispatch_source_word": "BUSY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -915,7 +1592,18 @@
       "dispatch": [
         "buycom"
       ],
+      "handlers": [
+        "buycom"
+      ],
       "primary_handler": "buycom",
+      "route_id": "verb:63",
+      "route_kind": "handler",
+      "handler_sources": {
+        "buycom": {
+          "file": "cr/store.c",
+          "line": 98
+        }
+      },
       "dispatch_source_word": "BUY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -929,7 +1617,18 @@
       "dispatch": [
         "cfrcom"
       ],
+      "handlers": [
+        "cfrcom"
+      ],
       "primary_handler": "cfrcom",
+      "route_id": "verb:64",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cfrcom": {
+          "file": "src/wizard.c",
+          "line": 120
+        }
+      },
       "dispatch_source_word": "CFR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -943,7 +1642,18 @@
       "dispatch": [
         "changecom"
       ],
+      "handlers": [
+        "changecom"
+      ],
       "primary_handler": "changecom",
+      "route_id": "verb:65",
+      "route_kind": "handler",
+      "handler_sources": {
+        "changecom": {
+          "file": "src/change.c",
+          "line": 67
+        }
+      },
       "dispatch_source_word": "CHANGE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -957,7 +1667,18 @@
       "dispatch": [
         "challengecom"
       ],
+      "handlers": [
+        "challengecom"
+      ],
       "primary_handler": "challengecom",
+      "route_id": "verb:66",
+      "route_kind": "handler",
+      "handler_sources": {
+        "challengecom": {
+          "file": "cr/fight.c",
+          "line": 302
+        }
+      },
       "dispatch_source_word": "CHALLENGE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -971,7 +1692,18 @@
       "dispatch": [
         "channelcom"
       ],
+      "handlers": [
+        "channelcom"
+      ],
       "primary_handler": "channelcom",
+      "route_id": "verb:67",
+      "route_kind": "handler",
+      "handler_sources": {
+        "channelcom": {
+          "file": "src/comm.c",
+          "line": 531
+        }
+      },
       "dispatch_source_word": "CHANNEL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -985,7 +1717,18 @@
       "dispatch": [
         "com_handler"
       ],
+      "handlers": [
+        "com_handler"
+      ],
       "primary_handler": "com_handler",
+      "route_id": "verb:68",
+      "route_kind": "handler",
+      "handler_sources": {
+        "com_handler": {
+          "file": "src/comm.c",
+          "line": 67
+        }
+      },
       "dispatch_source_word": "GOSSIP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -999,7 +1742,11 @@
       "dispatch": [
         "bprintf"
       ],
-      "primary_handler": "bprintf",
+      "handlers": [],
+      "primary_handler": "inline:clear",
+      "route_id": "verb:69",
+      "route_kind": "inline",
+      "handler_sources": {},
       "dispatch_source_word": "CLEAR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1013,7 +1760,11 @@
       "dispatch": [
         "doverb_default"
       ],
+      "handlers": [],
       "primary_handler": "doverb_default",
+      "route_id": "doverb_default",
+      "route_kind": "fallback",
+      "handler_sources": {},
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -1029,7 +1780,18 @@
         "pfollow",
         "dogocom"
       ],
+      "handlers": [
+        "dogocom"
+      ],
       "primary_handler": "dogocom",
+      "route_id": "verb:1",
+      "route_kind": "handler",
+      "handler_sources": {
+        "dogocom": {
+          "file": "src/move.c",
+          "line": 492
+        }
+      },
       "dispatch_source_word": "GO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1043,7 +1805,18 @@
       "dispatch": [
         "closecom"
       ],
+      "handlers": [
+        "closecom"
+      ],
       "primary_handler": "closecom",
+      "route_id": "verb:71",
+      "route_kind": "handler",
+      "handler_sources": {
+        "closecom": {
+          "file": "src/objsys.c",
+          "line": 305
+        }
+      },
       "dispatch_source_word": "CLOSE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1057,7 +1830,18 @@
       "dispatch": [
         "clonecom"
       ],
+      "handlers": [
+        "clonecom"
+      ],
       "primary_handler": "clonecom",
+      "route_id": "verb:72",
+      "route_kind": "handler",
+      "handler_sources": {
+        "clonecom": {
+          "file": "src/clone.c",
+          "line": 476
+        }
+      },
       "dispatch_source_word": "CLONE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1073,7 +1857,11 @@
         "sclrflg",
         "ssetflg"
       ],
-      "primary_handler": "ssetflg",
+      "handlers": [],
+      "primary_handler": "inline:color",
+      "route_id": "verb:73",
+      "route_kind": "inline",
+      "handler_sources": {},
       "dispatch_source_word": "COLOR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1087,7 +1875,18 @@
       "dispatch": [
         "togglecoding"
       ],
+      "handlers": [
+        "togglecoding"
+      ],
       "primary_handler": "togglecoding",
+      "route_id": "verb:74",
+      "route_kind": "handler",
+      "handler_sources": {
+        "togglecoding": {
+          "file": "src/god.c",
+          "line": 148
+        }
+      },
       "dispatch_source_word": "CODING",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1101,7 +1900,18 @@
       "dispatch": [
         "comparecom"
       ],
+      "handlers": [
+        "comparecom"
+      ],
       "primary_handler": "comparecom",
+      "route_id": "verb:75",
+      "route_kind": "handler",
+      "handler_sources": {
+        "comparecom": {
+          "file": "src/commands.c",
+          "line": 2324
+        }
+      },
       "dispatch_source_word": "COMPARE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1115,7 +1925,18 @@
       "dispatch": [
         "configurecom"
       ],
+      "handlers": [
+        "configurecom"
+      ],
       "primary_handler": "configurecom",
+      "route_id": "verb:76",
+      "route_kind": "handler",
+      "handler_sources": {
+        "configurecom": {
+          "file": "cr/configure.c",
+          "line": 126
+        }
+      },
       "dispatch_source_word": "CONFIGURE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1129,7 +1950,18 @@
       "dispatch": [
         "conversecom"
       ],
+      "handlers": [
+        "conversecom"
+      ],
       "primary_handler": "conversecom",
+      "route_id": "verb:77",
+      "route_kind": "handler",
+      "handler_sources": {
+        "conversecom": {
+          "file": "src/comm.c",
+          "line": 682
+        }
+      },
       "dispatch_source_word": "CONVERSE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1143,7 +1975,11 @@
       "dispatch": [
         "bprintf"
       ],
-      "primary_handler": "bprintf",
+      "handlers": [],
+      "primary_handler": "inline:couples",
+      "route_id": "verb:78",
+      "route_kind": "inline",
+      "handler_sources": {},
       "dispatch_source_word": "COUPLES",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1157,7 +1993,11 @@
       "dispatch": [
         "bprintf"
       ],
-      "primary_handler": "bprintf",
+      "handlers": [],
+      "primary_handler": "inline:credits",
+      "route_id": "verb:79",
+      "route_kind": "inline",
+      "handler_sources": {},
       "dispatch_source_word": "CREDITS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1171,7 +2011,18 @@
       "dispatch": [
         "spellcom"
       ],
+      "handlers": [
+        "spellcom"
+      ],
       "primary_handler": "spellcom",
+      "route_id": "verb:80",
+      "route_kind": "handler",
+      "handler_sources": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
       "dispatch_source_word": "CRIPPLE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1185,7 +2036,18 @@
       "dispatch": [
         "crashcom"
       ],
+      "handlers": [
+        "crashcom"
+      ],
       "primary_handler": "crashcom",
+      "route_id": "verb:81",
+      "route_kind": "handler",
+      "handler_sources": {
+        "crashcom": {
+          "file": "src/god.c",
+          "line": 47
+        }
+      },
       "dispatch_source_word": "CRASH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1199,7 +2061,18 @@
       "dispatch": [
         "crawlcom"
       ],
+      "handlers": [
+        "crawlcom"
+      ],
       "primary_handler": "crawlcom",
+      "route_id": "verb:82",
+      "route_kind": "handler",
+      "handler_sources": {
+        "crawlcom": {
+          "file": "cr/fight.c",
+          "line": 1762
+        }
+      },
       "dispatch_source_word": "CRAWL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1213,7 +2086,11 @@
       "dispatch": [
         "doverb_default"
       ],
+      "handlers": [],
       "primary_handler": "doverb_default",
+      "route_id": "doverb_default",
+      "route_kind": "fallback",
+      "handler_sources": {},
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -1227,7 +2104,18 @@
       "dispatch": [
         "curecom"
       ],
+      "handlers": [
+        "curecom"
+      ],
       "primary_handler": "curecom",
+      "route_id": "verb:84",
+      "route_kind": "handler",
+      "handler_sources": {
+        "curecom": {
+          "file": "src/magic.c",
+          "line": 506
+        }
+      },
       "dispatch_source_word": "CURE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1241,7 +2129,11 @@
       "dispatch": [
         "doverb_default"
       ],
+      "handlers": [],
       "primary_handler": "doverb_default",
+      "route_id": "doverb_default",
+      "route_kind": "fallback",
+      "handler_sources": {},
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -1255,7 +2147,18 @@
       "dispatch": [
         "spellcom"
       ],
+      "handlers": [
+        "spellcom"
+      ],
       "primary_handler": "spellcom",
+      "route_id": "verb:86",
+      "route_kind": "handler",
+      "handler_sources": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
       "dispatch_source_word": "DAMAGE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1269,7 +2172,18 @@
       "dispatch": [
         "spellcom"
       ],
+      "handlers": [
+        "spellcom"
+      ],
       "primary_handler": "spellcom",
+      "route_id": "verb:87",
+      "route_kind": "handler",
+      "handler_sources": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
       "dispatch_source_word": "DEAFEN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1283,7 +2197,18 @@
       "dispatch": [
         "deletecom"
       ],
+      "handlers": [
+        "deletecom"
+      ],
       "primary_handler": "deletecom",
+      "route_id": "verb:88",
+      "route_kind": "handler",
+      "handler_sources": {
+        "deletecom": {
+          "file": "src/god.c",
+          "line": 24
+        }
+      },
       "dispatch_source_word": "DELETE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1297,7 +2222,18 @@
       "dispatch": [
         "destructcom"
       ],
+      "handlers": [
+        "destructcom"
+      ],
       "primary_handler": "destructcom",
+      "route_id": "verb:89",
+      "route_kind": "handler",
+      "handler_sources": {
+        "destructcom": {
+          "file": "src/clone.c",
+          "line": 562
+        }
+      },
       "dispatch_source_word": "DESTRUCT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1311,7 +2247,18 @@
       "dispatch": [
         "debugcom"
       ],
+      "handlers": [
+        "debugcom"
+      ],
       "primary_handler": "debugcom",
+      "route_id": "verb:90",
+      "route_kind": "handler",
+      "handler_sources": {
+        "debugcom": {
+          "file": "src/wizard.c",
+          "line": 1117
+        }
+      },
       "dispatch_source_word": "DEBUG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1325,7 +2272,18 @@
       "dispatch": [
         "com_handler"
       ],
+      "handlers": [
+        "com_handler"
+      ],
       "primary_handler": "com_handler",
+      "route_id": "verb:11",
+      "route_kind": "handler",
+      "handler_sources": {
+        "com_handler": {
+          "file": "src/comm.c",
+          "line": 67
+        }
+      },
       "dispatch_source_word": "DEMI",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1339,7 +2297,18 @@
       "dispatch": [
         "change_desc"
       ],
+      "handlers": [
+        "change_desc"
+      ],
       "primary_handler": "change_desc",
+      "route_id": "verb:91",
+      "route_kind": "handler",
+      "handler_sources": {
+        "change_desc": {
+          "file": "src/change.c",
+          "line": 1001
+        }
+      },
       "dispatch_source_word": "DESCRIPTION",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1353,7 +2322,18 @@
       "dispatch": [
         "digcom"
       ],
+      "handlers": [
+        "digcom"
+      ],
       "primary_handler": "digcom",
+      "route_id": "verb:92",
+      "route_kind": "handler",
+      "handler_sources": {
+        "digcom": {
+          "file": "cr/digcom.c",
+          "line": 32
+        }
+      },
       "dispatch_source_word": "DIG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1367,7 +2347,18 @@
       "dispatch": [
         "eatcom"
       ],
+      "handlers": [
+        "eatcom"
+      ],
       "primary_handler": "eatcom",
+      "route_id": "verb:93",
+      "route_kind": "handler",
+      "handler_sources": {
+        "eatcom": {
+          "file": "src/objsys.c",
+          "line": 683
+        }
+      },
       "dispatch_source_word": "EAT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1381,7 +2372,18 @@
       "dispatch": [
         "dropobjcom"
       ],
+      "handlers": [
+        "dropobjcom"
+      ],
       "primary_handler": "dropobjcom",
+      "route_id": "verb:94",
+      "route_kind": "handler",
+      "handler_sources": {
+        "dropobjcom": {
+          "file": "src/objsys.c",
+          "line": 1264
+        }
+      },
       "dispatch_source_word": "DROP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1395,7 +2397,18 @@
       "dispatch": [
         "erasezonecom"
       ],
+      "handlers": [
+        "erasezonecom"
+      ],
       "primary_handler": "erasezonecom",
+      "route_id": "verb:95",
+      "route_kind": "handler",
+      "handler_sources": {
+        "erasezonecom": {
+          "file": "src/clone.c",
+          "line": 820
+        }
+      },
       "dispatch_source_word": "ERASEZONE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1409,7 +2422,18 @@
       "dispatch": [
         "eatcom"
       ],
+      "handlers": [
+        "eatcom"
+      ],
       "primary_handler": "eatcom",
+      "route_id": "verb:93",
+      "route_kind": "handler",
+      "handler_sources": {
+        "eatcom": {
+          "file": "src/objsys.c",
+          "line": 683
+        }
+      },
       "dispatch_source_word": "EAT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1423,7 +2447,18 @@
       "dispatch": [
         "echocom"
       ],
+      "handlers": [
+        "echocom"
+      ],
       "primary_handler": "echocom",
+      "route_id": "verb:96",
+      "route_kind": "handler",
+      "handler_sources": {
+        "echocom": {
+          "file": "src/wizard.c",
+          "line": 253
+        }
+      },
       "dispatch_source_word": "ECHO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1437,7 +2472,18 @@
       "dispatch": [
         "echoallcom"
       ],
+      "handlers": [
+        "echoallcom"
+      ],
       "primary_handler": "echoallcom",
+      "route_id": "verb:97",
+      "route_kind": "handler",
+      "handler_sources": {
+        "echoallcom": {
+          "file": "src/wizard.c",
+          "line": 319
+        }
+      },
       "dispatch_source_word": "ECHOALL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1451,7 +2497,18 @@
       "dispatch": [
         "echotocom"
       ],
+      "handlers": [
+        "echotocom"
+      ],
       "primary_handler": "echotocom",
+      "route_id": "verb:98",
+      "route_kind": "handler",
+      "handler_sources": {
+        "echotocom": {
+          "file": "src/wizard.c",
+          "line": 373
+        }
+      },
       "dispatch_source_word": "ECHOTO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1465,7 +2522,18 @@
       "dispatch": [
         "editcom"
       ],
+      "handlers": [
+        "editcom"
+      ],
       "primary_handler": "editcom",
+      "route_id": "verb:99",
+      "route_kind": "handler",
+      "handler_sources": {
+        "editcom": {
+          "file": "cr/edit.c",
+          "line": 9
+        }
+      },
       "dispatch_source_word": "EDIT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1479,7 +2547,18 @@
       "dispatch": [
         "mob_flags"
       ],
+      "handlers": [
+        "mob_flags"
+      ],
       "primary_handler": "mob_flags",
+      "route_id": "verb:100",
+      "route_kind": "handler",
+      "handler_sources": {
+        "mob_flags": {
+          "file": "cr/flags.c",
+          "line": 394
+        }
+      },
       "dispatch_source_word": "EFLAGS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1493,7 +2572,18 @@
       "dispatch": [
         "emotecom"
       ],
+      "handlers": [
+        "emotecom"
+      ],
       "primary_handler": "emotecom",
+      "route_id": "verb:101",
+      "route_kind": "handler",
+      "handler_sources": {
+        "emotecom": {
+          "file": "src/wizard.c",
+          "line": 421
+        }
+      },
       "dispatch_source_word": "EMOTE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1507,7 +2597,18 @@
       "dispatch": [
         "emoteallcom"
       ],
+      "handlers": [
+        "emoteallcom"
+      ],
       "primary_handler": "emoteallcom",
+      "route_id": "verb:102",
+      "route_kind": "handler",
+      "handler_sources": {
+        "emoteallcom": {
+          "file": "src/wizard.c",
+          "line": 346
+        }
+      },
       "dispatch_source_word": "EMOTEALL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1521,7 +2622,18 @@
       "dispatch": [
         "emotetocom"
       ],
+      "handlers": [
+        "emotetocom"
+      ],
       "primary_handler": "emotetocom",
+      "route_id": "verb:103",
+      "route_kind": "handler",
+      "handler_sources": {
+        "emotetocom": {
+          "file": "src/wizard.c",
+          "line": 445
+        }
+      },
       "dispatch_source_word": "EMOTETO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1535,7 +2647,18 @@
       "dispatch": [
         "emptycom"
       ],
+      "handlers": [
+        "emptycom"
+      ],
       "primary_handler": "emptycom",
+      "route_id": "verb:104",
+      "route_kind": "handler",
+      "handler_sources": {
+        "emptycom": {
+          "file": "src/commands.c",
+          "line": 1458
+        }
+      },
       "dispatch_source_word": "EMPTY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1549,7 +2672,18 @@
       "dispatch": [
         "equcom"
       ],
+      "handlers": [
+        "equcom"
+      ],
       "primary_handler": "equcom",
+      "route_id": "verb:105",
+      "route_kind": "handler",
+      "handler_sources": {
+        "equcom": {
+          "file": "cr/fight.c",
+          "line": 857
+        }
+      },
       "dispatch_source_word": "EQUIPMENT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1563,7 +2697,18 @@
       "dispatch": [
         "examcom"
       ],
+      "handlers": [
+        "examcom"
+      ],
       "primary_handler": "examcom",
+      "route_id": "verb:106",
+      "route_kind": "handler",
+      "handler_sources": {
+        "examcom": {
+          "file": "src/commands.c",
+          "line": 285
+        }
+      },
       "dispatch_source_word": "EXAMINE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1577,7 +2722,18 @@
       "dispatch": [
         "exitcom"
       ],
+      "handlers": [
+        "exitcom"
+      ],
       "primary_handler": "exitcom",
+      "route_id": "verb:107",
+      "route_kind": "handler",
+      "handler_sources": {
+        "exitcom": {
+          "file": "src/rooms.c",
+          "line": 197
+        }
+      },
       "dispatch_source_word": "EXITS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1591,7 +2747,18 @@
       "dispatch": [
         "exorcom"
       ],
+      "handlers": [
+        "exorcom"
+      ],
       "primary_handler": "exorcom",
+      "route_id": "verb:108",
+      "route_kind": "handler",
+      "handler_sources": {
+        "exorcom": {
+          "file": "src/wizard.c",
+          "line": 680
+        }
+      },
       "dispatch_source_word": "EXORCISE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1605,7 +2772,18 @@
       "dispatch": [
         "extinguishcom"
       ],
+      "handlers": [
+        "extinguishcom"
+      ],
       "primary_handler": "extinguishcom",
+      "route_id": "verb:109",
+      "route_kind": "handler",
+      "handler_sources": {
+        "extinguishcom": {
+          "file": "src/commands.c",
+          "line": 1707
+        }
+      },
       "dispatch_source_word": "EXTINGUISH",
       "dispatch_kind": "c-handler",
       "test_cases": [
@@ -1623,7 +2801,18 @@
       "dispatch": [
         "fakequitcom"
       ],
+      "handlers": [
+        "fakequitcom"
+      ],
       "primary_handler": "fakequitcom",
+      "route_id": "verb:110",
+      "route_kind": "handler",
+      "handler_sources": {
+        "fakequitcom": {
+          "file": "src/wizard.c",
+          "line": 1761
+        }
+      },
       "dispatch_source_word": "FAKEQUIT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1637,7 +2826,18 @@
       "dispatch": [
         "fdlistcom"
       ],
+      "handlers": [
+        "fdlistcom"
+      ],
       "primary_handler": "fdlistcom",
+      "route_id": "verb:111",
+      "route_kind": "handler",
+      "handler_sources": {
+        "fdlistcom": {
+          "file": "cr/mudfd.c",
+          "line": 141
+        }
+      },
       "dispatch_source_word": "FDLIST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1651,7 +2851,18 @@
       "dispatch": [
         "fillcom"
       ],
+      "handlers": [
+        "fillcom"
+      ],
       "primary_handler": "fillcom",
+      "route_id": "verb:112",
+      "route_kind": "handler",
+      "handler_sources": {
+        "fillcom": {
+          "file": "src/commands.c",
+          "line": 165
+        }
+      },
       "dispatch_source_word": "FILL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1665,7 +2876,18 @@
       "dispatch": [
         "findcom"
       ],
+      "handlers": [
+        "findcom"
+      ],
       "primary_handler": "findcom",
+      "route_id": "verb:113",
+      "route_kind": "handler",
+      "handler_sources": {
+        "findcom": {
+          "file": "src/wizard.c",
+          "line": 1671
+        }
+      },
       "dispatch_source_word": "FIND",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1679,7 +2901,18 @@
       "dispatch": [
         "spellcom"
       ],
+      "handlers": [
+        "spellcom"
+      ],
       "primary_handler": "spellcom",
+      "route_id": "verb:114",
+      "route_kind": "handler",
+      "handler_sources": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
       "dispatch_source_word": "FIREBALL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1693,7 +2926,18 @@
       "dispatch": [
         "flee"
       ],
+      "handlers": [
+        "flee"
+      ],
       "primary_handler": "flee",
+      "route_id": "verb:115",
+      "route_kind": "handler",
+      "handler_sources": {
+        "flee": {
+          "file": "cr/fight.c",
+          "line": 1432
+        }
+      },
       "dispatch_source_word": "FLEE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1707,7 +2951,18 @@
       "dispatch": [
         "forgetlist"
       ],
+      "handlers": [
+        "forgetlist"
+      ],
       "primary_handler": "forgetlist",
+      "route_id": "verb:116",
+      "route_kind": "handler",
+      "handler_sources": {
+        "forgetlist": {
+          "file": "src/god.c",
+          "line": 355
+        }
+      },
       "dispatch_source_word": "FLIST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1721,7 +2976,18 @@
       "dispatch": [
         "flowercom"
       ],
+      "handlers": [
+        "flowercom"
+      ],
       "primary_handler": "flowercom",
+      "route_id": "verb:117",
+      "route_kind": "handler",
+      "handler_sources": {
+        "flowercom": {
+          "file": "cr/actions.c",
+          "line": 368
+        }
+      },
       "dispatch_source_word": "FLOWERS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1735,7 +3001,18 @@
       "dispatch": [
         "flushcom"
       ],
+      "handlers": [
+        "flushcom"
+      ],
       "primary_handler": "flushcom",
+      "route_id": "verb:118",
+      "route_kind": "handler",
+      "handler_sources": {
+        "flushcom": {
+          "file": "src/commands.c",
+          "line": 45
+        }
+      },
       "dispatch_source_word": "FLUSH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1749,7 +3026,18 @@
       "dispatch": [
         "followcom"
       ],
+      "handlers": [
+        "followcom"
+      ],
       "primary_handler": "followcom",
+      "route_id": "verb:119",
+      "route_kind": "handler",
+      "handler_sources": {
+        "followcom": {
+          "file": "src/commands.c",
+          "line": 2044
+        }
+      },
       "dispatch_source_word": "FOLLOW",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1763,7 +3051,18 @@
       "dispatch": [
         "follist"
       ],
+      "handlers": [
+        "follist"
+      ],
       "primary_handler": "follist",
+      "route_id": "verb:120",
+      "route_kind": "handler",
+      "handler_sources": {
+        "follist": {
+          "file": "src/wizard.c",
+          "line": 1619
+        }
+      },
       "dispatch_source_word": "FOLLIST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1777,7 +3076,11 @@
       "dispatch": [
         "doverb_default"
       ],
+      "handlers": [],
       "primary_handler": "doverb_default",
+      "route_id": "doverb_default",
+      "route_kind": "fallback",
+      "handler_sources": {},
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -1791,7 +3094,18 @@
       "dispatch": [
         "forcecom"
       ],
+      "handlers": [
+        "forcecom"
+      ],
       "primary_handler": "forcecom",
+      "route_id": "verb:122",
+      "route_kind": "handler",
+      "handler_sources": {
+        "forcecom": {
+          "file": "src/magic.c",
+          "line": 112
+        }
+      },
       "dispatch_source_word": "FORCE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1805,7 +3119,18 @@
       "dispatch": [
         "forceallcom"
       ],
+      "handlers": [
+        "forceallcom"
+      ],
       "primary_handler": "forceallcom",
+      "route_id": "verb:123",
+      "route_kind": "handler",
+      "handler_sources": {
+        "forceallcom": {
+          "file": "src/magic.c",
+          "line": 153
+        }
+      },
       "dispatch_source_word": "FORCEALL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1819,7 +3144,18 @@
       "dispatch": [
         "forgetcom"
       ],
+      "handlers": [
+        "forgetcom"
+      ],
       "primary_handler": "forgetcom",
+      "route_id": "verb:124",
+      "route_kind": "handler",
+      "handler_sources": {
+        "forgetcom": {
+          "file": "src/comm.c",
+          "line": 617
+        }
+      },
       "dispatch_source_word": "FORGET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1833,7 +3169,18 @@
       "dispatch": [
         "freaqcom"
       ],
+      "handlers": [
+        "freaqcom"
+      ],
       "primary_handler": "freaqcom",
+      "route_id": "verb:125",
+      "route_kind": "handler",
+      "handler_sources": {
+        "freaqcom": {
+          "file": "src/wizard.c",
+          "line": 2002
+        }
+      },
       "dispatch_source_word": "FREAQ",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1847,7 +3194,18 @@
       "dispatch": [
         "frobcom"
       ],
+      "handlers": [
+        "frobcom"
+      ],
       "primary_handler": "frobcom",
+      "route_id": "verb:126",
+      "route_kind": "handler",
+      "handler_sources": {
+        "frobcom": {
+          "file": "src/frob.c",
+          "line": 37
+        }
+      },
       "dispatch_source_word": "FROB",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1861,7 +3219,18 @@
       "dispatch": [
         "spellcom"
       ],
+      "handlers": [
+        "spellcom"
+      ],
       "primary_handler": "spellcom",
+      "route_id": "verb:127",
+      "route_kind": "handler",
+      "handler_sources": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
       "dispatch_source_word": "FROST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1875,7 +3244,18 @@
       "dispatch": [
         "chatcom"
       ],
+      "handlers": [
+        "chatcom"
+      ],
       "primary_handler": "chatcom",
+      "route_id": "verb:128",
+      "route_kind": "handler",
+      "handler_sources": {
+        "chatcom": {
+          "file": "src/comm.c",
+          "line": 503
+        }
+      },
       "dispatch_source_word": "GCHAT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1889,7 +3269,18 @@
       "dispatch": [
         "getcom"
       ],
+      "handlers": [
+        "getcom"
+      ],
       "primary_handler": "getcom",
+      "route_id": "verb:129",
+      "route_kind": "handler",
+      "handler_sources": {
+        "getcom": {
+          "file": "src/objsys.c",
+          "line": 1116
+        }
+      },
       "dispatch_source_word": "GET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1903,7 +3294,18 @@
       "dispatch": [
         "givecom"
       ],
+      "handlers": [
+        "givecom"
+      ],
       "primary_handler": "givecom",
+      "route_id": "verb:130",
+      "route_kind": "handler",
+      "handler_sources": {
+        "givecom": {
+          "file": "src/objsys.c",
+          "line": 334
+        }
+      },
       "dispatch_source_word": "GIVE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1917,7 +3319,18 @@
       "dispatch": [
         "globalcom"
       ],
+      "handlers": [
+        "globalcom"
+      ],
       "primary_handler": "globalcom",
+      "route_id": "verb:131",
+      "route_kind": "handler",
+      "handler_sources": {
+        "globalcom": {
+          "file": "src/commands.c",
+          "line": 1227
+        }
+      },
       "dispatch_source_word": "GLOBAL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1931,7 +3344,18 @@
       "dispatch": [
         "com_handler"
       ],
+      "handlers": [
+        "com_handler"
+      ],
       "primary_handler": "com_handler",
+      "route_id": "verb:68",
+      "route_kind": "handler",
+      "handler_sources": {
+        "com_handler": {
+          "file": "src/comm.c",
+          "line": 67
+        }
+      },
       "dispatch_source_word": "GOSSIP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1945,7 +3369,18 @@
       "dispatch": [
         "gotocom"
       ],
+      "handlers": [
+        "gotocom"
+      ],
       "primary_handler": "gotocom",
+      "route_id": "verb:132",
+      "route_kind": "handler",
+      "handler_sources": {
+        "gotocom": {
+          "file": "src/rooms.c",
+          "line": 126
+        }
+      },
       "dispatch_source_word": "GOTO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1959,7 +3394,18 @@
       "dispatch": [
         "com_handler"
       ],
+      "handlers": [
+        "com_handler"
+      ],
       "primary_handler": "com_handler",
+      "route_id": "verb:133",
+      "route_kind": "handler",
+      "handler_sources": {
+        "com_handler": {
+          "file": "src/comm.c",
+          "line": 67
+        }
+      },
       "dispatch_source_word": "GOD",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1973,7 +3419,18 @@
       "dispatch": [
         "group"
       ],
+      "handlers": [
+        "group"
+      ],
       "primary_handler": "group",
+      "route_id": "verb:134",
+      "route_kind": "handler",
+      "handler_sources": {
+        "group": {
+          "file": "src/group.c",
+          "line": 137
+        }
+      },
       "dispatch_source_word": "GROUP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1987,7 +3444,18 @@
       "dispatch": [
         "gtell"
       ],
+      "handlers": [
+        "gtell"
+      ],
       "primary_handler": "gtell",
+      "route_id": "verb:135",
+      "route_kind": "handler",
+      "handler_sources": {
+        "gtell": {
+          "file": "src/group.c",
+          "line": 225
+        }
+      },
       "dispatch_source_word": "GTELL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2001,7 +3469,18 @@
       "dispatch": [
         "glist"
       ],
+      "handlers": [
+        "glist"
+      ],
       "primary_handler": "glist",
+      "route_id": "verb:136",
+      "route_kind": "handler",
+      "handler_sources": {
+        "glist": {
+          "file": "src/group.c",
+          "line": 73
+        }
+      },
       "dispatch_source_word": "GLIST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2015,7 +3494,18 @@
       "dispatch": [
         "healcom"
       ],
+      "handlers": [
+        "healcom"
+      ],
       "primary_handler": "healcom",
+      "route_id": "verb:137",
+      "route_kind": "handler",
+      "handler_sources": {
+        "healcom": {
+          "file": "src/magic.c",
+          "line": 16
+        }
+      },
       "dispatch_source_word": "HEAL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2029,7 +3519,18 @@
       "dispatch": [
         "healallcom"
       ],
+      "handlers": [
+        "healallcom"
+      ],
       "primary_handler": "healallcom",
+      "route_id": "verb:138",
+      "route_kind": "handler",
+      "handler_sources": {
+        "healallcom": {
+          "file": "src/magic.c",
+          "line": 72
+        }
+      },
       "dispatch_source_word": "HEALALL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2043,7 +3544,18 @@
       "dispatch": [
         "togglecom"
       ],
+      "handlers": [
+        "togglecom"
+      ],
       "primary_handler": "togglecom",
+      "route_id": "verb:139",
+      "route_kind": "handler",
+      "handler_sources": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
       "dispatch_source_word": "HEARBACK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2057,7 +3569,18 @@
       "dispatch": [
         "helpcom"
       ],
+      "handlers": [
+        "helpcom"
+      ],
       "primary_handler": "helpcom",
+      "route_id": "verb:140",
+      "route_kind": "handler",
+      "handler_sources": {
+        "helpcom": {
+          "file": "src/commands.c",
+          "line": 1061
+        }
+      },
       "dispatch_source_word": "HELP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2071,7 +3594,18 @@
       "dispatch": [
         "killcom"
       ],
+      "handlers": [
+        "killcom"
+      ],
       "primary_handler": "killcom",
+      "route_id": "verb:35",
+      "route_kind": "handler",
+      "handler_sources": {
+        "killcom": {
+          "file": "cr/fight.c",
+          "line": 1577
+        }
+      },
       "dispatch_source_word": "KILL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2085,7 +3619,18 @@
       "dispatch": [
         "hostscom"
       ],
+      "handlers": [
+        "hostscom"
+      ],
       "primary_handler": "hostscom",
+      "route_id": "verb:141",
+      "route_kind": "handler",
+      "handler_sources": {
+        "hostscom": {
+          "file": "cr/hostscom.c",
+          "line": 43
+        }
+      },
       "dispatch_source_word": "HOSTS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2099,7 +3644,18 @@
       "dispatch": [
         "inventory"
       ],
+      "handlers": [
+        "inventory"
+      ],
       "primary_handler": "inventory",
+      "route_id": "verb:142",
+      "route_kind": "handler",
+      "handler_sources": {
+        "inventory": {
+          "file": "src/objsys.c",
+          "line": 759
+        }
+      },
       "dispatch_source_word": "INVENTORY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2113,7 +3669,18 @@
       "dispatch": [
         "spellcom"
       ],
+      "handlers": [
+        "spellcom"
+      ],
       "primary_handler": "spellcom",
+      "route_id": "verb:143",
+      "route_kind": "handler",
+      "handler_sources": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
       "dispatch_source_word": "ICESTORM",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2127,7 +3694,18 @@
       "dispatch": [
         "idlecom"
       ],
+      "handlers": [
+        "idlecom"
+      ],
       "primary_handler": "idlecom",
+      "route_id": "verb:144",
+      "route_kind": "handler",
+      "handler_sources": {
+        "idlecom": {
+          "file": "src/god.c",
+          "line": 97
+        }
+      },
       "dispatch_source_word": "IDLE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2141,7 +3719,11 @@
       "dispatch": [
         "doverb_default"
       ],
+      "handlers": [],
       "primary_handler": "doverb_default",
+      "route_id": "doverb_default",
+      "route_kind": "fallback",
+      "handler_sources": {},
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -2155,7 +3737,18 @@
       "dispatch": [
         "incom"
       ],
+      "handlers": [
+        "incom"
+      ],
       "primary_handler": "incom",
+      "route_id": "verb:146",
+      "route_kind": "handler",
+      "handler_sources": {
+        "incom": {
+          "file": "src/commands.c",
+          "line": 675
+        }
+      },
       "dispatch_source_word": "IN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2169,7 +3762,18 @@
       "dispatch": [
         "infocom"
       ],
+      "handlers": [
+        "infocom"
+      ],
       "primary_handler": "infocom",
+      "route_id": "verb:147",
+      "route_kind": "handler",
+      "handler_sources": {
+        "infocom": {
+          "file": "src/commands.c",
+          "line": 1182
+        }
+      },
       "dispatch_source_word": "INFO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2183,7 +3787,18 @@
       "dispatch": [
         "inviscom"
       ],
+      "handlers": [
+        "inviscom"
+      ],
       "primary_handler": "inviscom",
+      "route_id": "verb:148",
+      "route_kind": "handler",
+      "handler_sources": {
+        "inviscom": {
+          "file": "src/magic.c",
+          "line": 411
+        }
+      },
       "dispatch_source_word": "INVISIBLE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2197,7 +3812,18 @@
       "dispatch": [
         "com_handler"
       ],
+      "handlers": [
+        "com_handler"
+      ],
       "primary_handler": "com_handler",
+      "route_id": "verb:149",
+      "route_kind": "handler",
+      "handler_sources": {
+        "com_handler": {
+          "file": "src/comm.c",
+          "line": 67
+        }
+      },
       "dispatch_source_word": "ISTARI",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2211,7 +3837,18 @@
       "dispatch": [
         "jumpcom"
       ],
+      "handlers": [
+        "jumpcom"
+      ],
       "primary_handler": "jumpcom",
+      "route_id": "verb:150",
+      "route_kind": "handler",
+      "handler_sources": {
+        "jumpcom": {
+          "file": "src/mobile.c",
+          "line": 1879
+        }
+      },
       "dispatch_source_word": "JUMP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2225,7 +3862,18 @@
       "dispatch": [
         "killcom"
       ],
+      "handlers": [
+        "killcom"
+      ],
       "primary_handler": "killcom",
+      "route_id": "verb:35",
+      "route_kind": "handler",
+      "handler_sources": {
+        "killcom": {
+          "file": "cr/fight.c",
+          "line": 1577
+        }
+      },
       "dispatch_source_word": "KILL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2239,7 +3887,18 @@
       "dispatch": [
         "klockcom"
       ],
+      "handlers": [
+        "klockcom"
+      ],
       "primary_handler": "klockcom",
+      "route_id": "verb:151",
+      "route_kind": "handler",
+      "handler_sources": {
+        "klockcom": {
+          "file": "src/commands.c",
+          "line": 2295
+        }
+      },
       "dispatch_source_word": "KLOCK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2253,7 +3912,11 @@
       "dispatch": [
         "doverb_default"
       ],
+      "handlers": [],
       "primary_handler": "doverb_default",
+      "route_id": "doverb_default",
+      "route_kind": "fallback",
+      "handler_sources": {},
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -2267,7 +3930,18 @@
       "dispatch": [
         "lookcom"
       ],
+      "handlers": [
+        "lookcom"
+      ],
       "primary_handler": "lookcom",
+      "route_id": "verb:153",
+      "route_kind": "handler",
+      "handler_sources": {
+        "lookcom": {
+          "file": "src/commands.c",
+          "line": 224
+        }
+      },
       "dispatch_source_word": "LOOK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2281,7 +3955,18 @@
       "dispatch": [
         "linkcom"
       ],
+      "handlers": [
+        "linkcom"
+      ],
       "primary_handler": "linkcom",
+      "route_id": "verb:154",
+      "route_kind": "handler",
+      "handler_sources": {
+        "linkcom": {
+          "file": "src/clone.c",
+          "line": 796
+        }
+      },
       "dispatch_source_word": "LINK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2295,7 +3980,18 @@
       "dispatch": [
         "lastoncom"
       ],
+      "handlers": [
+        "lastoncom"
+      ],
       "primary_handler": "lastoncom",
+      "route_id": "verb:155",
+      "route_kind": "handler",
+      "handler_sources": {
+        "lastoncom": {
+          "file": "src/commands.c",
+          "line": 2174
+        }
+      },
       "dispatch_source_word": "LASTON",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2309,7 +4005,18 @@
       "dispatch": [
         "langcom"
       ],
+      "handlers": [
+        "langcom"
+      ],
       "primary_handler": "langcom",
+      "route_id": "verb:156",
+      "route_kind": "handler",
+      "handler_sources": {
+        "langcom": {
+          "file": "src/comm.c",
+          "line": 657
+        }
+      },
       "dispatch_source_word": "LANG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2323,7 +4030,18 @@
       "dispatch": [
         "levelscom"
       ],
+      "handlers": [
+        "levelscom"
+      ],
       "primary_handler": "levelscom",
+      "route_id": "verb:157",
+      "route_kind": "handler",
+      "handler_sources": {
+        "levelscom": {
+          "file": "cr/level.c",
+          "line": 527
+        }
+      },
       "dispatch_source_word": "LEVELS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2337,7 +4055,18 @@
       "dispatch": [
         "levechocom"
       ],
+      "handlers": [
+        "levechocom"
+      ],
       "primary_handler": "levechocom",
+      "route_id": "verb:158",
+      "route_kind": "handler",
+      "handler_sources": {
+        "levechocom": {
+          "file": "src/wizard.c",
+          "line": 280
+        }
+      },
       "dispatch_source_word": "LEVECHO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2351,7 +4080,18 @@
       "dispatch": [
         "loc_flags"
       ],
+      "handlers": [
+        "loc_flags"
+      ],
       "primary_handler": "loc_flags",
+      "route_id": "verb:159",
+      "route_kind": "handler",
+      "handler_sources": {
+        "loc_flags": {
+          "file": "cr/flags.c",
+          "line": 358
+        }
+      },
       "dispatch_source_word": "LFLAGS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2365,7 +4105,18 @@
       "dispatch": [
         "opencom"
       ],
+      "handlers": [
+        "opencom"
+      ],
       "primary_handler": "opencom",
+      "route_id": "verb:160",
+      "route_kind": "handler",
+      "handler_sources": {
+        "opencom": {
+          "file": "src/objsys.c",
+          "line": 155
+        }
+      },
       "dispatch_source_word": "OPEN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2379,7 +4130,18 @@
       "dispatch": [
         "lightcom"
       ],
+      "handlers": [
+        "lightcom"
+      ],
       "primary_handler": "lightcom",
+      "route_id": "verb:161",
+      "route_kind": "handler",
+      "handler_sources": {
+        "lightcom": {
+          "file": "src/commands.c",
+          "line": 1650
+        }
+      },
       "dispatch_source_word": "LIGHT",
       "dispatch_kind": "c-handler",
       "test_cases": [
@@ -2398,7 +4160,23 @@
         "spellcom",
         "litcom"
       ],
-      "primary_handler": "litcom",
+      "handlers": [
+        "spellcom",
+        "litcom"
+      ],
+      "primary_handler": "inline:lit",
+      "route_id": "verb:162",
+      "route_kind": "inline",
+      "handler_sources": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        },
+        "litcom": {
+          "file": "src/wizard.c",
+          "line": 1436
+        }
+      },
       "dispatch_source_word": "LIT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2412,7 +4190,18 @@
       "dispatch": [
         "loadcom"
       ],
+      "handlers": [
+        "loadcom"
+      ],
       "primary_handler": "loadcom",
+      "route_id": "verb:163",
+      "route_kind": "handler",
+      "handler_sources": {
+        "loadcom": {
+          "file": "src/clone.c",
+          "line": 761
+        }
+      },
       "dispatch_source_word": "LOAD",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2426,7 +4215,18 @@
       "dispatch": [
         "locationscom"
       ],
+      "handlers": [
+        "locationscom"
+      ],
       "primary_handler": "locationscom",
+      "route_id": "verb:164",
+      "route_kind": "handler",
+      "handler_sources": {
+        "locationscom": {
+          "file": "src/zones.c",
+          "line": 212
+        }
+      },
       "dispatch_source_word": "LOCATIONS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2440,7 +4240,18 @@
       "dispatch": [
         "lockcom"
       ],
+      "handlers": [
+        "lockcom"
+      ],
       "primary_handler": "lockcom",
+      "route_id": "verb:165",
+      "route_kind": "handler",
+      "handler_sources": {
+        "lockcom": {
+          "file": "src/objsys.c",
+          "line": 133
+        }
+      },
       "dispatch_source_word": "LOCK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2454,7 +4265,18 @@
       "dispatch": [
         "writelog"
       ],
+      "handlers": [
+        "writelog"
+      ],
       "primary_handler": "writelog",
+      "route_id": "verb:166",
+      "route_kind": "handler",
+      "handler_sources": {
+        "writelog": {
+          "file": "src/wizard.c",
+          "line": 1984
+        }
+      },
       "dispatch_source_word": "LOG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2468,7 +4290,18 @@
       "dispatch": [
         "lootcom"
       ],
+      "handlers": [
+        "lootcom"
+      ],
       "primary_handler": "lootcom",
+      "route_id": "verb:167",
+      "route_kind": "handler",
+      "handler_sources": {
+        "lootcom": {
+          "file": "cr/fight.c",
+          "line": 357
+        }
+      },
       "dispatch_source_word": "LOOT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2482,7 +4315,18 @@
       "dispatch": [
         "losecom"
       ],
+      "handlers": [
+        "losecom"
+      ],
       "primary_handler": "losecom",
+      "route_id": "verb:168",
+      "route_kind": "handler",
+      "handler_sources": {
+        "losecom": {
+          "file": "src/commands.c",
+          "line": 2086
+        }
+      },
       "dispatch_source_word": "LOSE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2496,7 +4340,18 @@
       "dispatch": [
         "lsaycom"
       ],
+      "handlers": [
+        "lsaycom"
+      ],
       "primary_handler": "lsaycom",
+      "route_id": "verb:169",
+      "route_kind": "handler",
+      "handler_sources": {
+        "lsaycom": {
+          "file": "src/comm.c",
+          "line": 262
+        }
+      },
       "dispatch_source_word": "LSAY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2510,7 +4365,18 @@
       "dispatch": [
         "mailcom"
       ],
+      "handlers": [
+        "mailcom"
+      ],
       "primary_handler": "mailcom",
+      "route_id": "verb:170",
+      "route_kind": "handler",
+      "handler_sources": {
+        "mailcom": {
+          "file": "cr/mail.c",
+          "line": 12
+        }
+      },
       "dispatch_source_word": "MAIL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2524,7 +4390,18 @@
       "dispatch": [
         "spellcom"
       ],
+      "handlers": [
+        "spellcom"
+      ],
       "primary_handler": "spellcom",
+      "route_id": "verb:171",
+      "route_kind": "handler",
+      "handler_sources": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
       "dispatch_source_word": "MAKEPIG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2538,7 +4415,18 @@
       "dispatch": [
         "mob_flags"
       ],
+      "handlers": [
+        "mob_flags"
+      ],
       "primary_handler": "mob_flags",
+      "route_id": "verb:172",
+      "route_kind": "handler",
+      "handler_sources": {
+        "mob_flags": {
+          "file": "cr/flags.c",
+          "line": 394
+        }
+      },
       "dispatch_source_word": "MASK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2552,7 +4440,18 @@
       "dispatch": [
         "maxstatecom"
       ],
+      "handlers": [
+        "maxstatecom"
+      ],
       "primary_handler": "maxstatecom",
+      "route_id": "verb:173",
+      "route_kind": "handler",
+      "handler_sources": {
+        "maxstatecom": {
+          "file": "src/clone.c",
+          "line": 850
+        }
+      },
       "dispatch_source_word": "MAXSTATE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2568,7 +4467,11 @@
         "trapch",
         "mudlog"
       ],
-      "primary_handler": "mudlog",
+      "handlers": [],
+      "primary_handler": "inline:meditate",
+      "route_id": "verb:174",
+      "route_kind": "inline",
+      "handler_sources": {},
       "dispatch_source_word": "MEDITATE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2582,7 +4485,18 @@
       "dispatch": [
         "mob_flags"
       ],
+      "handlers": [
+        "mob_flags"
+      ],
       "primary_handler": "mob_flags",
+      "route_id": "verb:175",
+      "route_kind": "handler",
+      "handler_sources": {
+        "mob_flags": {
+          "file": "cr/flags.c",
+          "line": 394
+        }
+      },
       "dispatch_source_word": "MFLAGS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2596,7 +4510,18 @@
       "dispatch": [
         "spellcom"
       ],
+      "handlers": [
+        "spellcom"
+      ],
       "primary_handler": "spellcom",
+      "route_id": "verb:176",
+      "route_kind": "handler",
+      "handler_sources": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
       "dispatch_source_word": "MISSILE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2610,7 +4535,18 @@
       "dispatch": [
         "mobilecom"
       ],
+      "handlers": [
+        "mobilecom"
+      ],
       "primary_handler": "mobilecom",
+      "route_id": "verb:177",
+      "route_kind": "handler",
+      "handler_sources": {
+        "mobilecom": {
+          "file": "src/mobile.c",
+          "line": 684
+        }
+      },
       "dispatch_source_word": "MOBILES",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2626,7 +4562,11 @@
         "sclrflg",
         "ssetflg"
       ],
-      "primary_handler": "ssetflg",
+      "handlers": [],
+      "primary_handler": "inline:color",
+      "route_id": "verb:73",
+      "route_kind": "inline",
+      "handler_sources": {},
       "dispatch_source_word": "COLOR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2640,7 +4580,18 @@
       "dispatch": [
         "pushcom"
       ],
+      "handlers": [
+        "pushcom"
+      ],
       "primary_handler": "pushcom",
+      "route_id": "verb:178",
+      "route_kind": "handler",
+      "handler_sources": {
+        "pushcom": {
+          "file": "src/commands.c",
+          "line": 1727
+        }
+      },
       "dispatch_source_word": "PUSH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2654,7 +4605,18 @@
       "dispatch": [
         "muserscom"
       ],
+      "handlers": [
+        "muserscom"
+      ],
       "primary_handler": "muserscom",
+      "route_id": "verb:179",
+      "route_kind": "handler",
+      "handler_sources": {
+        "muserscom": {
+          "file": "cr/muserscom.c",
+          "line": 32
+        }
+      },
       "dispatch_source_word": "MSTAT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2668,7 +4630,18 @@
       "dispatch": [
         "spellcom"
       ],
+      "handlers": [
+        "spellcom"
+      ],
       "primary_handler": "spellcom",
+      "route_id": "verb:180",
+      "route_kind": "handler",
+      "handler_sources": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
       "dispatch_source_word": "MUTE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2682,7 +4655,18 @@
       "dispatch": [
         "muserscom"
       ],
+      "handlers": [
+        "muserscom"
+      ],
       "primary_handler": "muserscom",
+      "route_id": "verb:181",
+      "route_kind": "handler",
+      "handler_sources": {
+        "muserscom": {
+          "file": "cr/muserscom.c",
+          "line": 32
+        }
+      },
       "dispatch_source_word": "MUSERS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2696,7 +4680,18 @@
       "dispatch": [
         "mwhocom"
       ],
+      "handlers": [
+        "mwhocom"
+      ],
       "primary_handler": "mwhocom",
+      "route_id": "verb:182",
+      "route_kind": "handler",
+      "handler_sources": {
+        "mwhocom": {
+          "file": "src/mobile.c",
+          "line": 395
+        }
+      },
       "dispatch_source_word": "MWHO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2710,7 +4705,18 @@
       "dispatch": [
         "togglecom"
       ],
+      "handlers": [
+        "togglecom"
+      ],
       "primary_handler": "togglecom",
+      "route_id": "verb:183",
+      "route_kind": "handler",
+      "handler_sources": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
       "dispatch_source_word": "NEWSTYLE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2724,7 +4730,18 @@
       "dispatch": [
         "mob_flags"
       ],
+      "handlers": [
+        "mob_flags"
+      ],
       "primary_handler": "mob_flags",
+      "route_id": "verb:184",
+      "route_kind": "handler",
+      "handler_sources": {
+        "mob_flags": {
+          "file": "cr/flags.c",
+          "line": 394
+        }
+      },
       "dispatch_source_word": "NFLAGS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2738,7 +4755,18 @@
       "dispatch": [
         "nolinecom"
       ],
+      "handlers": [
+        "nolinecom"
+      ],
       "primary_handler": "nolinecom",
+      "route_id": "verb:185",
+      "route_kind": "handler",
+      "handler_sources": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
       "dispatch_source_word": "NDGOD",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2752,7 +4780,18 @@
       "dispatch": [
         "nolinecom"
       ],
+      "handlers": [
+        "nolinecom"
+      ],
       "primary_handler": "nolinecom",
+      "route_id": "verb:186",
+      "route_kind": "handler",
+      "handler_sources": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
       "dispatch_source_word": "NOANON",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2766,7 +4805,18 @@
       "dispatch": [
         "nolinecom"
       ],
+      "handlers": [
+        "nolinecom"
+      ],
       "primary_handler": "nolinecom",
+      "route_id": "verb:187",
+      "route_kind": "handler",
+      "handler_sources": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
       "dispatch_source_word": "NOAWIZ",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2780,7 +4830,18 @@
       "dispatch": [
         "togglecom"
       ],
+      "handlers": [
+        "togglecom"
+      ],
       "primary_handler": "togglecom",
+      "route_id": "verb:188",
+      "route_kind": "handler",
+      "handler_sources": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
       "dispatch_source_word": "NOBEEP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2794,7 +4855,18 @@
       "dispatch": [
         "togglecom"
       ],
+      "handlers": [
+        "togglecom"
+      ],
       "primary_handler": "togglecom",
+      "route_id": "verb:189",
+      "route_kind": "handler",
+      "handler_sources": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
       "dispatch_source_word": "NOBLINK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2808,7 +4880,18 @@
       "dispatch": [
         "nolinecom"
       ],
+      "handlers": [
+        "nolinecom"
+      ],
       "primary_handler": "nolinecom",
+      "route_id": "verb:190",
+      "route_kind": "handler",
+      "handler_sources": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
       "dispatch_source_word": "NOCHAT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2822,7 +4905,18 @@
       "dispatch": [
         "nolinecom"
       ],
+      "handlers": [
+        "nolinecom"
+      ],
       "primary_handler": "nolinecom",
+      "route_id": "verb:185",
+      "route_kind": "handler",
+      "handler_sources": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
       "dispatch_source_word": "NDGOD",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2836,7 +4930,18 @@
       "dispatch": [
         "togglecom"
       ],
+      "handlers": [
+        "togglecom"
+      ],
       "primary_handler": "togglecom",
+      "route_id": "verb:191",
+      "route_kind": "handler",
+      "handler_sources": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
       "dispatch_source_word": "NOFIGHT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2850,7 +4955,18 @@
       "dispatch": [
         "togglecom"
       ],
+      "handlers": [
+        "togglecom"
+      ],
       "primary_handler": "togglecom",
+      "route_id": "verb:192",
+      "route_kind": "handler",
+      "handler_sources": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
       "dispatch_source_word": "NOFLAG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2864,7 +4980,18 @@
       "dispatch": [
         "nolinecom"
       ],
+      "handlers": [
+        "nolinecom"
+      ],
       "primary_handler": "nolinecom",
+      "route_id": "verb:193",
+      "route_kind": "handler",
+      "handler_sources": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
       "dispatch_source_word": "NOGOD",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2878,7 +5005,18 @@
       "dispatch": [
         "nolinecom"
       ],
+      "handlers": [
+        "nolinecom"
+      ],
       "primary_handler": "nolinecom",
+      "route_id": "verb:190",
+      "route_kind": "handler",
+      "handler_sources": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
       "dispatch_source_word": "NOCHAT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2892,7 +5030,18 @@
       "dispatch": [
         "nolinecom"
       ],
+      "handlers": [
+        "nolinecom"
+      ],
       "primary_handler": "nolinecom",
+      "route_id": "verb:194",
+      "route_kind": "handler",
+      "handler_sources": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
       "dispatch_source_word": "NOISTARI",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2906,7 +5055,18 @@
       "dispatch": [
         "togglecom"
       ],
+      "handlers": [
+        "togglecom"
+      ],
       "primary_handler": "togglecom",
+      "route_id": "verb:195",
+      "route_kind": "handler",
+      "handler_sources": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
       "dispatch_source_word": "NOINV",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2923,7 +5083,11 @@
         "sclrflg",
         "ssetflg"
       ],
-      "primary_handler": "ssetflg",
+      "handlers": [],
+      "primary_handler": "inline:quiet",
+      "route_id": "verb:196",
+      "route_kind": "inline",
+      "handler_sources": {},
       "dispatch_source_word": "QUIET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2937,7 +5101,18 @@
       "dispatch": [
         "togglecom"
       ],
+      "handlers": [
+        "togglecom"
+      ],
       "primary_handler": "togglecom",
+      "route_id": "verb:197",
+      "route_kind": "handler",
+      "handler_sources": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
       "dispatch_source_word": "NOORACLE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2951,7 +5126,18 @@
       "dispatch": [
         "nolinecom"
       ],
+      "handlers": [
+        "nolinecom"
+      ],
       "primary_handler": "nolinecom",
+      "route_id": "verb:198",
+      "route_kind": "handler",
+      "handler_sources": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
       "dispatch_source_word": "NOPIG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2965,7 +5151,18 @@
       "dispatch": [
         "nolinecom"
       ],
+      "handlers": [
+        "nolinecom"
+      ],
       "primary_handler": "nolinecom",
+      "route_id": "verb:194",
+      "route_kind": "handler",
+      "handler_sources": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
       "dispatch_source_word": "NOISTARI",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2979,7 +5176,18 @@
       "dispatch": [
         "togglecom"
       ],
+      "handlers": [
+        "togglecom"
+      ],
       "primary_handler": "togglecom",
+      "route_id": "verb:199",
+      "route_kind": "handler",
+      "handler_sources": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
       "dispatch_source_word": "NOPUFF",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2993,7 +5201,18 @@
       "dispatch": [
         "nopuntcom"
       ],
+      "handlers": [
+        "nopuntcom"
+      ],
       "primary_handler": "nopuntcom",
+      "route_id": "verb:200",
+      "route_kind": "handler",
+      "handler_sources": {
+        "nopuntcom": {
+          "file": "src/wizard.c",
+          "line": 1745
+        }
+      },
       "dispatch_source_word": "NOPUNT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3007,7 +5226,18 @@
       "dispatch": [
         "noruncom"
       ],
+      "handlers": [
+        "noruncom"
+      ],
       "primary_handler": "noruncom",
+      "route_id": "verb:201",
+      "route_kind": "handler",
+      "handler_sources": {
+        "noruncom": {
+          "file": "src/god.c",
+          "line": 381
+        }
+      },
       "dispatch_source_word": "NORUN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3021,7 +5251,18 @@
       "dispatch": [
         "noshoutcom"
       ],
+      "handlers": [
+        "noshoutcom"
+      ],
       "primary_handler": "noshoutcom",
+      "route_id": "verb:202",
+      "route_kind": "handler",
+      "handler_sources": {
+        "noshoutcom": {
+          "file": "src/wizard.c",
+          "line": 801
+        }
+      },
       "dispatch_source_word": "NOSHOUT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3035,7 +5276,18 @@
       "dispatch": [
         "noslaincom"
       ],
+      "handlers": [
+        "noslaincom"
+      ],
       "primary_handler": "noslaincom",
+      "route_id": "verb:203",
+      "route_kind": "handler",
+      "handler_sources": {
+        "noslaincom": {
+          "file": "src/wizard.c",
+          "line": 1221
+        }
+      },
       "dispatch_source_word": "NOSLAIN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3049,7 +5301,18 @@
       "dispatch": [
         "togglecom"
       ],
+      "handlers": [
+        "togglecom"
+      ],
       "primary_handler": "togglecom",
+      "route_id": "verb:204",
+      "route_kind": "handler",
+      "handler_sources": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
       "dispatch_source_word": "NOSWEAR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3063,7 +5326,18 @@
       "dispatch": [
         "nolinecom"
       ],
+      "handlers": [
+        "nolinecom"
+      ],
       "primary_handler": "nolinecom",
+      "route_id": "verb:205",
+      "route_kind": "handler",
+      "handler_sources": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
       "dispatch_source_word": "NOUPPER",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3077,7 +5351,18 @@
       "dispatch": [
         "togglecom"
       ],
+      "handlers": [
+        "togglecom"
+      ],
       "primary_handler": "togglecom",
+      "route_id": "verb:206",
+      "route_kind": "handler",
+      "handler_sources": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
       "dispatch_source_word": "NOWET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3091,7 +5376,18 @@
       "dispatch": [
         "nolinecom"
       ],
+      "handlers": [
+        "nolinecom"
+      ],
       "primary_handler": "nolinecom",
+      "route_id": "verb:207",
+      "route_kind": "handler",
+      "handler_sources": {
+        "nolinecom": {
+          "file": "src/comm.c",
+          "line": 103
+        }
+      },
       "dispatch_source_word": "NOWIZ",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3105,7 +5401,18 @@
       "dispatch": [
         "nowishcom"
       ],
+      "handlers": [
+        "nowishcom"
+      ],
       "primary_handler": "nowishcom",
+      "route_id": "verb:208",
+      "route_kind": "handler",
+      "handler_sources": {
+        "nowishcom": {
+          "file": "src/wizard.c",
+          "line": 1167
+        }
+      },
       "dispatch_source_word": "NOWISH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3119,7 +5426,18 @@
       "dispatch": [
         "objectscom"
       ],
+      "handlers": [
+        "objectscom"
+      ],
       "primary_handler": "objectscom",
+      "route_id": "verb:209",
+      "route_kind": "handler",
+      "handler_sources": {
+        "objectscom": {
+          "file": "src/acct.c",
+          "line": 233
+        }
+      },
       "dispatch_source_word": "OBJECTS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3133,7 +5451,18 @@
       "dispatch": [
         "obj_flags"
       ],
+      "handlers": [
+        "obj_flags"
+      ],
       "primary_handler": "obj_flags",
+      "route_id": "verb:210",
+      "route_kind": "handler",
+      "handler_sources": {
+        "obj_flags": {
+          "file": "cr/flags.c",
+          "line": 322
+        }
+      },
       "dispatch_source_word": "OFLAGS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3147,7 +5476,18 @@
       "dispatch": [
         "opencom"
       ],
+      "handlers": [
+        "opencom"
+      ],
       "primary_handler": "opencom",
+      "route_id": "verb:160",
+      "route_kind": "handler",
+      "handler_sources": {
+        "opencom": {
+          "file": "src/objsys.c",
+          "line": 155
+        }
+      },
       "dispatch_source_word": "OPEN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3161,7 +5501,18 @@
       "dispatch": [
         "optionscom"
       ],
+      "handlers": [
+        "optionscom"
+      ],
       "primary_handler": "optionscom",
+      "route_id": "verb:211",
+      "route_kind": "handler",
+      "handler_sources": {
+        "optionscom": {
+          "file": "src/commands.c",
+          "line": 2233
+        }
+      },
       "dispatch_source_word": "OPTIONS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3175,7 +5526,18 @@
       "dispatch": [
         "setpager"
       ],
+      "handlers": [
+        "setpager"
+      ],
       "primary_handler": "setpager",
+      "route_id": "verb:212",
+      "route_kind": "handler",
+      "handler_sources": {
+        "setpager": {
+          "file": "src/commands.c",
+          "line": 2205
+        }
+      },
       "dispatch_source_word": "PAGER",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3189,7 +5551,18 @@
       "dispatch": [
         "petcom"
       ],
+      "handlers": [
+        "petcom"
+      ],
       "primary_handler": "petcom",
+      "route_id": "verb:213",
+      "route_kind": "handler",
+      "handler_sources": {
+        "petcom": {
+          "file": "cr/actions.c",
+          "line": 403
+        }
+      },
       "dispatch_source_word": "PET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3203,7 +5576,18 @@
       "dispatch": [
         "peacecom"
       ],
+      "handlers": [
+        "peacecom"
+      ],
       "primary_handler": "peacecom",
+      "route_id": "verb:214",
+      "route_kind": "handler",
+      "handler_sources": {
+        "peacecom": {
+          "file": "src/wizard.c",
+          "line": 994
+        }
+      },
       "dispatch_source_word": "PEACE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3217,7 +5601,18 @@
       "dispatch": [
         "usercom"
       ],
+      "handlers": [
+        "usercom"
+      ],
       "primary_handler": "usercom",
+      "route_id": "verb:215",
+      "route_kind": "handler",
+      "handler_sources": {
+        "usercom": {
+          "file": "src/mobile.c",
+          "line": 457
+        }
+      },
       "dispatch_source_word": "USERS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3231,7 +5626,18 @@
       "dispatch": [
         "petcom"
       ],
+      "handlers": [
+        "petcom"
+      ],
       "primary_handler": "petcom",
+      "route_id": "verb:213",
+      "route_kind": "handler",
+      "handler_sources": {
+        "petcom": {
+          "file": "cr/actions.c",
+          "line": 403
+        }
+      },
       "dispatch_source_word": "PET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3245,7 +5651,18 @@
       "dispatch": [
         "mob_flags"
       ],
+      "handlers": [
+        "mob_flags"
+      ],
       "primary_handler": "mob_flags",
+      "route_id": "verb:216",
+      "route_kind": "handler",
+      "handler_sources": {
+        "mob_flags": {
+          "file": "cr/flags.c",
+          "line": 394
+        }
+      },
       "dispatch_source_word": "PFLAGS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3259,7 +5676,18 @@
       "dispatch": [
         "pickcom"
       ],
+      "handlers": [
+        "pickcom"
+      ],
       "primary_handler": "pickcom",
+      "route_id": "verb:217",
+      "route_kind": "handler",
+      "handler_sources": {
+        "pickcom": {
+          "file": "src/commands.c",
+          "line": 123
+        }
+      },
       "dispatch_source_word": "PICK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3273,7 +5701,18 @@
       "dispatch": [
         "pigcom"
       ],
+      "handlers": [
+        "pigcom"
+      ],
       "primary_handler": "pigcom",
+      "route_id": "verb:218",
+      "route_kind": "handler",
+      "handler_sources": {
+        "pigcom": {
+          "file": "cr/pig.c",
+          "line": 89
+        }
+      },
       "dispatch_source_word": "PIG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3287,7 +5726,18 @@
       "dispatch": [
         "playcom"
       ],
+      "handlers": [
+        "playcom"
+      ],
       "primary_handler": "playcom",
+      "route_id": "verb:219",
+      "route_kind": "handler",
+      "handler_sources": {
+        "playcom": {
+          "file": "src/commands.c",
+          "line": 1564
+        }
+      },
       "dispatch_source_word": "PLAY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3301,7 +5751,18 @@
       "dispatch": [
         "usercom"
       ],
+      "handlers": [
+        "usercom"
+      ],
       "primary_handler": "usercom",
+      "route_id": "verb:215",
+      "route_kind": "handler",
+      "handler_sources": {
+        "usercom": {
+          "file": "src/mobile.c",
+          "line": 457
+        }
+      },
       "dispatch_source_word": "USERS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3315,7 +5776,18 @@
       "dispatch": [
         "ploccom"
       ],
+      "handlers": [
+        "ploccom"
+      ],
       "primary_handler": "ploccom",
+      "route_id": "verb:220",
+      "route_kind": "handler",
+      "handler_sources": {
+        "ploccom": {
+          "file": "src/god.c",
+          "line": 222
+        }
+      },
       "dispatch_source_word": "PLOC",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3329,7 +5801,18 @@
       "dispatch": [
         "pncom"
       ],
+      "handlers": [
+        "pncom"
+      ],
       "primary_handler": "pncom",
+      "route_id": "verb:221",
+      "route_kind": "handler",
+      "handler_sources": {
+        "pncom": {
+          "file": "src/commands.c",
+          "line": 999
+        }
+      },
       "dispatch_source_word": "PN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3343,7 +5826,18 @@
       "dispatch": [
         "policycom"
       ],
+      "handlers": [
+        "policycom"
+      ],
       "primary_handler": "policycom",
+      "route_id": "verb:222",
+      "route_kind": "handler",
+      "handler_sources": {
+        "policycom": {
+          "file": "src/commands.c",
+          "line": 1206
+        }
+      },
       "dispatch_source_word": "POLICY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3357,7 +5851,18 @@
       "dispatch": [
         "posecom"
       ],
+      "handlers": [
+        "posecom"
+      ],
       "primary_handler": "posecom",
+      "route_id": "verb:223",
+      "route_kind": "handler",
+      "handler_sources": {
+        "posecom": {
+          "file": "src/magic.c",
+          "line": 617
+        }
+      },
       "dispatch_source_word": "POSE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3371,7 +5876,18 @@
       "dispatch": [
         "praycom"
       ],
+      "handlers": [
+        "praycom"
+      ],
       "primary_handler": "praycom",
+      "route_id": "verb:224",
+      "route_kind": "handler",
+      "handler_sources": {
+        "praycom": {
+          "file": "cr/actions.c",
+          "line": 481
+        }
+      },
       "dispatch_source_word": "PRAY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3385,7 +5901,18 @@
       "dispatch": [
         "pushcom"
       ],
+      "handlers": [
+        "pushcom"
+      ],
       "primary_handler": "pushcom",
+      "route_id": "verb:178",
+      "route_kind": "handler",
+      "handler_sources": {
+        "pushcom": {
+          "file": "src/commands.c",
+          "line": 1727
+        }
+      },
       "dispatch_source_word": "PUSH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3399,7 +5926,11 @@
       "dispatch": [
         "doverb_default"
       ],
+      "handlers": [],
       "primary_handler": "doverb_default",
+      "route_id": "doverb_default",
+      "route_kind": "fallback",
+      "handler_sources": {},
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -3413,7 +5944,18 @@
       "dispatch": [
         "probationcom"
       ],
+      "handlers": [
+        "probationcom"
+      ],
       "primary_handler": "probationcom",
+      "route_id": "verb:226",
+      "route_kind": "handler",
+      "handler_sources": {
+        "probationcom": {
+          "file": "src/god.c",
+          "line": 263
+        }
+      },
       "dispatch_source_word": "PROBATION",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3427,7 +5969,18 @@
       "dispatch": [
         "promptcom"
       ],
+      "handlers": [
+        "promptcom"
+      ],
       "primary_handler": "promptcom",
+      "route_id": "verb:227",
+      "route_kind": "handler",
+      "handler_sources": {
+        "promptcom": {
+          "file": "src/commands.c",
+          "line": 1543
+        }
+      },
       "dispatch_source_word": "PROMPT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3441,7 +5994,18 @@
       "dispatch": [
         "promote"
       ],
+      "handlers": [
+        "promote"
+      ],
       "primary_handler": "promote",
+      "route_id": "verb:228",
+      "route_kind": "handler",
+      "handler_sources": {
+        "promote": {
+          "file": "src/group.c",
+          "line": 280
+        }
+      },
       "dispatch_source_word": "PROMOTE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3455,7 +6019,18 @@
       "dispatch": [
         "com_handler"
       ],
+      "handlers": [
+        "com_handler"
+      ],
       "primary_handler": "com_handler",
+      "route_id": "verb:149",
+      "route_kind": "handler",
+      "handler_sources": {
+        "com_handler": {
+          "file": "src/comm.c",
+          "line": 67
+        }
+      },
       "dispatch_source_word": "ISTARI",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3469,7 +6044,18 @@
       "dispatch": [
         "spellcom"
       ],
+      "handlers": [
+        "spellcom"
+      ],
       "primary_handler": "spellcom",
+      "route_id": "verb:229",
+      "route_kind": "handler",
+      "handler_sources": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
       "dispatch_source_word": "PROTECT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3483,7 +6069,18 @@
       "dispatch": [
         "pushcom"
       ],
+      "handlers": [
+        "pushcom"
+      ],
       "primary_handler": "pushcom",
+      "route_id": "verb:178",
+      "route_kind": "handler",
+      "handler_sources": {
+        "pushcom": {
+          "file": "src/commands.c",
+          "line": 1727
+        }
+      },
       "dispatch_source_word": "PUSH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3497,7 +6094,18 @@
       "dispatch": [
         "puntcom"
       ],
+      "handlers": [
+        "puntcom"
+      ],
       "primary_handler": "puntcom",
+      "route_id": "verb:230",
+      "route_kind": "handler",
+      "handler_sources": {
+        "puntcom": {
+          "file": "src/wizard.c",
+          "line": 1239
+        }
+      },
       "dispatch_source_word": "PUNT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3511,7 +6119,18 @@
       "dispatch": [
         "puntallcom"
       ],
+      "handlers": [
+        "puntallcom"
+      ],
       "primary_handler": "puntallcom",
+      "route_id": "verb:231",
+      "route_kind": "handler",
+      "handler_sources": {
+        "puntallcom": {
+          "file": "src/wizard.c",
+          "line": 1360
+        }
+      },
       "dispatch_source_word": "PUNTALL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3525,7 +6144,18 @@
       "dispatch": [
         "pushcom"
       ],
+      "handlers": [
+        "pushcom"
+      ],
       "primary_handler": "pushcom",
+      "route_id": "verb:178",
+      "route_kind": "handler",
+      "handler_sources": {
+        "pushcom": {
+          "file": "src/commands.c",
+          "line": 1727
+        }
+      },
       "dispatch_source_word": "PUSH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3539,7 +6169,18 @@
       "dispatch": [
         "putcom"
       ],
+      "handlers": [
+        "putcom"
+      ],
       "primary_handler": "putcom",
+      "route_id": "verb:232",
+      "route_kind": "handler",
+      "handler_sources": {
+        "putcom": {
+          "file": "src/objsys.c",
+          "line": 632
+        }
+      },
       "dispatch_source_word": "PUT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3553,7 +6194,18 @@
       "dispatch": [
         "pzapcom"
       ],
+      "handlers": [
+        "pzapcom"
+      ],
       "primary_handler": "pzapcom",
+      "route_id": "verb:233",
+      "route_kind": "handler",
+      "handler_sources": {
+        "pzapcom": {
+          "file": "src/wizard.c",
+          "line": 1063
+        }
+      },
       "dispatch_source_word": "PZAP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3567,7 +6219,18 @@
       "dispatch": [
         "qinfocom"
       ],
+      "handlers": [
+        "qinfocom"
+      ],
       "primary_handler": "qinfocom",
+      "route_id": "verb:234",
+      "route_kind": "handler",
+      "handler_sources": {
+        "qinfocom": {
+          "file": "src/commands.c",
+          "line": 1160
+        }
+      },
       "dispatch_source_word": "QINFO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3581,7 +6244,18 @@
       "dispatch": [
         "qlistcom"
       ],
+      "handlers": [
+        "qlistcom"
+      ],
       "primary_handler": "qlistcom",
+      "route_id": "verb:235",
+      "route_kind": "handler",
+      "handler_sources": {
+        "qlistcom": {
+          "file": "src/quests.c",
+          "line": 137
+        }
+      },
       "dispatch_source_word": "QLIST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3595,7 +6269,18 @@
       "dispatch": [
         "questcom"
       ],
+      "handlers": [
+        "questcom"
+      ],
       "primary_handler": "questcom",
+      "route_id": "verb:236",
+      "route_kind": "handler",
+      "handler_sources": {
+        "questcom": {
+          "file": "src/quests.c",
+          "line": 284
+        }
+      },
       "dispatch_source_word": "QUESTS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3612,7 +6297,11 @@
         "sclrflg",
         "ssetflg"
       ],
-      "primary_handler": "ssetflg",
+      "handlers": [],
+      "primary_handler": "inline:quiet",
+      "route_id": "verb:196",
+      "route_kind": "inline",
+      "handler_sources": {},
       "dispatch_source_word": "QUIET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3626,7 +6315,18 @@
       "dispatch": [
         "quit_game"
       ],
+      "handlers": [
+        "quit_game"
+      ],
       "primary_handler": "quit_game",
+      "route_id": "verb:237",
+      "route_kind": "handler",
+      "handler_sources": {
+        "quit_game": {
+          "file": "src/parse.c",
+          "line": 1425
+        }
+      },
       "dispatch_source_word": "QUIT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3640,7 +6340,18 @@
       "dispatch": [
         "rawcom"
       ],
+      "handlers": [
+        "rawcom"
+      ],
       "primary_handler": "rawcom",
+      "route_id": "verb:238",
+      "route_kind": "handler",
+      "handler_sources": {
+        "rawcom": {
+          "file": "src/wizard.c",
+          "line": 137
+        }
+      },
       "dispatch_source_word": "RAW",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3654,7 +6365,18 @@
       "dispatch": [
         "examcom"
       ],
+      "handlers": [
+        "examcom"
+      ],
       "primary_handler": "examcom",
+      "route_id": "verb:106",
+      "route_kind": "handler",
+      "handler_sources": {
+        "examcom": {
+          "file": "src/commands.c",
+          "line": 285
+        }
+      },
       "dispatch_source_word": "EXAMINE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3668,7 +6390,18 @@
       "dispatch": [
         "rebootcom"
       ],
+      "handlers": [
+        "rebootcom"
+      ],
       "primary_handler": "rebootcom",
+      "route_id": "verb:239",
+      "route_kind": "handler",
+      "handler_sources": {
+        "rebootcom": {
+          "file": "cr/update.c",
+          "line": 40
+        }
+      },
       "dispatch_source_word": "REBOOT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3682,7 +6415,18 @@
       "dispatch": [
         "removecom"
       ],
+      "handlers": [
+        "removecom"
+      ],
       "primary_handler": "removecom",
+      "route_id": "verb:240",
+      "route_kind": "handler",
+      "handler_sources": {
+        "removecom": {
+          "file": "cr/fight.c",
+          "line": 896
+        }
+      },
       "dispatch_source_word": "REMOVE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3696,7 +6440,18 @@
       "dispatch": [
         "replycom"
       ],
+      "handlers": [
+        "replycom"
+      ],
       "primary_handler": "replycom",
+      "route_id": "verb:241",
+      "route_kind": "handler",
+      "handler_sources": {
+        "replycom": {
+          "file": "src/comm.c",
+          "line": 711
+        }
+      },
       "dispatch_source_word": "REPLY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3710,7 +6465,18 @@
       "dispatch": [
         "reportcom"
       ],
+      "handlers": [
+        "reportcom"
+      ],
       "primary_handler": "reportcom",
+      "route_id": "verb:242",
+      "route_kind": "handler",
+      "handler_sources": {
+        "reportcom": {
+          "file": "src/group.c",
+          "line": 25
+        }
+      },
       "dispatch_source_word": "REPORT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3724,7 +6490,18 @@
       "dispatch": [
         "resurcom"
       ],
+      "handlers": [
+        "resurcom"
+      ],
       "primary_handler": "resurcom",
+      "route_id": "verb:243",
+      "route_kind": "handler",
+      "handler_sources": {
+        "resurcom": {
+          "file": "src/magic.c",
+          "line": 458
+        }
+      },
       "dispatch_source_word": "RESURRECT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3738,7 +6515,18 @@
       "dispatch": [
         "resetcom"
       ],
+      "handlers": [
+        "resetcom"
+      ],
       "primary_handler": "resetcom",
+      "route_id": "verb:244",
+      "route_kind": "handler",
+      "handler_sources": {
+        "resetcom": {
+          "file": "src/commands.c",
+          "line": 736
+        }
+      },
       "dispatch_source_word": "RESET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3752,7 +6540,18 @@
       "dispatch": [
         "restorecom"
       ],
+      "handlers": [
+        "restorecom"
+      ],
       "primary_handler": "restorecom",
+      "route_id": "verb:245",
+      "route_kind": "handler",
+      "handler_sources": {
+        "restorecom": {
+          "file": "cr/fight.c",
+          "line": 171
+        }
+      },
       "dispatch_source_word": "RESTORE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3766,7 +6565,18 @@
       "dispatch": [
         "reviewcom"
       ],
+      "handlers": [
+        "reviewcom"
+      ],
       "primary_handler": "reviewcom",
+      "route_id": "verb:246",
+      "route_kind": "handler",
+      "handler_sources": {
+        "reviewcom": {
+          "file": "src/commands.c",
+          "line": 880
+        }
+      },
       "dispatch_source_word": "REVIEW",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3780,7 +6590,18 @@
       "dispatch": [
         "ringcom"
       ],
+      "handlers": [
+        "ringcom"
+      ],
       "primary_handler": "ringcom",
+      "route_id": "verb:247",
+      "route_kind": "handler",
+      "handler_sources": {
+        "ringcom": {
+          "file": "src/commands.c",
+          "line": 971
+        }
+      },
       "dispatch_source_word": "RING",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3794,7 +6615,18 @@
       "dispatch": [
         "rollcom"
       ],
+      "handlers": [
+        "rollcom"
+      ],
       "primary_handler": "rollcom",
+      "route_id": "verb:248",
+      "route_kind": "handler",
+      "handler_sources": {
+        "rollcom": {
+          "file": "src/commands.c",
+          "line": 1439
+        }
+      },
       "dispatch_source_word": "ROLL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3808,7 +6640,18 @@
       "dispatch": [
         "rosecom"
       ],
+      "handlers": [
+        "rosecom"
+      ],
       "primary_handler": "rosecom",
+      "route_id": "verb:249",
+      "route_kind": "handler",
+      "handler_sources": {
+        "rosecom": {
+          "file": "cr/actions.c",
+          "line": 451
+        }
+      },
       "dispatch_source_word": "ROSE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3822,7 +6665,18 @@
       "dispatch": [
         "rubcom"
       ],
+      "handlers": [
+        "rubcom"
+      ],
       "primary_handler": "rubcom",
+      "route_id": "verb:250",
+      "route_kind": "handler",
+      "handler_sources": {
+        "rubcom": {
+          "file": "src/commands.c",
+          "line": 170
+        }
+      },
       "dispatch_source_word": "RUB",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3836,7 +6690,18 @@
       "dispatch": [
         "saycom"
       ],
+      "handlers": [
+        "saycom"
+      ],
       "primary_handler": "saycom",
+      "route_id": "verb:251",
+      "route_kind": "handler",
+      "handler_sources": {
+        "saycom": {
+          "file": "src/comm.c",
+          "line": 172
+        }
+      },
       "dispatch_source_word": "SAY",
       "dispatch_kind": "c-handler",
       "test_cases": [
@@ -3854,7 +6719,18 @@
       "dispatch": [
         "saytocom"
       ],
+      "handlers": [
+        "saytocom"
+      ],
       "primary_handler": "saytocom",
+      "route_id": "verb:252",
+      "route_kind": "handler",
+      "handler_sources": {
+        "saytocom": {
+          "file": "src/comm.c",
+          "line": 209
+        }
+      },
       "dispatch_source_word": "SAYTO",
       "dispatch_kind": "c-handler",
       "test_cases": [
@@ -3872,7 +6748,18 @@
       "dispatch": [
         "saveother"
       ],
+      "handlers": [
+        "saveother"
+      ],
       "primary_handler": "saveother",
+      "route_id": "verb:253",
+      "route_kind": "handler",
+      "handler_sources": {
+        "saveother": {
+          "file": "cr/uaf.c",
+          "line": 265
+        }
+      },
       "dispatch_source_word": "SAVE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3886,7 +6773,18 @@
       "dispatch": [
         "saveallcom"
       ],
+      "handlers": [
+        "saveallcom"
+      ],
       "primary_handler": "saveallcom",
+      "route_id": "verb:254",
+      "route_kind": "handler",
+      "handler_sources": {
+        "saveallcom": {
+          "file": "cr/uaf.c",
+          "line": 307
+        }
+      },
       "dispatch_source_word": "SAVEALL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3900,7 +6798,18 @@
       "dispatch": [
         "xrscorecom"
       ],
+      "handlers": [
+        "xrscorecom"
+      ],
       "primary_handler": "xrscorecom",
+      "route_id": "verb:255",
+      "route_kind": "handler",
+      "handler_sources": {
+        "xrscorecom": {
+          "file": "cr/score.c",
+          "line": 92
+        }
+      },
       "dispatch_source_word": "SCORE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3914,7 +6823,18 @@
       "dispatch": [
         "examcom"
       ],
+      "handlers": [
+        "examcom"
+      ],
       "primary_handler": "examcom",
+      "route_id": "verb:106",
+      "route_kind": "handler",
+      "handler_sources": {
+        "examcom": {
+          "file": "src/commands.c",
+          "line": 285
+        }
+      },
       "dispatch_source_word": "EXAMINE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3928,7 +6848,18 @@
       "dispatch": [
         "toggleseeext"
       ],
+      "handlers": [
+        "toggleseeext"
+      ],
       "primary_handler": "toggleseeext",
+      "route_id": "verb:256",
+      "route_kind": "handler",
+      "handler_sources": {
+        "toggleseeext": {
+          "file": "src/wizard.c",
+          "line": 1653
+        }
+      },
       "dispatch_source_word": "SEEEXT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3942,7 +6873,18 @@
       "dispatch": [
         "seeidlecom"
       ],
+      "handlers": [
+        "seeidlecom"
+      ],
       "primary_handler": "seeidlecom",
+      "route_id": "verb:257",
+      "route_kind": "handler",
+      "handler_sources": {
+        "seeidlecom": {
+          "file": "src/god.c",
+          "line": 114
+        }
+      },
       "dispatch_source_word": "SEEIDLE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3956,7 +6898,18 @@
       "dispatch": [
         "toggleseesocket"
       ],
+      "handlers": [
+        "toggleseesocket"
+      ],
       "primary_handler": "toggleseesocket",
+      "route_id": "verb:258",
+      "route_kind": "handler",
+      "handler_sources": {
+        "toggleseesocket": {
+          "file": "src/god.c",
+          "line": 132
+        }
+      },
       "dispatch_source_word": "SEESOCKET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3970,7 +6923,18 @@
       "dispatch": [
         "setcom"
       ],
+      "handlers": [
+        "setcom"
+      ],
       "primary_handler": "setcom",
+      "route_id": "verb:259",
+      "route_kind": "handler",
+      "handler_sources": {
+        "setcom": {
+          "file": "src/wizard.c",
+          "line": 519
+        }
+      },
       "dispatch_source_word": "SET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3984,7 +6948,18 @@
       "dispatch": [
         "set_msg"
       ],
+      "handlers": [
+        "set_msg"
+      ],
       "primary_handler": "set_msg",
+      "route_id": "verb:260",
+      "route_kind": "handler",
+      "handler_sources": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
       "dispatch_source_word": "SETIN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3998,7 +6973,11 @@
       "dispatch": [
         "doverb_default"
       ],
+      "handlers": [],
       "primary_handler": "doverb_default",
+      "route_id": "doverb_default",
+      "route_kind": "fallback",
+      "handler_sources": {},
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -4012,7 +6991,18 @@
       "dispatch": [
         "set_msg"
       ],
+      "handlers": [
+        "set_msg"
+      ],
       "primary_handler": "set_msg",
+      "route_id": "verb:262",
+      "route_kind": "handler",
+      "handler_sources": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
       "dispatch_source_word": "SETMIN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4026,7 +7016,18 @@
       "dispatch": [
         "set_msg"
       ],
+      "handlers": [
+        "set_msg"
+      ],
       "primary_handler": "set_msg",
+      "route_id": "verb:263",
+      "route_kind": "handler",
+      "handler_sources": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
       "dispatch_source_word": "SETMOUT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4040,7 +7041,18 @@
       "dispatch": [
         "set_msg"
       ],
+      "handlers": [
+        "set_msg"
+      ],
       "primary_handler": "set_msg",
+      "route_id": "verb:264",
+      "route_kind": "handler",
+      "handler_sources": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
       "dispatch_source_word": "SETOUT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4054,7 +7066,18 @@
       "dispatch": [
         "set_msg"
       ],
+      "handlers": [
+        "set_msg"
+      ],
       "primary_handler": "set_msg",
+      "route_id": "verb:265",
+      "route_kind": "handler",
+      "handler_sources": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
       "dispatch_source_word": "SETSIN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4068,7 +7091,18 @@
       "dispatch": [
         "set_msg"
       ],
+      "handlers": [
+        "set_msg"
+      ],
       "primary_handler": "set_msg",
+      "route_id": "verb:266",
+      "route_kind": "handler",
+      "handler_sources": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
       "dispatch_source_word": "SETSIT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4082,7 +7116,18 @@
       "dispatch": [
         "set_msg"
       ],
+      "handlers": [
+        "set_msg"
+      ],
       "primary_handler": "set_msg",
+      "route_id": "verb:267",
+      "route_kind": "handler",
+      "handler_sources": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
       "dispatch_source_word": "SETSOUT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4096,7 +7141,18 @@
       "dispatch": [
         "setstart"
       ],
+      "handlers": [
+        "setstart"
+      ],
       "primary_handler": "setstart",
+      "route_id": "verb:268",
+      "route_kind": "handler",
+      "handler_sources": {
+        "setstart": {
+          "file": "src/wizard.c",
+          "line": 730
+        }
+      },
       "dispatch_source_word": "SETSTART",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4110,7 +7166,18 @@
       "dispatch": [
         "set_msg"
       ],
+      "handlers": [
+        "set_msg"
+      ],
       "primary_handler": "set_msg",
+      "route_id": "verb:269",
+      "route_kind": "handler",
+      "handler_sources": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
       "dispatch_source_word": "SETSTND",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4124,7 +7191,18 @@
       "dispatch": [
         "set_msg"
       ],
+      "handlers": [
+        "set_msg"
+      ],
       "primary_handler": "set_msg",
+      "route_id": "verb:270",
+      "route_kind": "handler",
+      "handler_sources": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
       "dispatch_source_word": "SETSUM",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4138,7 +7216,11 @@
       "dispatch": [
         "doverb_default"
       ],
+      "handlers": [],
       "primary_handler": "doverb_default",
+      "route_id": "doverb_default",
+      "route_kind": "fallback",
+      "handler_sources": {},
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -4152,7 +7234,18 @@
       "dispatch": [
         "set_msg"
       ],
+      "handlers": [
+        "set_msg"
+      ],
       "primary_handler": "set_msg",
+      "route_id": "verb:272",
+      "route_kind": "handler",
+      "handler_sources": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
       "dispatch_source_word": "SETVIN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4166,7 +7259,18 @@
       "dispatch": [
         "set_msg"
       ],
+      "handlers": [
+        "set_msg"
+      ],
       "primary_handler": "set_msg",
+      "route_id": "verb:273",
+      "route_kind": "handler",
+      "handler_sources": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
       "dispatch_source_word": "SETVOUT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4180,7 +7284,18 @@
       "dispatch": [
         "set_msg"
       ],
+      "handlers": [
+        "set_msg"
+      ],
       "primary_handler": "set_msg",
+      "route_id": "verb:274",
+      "route_kind": "handler",
+      "handler_sources": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
       "dispatch_source_word": "SETQIN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4194,7 +7309,18 @@
       "dispatch": [
         "set_msg"
       ],
+      "handlers": [
+        "set_msg"
+      ],
       "primary_handler": "set_msg",
+      "route_id": "verb:275",
+      "route_kind": "handler",
+      "handler_sources": {
+        "set_msg": {
+          "file": "src/mobile.c",
+          "line": 1461
+        }
+      },
       "dispatch_source_word": "SETQOUT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4208,7 +7334,18 @@
       "dispatch": [
         "mob_flags"
       ],
+      "handlers": [
+        "mob_flags"
+      ],
       "primary_handler": "mob_flags",
+      "route_id": "verb:276",
+      "route_kind": "handler",
+      "handler_sources": {
+        "mob_flags": {
+          "file": "cr/flags.c",
+          "line": 394
+        }
+      },
       "dispatch_source_word": "SFLAGS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4224,7 +7361,23 @@
         "saveallcom",
         "erreval"
       ],
-      "primary_handler": "erreval",
+      "handlers": [
+        "healallcom",
+        "saveallcom"
+      ],
+      "primary_handler": "inline:shall",
+      "route_id": "verb:277",
+      "route_kind": "inline",
+      "handler_sources": {
+        "healallcom": {
+          "file": "src/magic.c",
+          "line": 72
+        },
+        "saveallcom": {
+          "file": "cr/uaf.c",
+          "line": 307
+        }
+      },
       "dispatch_source_word": "SHALL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4238,7 +7391,18 @@
       "dispatch": [
         "spellcom"
       ],
+      "handlers": [
+        "spellcom"
+      ],
       "primary_handler": "spellcom",
+      "route_id": "verb:278",
+      "route_kind": "handler",
+      "handler_sources": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
       "dispatch_source_word": "SHOCK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4252,7 +7416,18 @@
       "dispatch": [
         "shoutcom"
       ],
+      "handlers": [
+        "shoutcom"
+      ],
       "primary_handler": "shoutcom",
+      "route_id": "verb:279",
+      "route_kind": "handler",
+      "handler_sources": {
+        "shoutcom": {
+          "file": "src/comm.c",
+          "line": 149
+        }
+      },
       "dispatch_source_word": "SHOUT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4266,7 +7441,18 @@
       "dispatch": [
         "pushcom"
       ],
+      "handlers": [
+        "pushcom"
+      ],
       "primary_handler": "pushcom",
+      "route_id": "verb:178",
+      "route_kind": "handler",
+      "handler_sources": {
+        "pushcom": {
+          "file": "src/commands.c",
+          "line": 1727
+        }
+      },
       "dispatch_source_word": "PUSH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4280,7 +7466,18 @@
       "dispatch": [
         "showitem"
       ],
+      "handlers": [
+        "showitem"
+      ],
       "primary_handler": "showitem",
+      "route_id": "verb:280",
+      "route_kind": "handler",
+      "handler_sources": {
+        "showitem": {
+          "file": "src/wizard.c",
+          "line": 897
+        }
+      },
       "dispatch_source_word": "SHOW",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4294,7 +7491,18 @@
       "dispatch": [
         "closecom"
       ],
+      "handlers": [
+        "closecom"
+      ],
       "primary_handler": "closecom",
+      "route_id": "verb:71",
+      "route_kind": "handler",
+      "handler_sources": {
+        "closecom": {
+          "file": "src/objsys.c",
+          "line": 305
+        }
+      },
       "dispatch_source_word": "CLOSE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4308,7 +7516,18 @@
       "dispatch": [
         "sitcom"
       ],
+      "handlers": [
+        "sitcom"
+      ],
       "primary_handler": "sitcom",
+      "route_id": "verb:281",
+      "route_kind": "handler",
+      "handler_sources": {
+        "sitcom": {
+          "file": "src/commands.c",
+          "line": 943
+        }
+      },
       "dispatch_source_word": "SIT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4322,7 +7541,18 @@
       "dispatch": [
         "siccom"
       ],
+      "handlers": [
+        "siccom"
+      ],
       "primary_handler": "siccom",
+      "route_id": "verb:282",
+      "route_kind": "handler",
+      "handler_sources": {
+        "siccom": {
+          "file": "src/wizard.c",
+          "line": 1891
+        }
+      },
       "dispatch_source_word": "SIC",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4336,7 +7566,18 @@
       "dispatch": [
         "signalcom"
       ],
+      "handlers": [
+        "signalcom"
+      ],
       "primary_handler": "signalcom",
+      "route_id": "verb:283",
+      "route_kind": "handler",
+      "handler_sources": {
+        "signalcom": {
+          "file": "src/exit.c",
+          "line": 128
+        }
+      },
       "dispatch_source_word": "SIGNAL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4350,7 +7591,18 @@
       "dispatch": [
         "silentcom"
       ],
+      "handlers": [
+        "silentcom"
+      ],
       "primary_handler": "silentcom",
+      "route_id": "verb:284",
+      "route_kind": "handler",
+      "handler_sources": {
+        "silentcom": {
+          "file": "src/god.c",
+          "line": 206
+        }
+      },
       "dispatch_source_word": "SILENT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4364,7 +7616,18 @@
       "dispatch": [
         "killcom"
       ],
+      "handlers": [
+        "killcom"
+      ],
       "primary_handler": "killcom",
+      "route_id": "verb:35",
+      "route_kind": "handler",
+      "handler_sources": {
+        "killcom": {
+          "file": "cr/fight.c",
+          "line": 1577
+        }
+      },
       "dispatch_source_word": "KILL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4378,7 +7641,18 @@
       "dispatch": [
         "sneakcom"
       ],
+      "handlers": [
+        "sneakcom"
+      ],
       "primary_handler": "sneakcom",
+      "route_id": "verb:285",
+      "route_kind": "handler",
+      "handler_sources": {
+        "sneakcom": {
+          "file": "src/commands.c",
+          "line": 144
+        }
+      },
       "dispatch_source_word": "SNEAK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4392,7 +7666,18 @@
       "dispatch": [
         "snoopcom"
       ],
+      "handlers": [
+        "snoopcom"
+      ],
       "primary_handler": "snoopcom",
+      "route_id": "verb:286",
+      "route_kind": "handler",
+      "handler_sources": {
+        "snoopcom": {
+          "file": "src/wizard.c",
+          "line": 39
+        }
+      },
       "dispatch_source_word": "SNOOP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4406,7 +7691,18 @@
       "dispatch": [
         "socketcom"
       ],
+      "handlers": [
+        "socketcom"
+      ],
       "primary_handler": "socketcom",
+      "route_id": "verb:287",
+      "route_kind": "handler",
+      "handler_sources": {
+        "socketcom": {
+          "file": "src/wizard.c",
+          "line": 1452
+        }
+      },
       "dispatch_source_word": "SOCKET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4420,7 +7716,18 @@
       "dispatch": [
         "spellscom"
       ],
+      "handlers": [
+        "spellscom"
+      ],
       "primary_handler": "spellscom",
+      "route_id": "verb:288",
+      "route_kind": "handler",
+      "handler_sources": {
+        "spellscom": {
+          "file": "src/spell.c",
+          "line": 19
+        }
+      },
       "dispatch_source_word": "SPELLS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4434,7 +7741,18 @@
       "dispatch": [
         "standcom"
       ],
+      "handlers": [
+        "standcom"
+      ],
       "primary_handler": "standcom",
+      "route_id": "verb:289",
+      "route_kind": "handler",
+      "handler_sources": {
+        "standcom": {
+          "file": "src/commands.c",
+          "line": 984
+        }
+      },
       "dispatch_source_word": "STAND",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4448,7 +7766,18 @@
       "dispatch": [
         "startcom"
       ],
+      "handlers": [
+        "startcom"
+      ],
       "primary_handler": "startcom",
+      "route_id": "verb:290",
+      "route_kind": "handler",
+      "handler_sources": {
+        "startcom": {
+          "file": "src/mobile.c",
+          "line": 1040
+        }
+      },
       "dispatch_source_word": "START",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4462,7 +7791,18 @@
       "dispatch": [
         "showplayer"
       ],
+      "handlers": [
+        "showplayer"
+      ],
       "primary_handler": "showplayer",
+      "route_id": "verb:291",
+      "route_kind": "handler",
+      "handler_sources": {
+        "showplayer": {
+          "file": "src/mobile.c",
+          "line": 545
+        }
+      },
       "dispatch_source_word": "STATS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4476,7 +7816,18 @@
       "dispatch": [
         "stealcom"
       ],
+      "handlers": [
+        "stealcom"
+      ],
       "primary_handler": "stealcom",
+      "route_id": "verb:292",
+      "route_kind": "handler",
+      "handler_sources": {
+        "stealcom": {
+          "file": "src/objsys.c",
+          "line": 438
+        }
+      },
       "dispatch_source_word": "STEAL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4490,7 +7841,18 @@
       "dispatch": [
         "stopcom"
       ],
+      "handlers": [
+        "stopcom"
+      ],
       "primary_handler": "stopcom",
+      "route_id": "verb:293",
+      "route_kind": "handler",
+      "handler_sources": {
+        "stopcom": {
+          "file": "src/mobile.c",
+          "line": 1027
+        }
+      },
       "dispatch_source_word": "STOP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4504,7 +7866,18 @@
       "dispatch": [
         "storecom"
       ],
+      "handlers": [
+        "storecom"
+      ],
       "primary_handler": "storecom",
+      "route_id": "verb:294",
+      "route_kind": "handler",
+      "handler_sources": {
+        "storecom": {
+          "file": "src/clone.c",
+          "line": 619
+        }
+      },
       "dispatch_source_word": "STORE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4518,7 +7891,18 @@
       "dispatch": [
         "sumcom"
       ],
+      "handlers": [
+        "sumcom"
+      ],
       "primary_handler": "sumcom",
+      "route_id": "verb:295",
+      "route_kind": "handler",
+      "handler_sources": {
+        "sumcom": {
+          "file": "src/magic.c",
+          "line": 182
+        }
+      },
       "dispatch_source_word": "SUMMON",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4532,7 +7916,18 @@
       "dispatch": [
         "suggestcom"
       ],
+      "handlers": [
+        "suggestcom"
+      ],
       "primary_handler": "suggestcom",
+      "route_id": "verb:296",
+      "route_kind": "handler",
+      "handler_sources": {
+        "suggestcom": {
+          "file": "src/commands.c",
+          "line": 1031
+        }
+      },
       "dispatch_source_word": "SUGGEST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4546,7 +7941,18 @@
       "dispatch": [
         "syslogcom"
       ],
+      "handlers": [
+        "syslogcom"
+      ],
       "primary_handler": "syslogcom",
+      "route_id": "verb:297",
+      "route_kind": "handler",
+      "handler_sources": {
+        "syslogcom": {
+          "file": "src/wizard.c",
+          "line": 190
+        }
+      },
       "dispatch_source_word": "SYSLOG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4560,7 +7966,18 @@
       "dispatch": [
         "systemcom"
       ],
+      "handlers": [
+        "systemcom"
+      ],
       "primary_handler": "systemcom",
+      "route_id": "verb:298",
+      "route_kind": "handler",
+      "handler_sources": {
+        "systemcom": {
+          "file": "src/wizard.c",
+          "line": 101
+        }
+      },
       "dispatch_source_word": "SYSTEM",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4574,7 +7991,18 @@
       "dispatch": [
         "getcom"
       ],
+      "handlers": [
+        "getcom"
+      ],
       "primary_handler": "getcom",
+      "route_id": "verb:129",
+      "route_kind": "handler",
+      "handler_sources": {
+        "getcom": {
+          "file": "src/objsys.c",
+          "line": 1116
+        }
+      },
       "dispatch_source_word": "GET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4588,7 +8016,18 @@
       "dispatch": [
         "tellcom"
       ],
+      "handlers": [
+        "tellcom"
+      ],
       "primary_handler": "tellcom",
+      "route_id": "verb:30",
+      "route_kind": "handler",
+      "handler_sources": {
+        "tellcom": {
+          "file": "src/comm.c",
+          "line": 305
+        }
+      },
       "dispatch_source_word": "TELL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4602,7 +8041,18 @@
       "dispatch": [
         "throwcom"
       ],
+      "handlers": [
+        "throwcom"
+      ],
       "primary_handler": "throwcom",
+      "route_id": "verb:299",
+      "route_kind": "handler",
+      "handler_sources": {
+        "throwcom": {
+          "file": "cr/throwcom.c",
+          "line": 29
+        }
+      },
       "dispatch_source_word": "THROW",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4616,7 +8066,18 @@
       "dispatch": [
         "ticklecom"
       ],
+      "handlers": [
+        "ticklecom"
+      ],
       "primary_handler": "ticklecom",
+      "route_id": "verb:300",
+      "route_kind": "handler",
+      "handler_sources": {
+        "ticklecom": {
+          "file": "cr/actions.c",
+          "line": 381
+        }
+      },
       "dispatch_source_word": "TICKLE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4630,7 +8091,18 @@
       "dispatch": [
         "tiecom"
       ],
+      "handlers": [
+        "tiecom"
+      ],
       "primary_handler": "tiecom",
+      "route_id": "verb:301",
+      "route_kind": "handler",
+      "handler_sources": {
+        "tiecom": {
+          "file": "cr/tiecom.c",
+          "line": 29
+        }
+      },
       "dispatch_source_word": "TIE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4644,7 +8116,18 @@
       "dispatch": [
         "timecom"
       ],
+      "handlers": [
+        "timecom"
+      ],
       "primary_handler": "timecom",
+      "route_id": "verb:302",
+      "route_kind": "handler",
+      "handler_sources": {
+        "timecom": {
+          "file": "src/timing.c",
+          "line": 63
+        }
+      },
       "dispatch_source_word": "TIME",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4658,7 +8141,18 @@
       "dispatch": [
         "gotocom"
       ],
+      "handlers": [
+        "gotocom"
+      ],
       "primary_handler": "gotocom",
+      "route_id": "verb:303",
+      "route_kind": "handler",
+      "handler_sources": {
+        "gotocom": {
+          "file": "src/rooms.c",
+          "line": 126
+        }
+      },
       "dispatch_source_word": "TIPTOE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4672,7 +8166,18 @@
       "dispatch": [
         "change_title"
       ],
+      "handlers": [
+        "change_title"
+      ],
       "primary_handler": "change_title",
+      "route_id": "verb:304",
+      "route_kind": "handler",
+      "handler_sources": {
+        "change_title": {
+          "file": "src/change.c",
+          "line": 645
+        }
+      },
       "dispatch_source_word": "TITLE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4686,7 +8191,18 @@
       "dispatch": [
         "tournamentcom"
       ],
+      "handlers": [
+        "tournamentcom"
+      ],
       "primary_handler": "tournamentcom",
+      "route_id": "verb:305",
+      "route_kind": "handler",
+      "handler_sources": {
+        "tournamentcom": {
+          "file": "src/wizard.c",
+          "line": 170
+        }
+      },
       "dispatch_source_word": "TOURNAMENT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4700,7 +8216,18 @@
       "dispatch": [
         "pushcom"
       ],
+      "handlers": [
+        "pushcom"
+      ],
       "primary_handler": "pushcom",
+      "route_id": "verb:178",
+      "route_kind": "handler",
+      "handler_sources": {
+        "pushcom": {
+          "file": "src/commands.c",
+          "line": 1727
+        }
+      },
       "dispatch_source_word": "PUSH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4714,7 +8241,18 @@
       "dispatch": [
         "toutcom"
       ],
+      "handlers": [
+        "toutcom"
+      ],
       "primary_handler": "toutcom",
+      "route_id": "verb:306",
+      "route_kind": "handler",
+      "handler_sources": {
+        "toutcom": {
+          "file": "src/wizard.c",
+          "line": 1123
+        }
+      },
       "dispatch_source_word": "TOUT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4728,7 +8266,11 @@
       "dispatch": [
         "tracecom"
       ],
-      "primary_handler": "tracecom",
+      "handlers": [],
+      "primary_handler": "inline:trace",
+      "route_id": "verb:307",
+      "route_kind": "inline",
+      "handler_sources": {},
       "dispatch_source_word": "TRACE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4742,7 +8284,18 @@
       "dispatch": [
         "sumcom"
       ],
+      "handlers": [
+        "sumcom"
+      ],
       "primary_handler": "sumcom",
+      "route_id": "verb:308",
+      "route_kind": "handler",
+      "handler_sources": {
+        "sumcom": {
+          "file": "src/magic.c",
+          "line": 182
+        }
+      },
       "dispatch_source_word": "TRANSLOCATE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4756,7 +8309,18 @@
       "dispatch": [
         "treasurecom"
       ],
+      "handlers": [
+        "treasurecom"
+      ],
       "primary_handler": "treasurecom",
+      "route_id": "verb:309",
+      "route_kind": "handler",
+      "handler_sources": {
+        "treasurecom": {
+          "file": "src/commands.c",
+          "line": 1520
+        }
+      },
       "dispatch_source_word": "TREASURES",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4770,7 +8334,18 @@
       "dispatch": [
         "hostscom"
       ],
+      "handlers": [
+        "hostscom"
+      ],
       "primary_handler": "hostscom",
+      "route_id": "verb:141",
+      "route_kind": "handler",
+      "handler_sources": {
+        "hostscom": {
+          "file": "cr/hostscom.c",
+          "line": 43
+        }
+      },
       "dispatch_source_word": "HOSTS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4784,7 +8359,18 @@
       "dispatch": [
         "pushcom"
       ],
+      "handlers": [
+        "pushcom"
+      ],
       "primary_handler": "pushcom",
+      "route_id": "verb:178",
+      "route_kind": "handler",
+      "handler_sources": {
+        "pushcom": {
+          "file": "src/commands.c",
+          "line": 1727
+        }
+      },
       "dispatch_source_word": "PUSH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4798,7 +8384,18 @@
       "dispatch": [
         "textrawcom"
       ],
+      "handlers": [
+        "textrawcom"
+      ],
       "primary_handler": "textrawcom",
+      "route_id": "verb:310",
+      "route_kind": "handler",
+      "handler_sources": {
+        "textrawcom": {
+          "file": "src/wizard.c",
+          "line": 152
+        }
+      },
       "dispatch_source_word": "TXTRAW",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4812,7 +8409,18 @@
       "dispatch": [
         "typocom"
       ],
+      "handlers": [
+        "typocom"
+      ],
       "primary_handler": "typocom",
+      "route_id": "verb:311",
+      "route_kind": "handler",
+      "handler_sources": {
+        "typocom": {
+          "file": "src/commands.c",
+          "line": 1046
+        }
+      },
       "dispatch_source_word": "TYPO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4826,7 +8434,11 @@
       "dispatch": [
         "doverb_default"
       ],
+      "handlers": [],
       "primary_handler": "doverb_default",
+      "route_id": "doverb_default",
+      "route_kind": "fallback",
+      "handler_sources": {},
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -4840,7 +8452,18 @@
       "dispatch": [
         "extinguishcom"
       ],
+      "handlers": [
+        "extinguishcom"
+      ],
       "primary_handler": "extinguishcom",
+      "route_id": "verb:109",
+      "route_kind": "handler",
+      "handler_sources": {
+        "extinguishcom": {
+          "file": "src/commands.c",
+          "line": 1707
+        }
+      },
       "dispatch_source_word": "EXTINGUISH",
       "dispatch_kind": "c-handler",
       "test_cases": [
@@ -4858,7 +8481,18 @@
       "dispatch": [
         "unlockcom"
       ],
+      "handlers": [
+        "unlockcom"
+      ],
       "primary_handler": "unlockcom",
+      "route_id": "verb:313",
+      "route_kind": "handler",
+      "handler_sources": {
+        "unlockcom": {
+          "file": "src/objsys.c",
+          "line": 282
+        }
+      },
       "dispatch_source_word": "UNLOCK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4872,7 +8506,18 @@
       "dispatch": [
         "untiecom"
       ],
+      "handlers": [
+        "untiecom"
+      ],
       "primary_handler": "untiecom",
+      "route_id": "verb:314",
+      "route_kind": "handler",
+      "handler_sources": {
+        "untiecom": {
+          "file": "cr/untiecom.c",
+          "line": 36
+        }
+      },
       "dispatch_source_word": "UNTIE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4886,7 +8531,18 @@
       "dispatch": [
         "unveilcom"
       ],
+      "handlers": [
+        "unveilcom"
+      ],
       "primary_handler": "unveilcom",
+      "route_id": "verb:315",
+      "route_kind": "handler",
+      "handler_sources": {
+        "unveilcom": {
+          "file": "src/commands.c",
+          "line": 835
+        }
+      },
       "dispatch_source_word": "UNVEIL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4900,7 +8556,18 @@
       "dispatch": [
         "com_handler"
       ],
+      "handlers": [
+        "com_handler"
+      ],
       "primary_handler": "com_handler",
+      "route_id": "verb:316",
+      "route_kind": "handler",
+      "handler_sources": {
+        "com_handler": {
+          "file": "src/comm.c",
+          "line": 67
+        }
+      },
       "dispatch_source_word": "UPPER",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4914,7 +8581,18 @@
       "dispatch": [
         "updatecom"
       ],
+      "handlers": [
+        "updatecom"
+      ],
       "primary_handler": "updatecom",
+      "route_id": "verb:317",
+      "route_kind": "handler",
+      "handler_sources": {
+        "updatecom": {
+          "file": "cr/update.c",
+          "line": 48
+        }
+      },
       "dispatch_source_word": "UPDATE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4928,7 +8606,18 @@
       "dispatch": [
         "uptimecom"
       ],
+      "handlers": [
+        "uptimecom"
+      ],
       "primary_handler": "uptimecom",
+      "route_id": "verb:318",
+      "route_kind": "handler",
+      "handler_sources": {
+        "uptimecom": {
+          "file": "src/timing.c",
+          "line": 72
+        }
+      },
       "dispatch_source_word": "UPTIME",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4942,7 +8631,18 @@
       "dispatch": [
         "usecom"
       ],
+      "handlers": [
+        "usecom"
+      ],
       "primary_handler": "usecom",
+      "route_id": "verb:319",
+      "route_kind": "handler",
+      "handler_sources": {
+        "usecom": {
+          "file": "src/objsys.c",
+          "line": 49
+        }
+      },
       "dispatch_source_word": "USE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4956,7 +8656,18 @@
       "dispatch": [
         "usercom"
       ],
+      "handlers": [
+        "usercom"
+      ],
       "primary_handler": "usercom",
+      "route_id": "verb:215",
+      "route_kind": "handler",
+      "handler_sources": {
+        "usercom": {
+          "file": "src/mobile.c",
+          "line": 457
+        }
+      },
       "dispatch_source_word": "USERS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4970,7 +8681,18 @@
       "dispatch": [
         "usercom"
       ],
+      "handlers": [
+        "usercom"
+      ],
       "primary_handler": "usercom",
+      "route_id": "verb:215",
+      "route_kind": "handler",
+      "handler_sources": {
+        "usercom": {
+          "file": "src/mobile.c",
+          "line": 457
+        }
+      },
       "dispatch_source_word": "USERS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4984,7 +8706,18 @@
       "dispatch": [
         "valuecom"
       ],
+      "handlers": [
+        "valuecom"
+      ],
       "primary_handler": "valuecom",
+      "route_id": "verb:320",
+      "route_kind": "handler",
+      "handler_sources": {
+        "valuecom": {
+          "file": "src/objsys.c",
+          "line": 606
+        }
+      },
       "dispatch_source_word": "VALUE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4998,7 +8731,11 @@
       "dispatch": [
         "bprintf"
       ],
-      "primary_handler": "bprintf",
+      "handlers": [],
+      "primary_handler": "inline:version",
+      "route_id": "verb:321",
+      "route_kind": "inline",
+      "handler_sources": {},
       "dispatch_source_word": "VERSION",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5012,7 +8749,18 @@
       "dispatch": [
         "viscom"
       ],
+      "handlers": [
+        "viscom"
+      ],
       "primary_handler": "viscom",
+      "route_id": "verb:322",
+      "route_kind": "handler",
+      "handler_sources": {
+        "viscom": {
+          "file": "src/magic.c",
+          "line": 398
+        }
+      },
       "dispatch_source_word": "VISIBLE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5026,7 +8774,18 @@
       "dispatch": [
         "viewcom"
       ],
+      "handlers": [
+        "viewcom"
+      ],
       "primary_handler": "viewcom",
+      "route_id": "verb:323",
+      "route_kind": "handler",
+      "handler_sources": {
+        "viewcom": {
+          "file": "src/viewcom.c",
+          "line": 17
+        }
+      },
       "dispatch_source_word": "VIEWCOM",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5040,7 +8799,18 @@
       "dispatch": [
         "votecom"
       ],
+      "handlers": [
+        "votecom"
+      ],
       "primary_handler": "votecom",
+      "route_id": "verb:324",
+      "route_kind": "handler",
+      "handler_sources": {
+        "votecom": {
+          "file": "cr/vote.c",
+          "line": 35
+        }
+      },
       "dispatch_source_word": "VOTE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5054,7 +8824,18 @@
       "dispatch": [
         "spellcom"
       ],
+      "handlers": [
+        "spellcom"
+      ],
       "primary_handler": "spellcom",
+      "route_id": "verb:325",
+      "route_kind": "handler",
+      "handler_sources": {
+        "spellcom": {
+          "file": "src/spell.c",
+          "line": 48
+        }
+      },
       "dispatch_source_word": "VTOUCH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5068,7 +8849,11 @@
       "dispatch": [
         "doverb_default"
       ],
+      "handlers": [],
       "primary_handler": "doverb_default",
+      "route_id": "doverb_default",
+      "route_kind": "fallback",
+      "handler_sources": {},
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -5082,7 +8867,18 @@
       "dispatch": [
         "whocom"
       ],
+      "handlers": [
+        "whocom"
+      ],
       "primary_handler": "whocom",
+      "route_id": "verb:327",
+      "route_kind": "handler",
+      "handler_sources": {
+        "whocom": {
+          "file": "src/mobile.c",
+          "line": 136
+        }
+      },
       "dispatch_source_word": "WHO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5096,7 +8892,18 @@
       "dispatch": [
         "whoncom"
       ],
+      "handlers": [
+        "whoncom"
+      ],
       "primary_handler": "whoncom",
+      "route_id": "verb:328",
+      "route_kind": "handler",
+      "handler_sources": {
+        "whoncom": {
+          "file": "src/mobile.c",
+          "line": 309
+        }
+      },
       "dispatch_source_word": "WHON",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5110,7 +8917,18 @@
       "dispatch": [
         "warcom"
       ],
+      "handlers": [
+        "warcom"
+      ],
       "primary_handler": "warcom",
+      "route_id": "verb:329",
+      "route_kind": "handler",
+      "handler_sources": {
+        "warcom": {
+          "file": "src/wizard.c",
+          "line": 982
+        }
+      },
       "dispatch_source_word": "WAR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5124,7 +8942,18 @@
       "dispatch": [
         "wavecom"
       ],
+      "handlers": [
+        "wavecom"
+      ],
       "primary_handler": "wavecom",
+      "route_id": "verb:330",
+      "route_kind": "handler",
+      "handler_sources": {
+        "wavecom": {
+          "file": "cr/actions.c",
+          "line": 422
+        }
+      },
       "dispatch_source_word": "WAVE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5138,7 +8967,18 @@
       "dispatch": [
         "wearcom"
       ],
+      "handlers": [
+        "wearcom"
+      ],
       "primary_handler": "wearcom",
+      "route_id": "verb:27",
+      "route_kind": "handler",
+      "handler_sources": {
+        "wearcom": {
+          "file": "cr/fight.c",
+          "line": 930
+        }
+      },
       "dispatch_source_word": "WEAR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5152,7 +8992,18 @@
       "dispatch": [
         "wearall"
       ],
+      "handlers": [
+        "wearall"
+      ],
       "primary_handler": "wearall",
+      "route_id": "verb:331",
+      "route_kind": "handler",
+      "handler_sources": {
+        "wearall": {
+          "file": "src/objsys.c",
+          "line": 1744
+        }
+      },
       "dispatch_source_word": "WEARALL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5166,7 +9017,18 @@
       "dispatch": [
         "weathercom"
       ],
+      "handlers": [
+        "weathercom"
+      ],
       "primary_handler": "weathercom",
+      "route_id": "verb:332",
+      "route_kind": "handler",
+      "handler_sources": {
+        "weathercom": {
+          "file": "cr/weather.c",
+          "line": 83
+        }
+      },
       "dispatch_source_word": "WEATHER",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5180,7 +9042,18 @@
       "dispatch": [
         "wherecom"
       ],
+      "handlers": [
+        "wherecom"
+      ],
       "primary_handler": "wherecom",
+      "route_id": "verb:333",
+      "route_kind": "handler",
+      "handler_sources": {
+        "wherecom": {
+          "file": "src/magic.c",
+          "line": 532
+        }
+      },
       "dispatch_source_word": "WHERE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5194,7 +9067,18 @@
       "dispatch": [
         "wieldcom"
       ],
+      "handlers": [
+        "wieldcom"
+      ],
       "primary_handler": "wieldcom",
+      "route_id": "verb:334",
+      "route_kind": "handler",
+      "handler_sources": {
+        "wieldcom": {
+          "file": "cr/fight.c",
+          "line": 127
+        }
+      },
       "dispatch_source_word": "WIELD",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5208,7 +9092,18 @@
       "dispatch": [
         "wipecom"
       ],
+      "handlers": [
+        "wipecom"
+      ],
       "primary_handler": "wipecom",
+      "route_id": "verb:335",
+      "route_kind": "handler",
+      "handler_sources": {
+        "wipecom": {
+          "file": "cr/actions.c",
+          "line": 527
+        }
+      },
       "dispatch_source_word": "WIPE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5222,7 +9117,18 @@
       "dispatch": [
         "wishcom"
       ],
+      "handlers": [
+        "wishcom"
+      ],
       "primary_handler": "wishcom",
+      "route_id": "verb:336",
+      "route_kind": "handler",
+      "handler_sources": {
+        "wishcom": {
+          "file": "src/comm.c",
+          "line": 474
+        }
+      },
       "dispatch_source_word": "WISH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5236,7 +9142,18 @@
       "dispatch": [
         "com_handler"
       ],
+      "handlers": [
+        "com_handler"
+      ],
       "primary_handler": "com_handler",
+      "route_id": "verb:337",
+      "route_kind": "handler",
+      "handler_sources": {
+        "com_handler": {
+          "file": "src/comm.c",
+          "line": 67
+        }
+      },
       "dispatch_source_word": "WIZ",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5250,7 +9167,18 @@
       "dispatch": [
         "wizlistcom"
       ],
+      "handlers": [
+        "wizlistcom"
+      ],
       "primary_handler": "wizlistcom",
+      "route_id": "verb:338",
+      "route_kind": "handler",
+      "handler_sources": {
+        "wizlistcom": {
+          "file": "src/wizlist.c",
+          "line": 218
+        }
+      },
       "dispatch_source_word": "WIZLIST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5264,7 +9192,18 @@
       "dispatch": [
         "wizlock"
       ],
+      "handlers": [
+        "wizlock"
+      ],
       "primary_handler": "wizlock",
+      "route_id": "verb:339",
+      "route_kind": "handler",
+      "handler_sources": {
+        "wizlock": {
+          "file": "src/wizard.c",
+          "line": 956
+        }
+      },
       "dispatch_source_word": "WIZLOCK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5278,7 +9217,18 @@
       "dispatch": [
         "wloadcom"
       ],
+      "handlers": [
+        "wloadcom"
+      ],
       "primary_handler": "wloadcom",
+      "route_id": "verb:340",
+      "route_kind": "handler",
+      "handler_sources": {
+        "wloadcom": {
+          "file": "src/god.c",
+          "line": 168
+        }
+      },
       "dispatch_source_word": "WLOAD",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5292,7 +9242,18 @@
       "dispatch": [
         "shoutcom"
       ],
+      "handlers": [
+        "shoutcom"
+      ],
       "primary_handler": "shoutcom",
+      "route_id": "verb:279",
+      "route_kind": "handler",
+      "handler_sources": {
+        "shoutcom": {
+          "file": "src/comm.c",
+          "line": 149
+        }
+      },
       "dispatch_source_word": "SHOUT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5306,7 +9267,18 @@
       "dispatch": [
         "zapcom"
       ],
+      "handlers": [
+        "zapcom"
+      ],
       "primary_handler": "zapcom",
+      "route_id": "verb:341",
+      "route_kind": "handler",
+      "handler_sources": {
+        "zapcom": {
+          "file": "src/wizard.c",
+          "line": 1010
+        }
+      },
       "dispatch_source_word": "ZAP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5320,7 +9292,18 @@
       "dispatch": [
         "zonescom"
       ],
+      "handlers": [
+        "zonescom"
+      ],
       "primary_handler": "zonescom",
+      "route_id": "verb:342",
+      "route_kind": "handler",
+      "handler_sources": {
+        "zonescom": {
+          "file": "src/zones.c",
+          "line": 158
+        }
+      },
       "dispatch_source_word": "ZONES",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5334,7 +9317,18 @@
       "dispatch": [
         "togglecom"
       ],
+      "handlers": [
+        "togglecom"
+      ],
       "primary_handler": "togglecom",
+      "route_id": "verb:343",
+      "route_kind": "handler",
+      "handler_sources": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
       "dispatch_source_word": "SEENUMBERS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5348,7 +9342,18 @@
       "dispatch": [
         "awaymsgcom"
       ],
+      "handlers": [
+        "awaymsgcom"
+      ],
       "primary_handler": "awaymsgcom",
+      "route_id": "verb:344",
+      "route_kind": "handler",
+      "handler_sources": {
+        "awaymsgcom": {
+          "file": "src/commands.c",
+          "line": 66
+        }
+      },
       "dispatch_source_word": "AWAYMSG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5362,7 +9367,18 @@
       "dispatch": [
         "togglecom"
       ],
+      "handlers": [
+        "togglecom"
+      ],
       "primary_handler": "togglecom",
+      "route_id": "verb:345",
+      "route_kind": "handler",
+      "handler_sources": {
+        "togglecom": {
+          "file": "src/commands.c",
+          "line": 2101
+        }
+      },
       "dispatch_source_word": "AWAYBEEPS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5376,7 +9392,18 @@
       "dispatch": [
         "iuserscom"
       ],
+      "handlers": [
+        "iuserscom"
+      ],
       "primary_handler": "iuserscom",
+      "route_id": "verb:346",
+      "route_kind": "handler",
+      "handler_sources": {
+        "iuserscom": {
+          "file": "cr/muserscom.c",
+          "line": 100
+        }
+      },
       "dispatch_source_word": "IUSERS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5390,7 +9417,11 @@
       "dispatch": [
         "doverb_default"
       ],
+      "handlers": [],
       "primary_handler": "doverb_default",
+      "route_id": "doverb_default",
+      "route_kind": "fallback",
+      "handler_sources": {},
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -5404,7 +9435,11 @@
       "dispatch": [
         "doverb_default"
       ],
+      "handlers": [],
       "primary_handler": "doverb_default",
+      "route_id": "doverb_default",
+      "route_kind": "fallback",
+      "handler_sources": {},
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -5418,7 +9453,18 @@
       "dispatch": [
         "cmd_noachat"
       ],
+      "handlers": [
+        "cmd_noachat"
+      ],
       "primary_handler": "cmd_noachat",
+      "route_id": "verb:349",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_noachat": {
+          "file": "cr/client.c",
+          "line": 216
+        }
+      },
       "dispatch_source_word": "NOACHAT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5432,7 +9478,18 @@
       "dispatch": [
         "cmd_noacode"
       ],
+      "handlers": [
+        "cmd_noacode"
+      ],
       "primary_handler": "cmd_noacode",
+      "route_id": "verb:350",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_noacode": {
+          "file": "cr/client.c",
+          "line": 223
+        }
+      },
       "dispatch_source_word": "NOACODE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5446,7 +9503,18 @@
       "dispatch": [
         "cmd_noagod"
       ],
+      "handlers": [
+        "cmd_noagod"
+      ],
       "primary_handler": "cmd_noagod",
+      "route_id": "verb:351",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_noagod": {
+          "file": "cr/client.c",
+          "line": 230
+        }
+      },
       "dispatch_source_word": "NOAGOD",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5460,7 +9528,18 @@
       "dispatch": [
         "cmd_noainfo"
       ],
+      "handlers": [
+        "cmd_noainfo"
+      ],
       "primary_handler": "cmd_noainfo",
+      "route_id": "verb:352",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_noainfo": {
+          "file": "cr/client.c",
+          "line": 237
+        }
+      },
       "dispatch_source_word": "NOAINFO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5474,7 +9553,18 @@
       "dispatch": [
         "cmd_noatell"
       ],
+      "handlers": [
+        "cmd_noatell"
+      ],
       "primary_handler": "cmd_noatell",
+      "route_id": "verb:353",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_noatell": {
+          "file": "cr/client.c",
+          "line": 244
+        }
+      },
       "dispatch_source_word": "NOATELL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5488,7 +9578,18 @@
       "dispatch": [
         "cmd_noaberchat"
       ],
+      "handlers": [
+        "cmd_noaberchat"
+      ],
       "primary_handler": "cmd_noaberchat",
+      "route_id": "verb:354",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_noaberchat": {
+          "file": "cr/client.c",
+          "line": 209
+        }
+      },
       "dispatch_source_word": "NOABERCHAT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5502,7 +9603,18 @@
       "dispatch": [
         "cmd_aautocon"
       ],
+      "handlers": [
+        "cmd_aautocon"
+      ],
       "primary_handler": "cmd_aautocon",
+      "route_id": "verb:355",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_aautocon": {
+          "file": "cr/client.c",
+          "line": 265
+        }
+      },
       "dispatch_source_word": "AAUTOCON",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5516,7 +9628,18 @@
       "dispatch": [
         "cmd_acommstats"
       ],
+      "handlers": [
+        "cmd_acommstats"
+      ],
       "primary_handler": "cmd_acommstats",
+      "route_id": "verb:356",
+      "route_kind": "handler",
+      "handler_sources": {
+        "cmd_acommstats": {
+          "file": "cr/client.c",
+          "line": 155
+        }
+      },
       "dispatch_source_word": "ACOMMSTATS",
       "dispatch_kind": "c-handler",
       "test_cases": [],

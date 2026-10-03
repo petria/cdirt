@@ -44,10 +44,10 @@ void digcom(void)
     if( obj == OBJ_RAINFOREST_MACHETE ) {
         if( iscarrby( OBJ_RAINFOREST_MACHETE, mynum ) ) {
       bprintf( "You hack through the branches blocking your way.\n" );
-      send_msg (ploc(mynum), MODE_NOBLIND, pvis(mynum), LVL_MAX, mynum, NOBODY,
+      send_msg (sendloc(mynum), MODE_NOBLIND, pvis(mynum), LVL_MAX, mynum, NOBODY,
                 "%s hacks through the branches blocking the exit to the west.\n",
                 pname(mynum) );
-      send_msg (ploc(mynum), MODE_NOBLIND, 0, pvis(mynum), mynum, NOBODY,
+      send_msg (sendloc(mynum), MODE_NOBLIND, 0, pvis(mynum), mynum, NOBODY,
                 "Someone hacks through the branches blocking the exit to the west.\n" );
       setobjstate( OBJ_RAINFOREST_BRANCHES, 0 );
     }

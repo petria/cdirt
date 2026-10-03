@@ -1166,7 +1166,7 @@ char *prepass(Boolean *in_comment, Boolean *in_quote,
 	*q++ = *p;
       break;
     case '^':
-      if (*(p-1) != ':')
+      if (p == inp || *(p-1) != ':')
 	*in_hat = !*in_hat;
       else
 	*q++ = '^';
@@ -1179,16 +1179,12 @@ char *prepass(Boolean *in_comment, Boolean *in_quote,
   }
   *q = 0;
 
-  if (*(q - 1) == '\n')                                   /* remove newline */
+  if (q > newbuff && *(q - 1) == '\n')                     /* remove newline */
     *(--q) = 0;
 
   if (!*in_quote)
-    for (--q ; q >= newbuff ; q--) {         /* remove trailing whitespaces */
-      if (isspace(*q))
-	*q = 0;
-      else
-	break;
-    }
+    while (q > newbuff && isspace((unsigned char)q[-1]))
+      *--q = 0;
 
   return(newbuff);
 }

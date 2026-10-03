@@ -418,8 +418,8 @@ Boolean destruct_location (int l) {
   for (i = 0; i < NEXITS; i++)
     setexit (l, i, 0);
 
-  for (i = first_int(lexits_to_me(l)), ct = 0 ; ct < set_size(lexits_to_me(l));
-       i = int_number(++ct, lexits_to_me(l))) {
+  for (ct = 0; ct < set_size(lexits_to_me(l)); ct++) {
+    i = int_number(ct, lexits_to_me(l));
 
     for (j = 0; j < NEXITS; j++)
       if (lexit (i, j) == l)

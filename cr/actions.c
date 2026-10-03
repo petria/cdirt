@@ -265,7 +265,7 @@ int do_action(Actionptr v) {
     sendf(p, buff);
     if (v->toothers) {
       astrcpy(p, buff, v->toothers);
-      send_msg(ploc(p), 0, pvis(mynum), LVL_MAX, mynum, p, buff);
+      send_msg(sendloc(p), 0, pvis(mynum), LVL_MAX, mynum, p, buff);
     }
     astrcpy(p, buff, v->tosender);
     bprintf(buff);
@@ -429,12 +429,12 @@ void wavecom (void) {
   if (pl1 != -1) {
     bprintf("You wave at %s.\n", pname(pl1));
     sendf(pl1, "%s waves at you!\n", pname(mynum));
-    send_msg(ploc(mynum), 0, LVL_MIN, LVL_MAX, mynum, pl1, 
+    send_msg(sendloc(mynum), 0, LVL_MIN, LVL_MAX, mynum, pl1,
       "\001p%s\003 waves at \001p%s\003.\n", pname(mynum), pname(pl1));
     return;
   }
   if (EMPTY(item1)) {
-    send_msg(ploc(mynum), 0, LVL_MIN, LVL_MAX, mynum, NOBODY,
+    send_msg(sendloc(mynum), 0, LVL_MIN, LVL_MAX, mynum, NOBODY,
       "\001p%s\003 waves happily.\n", pname(mynum));
     bprintf("You wave happily.\n");
     return;
@@ -539,13 +539,13 @@ wipecom (void)
   }
   if (plr == mynum) {
     bprintf ("You wipe yourself. (Hope nobody is watching..)\n");
-    send_msg (ploc (mynum), 0, pvis (mynum), LVL_MAX, mynum, NOBODY,
+    send_msg (sendloc(mynum), 0, pvis (mynum), LVL_MAX, mynum, NOBODY,
               "%s wipes %sself.\n", pname (mynum), him_or_her (mynum));
     return;
   }
   bprintf ("You wipe %s.\n", pname (plr));
   sendf (plr, "%s wipes you.\n");
-  send_msg (ploc (mynum), 0, pvis (mynum), LVL_MAX, mynum, plr,
+  send_msg (sendloc(mynum), 0, pvis (mynum), LVL_MAX, mynum, plr,
             "%s wipes \001p%s\003.\n", pname (mynum), pname (plr));
 }
 

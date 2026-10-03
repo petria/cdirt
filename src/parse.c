@@ -43,6 +43,7 @@
 #include "store.h"
 #include "xrscore.h"
 #include "update.h"
+#include "audit.h"
 
 #define NOISECHAR(c)	((c) == ' ' || (c) == '.' || (c) == ',' || (c) == '%')
 
@@ -62,7 +63,15 @@ Boolean allspaces(char *line) {
   return(True);
 }
 
-void gamecom (char *txt, Boolean savecom) {
+static void gamecom_impl(char *txt, Boolean savecom);
+
+void gamecom(char *txt, Boolean savecom) {
+  audit_begin(txt);
+  gamecom_impl(txt, savecom);
+  audit_end();
+}
+
+static void gamecom_impl(char *txt, Boolean savecom) {
   Actionptr act = NULL;
   Boolean ismacro = False;
   int a, p;
@@ -152,8 +161,10 @@ void gamecom (char *txt, Boolean savecom) {
 
     if ((a = tree_lookup(verb_t, wordbuf)) != -1)
       doverb(a);
-    else if ((act = find_act(wordbuf, actions)))
+    else if ((act = find_act(wordbuf, actions))) {
+      audit_action(wordbuf);
       do_action(act);
+    }
     else if ((p = find_mob(False, wordbuf)) != -1)  /* search only plrs */
       tellcom(p);
     else
@@ -283,6 +294,7 @@ int chklist (char *word, char *lista[], int listb[]) {
 void doverb (int vb) {
   char *ptr;
   char buf[MAX_COM_LEN];
+  audit_dispatch(vb);
 
 #ifdef LOCMIN_VILLAGE
   if (ploc(mynum) == LOC_VILLAGE_EMERGENCY && plev(mynum) < LVL_WIZARD) {
@@ -1446,4 +1458,3 @@ erreval (void)
 {
   bprintf ("You can't do that now.\n");
 }
-

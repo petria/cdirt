@@ -794,8 +794,8 @@ void aobjsat (int loc, int mode, int marg) {
 
   *line = 0;       /* line to assemble */
 
-  for (obj = first_int(inv), ct = 0; ct < set_size(inv); 
-    obj = int_number(++ct, inv)) {
+  for (ct = 0; ct < set_size(inv); ct++) {
+    obj = int_number(ct, inv);
 
     if (ovis (obj) > plev (mynum) || iswornby(obj, loc) ||
       otstbit(obj, OFL_DESTROYED))
@@ -1046,19 +1046,17 @@ int get1objfrom (int ob, int container) {
         bprintf("The %s is locked, and you have no key.\n", oname(container));
         return(-2);
     }
-    else if (otstbit(container, OFL_OPENABLE) && state(container) == 1) {
+    if (otstbit(container, OFL_OPENABLE) && state(container) != 0) {
       bprintf("You open the %s.\n", oname(container));
       setobjstate(container, 0);
     }
-    else if (!cancarry (mynum)) {
+    if (!cancarry (mynum)) {
       bprintf ("You can't carry any more.\n");
       return(-2);
     }
-    else {
-      setoloc(ob, mynum, CARRIED_BY);
-      bprintf("You take the %s from the %s.\n", oname(ob), oname(container));
-      return(0);
-    }
+    setoloc(ob, mynum, CARRIED_BY);
+    bprintf("You take the %s from the %s.\n", oname(ob), oname(container));
+    return(0);
   }
   else {
     if (!cancarry (mynum)) {
@@ -1099,6 +1097,22 @@ int get1objfrom (int ob, int container) {
   return(0);
 }
 
+/* Prepositions must be complete argument words: "ball" is not "all". */
+static Boolean argument_word(const char *command, const char *word) {
+  const char *start;
+  size_t length = strlen(word);
+
+  while (*command && !isspace((unsigned char)*command)) command++;
+  while (*command) {
+    while (isspace((unsigned char)*command)) command++;
+    start = command;
+    while (*command && !isspace((unsigned char)*command)) command++;
+    if ((size_t)(command - start) == length &&
+        !strncasecmp(start, word, length)) return True;
+  }
+  return False;
+}
+
 void getcom (void) {
   char buff1[80];
   char buff2[80];
@@ -1114,17 +1128,17 @@ void getcom (void) {
     bprintf("It's dark!\n");
   else if (!has_hand(mynum))
     bprintf("How exactly? You don't have a hand to pick it up with.\n");
-  else if (strcasestr(strbuf, "all from")) {
+  else if (EQ(item1, "all") && argument_word(strbuf, "from")) {
     if (cantake(ob2, "Get all from what?", buff2) != -1)
       getallfr(ob2);
   }
-  else if (strcasestr(strbuf, "all")) {
+  else if (EQ(item1, "all")) {
     if (ob1 == -1 && ob2 == -1)
       getall();
     else if (cantake(ob2, "Get all what?", buff2) != -1)
       getallfr(ob2);
   }
-  else if (strcasestr(strbuf, "from")) {
+  else if (argument_word(strbuf, "from")) {
     if ((container = cantake(ob2, "Get from what?", buff2)) != -1) {
       obj = findob(mynum, item1, CONT, container);
       if (obj == -1)
@@ -1211,6 +1225,8 @@ static void dropall(void) {
 }
 
 Boolean p_ishere (int plr, int item) {
+  if (plr < 0 || plr >= numchars || item < 0 || item >= numobs)
+    return False;
   if (plev (plr) < LVL_WIZARD && 
     (plev(plr) < ovis(item) || (otstbit (item, OFL_DESTROYED))))
     return(False);
@@ -1249,7 +1265,7 @@ void dropobjcom(int a) {
   int l;
 
   if (a == -1) {                         /* user typed drop <args> */
-    if (strcasestr(strbuf, "drop all")) {
+    if (EQ(item1, "all")) {
       dropall();
       return;
     }
@@ -1746,4 +1762,3 @@ void wearall (void) {
   else if (!worn)
     bprintf ("You have nothing to wear.\n");
 }
-

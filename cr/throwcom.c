@@ -122,13 +122,13 @@ void throwcom(void) {
         (ob1 == OBJ_NIBELUNG_ARROW2 && state(OBJ_NIBELUNG_FIRE) == 2) ||
         (ob1 == OBJ_NIBELUNG_ARROW3 && state(OBJ_NIBELUNG_FIRE) == 3)) {
       bprintf ("The arrow arcs cleanly through the air and into the hole.\n");
-      send_msg (ploc(mynum), 0, pvis(mynum), LVL_MAX, mynum, NOBODY,
+      send_msg (sendloc(mynum), 0, pvis(mynum), LVL_MAX, mynum, NOBODY,
                 "%s throws an arrow right through the hole on the "
                 "south wall.\n", pname(mynum));
-      send_msg (ploc(mynum), 0, LVL_MIN, pvis(mynum)-1, mynum, NOBODY,
+      send_msg (sendloc(mynum), 0, LVL_MIN, pvis(mynum)-1, mynum, NOBODY,
                 "An arrow suddenly materializes in the room and flies right "
                 "through the hole\non the south wall.\n");
-      send_msg (ploc(mynum), 0, LVL_MIN, LVL_MAX, NOBODY, NOBODY,
+      send_msg (sendloc(mynum), 0, LVL_MIN, LVL_MAX, NOBODY, NOBODY,
                 "The entire south wall slides to one side, revealing beyond "
                 "it a large\ncircular room.\n");
       setoloc (ob1, LOC_NIBELUNG_NIBELUNG68, IN_ROOM);
@@ -136,9 +136,9 @@ void throwcom(void) {
     } 
     else {
       bprintf ("The arrow lands against the wall and falls to the floor.\n");
-      send_msg (ploc(mynum), 0, pvis(mynum), LVL_MAX, mynum, NOBODY,
+      send_msg (sendloc(mynum), 0, pvis(mynum), LVL_MAX, mynum, NOBODY,
                 "%s throws an arrow against the south wall.\n", pname(mynum));
-      send_msg (ploc(mynum), 0, LVL_MIN, pvis(mynum)-1, mynum, NOBODY,
+      send_msg (sendloc(mynum), 0, LVL_MIN, pvis(mynum)-1, mynum, NOBODY,
                 "An arrow suddenly materializes in the room and flies into "
                 "the south wall.\n");
       setoloc (ob1, LOC_NIBELUNG_NIBELUNG67, IN_ROOM);

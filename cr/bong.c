@@ -36,7 +36,7 @@ void bongcom() {
     else {
       initbong(&hits, &fire, &last, &loc, &avail, &num);
       bprintf("You summon the virtual bong, and pack it with Dank!\n");
-      send_msg(ploc(mynum), 0, LVL_MIN, LVL_MAX, mynum, NOBODY,
+      send_msg(sendloc(mynum), 0, LVL_MIN, LVL_MAX, mynum, NOBODY,
                "%s summons a magical virtual bong!\n", pname(mynum));
     }
   }
@@ -50,12 +50,12 @@ void bongcom() {
        if (loc != mynum) {
          bprintf("You light the bong for %s.\n", pname(loc));
          sendf(loc, "%s lights up the bong for you. How nice!\n", pname(mynum));
-         send_msg(ploc(mynum), 0, LVL_MIN, LVL_MAX, mynum, loc,
+         send_msg(sendloc(mynum), 0, LVL_MIN, LVL_MAX, mynum, loc,
                "%s lights the bong for %s.\n", pname(mynum), pname(loc));
        }
        else {
          bprintf("You fire up the bong!\n");
-         send_msg(ploc(mynum), 0, LVL_MIN, LVL_MAX, mynum, NOBODY,
+         send_msg(sendloc(mynum), 0, LVL_MIN, LVL_MAX, mynum, NOBODY,
            "With an adept flick of a zippo lighter, %s fires up the bong!\n",
            pname(mynum));
        }
@@ -69,7 +69,7 @@ void bongcom() {
     else if (!fire)
       bprintf("You'll need to light it first.\n");
     else if (last == mynum) {
-     send_msg(ploc(mynum), 0, LVL_MIN, LVL_MAX, mynum, NOBODY,
+     send_msg(sendloc(mynum), 0, LVL_MIN, LVL_MAX, mynum, NOBODY,
        "%s bogarts the bong! FATAL mistake, buddy!\n", pname(mynum));
      quit_msg("You BOGART!", "&+WBogarted Dank");
      quit_player(False);
@@ -78,17 +78,17 @@ void bongcom() {
       switch(rand() % 3) {
         case 0:
           bprintf("You take a HUGE hit, then exhale.\n");
-          send_msg(ploc(mynum), 0, LVL_MIN, LVL_MAX, mynum, NOBODY,
+          send_msg(sendloc(mynum), 0, LVL_MIN, LVL_MAX, mynum, NOBODY,
            "%s takes a really huge hit!\n", pname(mynum));
           break;
         case 1:
           bprintf("You take a weak little puff.\n");
-          send_msg(ploc(mynum), 0, LVL_MIN, LVL_MAX, mynum, NOBODY,
+          send_msg(sendloc(mynum), 0, LVL_MIN, LVL_MAX, mynum, NOBODY,
            "%s takes a weak little hit.\n", pname(mynum));
           break;
         case 2:
           bprintf("You take a big hit, but cough your brains out!\n");
-          send_msg(ploc(mynum), 0, LVL_MIN, LVL_MAX, mynum, NOBODY,
+          send_msg(sendloc(mynum), 0, LVL_MIN, LVL_MAX, mynum, NOBODY,
            "%s takes a hit and coughs up a lung!\n", pname(mynum));
           break;
       }
@@ -107,7 +107,7 @@ void bongcom() {
       loc = lmob_nr(num, ploc(mynum));
       sendf(loc, "%s passes the bong to you.\n", pname(mynum));
       bprintf("You happily pass the bong to %s.\n", pname(loc));
-      send_msg(ploc(mynum), 0, LVL_MIN, LVL_MAX, mynum, loc,
+      send_msg(sendloc(mynum), 0, LVL_MIN, LVL_MAX, mynum, loc,
         "%s passes the bong to %s! WHOO HOO!\n", pname(mynum), pname(loc));
     }
   }
@@ -115,11 +115,11 @@ void bongcom() {
     bprintf("You tap out the charred contents of the virtual bong.\n");
     if (hits) {
       bprintf("Whoops! Looks like it wasn't cashed!\n");
-      send_msg(ploc(mynum), 0, LVL_MIN, LVL_MAX, mynum, NOBODY,
+      send_msg(sendloc(mynum), 0, LVL_MIN, LVL_MAX, mynum, NOBODY,
         "%s carelessly dumps out burning embers from the bong.\n",pname(mynum));
     }
     else
-      send_msg(ploc(mynum), 0, LVL_MIN, LVL_MAX, mynum, NOBODY,
+      send_msg(sendloc(mynum), 0, LVL_MIN, LVL_MAX, mynum, NOBODY,
            "%s cashes out the bong.\n", pname(mynum));
     avail = True;
   }

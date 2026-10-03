@@ -36,7 +36,7 @@ export DFLAGS   =
 
 # MUD Daemon Dependencies
 #
-MUDDOBJS = parse.o ban.o acct.o bootstrap.o change.o \
+MUDDOBJS = audit.o parse.o ban.o acct.o bootstrap.o change.o \
 	   clone.o commands.o exit.o group.o \
 	   frob.o log.o magic.o main.o mobile.o god.o \
 	   move.o mud.o objsys.o rooms.o sendsys.o \

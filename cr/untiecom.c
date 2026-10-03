@@ -52,7 +52,7 @@ void untiecom(void)
       if ((alive(MOB_TREEHOUSE_ELF+max_players) != -1) &&
           (state(OBJ_VALLEY_LADDER2ELF) == 0))
 	{
-        send_msg(ploc(mynum),MODE_NODEAF,LVL_MIN,LVL_MAX,NOBODY,NOBODY,
+        send_msg(sendloc(mynum),MODE_NODEAF,LVL_MIN,LVL_MAX,NOBODY,NOBODY,
             "The Elf yells 'Go away and leave my rope ladder alone'\n");
         return;
       }
