@@ -50,6 +50,8 @@ class VerbCatalogTests(unittest.TestCase):
             with self.subTest(word=entry["word"]):
                 self.assertTrue(entry["dispatch"])
                 self.assertIn(entry["dispatch_kind"], {"c-handler", "doverb-default"})
+                expected_handler = entry["dispatch"][-1]
+                self.assertEqual(entry["primary_handler"], expected_handler)
 
     def test_aliases_share_their_verb_number(self) -> None:
         entries_by_word = {entry["word"]: entry for entry in self.entries}
@@ -97,6 +99,25 @@ class VerbCatalogTests(unittest.TestCase):
                 for word in scenario["verbs"]:
                     self.assertIn(word, by_word)
                     self.assertIn(scenario["id"], by_word[word]["output_cases"])
+
+    def test_handler_scenarios_name_branches_and_existing_runner(self) -> None:
+        scenarios = json.loads(SCENARIOS.read_text())
+        for scenario in scenarios:
+            if "runner" not in scenario:
+                continue
+            with self.subTest(scenario=scenario["id"]):
+                self.assertTrue(scenario.get("handlers"))
+                self.assertTrue(scenario.get("branch_cases"))
+                self.assertTrue((ROOT / "tests" / scenario["runner"]).is_file())
+                self.assertTrue(scenario.get("prepare"))
+                self.assertTrue(scenario.get("steps"))
+                self.assertTrue(all(step.get("command") for step in scenario["steps"]))
+                by_word = {entry["word"]: entry for entry in self.entries}
+                actual_handlers = {by_word[word]["primary_handler"]
+                                   for word in scenario["verbs"]}
+                self.assertEqual(set(scenario["handlers"]), actual_handlers)
+                self.assertEqual(set(scenario["branch_cases"]), actual_handlers)
+                self.assertTrue(all(scenario["branch_cases"].values()))
 
 
 if __name__ == "__main__":

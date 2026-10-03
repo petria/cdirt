@@ -25,6 +25,7 @@
         "pfollow",
         "dogocom"
       ],
+      "primary_handler": "dogocom",
       "dispatch_source_word": "GO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -38,6 +39,7 @@
       "dispatch": [
         "dodirn"
       ],
+      "primary_handler": "dodirn",
       "dispatch_source_word": "NORTH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -51,6 +53,7 @@
       "dispatch": [
         "dodirn"
       ],
+      "primary_handler": "dodirn",
       "dispatch_source_word": "EAST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -64,6 +67,7 @@
       "dispatch": [
         "dodirn"
       ],
+      "primary_handler": "dodirn",
       "dispatch_source_word": "SOUTH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -77,6 +81,7 @@
       "dispatch": [
         "dodirn"
       ],
+      "primary_handler": "dodirn",
       "dispatch_source_word": "WEST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -90,6 +95,7 @@
       "dispatch": [
         "dodirn"
       ],
+      "primary_handler": "dodirn",
       "dispatch_source_word": "UP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -103,6 +109,7 @@
       "dispatch": [
         "dodirn"
       ],
+      "primary_handler": "dodirn",
       "dispatch_source_word": "DOWN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -116,6 +123,7 @@
       "dispatch": [
         "cmd_aboot"
       ],
+      "primary_handler": "cmd_aboot",
       "dispatch_source_word": "ABOOT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -129,6 +137,7 @@
       "dispatch": [
         "acctcom"
       ],
+      "primary_handler": "acctcom",
       "dispatch_source_word": "ACCT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -142,6 +151,7 @@
       "dispatch": [
         "actionscom"
       ],
+      "primary_handler": "actionscom",
       "dispatch_source_word": "ACTIONS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -155,6 +165,7 @@
       "dispatch": [
         "com_handler"
       ],
+      "primary_handler": "com_handler",
       "dispatch_source_word": "DEMI",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -168,6 +179,7 @@
       "dispatch": [
         "spellcom"
       ],
+      "primary_handler": "spellcom",
       "dispatch_source_word": "AID",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -181,6 +193,7 @@
       "dispatch": [
         "cmd_ainfo"
       ],
+      "primary_handler": "cmd_ainfo",
       "dispatch_source_word": "AINFO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -194,6 +207,7 @@
       "dispatch": [
         "aliascom"
       ],
+      "primary_handler": "aliascom",
       "dispatch_source_word": "ALIAS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -210,6 +224,7 @@
         "sclrflg",
         "ssetflg"
       ],
+      "primary_handler": "ssetflg",
       "dispatch_source_word": "ALOOF",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -224,6 +239,7 @@
         "bprintf",
         "obj_flags"
       ],
+      "primary_handler": "obj_flags",
       "dispatch_source_word": "AFLAGS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -237,6 +253,7 @@
       "dispatch": [
         "cmd_achat"
       ],
+      "primary_handler": "cmd_achat",
       "dispatch_source_word": "ACHAT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -250,6 +267,7 @@
       "dispatch": [
         "cmd_achat"
       ],
+      "primary_handler": "cmd_achat",
       "dispatch_source_word": "AGOD",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -263,6 +281,7 @@
       "dispatch": [
         "cmd_achat"
       ],
+      "primary_handler": "cmd_achat",
       "dispatch_source_word": "ACODE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -276,6 +295,7 @@
       "dispatch": [
         "cmd_amudlist"
       ],
+      "primary_handler": "cmd_amudlist",
       "dispatch_source_word": "AMUDLIST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -289,6 +309,7 @@
       "dispatch": [
         "cmd_amasslist"
       ],
+      "primary_handler": "cmd_amasslist",
       "dispatch_source_word": "AMASSLIST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -302,6 +323,7 @@
       "dispatch": [
         "cmd_acopyright"
       ],
+      "primary_handler": "cmd_acopyright",
       "dispatch_source_word": "ACOPYRIGHT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -315,6 +337,7 @@
       "dispatch": [
         "cmd_apolicy"
       ],
+      "primary_handler": "cmd_apolicy",
       "dispatch_source_word": "APOLICY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -328,6 +351,7 @@
       "dispatch": [
         "cmd_akick"
       ],
+      "primary_handler": "cmd_akick",
       "dispatch_source_word": "AKICK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -341,6 +365,7 @@
       "dispatch": [
         "cmd_aversion"
       ],
+      "primary_handler": "cmd_aversion",
       "dispatch_source_word": "AVERSION",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -354,6 +379,7 @@
       "dispatch": [
         "anoncom"
       ],
+      "primary_handler": "anoncom",
       "dispatch_source_word": "ANON",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -367,6 +393,7 @@
       "dispatch": [
         "wearcom"
       ],
+      "primary_handler": "wearcom",
       "dispatch_source_word": "WEAR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -380,6 +407,7 @@
       "dispatch": [
         "armorcom"
       ],
+      "primary_handler": "armorcom",
       "dispatch_source_word": "ARMOR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -393,6 +421,7 @@
       "dispatch": [
         "cmd_ashutdown"
       ],
+      "primary_handler": "cmd_ashutdown",
       "dispatch_source_word": "ASHUTDOWN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -406,6 +435,7 @@
       "dispatch": [
         "tellcom"
       ],
+      "primary_handler": "tellcom",
       "dispatch_source_word": "TELL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -419,6 +449,7 @@
       "dispatch": [
         "doverb_default"
       ],
+      "primary_handler": "doverb_default",
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -432,6 +463,7 @@
       "dispatch": [
         "incom"
       ],
+      "primary_handler": "incom",
       "dispatch_source_word": "AT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -445,6 +477,7 @@
       "dispatch": [
         "cmd_atell"
       ],
+      "primary_handler": "cmd_atell",
       "dispatch_source_word": "ATELL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -458,6 +491,7 @@
       "dispatch": [
         "cmd_areply"
       ],
+      "primary_handler": "cmd_areply",
       "dispatch_source_word": "AREPLY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -471,6 +505,7 @@
       "dispatch": [
         "killcom"
       ],
+      "primary_handler": "killcom",
       "dispatch_source_word": "KILL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -484,6 +519,7 @@
       "dispatch": [
         "atviscom"
       ],
+      "primary_handler": "atviscom",
       "dispatch_source_word": "ATVIS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -497,6 +533,7 @@
       "dispatch": [
         "togglecom"
       ],
+      "primary_handler": "togglecom",
       "dispatch_source_word": "AUTOEXIT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -513,6 +550,7 @@
         "togglecom",
         "bprintf"
       ],
+      "primary_handler": "bprintf",
       "dispatch_source_word": "AWAY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -526,6 +564,7 @@
       "dispatch": [
         "cmd_awho"
       ],
+      "primary_handler": "cmd_awho",
       "dispatch_source_word": "AWHO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -539,6 +578,7 @@
       "dispatch": [
         "com_handler"
       ],
+      "primary_handler": "com_handler",
       "dispatch_source_word": "AWIZ",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -552,6 +592,7 @@
       "dispatch": [
         "spellcom"
       ],
+      "primary_handler": "spellcom",
       "dispatch_source_word": "BABEL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -565,6 +606,7 @@
       "dispatch": [
         "backstabcom"
       ],
+      "primary_handler": "backstabcom",
       "dispatch_source_word": "BACKSTAB",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -578,6 +620,7 @@
       "dispatch": [
         "banlistcom"
       ],
+      "primary_handler": "banlistcom",
       "dispatch_source_word": "BANLIST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -591,6 +634,7 @@
       "dispatch": [
         "bancom"
       ],
+      "primary_handler": "bancom",
       "dispatch_source_word": "BANHOST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -604,6 +648,7 @@
       "dispatch": [
         "bancom"
       ],
+      "primary_handler": "bancom",
       "dispatch_source_word": "BANCHAR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -617,6 +662,7 @@
       "dispatch": [
         "bancom"
       ],
+      "primary_handler": "bancom",
       "dispatch_source_word": "BANACCT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -630,6 +676,7 @@
       "dispatch": [
         "bancom"
       ],
+      "primary_handler": "bancom",
       "dispatch_source_word": "BANWHO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -644,6 +691,7 @@
         "erreval",
         "broad"
       ],
+      "primary_handler": "broad",
       "dispatch_source_word": "BANG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -657,6 +705,7 @@
       "dispatch": [
         "bashcom"
       ],
+      "primary_handler": "bashcom",
       "dispatch_source_word": "BASH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -670,6 +719,7 @@
       "dispatch": [
         "becom"
       ],
+      "primary_handler": "becom",
       "dispatch_source_word": "BECOME",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -683,6 +733,7 @@
       "dispatch": [
         "beepcom"
       ],
+      "primary_handler": "beepcom",
       "dispatch_source_word": "BEEP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -696,6 +747,7 @@
       "dispatch": [
         "spellcom"
       ],
+      "primary_handler": "spellcom",
       "dispatch_source_word": "BHANDS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -709,6 +761,7 @@
       "dispatch": [
         "spellcom"
       ],
+      "primary_handler": "spellcom",
       "dispatch_source_word": "BLIND",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -722,6 +775,7 @@
       "dispatch": [
         "blowcom"
       ],
+      "primary_handler": "blowcom",
       "dispatch_source_word": "BLOW",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -735,6 +789,7 @@
       "dispatch": [
         "spellcom"
       ],
+      "primary_handler": "spellcom",
       "dispatch_source_word": "BLUR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -748,6 +803,7 @@
       "dispatch": [
         "bongcom"
       ],
+      "primary_handler": "bongcom",
       "dispatch_source_word": "BONG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -761,6 +817,7 @@
       "dispatch": [
         "bobcom"
       ],
+      "primary_handler": "bobcom",
       "dispatch_source_word": "BOB",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -774,6 +831,7 @@
       "dispatch": [
         "killcom"
       ],
+      "primary_handler": "killcom",
       "dispatch_source_word": "KILL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -787,6 +845,7 @@
       "dispatch": [
         "bresetcom"
       ],
+      "primary_handler": "bresetcom",
       "dispatch_source_word": "BRESET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -800,6 +859,7 @@
       "dispatch": [
         "togglecom"
       ],
+      "primary_handler": "togglecom",
       "dispatch_source_word": "BRIEF",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -813,6 +873,7 @@
       "dispatch": [
         "bugcom"
       ],
+      "primary_handler": "bugcom",
       "dispatch_source_word": "BUG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -826,6 +887,7 @@
       "dispatch": [
         "burncom"
       ],
+      "primary_handler": "burncom",
       "dispatch_source_word": "BURN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -839,6 +901,7 @@
       "dispatch": [
         "togglecom"
       ],
+      "primary_handler": "togglecom",
       "dispatch_source_word": "BUSY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -852,6 +915,7 @@
       "dispatch": [
         "buycom"
       ],
+      "primary_handler": "buycom",
       "dispatch_source_word": "BUY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -865,6 +929,7 @@
       "dispatch": [
         "cfrcom"
       ],
+      "primary_handler": "cfrcom",
       "dispatch_source_word": "CFR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -878,6 +943,7 @@
       "dispatch": [
         "changecom"
       ],
+      "primary_handler": "changecom",
       "dispatch_source_word": "CHANGE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -891,6 +957,7 @@
       "dispatch": [
         "challengecom"
       ],
+      "primary_handler": "challengecom",
       "dispatch_source_word": "CHALLENGE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -904,6 +971,7 @@
       "dispatch": [
         "channelcom"
       ],
+      "primary_handler": "channelcom",
       "dispatch_source_word": "CHANNEL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -917,6 +985,7 @@
       "dispatch": [
         "com_handler"
       ],
+      "primary_handler": "com_handler",
       "dispatch_source_word": "GOSSIP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -930,6 +999,7 @@
       "dispatch": [
         "bprintf"
       ],
+      "primary_handler": "bprintf",
       "dispatch_source_word": "CLEAR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -943,6 +1013,7 @@
       "dispatch": [
         "doverb_default"
       ],
+      "primary_handler": "doverb_default",
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -958,6 +1029,7 @@
         "pfollow",
         "dogocom"
       ],
+      "primary_handler": "dogocom",
       "dispatch_source_word": "GO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -971,6 +1043,7 @@
       "dispatch": [
         "closecom"
       ],
+      "primary_handler": "closecom",
       "dispatch_source_word": "CLOSE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -984,6 +1057,7 @@
       "dispatch": [
         "clonecom"
       ],
+      "primary_handler": "clonecom",
       "dispatch_source_word": "CLONE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -999,6 +1073,7 @@
         "sclrflg",
         "ssetflg"
       ],
+      "primary_handler": "ssetflg",
       "dispatch_source_word": "COLOR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1012,6 +1087,7 @@
       "dispatch": [
         "togglecoding"
       ],
+      "primary_handler": "togglecoding",
       "dispatch_source_word": "CODING",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1025,6 +1101,7 @@
       "dispatch": [
         "comparecom"
       ],
+      "primary_handler": "comparecom",
       "dispatch_source_word": "COMPARE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1038,6 +1115,7 @@
       "dispatch": [
         "configurecom"
       ],
+      "primary_handler": "configurecom",
       "dispatch_source_word": "CONFIGURE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1051,6 +1129,7 @@
       "dispatch": [
         "conversecom"
       ],
+      "primary_handler": "conversecom",
       "dispatch_source_word": "CONVERSE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1064,6 +1143,7 @@
       "dispatch": [
         "bprintf"
       ],
+      "primary_handler": "bprintf",
       "dispatch_source_word": "COUPLES",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1077,6 +1157,7 @@
       "dispatch": [
         "bprintf"
       ],
+      "primary_handler": "bprintf",
       "dispatch_source_word": "CREDITS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1090,6 +1171,7 @@
       "dispatch": [
         "spellcom"
       ],
+      "primary_handler": "spellcom",
       "dispatch_source_word": "CRIPPLE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1103,6 +1185,7 @@
       "dispatch": [
         "crashcom"
       ],
+      "primary_handler": "crashcom",
       "dispatch_source_word": "CRASH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1116,6 +1199,7 @@
       "dispatch": [
         "crawlcom"
       ],
+      "primary_handler": "crawlcom",
       "dispatch_source_word": "CRAWL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1129,6 +1213,7 @@
       "dispatch": [
         "doverb_default"
       ],
+      "primary_handler": "doverb_default",
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -1142,6 +1227,7 @@
       "dispatch": [
         "curecom"
       ],
+      "primary_handler": "curecom",
       "dispatch_source_word": "CURE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1155,6 +1241,7 @@
       "dispatch": [
         "doverb_default"
       ],
+      "primary_handler": "doverb_default",
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -1168,6 +1255,7 @@
       "dispatch": [
         "spellcom"
       ],
+      "primary_handler": "spellcom",
       "dispatch_source_word": "DAMAGE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1181,6 +1269,7 @@
       "dispatch": [
         "spellcom"
       ],
+      "primary_handler": "spellcom",
       "dispatch_source_word": "DEAFEN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1194,6 +1283,7 @@
       "dispatch": [
         "deletecom"
       ],
+      "primary_handler": "deletecom",
       "dispatch_source_word": "DELETE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1207,6 +1297,7 @@
       "dispatch": [
         "destructcom"
       ],
+      "primary_handler": "destructcom",
       "dispatch_source_word": "DESTRUCT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1220,6 +1311,7 @@
       "dispatch": [
         "debugcom"
       ],
+      "primary_handler": "debugcom",
       "dispatch_source_word": "DEBUG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1233,6 +1325,7 @@
       "dispatch": [
         "com_handler"
       ],
+      "primary_handler": "com_handler",
       "dispatch_source_word": "DEMI",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1246,6 +1339,7 @@
       "dispatch": [
         "change_desc"
       ],
+      "primary_handler": "change_desc",
       "dispatch_source_word": "DESCRIPTION",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1259,6 +1353,7 @@
       "dispatch": [
         "digcom"
       ],
+      "primary_handler": "digcom",
       "dispatch_source_word": "DIG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1272,6 +1367,7 @@
       "dispatch": [
         "eatcom"
       ],
+      "primary_handler": "eatcom",
       "dispatch_source_word": "EAT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1285,6 +1381,7 @@
       "dispatch": [
         "dropobjcom"
       ],
+      "primary_handler": "dropobjcom",
       "dispatch_source_word": "DROP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1298,6 +1395,7 @@
       "dispatch": [
         "erasezonecom"
       ],
+      "primary_handler": "erasezonecom",
       "dispatch_source_word": "ERASEZONE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1311,6 +1409,7 @@
       "dispatch": [
         "eatcom"
       ],
+      "primary_handler": "eatcom",
       "dispatch_source_word": "EAT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1324,6 +1423,7 @@
       "dispatch": [
         "echocom"
       ],
+      "primary_handler": "echocom",
       "dispatch_source_word": "ECHO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1337,6 +1437,7 @@
       "dispatch": [
         "echoallcom"
       ],
+      "primary_handler": "echoallcom",
       "dispatch_source_word": "ECHOALL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1350,6 +1451,7 @@
       "dispatch": [
         "echotocom"
       ],
+      "primary_handler": "echotocom",
       "dispatch_source_word": "ECHOTO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1363,6 +1465,7 @@
       "dispatch": [
         "editcom"
       ],
+      "primary_handler": "editcom",
       "dispatch_source_word": "EDIT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1376,6 +1479,7 @@
       "dispatch": [
         "mob_flags"
       ],
+      "primary_handler": "mob_flags",
       "dispatch_source_word": "EFLAGS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1389,6 +1493,7 @@
       "dispatch": [
         "emotecom"
       ],
+      "primary_handler": "emotecom",
       "dispatch_source_word": "EMOTE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1402,6 +1507,7 @@
       "dispatch": [
         "emoteallcom"
       ],
+      "primary_handler": "emoteallcom",
       "dispatch_source_word": "EMOTEALL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1415,6 +1521,7 @@
       "dispatch": [
         "emotetocom"
       ],
+      "primary_handler": "emotetocom",
       "dispatch_source_word": "EMOTETO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1428,6 +1535,7 @@
       "dispatch": [
         "emptycom"
       ],
+      "primary_handler": "emptycom",
       "dispatch_source_word": "EMPTY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1441,6 +1549,7 @@
       "dispatch": [
         "equcom"
       ],
+      "primary_handler": "equcom",
       "dispatch_source_word": "EQUIPMENT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1454,6 +1563,7 @@
       "dispatch": [
         "examcom"
       ],
+      "primary_handler": "examcom",
       "dispatch_source_word": "EXAMINE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1467,6 +1577,7 @@
       "dispatch": [
         "exitcom"
       ],
+      "primary_handler": "exitcom",
       "dispatch_source_word": "EXITS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1480,6 +1591,7 @@
       "dispatch": [
         "exorcom"
       ],
+      "primary_handler": "exorcom",
       "dispatch_source_word": "EXORCISE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1493,10 +1605,15 @@
       "dispatch": [
         "extinguishcom"
       ],
+      "primary_handler": "extinguishcom",
       "dispatch_source_word": "EXTINGUISH",
       "dispatch_kind": "c-handler",
-      "test_cases": [],
-      "output_cases": []
+      "test_cases": [
+        "light-carried-stick-at-start1"
+      ],
+      "output_cases": [
+        "light-carried-stick-at-start1"
+      ]
     },
     {
       "line": 114,
@@ -1506,6 +1623,7 @@
       "dispatch": [
         "fakequitcom"
       ],
+      "primary_handler": "fakequitcom",
       "dispatch_source_word": "FAKEQUIT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1519,6 +1637,7 @@
       "dispatch": [
         "fdlistcom"
       ],
+      "primary_handler": "fdlistcom",
       "dispatch_source_word": "FDLIST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1532,6 +1651,7 @@
       "dispatch": [
         "fillcom"
       ],
+      "primary_handler": "fillcom",
       "dispatch_source_word": "FILL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1545,6 +1665,7 @@
       "dispatch": [
         "findcom"
       ],
+      "primary_handler": "findcom",
       "dispatch_source_word": "FIND",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1558,6 +1679,7 @@
       "dispatch": [
         "spellcom"
       ],
+      "primary_handler": "spellcom",
       "dispatch_source_word": "FIREBALL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1571,6 +1693,7 @@
       "dispatch": [
         "flee"
       ],
+      "primary_handler": "flee",
       "dispatch_source_word": "FLEE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1584,6 +1707,7 @@
       "dispatch": [
         "forgetlist"
       ],
+      "primary_handler": "forgetlist",
       "dispatch_source_word": "FLIST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1597,6 +1721,7 @@
       "dispatch": [
         "flowercom"
       ],
+      "primary_handler": "flowercom",
       "dispatch_source_word": "FLOWERS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1610,6 +1735,7 @@
       "dispatch": [
         "flushcom"
       ],
+      "primary_handler": "flushcom",
       "dispatch_source_word": "FLUSH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1623,6 +1749,7 @@
       "dispatch": [
         "followcom"
       ],
+      "primary_handler": "followcom",
       "dispatch_source_word": "FOLLOW",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1636,6 +1763,7 @@
       "dispatch": [
         "follist"
       ],
+      "primary_handler": "follist",
       "dispatch_source_word": "FOLLIST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1649,6 +1777,7 @@
       "dispatch": [
         "doverb_default"
       ],
+      "primary_handler": "doverb_default",
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -1662,6 +1791,7 @@
       "dispatch": [
         "forcecom"
       ],
+      "primary_handler": "forcecom",
       "dispatch_source_word": "FORCE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1675,6 +1805,7 @@
       "dispatch": [
         "forceallcom"
       ],
+      "primary_handler": "forceallcom",
       "dispatch_source_word": "FORCEALL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1688,6 +1819,7 @@
       "dispatch": [
         "forgetcom"
       ],
+      "primary_handler": "forgetcom",
       "dispatch_source_word": "FORGET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1701,6 +1833,7 @@
       "dispatch": [
         "freaqcom"
       ],
+      "primary_handler": "freaqcom",
       "dispatch_source_word": "FREAQ",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1714,6 +1847,7 @@
       "dispatch": [
         "frobcom"
       ],
+      "primary_handler": "frobcom",
       "dispatch_source_word": "FROB",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1727,6 +1861,7 @@
       "dispatch": [
         "spellcom"
       ],
+      "primary_handler": "spellcom",
       "dispatch_source_word": "FROST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1740,6 +1875,7 @@
       "dispatch": [
         "chatcom"
       ],
+      "primary_handler": "chatcom",
       "dispatch_source_word": "GCHAT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1753,6 +1889,7 @@
       "dispatch": [
         "getcom"
       ],
+      "primary_handler": "getcom",
       "dispatch_source_word": "GET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1766,6 +1903,7 @@
       "dispatch": [
         "givecom"
       ],
+      "primary_handler": "givecom",
       "dispatch_source_word": "GIVE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1779,6 +1917,7 @@
       "dispatch": [
         "globalcom"
       ],
+      "primary_handler": "globalcom",
       "dispatch_source_word": "GLOBAL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1792,6 +1931,7 @@
       "dispatch": [
         "com_handler"
       ],
+      "primary_handler": "com_handler",
       "dispatch_source_word": "GOSSIP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1805,6 +1945,7 @@
       "dispatch": [
         "gotocom"
       ],
+      "primary_handler": "gotocom",
       "dispatch_source_word": "GOTO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1818,6 +1959,7 @@
       "dispatch": [
         "com_handler"
       ],
+      "primary_handler": "com_handler",
       "dispatch_source_word": "GOD",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1831,6 +1973,7 @@
       "dispatch": [
         "group"
       ],
+      "primary_handler": "group",
       "dispatch_source_word": "GROUP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1844,6 +1987,7 @@
       "dispatch": [
         "gtell"
       ],
+      "primary_handler": "gtell",
       "dispatch_source_word": "GTELL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1857,6 +2001,7 @@
       "dispatch": [
         "glist"
       ],
+      "primary_handler": "glist",
       "dispatch_source_word": "GLIST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1870,6 +2015,7 @@
       "dispatch": [
         "healcom"
       ],
+      "primary_handler": "healcom",
       "dispatch_source_word": "HEAL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1883,6 +2029,7 @@
       "dispatch": [
         "healallcom"
       ],
+      "primary_handler": "healallcom",
       "dispatch_source_word": "HEALALL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1896,6 +2043,7 @@
       "dispatch": [
         "togglecom"
       ],
+      "primary_handler": "togglecom",
       "dispatch_source_word": "HEARBACK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1909,6 +2057,7 @@
       "dispatch": [
         "helpcom"
       ],
+      "primary_handler": "helpcom",
       "dispatch_source_word": "HELP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1922,6 +2071,7 @@
       "dispatch": [
         "killcom"
       ],
+      "primary_handler": "killcom",
       "dispatch_source_word": "KILL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1935,6 +2085,7 @@
       "dispatch": [
         "hostscom"
       ],
+      "primary_handler": "hostscom",
       "dispatch_source_word": "HOSTS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1948,6 +2099,7 @@
       "dispatch": [
         "inventory"
       ],
+      "primary_handler": "inventory",
       "dispatch_source_word": "INVENTORY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1961,6 +2113,7 @@
       "dispatch": [
         "spellcom"
       ],
+      "primary_handler": "spellcom",
       "dispatch_source_word": "ICESTORM",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1974,6 +2127,7 @@
       "dispatch": [
         "idlecom"
       ],
+      "primary_handler": "idlecom",
       "dispatch_source_word": "IDLE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -1987,6 +2141,7 @@
       "dispatch": [
         "doverb_default"
       ],
+      "primary_handler": "doverb_default",
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -2000,6 +2155,7 @@
       "dispatch": [
         "incom"
       ],
+      "primary_handler": "incom",
       "dispatch_source_word": "IN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2013,6 +2169,7 @@
       "dispatch": [
         "infocom"
       ],
+      "primary_handler": "infocom",
       "dispatch_source_word": "INFO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2026,6 +2183,7 @@
       "dispatch": [
         "inviscom"
       ],
+      "primary_handler": "inviscom",
       "dispatch_source_word": "INVISIBLE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2039,6 +2197,7 @@
       "dispatch": [
         "com_handler"
       ],
+      "primary_handler": "com_handler",
       "dispatch_source_word": "ISTARI",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2052,6 +2211,7 @@
       "dispatch": [
         "jumpcom"
       ],
+      "primary_handler": "jumpcom",
       "dispatch_source_word": "JUMP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2065,6 +2225,7 @@
       "dispatch": [
         "killcom"
       ],
+      "primary_handler": "killcom",
       "dispatch_source_word": "KILL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2078,6 +2239,7 @@
       "dispatch": [
         "klockcom"
       ],
+      "primary_handler": "klockcom",
       "dispatch_source_word": "KLOCK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2091,6 +2253,7 @@
       "dispatch": [
         "doverb_default"
       ],
+      "primary_handler": "doverb_default",
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -2104,6 +2267,7 @@
       "dispatch": [
         "lookcom"
       ],
+      "primary_handler": "lookcom",
       "dispatch_source_word": "LOOK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2117,6 +2281,7 @@
       "dispatch": [
         "linkcom"
       ],
+      "primary_handler": "linkcom",
       "dispatch_source_word": "LINK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2130,6 +2295,7 @@
       "dispatch": [
         "lastoncom"
       ],
+      "primary_handler": "lastoncom",
       "dispatch_source_word": "LASTON",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2143,6 +2309,7 @@
       "dispatch": [
         "langcom"
       ],
+      "primary_handler": "langcom",
       "dispatch_source_word": "LANG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2156,6 +2323,7 @@
       "dispatch": [
         "levelscom"
       ],
+      "primary_handler": "levelscom",
       "dispatch_source_word": "LEVELS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2169,6 +2337,7 @@
       "dispatch": [
         "levechocom"
       ],
+      "primary_handler": "levechocom",
       "dispatch_source_word": "LEVECHO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2182,6 +2351,7 @@
       "dispatch": [
         "loc_flags"
       ],
+      "primary_handler": "loc_flags",
       "dispatch_source_word": "LFLAGS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2195,6 +2365,7 @@
       "dispatch": [
         "opencom"
       ],
+      "primary_handler": "opencom",
       "dispatch_source_word": "OPEN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2208,10 +2379,15 @@
       "dispatch": [
         "lightcom"
       ],
+      "primary_handler": "lightcom",
       "dispatch_source_word": "LIGHT",
       "dispatch_kind": "c-handler",
-      "test_cases": [],
-      "output_cases": []
+      "test_cases": [
+        "light-carried-stick-at-start1"
+      ],
+      "output_cases": [
+        "light-carried-stick-at-start1"
+      ]
     },
     {
       "line": 169,
@@ -2222,6 +2398,7 @@
         "spellcom",
         "litcom"
       ],
+      "primary_handler": "litcom",
       "dispatch_source_word": "LIT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2235,6 +2412,7 @@
       "dispatch": [
         "loadcom"
       ],
+      "primary_handler": "loadcom",
       "dispatch_source_word": "LOAD",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2248,6 +2426,7 @@
       "dispatch": [
         "locationscom"
       ],
+      "primary_handler": "locationscom",
       "dispatch_source_word": "LOCATIONS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2261,6 +2440,7 @@
       "dispatch": [
         "lockcom"
       ],
+      "primary_handler": "lockcom",
       "dispatch_source_word": "LOCK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2274,6 +2454,7 @@
       "dispatch": [
         "writelog"
       ],
+      "primary_handler": "writelog",
       "dispatch_source_word": "LOG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2287,6 +2468,7 @@
       "dispatch": [
         "lootcom"
       ],
+      "primary_handler": "lootcom",
       "dispatch_source_word": "LOOT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2300,6 +2482,7 @@
       "dispatch": [
         "losecom"
       ],
+      "primary_handler": "losecom",
       "dispatch_source_word": "LOSE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2313,6 +2496,7 @@
       "dispatch": [
         "lsaycom"
       ],
+      "primary_handler": "lsaycom",
       "dispatch_source_word": "LSAY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2326,6 +2510,7 @@
       "dispatch": [
         "mailcom"
       ],
+      "primary_handler": "mailcom",
       "dispatch_source_word": "MAIL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2339,6 +2524,7 @@
       "dispatch": [
         "spellcom"
       ],
+      "primary_handler": "spellcom",
       "dispatch_source_word": "MAKEPIG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2352,6 +2538,7 @@
       "dispatch": [
         "mob_flags"
       ],
+      "primary_handler": "mob_flags",
       "dispatch_source_word": "MASK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2365,6 +2552,7 @@
       "dispatch": [
         "maxstatecom"
       ],
+      "primary_handler": "maxstatecom",
       "dispatch_source_word": "MAXSTATE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2380,6 +2568,7 @@
         "trapch",
         "mudlog"
       ],
+      "primary_handler": "mudlog",
       "dispatch_source_word": "MEDITATE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2393,6 +2582,7 @@
       "dispatch": [
         "mob_flags"
       ],
+      "primary_handler": "mob_flags",
       "dispatch_source_word": "MFLAGS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2406,6 +2596,7 @@
       "dispatch": [
         "spellcom"
       ],
+      "primary_handler": "spellcom",
       "dispatch_source_word": "MISSILE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2419,6 +2610,7 @@
       "dispatch": [
         "mobilecom"
       ],
+      "primary_handler": "mobilecom",
       "dispatch_source_word": "MOBILES",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2434,6 +2626,7 @@
         "sclrflg",
         "ssetflg"
       ],
+      "primary_handler": "ssetflg",
       "dispatch_source_word": "COLOR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2447,6 +2640,7 @@
       "dispatch": [
         "pushcom"
       ],
+      "primary_handler": "pushcom",
       "dispatch_source_word": "PUSH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2460,6 +2654,7 @@
       "dispatch": [
         "muserscom"
       ],
+      "primary_handler": "muserscom",
       "dispatch_source_word": "MSTAT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2473,6 +2668,7 @@
       "dispatch": [
         "spellcom"
       ],
+      "primary_handler": "spellcom",
       "dispatch_source_word": "MUTE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2486,6 +2682,7 @@
       "dispatch": [
         "muserscom"
       ],
+      "primary_handler": "muserscom",
       "dispatch_source_word": "MUSERS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2499,6 +2696,7 @@
       "dispatch": [
         "mwhocom"
       ],
+      "primary_handler": "mwhocom",
       "dispatch_source_word": "MWHO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2512,6 +2710,7 @@
       "dispatch": [
         "togglecom"
       ],
+      "primary_handler": "togglecom",
       "dispatch_source_word": "NEWSTYLE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2525,6 +2724,7 @@
       "dispatch": [
         "mob_flags"
       ],
+      "primary_handler": "mob_flags",
       "dispatch_source_word": "NFLAGS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2538,6 +2738,7 @@
       "dispatch": [
         "nolinecom"
       ],
+      "primary_handler": "nolinecom",
       "dispatch_source_word": "NDGOD",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2551,6 +2752,7 @@
       "dispatch": [
         "nolinecom"
       ],
+      "primary_handler": "nolinecom",
       "dispatch_source_word": "NOANON",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2564,6 +2766,7 @@
       "dispatch": [
         "nolinecom"
       ],
+      "primary_handler": "nolinecom",
       "dispatch_source_word": "NOAWIZ",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2577,6 +2780,7 @@
       "dispatch": [
         "togglecom"
       ],
+      "primary_handler": "togglecom",
       "dispatch_source_word": "NOBEEP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2590,6 +2794,7 @@
       "dispatch": [
         "togglecom"
       ],
+      "primary_handler": "togglecom",
       "dispatch_source_word": "NOBLINK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2603,6 +2808,7 @@
       "dispatch": [
         "nolinecom"
       ],
+      "primary_handler": "nolinecom",
       "dispatch_source_word": "NOCHAT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2616,6 +2822,7 @@
       "dispatch": [
         "nolinecom"
       ],
+      "primary_handler": "nolinecom",
       "dispatch_source_word": "NDGOD",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2629,6 +2836,7 @@
       "dispatch": [
         "togglecom"
       ],
+      "primary_handler": "togglecom",
       "dispatch_source_word": "NOFIGHT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2642,6 +2850,7 @@
       "dispatch": [
         "togglecom"
       ],
+      "primary_handler": "togglecom",
       "dispatch_source_word": "NOFLAG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2655,6 +2864,7 @@
       "dispatch": [
         "nolinecom"
       ],
+      "primary_handler": "nolinecom",
       "dispatch_source_word": "NOGOD",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2668,6 +2878,7 @@
       "dispatch": [
         "nolinecom"
       ],
+      "primary_handler": "nolinecom",
       "dispatch_source_word": "NOCHAT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2681,6 +2892,7 @@
       "dispatch": [
         "nolinecom"
       ],
+      "primary_handler": "nolinecom",
       "dispatch_source_word": "NOISTARI",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2694,6 +2906,7 @@
       "dispatch": [
         "togglecom"
       ],
+      "primary_handler": "togglecom",
       "dispatch_source_word": "NOINV",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2710,6 +2923,7 @@
         "sclrflg",
         "ssetflg"
       ],
+      "primary_handler": "ssetflg",
       "dispatch_source_word": "QUIET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2723,6 +2937,7 @@
       "dispatch": [
         "togglecom"
       ],
+      "primary_handler": "togglecom",
       "dispatch_source_word": "NOORACLE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2736,6 +2951,7 @@
       "dispatch": [
         "nolinecom"
       ],
+      "primary_handler": "nolinecom",
       "dispatch_source_word": "NOPIG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2749,6 +2965,7 @@
       "dispatch": [
         "nolinecom"
       ],
+      "primary_handler": "nolinecom",
       "dispatch_source_word": "NOISTARI",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2762,6 +2979,7 @@
       "dispatch": [
         "togglecom"
       ],
+      "primary_handler": "togglecom",
       "dispatch_source_word": "NOPUFF",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2775,6 +2993,7 @@
       "dispatch": [
         "nopuntcom"
       ],
+      "primary_handler": "nopuntcom",
       "dispatch_source_word": "NOPUNT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2788,6 +3007,7 @@
       "dispatch": [
         "noruncom"
       ],
+      "primary_handler": "noruncom",
       "dispatch_source_word": "NORUN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2801,6 +3021,7 @@
       "dispatch": [
         "noshoutcom"
       ],
+      "primary_handler": "noshoutcom",
       "dispatch_source_word": "NOSHOUT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2814,6 +3035,7 @@
       "dispatch": [
         "noslaincom"
       ],
+      "primary_handler": "noslaincom",
       "dispatch_source_word": "NOSLAIN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2827,6 +3049,7 @@
       "dispatch": [
         "togglecom"
       ],
+      "primary_handler": "togglecom",
       "dispatch_source_word": "NOSWEAR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2840,6 +3063,7 @@
       "dispatch": [
         "nolinecom"
       ],
+      "primary_handler": "nolinecom",
       "dispatch_source_word": "NOUPPER",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2853,6 +3077,7 @@
       "dispatch": [
         "togglecom"
       ],
+      "primary_handler": "togglecom",
       "dispatch_source_word": "NOWET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2866,6 +3091,7 @@
       "dispatch": [
         "nolinecom"
       ],
+      "primary_handler": "nolinecom",
       "dispatch_source_word": "NOWIZ",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2879,6 +3105,7 @@
       "dispatch": [
         "nowishcom"
       ],
+      "primary_handler": "nowishcom",
       "dispatch_source_word": "NOWISH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2892,6 +3119,7 @@
       "dispatch": [
         "objectscom"
       ],
+      "primary_handler": "objectscom",
       "dispatch_source_word": "OBJECTS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2905,6 +3133,7 @@
       "dispatch": [
         "obj_flags"
       ],
+      "primary_handler": "obj_flags",
       "dispatch_source_word": "OFLAGS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2918,6 +3147,7 @@
       "dispatch": [
         "opencom"
       ],
+      "primary_handler": "opencom",
       "dispatch_source_word": "OPEN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2931,6 +3161,7 @@
       "dispatch": [
         "optionscom"
       ],
+      "primary_handler": "optionscom",
       "dispatch_source_word": "OPTIONS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2944,6 +3175,7 @@
       "dispatch": [
         "setpager"
       ],
+      "primary_handler": "setpager",
       "dispatch_source_word": "PAGER",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2957,6 +3189,7 @@
       "dispatch": [
         "petcom"
       ],
+      "primary_handler": "petcom",
       "dispatch_source_word": "PET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2970,6 +3203,7 @@
       "dispatch": [
         "peacecom"
       ],
+      "primary_handler": "peacecom",
       "dispatch_source_word": "PEACE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2983,6 +3217,7 @@
       "dispatch": [
         "usercom"
       ],
+      "primary_handler": "usercom",
       "dispatch_source_word": "USERS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -2996,6 +3231,7 @@
       "dispatch": [
         "petcom"
       ],
+      "primary_handler": "petcom",
       "dispatch_source_word": "PET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3009,6 +3245,7 @@
       "dispatch": [
         "mob_flags"
       ],
+      "primary_handler": "mob_flags",
       "dispatch_source_word": "PFLAGS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3022,6 +3259,7 @@
       "dispatch": [
         "pickcom"
       ],
+      "primary_handler": "pickcom",
       "dispatch_source_word": "PICK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3035,6 +3273,7 @@
       "dispatch": [
         "pigcom"
       ],
+      "primary_handler": "pigcom",
       "dispatch_source_word": "PIG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3048,6 +3287,7 @@
       "dispatch": [
         "playcom"
       ],
+      "primary_handler": "playcom",
       "dispatch_source_word": "PLAY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3061,6 +3301,7 @@
       "dispatch": [
         "usercom"
       ],
+      "primary_handler": "usercom",
       "dispatch_source_word": "USERS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3074,6 +3315,7 @@
       "dispatch": [
         "ploccom"
       ],
+      "primary_handler": "ploccom",
       "dispatch_source_word": "PLOC",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3087,6 +3329,7 @@
       "dispatch": [
         "pncom"
       ],
+      "primary_handler": "pncom",
       "dispatch_source_word": "PN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3100,6 +3343,7 @@
       "dispatch": [
         "policycom"
       ],
+      "primary_handler": "policycom",
       "dispatch_source_word": "POLICY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3113,6 +3357,7 @@
       "dispatch": [
         "posecom"
       ],
+      "primary_handler": "posecom",
       "dispatch_source_word": "POSE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3126,6 +3371,7 @@
       "dispatch": [
         "praycom"
       ],
+      "primary_handler": "praycom",
       "dispatch_source_word": "PRAY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3139,6 +3385,7 @@
       "dispatch": [
         "pushcom"
       ],
+      "primary_handler": "pushcom",
       "dispatch_source_word": "PUSH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3152,6 +3399,7 @@
       "dispatch": [
         "doverb_default"
       ],
+      "primary_handler": "doverb_default",
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -3165,6 +3413,7 @@
       "dispatch": [
         "probationcom"
       ],
+      "primary_handler": "probationcom",
       "dispatch_source_word": "PROBATION",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3178,6 +3427,7 @@
       "dispatch": [
         "promptcom"
       ],
+      "primary_handler": "promptcom",
       "dispatch_source_word": "PROMPT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3191,6 +3441,7 @@
       "dispatch": [
         "promote"
       ],
+      "primary_handler": "promote",
       "dispatch_source_word": "PROMOTE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3204,6 +3455,7 @@
       "dispatch": [
         "com_handler"
       ],
+      "primary_handler": "com_handler",
       "dispatch_source_word": "ISTARI",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3217,6 +3469,7 @@
       "dispatch": [
         "spellcom"
       ],
+      "primary_handler": "spellcom",
       "dispatch_source_word": "PROTECT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3230,6 +3483,7 @@
       "dispatch": [
         "pushcom"
       ],
+      "primary_handler": "pushcom",
       "dispatch_source_word": "PUSH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3243,6 +3497,7 @@
       "dispatch": [
         "puntcom"
       ],
+      "primary_handler": "puntcom",
       "dispatch_source_word": "PUNT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3256,6 +3511,7 @@
       "dispatch": [
         "puntallcom"
       ],
+      "primary_handler": "puntallcom",
       "dispatch_source_word": "PUNTALL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3269,6 +3525,7 @@
       "dispatch": [
         "pushcom"
       ],
+      "primary_handler": "pushcom",
       "dispatch_source_word": "PUSH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3282,6 +3539,7 @@
       "dispatch": [
         "putcom"
       ],
+      "primary_handler": "putcom",
       "dispatch_source_word": "PUT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3295,6 +3553,7 @@
       "dispatch": [
         "pzapcom"
       ],
+      "primary_handler": "pzapcom",
       "dispatch_source_word": "PZAP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3308,6 +3567,7 @@
       "dispatch": [
         "qinfocom"
       ],
+      "primary_handler": "qinfocom",
       "dispatch_source_word": "QINFO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3321,6 +3581,7 @@
       "dispatch": [
         "qlistcom"
       ],
+      "primary_handler": "qlistcom",
       "dispatch_source_word": "QLIST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3334,6 +3595,7 @@
       "dispatch": [
         "questcom"
       ],
+      "primary_handler": "questcom",
       "dispatch_source_word": "QUESTS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3350,6 +3612,7 @@
         "sclrflg",
         "ssetflg"
       ],
+      "primary_handler": "ssetflg",
       "dispatch_source_word": "QUIET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3363,6 +3626,7 @@
       "dispatch": [
         "quit_game"
       ],
+      "primary_handler": "quit_game",
       "dispatch_source_word": "QUIT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3376,6 +3640,7 @@
       "dispatch": [
         "rawcom"
       ],
+      "primary_handler": "rawcom",
       "dispatch_source_word": "RAW",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3389,6 +3654,7 @@
       "dispatch": [
         "examcom"
       ],
+      "primary_handler": "examcom",
       "dispatch_source_word": "EXAMINE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3402,6 +3668,7 @@
       "dispatch": [
         "rebootcom"
       ],
+      "primary_handler": "rebootcom",
       "dispatch_source_word": "REBOOT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3415,6 +3682,7 @@
       "dispatch": [
         "removecom"
       ],
+      "primary_handler": "removecom",
       "dispatch_source_word": "REMOVE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3428,6 +3696,7 @@
       "dispatch": [
         "replycom"
       ],
+      "primary_handler": "replycom",
       "dispatch_source_word": "REPLY",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3441,6 +3710,7 @@
       "dispatch": [
         "reportcom"
       ],
+      "primary_handler": "reportcom",
       "dispatch_source_word": "REPORT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3454,6 +3724,7 @@
       "dispatch": [
         "resurcom"
       ],
+      "primary_handler": "resurcom",
       "dispatch_source_word": "RESURRECT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3467,6 +3738,7 @@
       "dispatch": [
         "resetcom"
       ],
+      "primary_handler": "resetcom",
       "dispatch_source_word": "RESET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3480,6 +3752,7 @@
       "dispatch": [
         "restorecom"
       ],
+      "primary_handler": "restorecom",
       "dispatch_source_word": "RESTORE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3493,6 +3766,7 @@
       "dispatch": [
         "reviewcom"
       ],
+      "primary_handler": "reviewcom",
       "dispatch_source_word": "REVIEW",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3506,6 +3780,7 @@
       "dispatch": [
         "ringcom"
       ],
+      "primary_handler": "ringcom",
       "dispatch_source_word": "RING",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3519,6 +3794,7 @@
       "dispatch": [
         "rollcom"
       ],
+      "primary_handler": "rollcom",
       "dispatch_source_word": "ROLL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3532,6 +3808,7 @@
       "dispatch": [
         "rosecom"
       ],
+      "primary_handler": "rosecom",
       "dispatch_source_word": "ROSE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3545,6 +3822,7 @@
       "dispatch": [
         "rubcom"
       ],
+      "primary_handler": "rubcom",
       "dispatch_source_word": "RUB",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3558,6 +3836,7 @@
       "dispatch": [
         "saycom"
       ],
+      "primary_handler": "saycom",
       "dispatch_source_word": "SAY",
       "dispatch_kind": "c-handler",
       "test_cases": [
@@ -3575,6 +3854,7 @@
       "dispatch": [
         "saytocom"
       ],
+      "primary_handler": "saytocom",
       "dispatch_source_word": "SAYTO",
       "dispatch_kind": "c-handler",
       "test_cases": [
@@ -3592,6 +3872,7 @@
       "dispatch": [
         "saveother"
       ],
+      "primary_handler": "saveother",
       "dispatch_source_word": "SAVE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3605,6 +3886,7 @@
       "dispatch": [
         "saveallcom"
       ],
+      "primary_handler": "saveallcom",
       "dispatch_source_word": "SAVEALL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3618,6 +3900,7 @@
       "dispatch": [
         "xrscorecom"
       ],
+      "primary_handler": "xrscorecom",
       "dispatch_source_word": "SCORE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3631,6 +3914,7 @@
       "dispatch": [
         "examcom"
       ],
+      "primary_handler": "examcom",
       "dispatch_source_word": "EXAMINE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3644,6 +3928,7 @@
       "dispatch": [
         "toggleseeext"
       ],
+      "primary_handler": "toggleseeext",
       "dispatch_source_word": "SEEEXT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3657,6 +3942,7 @@
       "dispatch": [
         "seeidlecom"
       ],
+      "primary_handler": "seeidlecom",
       "dispatch_source_word": "SEEIDLE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3670,6 +3956,7 @@
       "dispatch": [
         "toggleseesocket"
       ],
+      "primary_handler": "toggleseesocket",
       "dispatch_source_word": "SEESOCKET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3683,6 +3970,7 @@
       "dispatch": [
         "setcom"
       ],
+      "primary_handler": "setcom",
       "dispatch_source_word": "SET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3696,6 +3984,7 @@
       "dispatch": [
         "set_msg"
       ],
+      "primary_handler": "set_msg",
       "dispatch_source_word": "SETIN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3709,6 +3998,7 @@
       "dispatch": [
         "doverb_default"
       ],
+      "primary_handler": "doverb_default",
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -3722,6 +4012,7 @@
       "dispatch": [
         "set_msg"
       ],
+      "primary_handler": "set_msg",
       "dispatch_source_word": "SETMIN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3735,6 +4026,7 @@
       "dispatch": [
         "set_msg"
       ],
+      "primary_handler": "set_msg",
       "dispatch_source_word": "SETMOUT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3748,6 +4040,7 @@
       "dispatch": [
         "set_msg"
       ],
+      "primary_handler": "set_msg",
       "dispatch_source_word": "SETOUT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3761,6 +4054,7 @@
       "dispatch": [
         "set_msg"
       ],
+      "primary_handler": "set_msg",
       "dispatch_source_word": "SETSIN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3774,6 +4068,7 @@
       "dispatch": [
         "set_msg"
       ],
+      "primary_handler": "set_msg",
       "dispatch_source_word": "SETSIT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3787,6 +4082,7 @@
       "dispatch": [
         "set_msg"
       ],
+      "primary_handler": "set_msg",
       "dispatch_source_word": "SETSOUT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3800,6 +4096,7 @@
       "dispatch": [
         "setstart"
       ],
+      "primary_handler": "setstart",
       "dispatch_source_word": "SETSTART",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3813,6 +4110,7 @@
       "dispatch": [
         "set_msg"
       ],
+      "primary_handler": "set_msg",
       "dispatch_source_word": "SETSTND",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3826,6 +4124,7 @@
       "dispatch": [
         "set_msg"
       ],
+      "primary_handler": "set_msg",
       "dispatch_source_word": "SETSUM",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3839,6 +4138,7 @@
       "dispatch": [
         "doverb_default"
       ],
+      "primary_handler": "doverb_default",
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -3852,6 +4152,7 @@
       "dispatch": [
         "set_msg"
       ],
+      "primary_handler": "set_msg",
       "dispatch_source_word": "SETVIN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3865,6 +4166,7 @@
       "dispatch": [
         "set_msg"
       ],
+      "primary_handler": "set_msg",
       "dispatch_source_word": "SETVOUT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3878,6 +4180,7 @@
       "dispatch": [
         "set_msg"
       ],
+      "primary_handler": "set_msg",
       "dispatch_source_word": "SETQIN",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3891,6 +4194,7 @@
       "dispatch": [
         "set_msg"
       ],
+      "primary_handler": "set_msg",
       "dispatch_source_word": "SETQOUT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3904,6 +4208,7 @@
       "dispatch": [
         "mob_flags"
       ],
+      "primary_handler": "mob_flags",
       "dispatch_source_word": "SFLAGS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3919,6 +4224,7 @@
         "saveallcom",
         "erreval"
       ],
+      "primary_handler": "erreval",
       "dispatch_source_word": "SHALL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3932,6 +4238,7 @@
       "dispatch": [
         "spellcom"
       ],
+      "primary_handler": "spellcom",
       "dispatch_source_word": "SHOCK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3945,6 +4252,7 @@
       "dispatch": [
         "shoutcom"
       ],
+      "primary_handler": "shoutcom",
       "dispatch_source_word": "SHOUT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3958,6 +4266,7 @@
       "dispatch": [
         "pushcom"
       ],
+      "primary_handler": "pushcom",
       "dispatch_source_word": "PUSH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3971,6 +4280,7 @@
       "dispatch": [
         "showitem"
       ],
+      "primary_handler": "showitem",
       "dispatch_source_word": "SHOW",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3984,6 +4294,7 @@
       "dispatch": [
         "closecom"
       ],
+      "primary_handler": "closecom",
       "dispatch_source_word": "CLOSE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -3997,6 +4308,7 @@
       "dispatch": [
         "sitcom"
       ],
+      "primary_handler": "sitcom",
       "dispatch_source_word": "SIT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4010,6 +4322,7 @@
       "dispatch": [
         "siccom"
       ],
+      "primary_handler": "siccom",
       "dispatch_source_word": "SIC",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4023,6 +4336,7 @@
       "dispatch": [
         "signalcom"
       ],
+      "primary_handler": "signalcom",
       "dispatch_source_word": "SIGNAL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4036,6 +4350,7 @@
       "dispatch": [
         "silentcom"
       ],
+      "primary_handler": "silentcom",
       "dispatch_source_word": "SILENT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4049,6 +4364,7 @@
       "dispatch": [
         "killcom"
       ],
+      "primary_handler": "killcom",
       "dispatch_source_word": "KILL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4062,6 +4378,7 @@
       "dispatch": [
         "sneakcom"
       ],
+      "primary_handler": "sneakcom",
       "dispatch_source_word": "SNEAK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4075,6 +4392,7 @@
       "dispatch": [
         "snoopcom"
       ],
+      "primary_handler": "snoopcom",
       "dispatch_source_word": "SNOOP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4088,6 +4406,7 @@
       "dispatch": [
         "socketcom"
       ],
+      "primary_handler": "socketcom",
       "dispatch_source_word": "SOCKET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4101,6 +4420,7 @@
       "dispatch": [
         "spellscom"
       ],
+      "primary_handler": "spellscom",
       "dispatch_source_word": "SPELLS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4114,6 +4434,7 @@
       "dispatch": [
         "standcom"
       ],
+      "primary_handler": "standcom",
       "dispatch_source_word": "STAND",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4127,6 +4448,7 @@
       "dispatch": [
         "startcom"
       ],
+      "primary_handler": "startcom",
       "dispatch_source_word": "START",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4140,6 +4462,7 @@
       "dispatch": [
         "showplayer"
       ],
+      "primary_handler": "showplayer",
       "dispatch_source_word": "STATS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4153,6 +4476,7 @@
       "dispatch": [
         "stealcom"
       ],
+      "primary_handler": "stealcom",
       "dispatch_source_word": "STEAL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4166,6 +4490,7 @@
       "dispatch": [
         "stopcom"
       ],
+      "primary_handler": "stopcom",
       "dispatch_source_word": "STOP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4179,6 +4504,7 @@
       "dispatch": [
         "storecom"
       ],
+      "primary_handler": "storecom",
       "dispatch_source_word": "STORE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4192,6 +4518,7 @@
       "dispatch": [
         "sumcom"
       ],
+      "primary_handler": "sumcom",
       "dispatch_source_word": "SUMMON",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4205,6 +4532,7 @@
       "dispatch": [
         "suggestcom"
       ],
+      "primary_handler": "suggestcom",
       "dispatch_source_word": "SUGGEST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4218,6 +4546,7 @@
       "dispatch": [
         "syslogcom"
       ],
+      "primary_handler": "syslogcom",
       "dispatch_source_word": "SYSLOG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4231,6 +4560,7 @@
       "dispatch": [
         "systemcom"
       ],
+      "primary_handler": "systemcom",
       "dispatch_source_word": "SYSTEM",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4244,6 +4574,7 @@
       "dispatch": [
         "getcom"
       ],
+      "primary_handler": "getcom",
       "dispatch_source_word": "GET",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4257,6 +4588,7 @@
       "dispatch": [
         "tellcom"
       ],
+      "primary_handler": "tellcom",
       "dispatch_source_word": "TELL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4270,6 +4602,7 @@
       "dispatch": [
         "throwcom"
       ],
+      "primary_handler": "throwcom",
       "dispatch_source_word": "THROW",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4283,6 +4616,7 @@
       "dispatch": [
         "ticklecom"
       ],
+      "primary_handler": "ticklecom",
       "dispatch_source_word": "TICKLE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4296,6 +4630,7 @@
       "dispatch": [
         "tiecom"
       ],
+      "primary_handler": "tiecom",
       "dispatch_source_word": "TIE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4309,6 +4644,7 @@
       "dispatch": [
         "timecom"
       ],
+      "primary_handler": "timecom",
       "dispatch_source_word": "TIME",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4322,6 +4658,7 @@
       "dispatch": [
         "gotocom"
       ],
+      "primary_handler": "gotocom",
       "dispatch_source_word": "TIPTOE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4335,6 +4672,7 @@
       "dispatch": [
         "change_title"
       ],
+      "primary_handler": "change_title",
       "dispatch_source_word": "TITLE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4348,6 +4686,7 @@
       "dispatch": [
         "tournamentcom"
       ],
+      "primary_handler": "tournamentcom",
       "dispatch_source_word": "TOURNAMENT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4361,6 +4700,7 @@
       "dispatch": [
         "pushcom"
       ],
+      "primary_handler": "pushcom",
       "dispatch_source_word": "PUSH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4374,6 +4714,7 @@
       "dispatch": [
         "toutcom"
       ],
+      "primary_handler": "toutcom",
       "dispatch_source_word": "TOUT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4387,6 +4728,7 @@
       "dispatch": [
         "tracecom"
       ],
+      "primary_handler": "tracecom",
       "dispatch_source_word": "TRACE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4400,6 +4742,7 @@
       "dispatch": [
         "sumcom"
       ],
+      "primary_handler": "sumcom",
       "dispatch_source_word": "TRANSLOCATE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4413,6 +4756,7 @@
       "dispatch": [
         "treasurecom"
       ],
+      "primary_handler": "treasurecom",
       "dispatch_source_word": "TREASURES",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4426,6 +4770,7 @@
       "dispatch": [
         "hostscom"
       ],
+      "primary_handler": "hostscom",
       "dispatch_source_word": "HOSTS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4439,6 +4784,7 @@
       "dispatch": [
         "pushcom"
       ],
+      "primary_handler": "pushcom",
       "dispatch_source_word": "PUSH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4452,6 +4798,7 @@
       "dispatch": [
         "textrawcom"
       ],
+      "primary_handler": "textrawcom",
       "dispatch_source_word": "TXTRAW",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4465,6 +4812,7 @@
       "dispatch": [
         "typocom"
       ],
+      "primary_handler": "typocom",
       "dispatch_source_word": "TYPO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4478,6 +4826,7 @@
       "dispatch": [
         "doverb_default"
       ],
+      "primary_handler": "doverb_default",
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -4491,10 +4840,15 @@
       "dispatch": [
         "extinguishcom"
       ],
+      "primary_handler": "extinguishcom",
       "dispatch_source_word": "EXTINGUISH",
       "dispatch_kind": "c-handler",
-      "test_cases": [],
-      "output_cases": []
+      "test_cases": [
+        "light-carried-stick-at-start1"
+      ],
+      "output_cases": [
+        "light-carried-stick-at-start1"
+      ]
     },
     {
       "line": 343,
@@ -4504,6 +4858,7 @@
       "dispatch": [
         "unlockcom"
       ],
+      "primary_handler": "unlockcom",
       "dispatch_source_word": "UNLOCK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4517,6 +4872,7 @@
       "dispatch": [
         "untiecom"
       ],
+      "primary_handler": "untiecom",
       "dispatch_source_word": "UNTIE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4530,6 +4886,7 @@
       "dispatch": [
         "unveilcom"
       ],
+      "primary_handler": "unveilcom",
       "dispatch_source_word": "UNVEIL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4543,6 +4900,7 @@
       "dispatch": [
         "com_handler"
       ],
+      "primary_handler": "com_handler",
       "dispatch_source_word": "UPPER",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4556,6 +4914,7 @@
       "dispatch": [
         "updatecom"
       ],
+      "primary_handler": "updatecom",
       "dispatch_source_word": "UPDATE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4569,6 +4928,7 @@
       "dispatch": [
         "uptimecom"
       ],
+      "primary_handler": "uptimecom",
       "dispatch_source_word": "UPTIME",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4582,6 +4942,7 @@
       "dispatch": [
         "usecom"
       ],
+      "primary_handler": "usecom",
       "dispatch_source_word": "USE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4595,6 +4956,7 @@
       "dispatch": [
         "usercom"
       ],
+      "primary_handler": "usercom",
       "dispatch_source_word": "USERS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4608,6 +4970,7 @@
       "dispatch": [
         "usercom"
       ],
+      "primary_handler": "usercom",
       "dispatch_source_word": "USERS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4621,6 +4984,7 @@
       "dispatch": [
         "valuecom"
       ],
+      "primary_handler": "valuecom",
       "dispatch_source_word": "VALUE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4634,6 +4998,7 @@
       "dispatch": [
         "bprintf"
       ],
+      "primary_handler": "bprintf",
       "dispatch_source_word": "VERSION",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4647,6 +5012,7 @@
       "dispatch": [
         "viscom"
       ],
+      "primary_handler": "viscom",
       "dispatch_source_word": "VISIBLE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4660,6 +5026,7 @@
       "dispatch": [
         "viewcom"
       ],
+      "primary_handler": "viewcom",
       "dispatch_source_word": "VIEWCOM",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4673,6 +5040,7 @@
       "dispatch": [
         "votecom"
       ],
+      "primary_handler": "votecom",
       "dispatch_source_word": "VOTE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4686,6 +5054,7 @@
       "dispatch": [
         "spellcom"
       ],
+      "primary_handler": "spellcom",
       "dispatch_source_word": "VTOUCH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4699,6 +5068,7 @@
       "dispatch": [
         "doverb_default"
       ],
+      "primary_handler": "doverb_default",
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -4712,6 +5082,7 @@
       "dispatch": [
         "whocom"
       ],
+      "primary_handler": "whocom",
       "dispatch_source_word": "WHO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4725,6 +5096,7 @@
       "dispatch": [
         "whoncom"
       ],
+      "primary_handler": "whoncom",
       "dispatch_source_word": "WHON",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4738,6 +5110,7 @@
       "dispatch": [
         "warcom"
       ],
+      "primary_handler": "warcom",
       "dispatch_source_word": "WAR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4751,6 +5124,7 @@
       "dispatch": [
         "wavecom"
       ],
+      "primary_handler": "wavecom",
       "dispatch_source_word": "WAVE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4764,6 +5138,7 @@
       "dispatch": [
         "wearcom"
       ],
+      "primary_handler": "wearcom",
       "dispatch_source_word": "WEAR",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4777,6 +5152,7 @@
       "dispatch": [
         "wearall"
       ],
+      "primary_handler": "wearall",
       "dispatch_source_word": "WEARALL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4790,6 +5166,7 @@
       "dispatch": [
         "weathercom"
       ],
+      "primary_handler": "weathercom",
       "dispatch_source_word": "WEATHER",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4803,6 +5180,7 @@
       "dispatch": [
         "wherecom"
       ],
+      "primary_handler": "wherecom",
       "dispatch_source_word": "WHERE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4816,6 +5194,7 @@
       "dispatch": [
         "wieldcom"
       ],
+      "primary_handler": "wieldcom",
       "dispatch_source_word": "WIELD",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4829,6 +5208,7 @@
       "dispatch": [
         "wipecom"
       ],
+      "primary_handler": "wipecom",
       "dispatch_source_word": "WIPE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4842,6 +5222,7 @@
       "dispatch": [
         "wishcom"
       ],
+      "primary_handler": "wishcom",
       "dispatch_source_word": "WISH",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4855,6 +5236,7 @@
       "dispatch": [
         "com_handler"
       ],
+      "primary_handler": "com_handler",
       "dispatch_source_word": "WIZ",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4868,6 +5250,7 @@
       "dispatch": [
         "wizlistcom"
       ],
+      "primary_handler": "wizlistcom",
       "dispatch_source_word": "WIZLIST",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4881,6 +5264,7 @@
       "dispatch": [
         "wizlock"
       ],
+      "primary_handler": "wizlock",
       "dispatch_source_word": "WIZLOCK",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4894,6 +5278,7 @@
       "dispatch": [
         "wloadcom"
       ],
+      "primary_handler": "wloadcom",
       "dispatch_source_word": "WLOAD",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4907,6 +5292,7 @@
       "dispatch": [
         "shoutcom"
       ],
+      "primary_handler": "shoutcom",
       "dispatch_source_word": "SHOUT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4920,6 +5306,7 @@
       "dispatch": [
         "zapcom"
       ],
+      "primary_handler": "zapcom",
       "dispatch_source_word": "ZAP",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4933,6 +5320,7 @@
       "dispatch": [
         "zonescom"
       ],
+      "primary_handler": "zonescom",
       "dispatch_source_word": "ZONES",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4946,6 +5334,7 @@
       "dispatch": [
         "togglecom"
       ],
+      "primary_handler": "togglecom",
       "dispatch_source_word": "SEENUMBERS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4959,6 +5348,7 @@
       "dispatch": [
         "awaymsgcom"
       ],
+      "primary_handler": "awaymsgcom",
       "dispatch_source_word": "AWAYMSG",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4972,6 +5362,7 @@
       "dispatch": [
         "togglecom"
       ],
+      "primary_handler": "togglecom",
       "dispatch_source_word": "AWAYBEEPS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4985,6 +5376,7 @@
       "dispatch": [
         "iuserscom"
       ],
+      "primary_handler": "iuserscom",
       "dispatch_source_word": "IUSERS",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -4998,6 +5390,7 @@
       "dispatch": [
         "doverb_default"
       ],
+      "primary_handler": "doverb_default",
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -5011,6 +5404,7 @@
       "dispatch": [
         "doverb_default"
       ],
+      "primary_handler": "doverb_default",
       "dispatch_source_word": "DEFAULT",
       "dispatch_kind": "doverb-default",
       "test_cases": [],
@@ -5024,6 +5418,7 @@
       "dispatch": [
         "cmd_noachat"
       ],
+      "primary_handler": "cmd_noachat",
       "dispatch_source_word": "NOACHAT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5037,6 +5432,7 @@
       "dispatch": [
         "cmd_noacode"
       ],
+      "primary_handler": "cmd_noacode",
       "dispatch_source_word": "NOACODE",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5050,6 +5446,7 @@
       "dispatch": [
         "cmd_noagod"
       ],
+      "primary_handler": "cmd_noagod",
       "dispatch_source_word": "NOAGOD",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5063,6 +5460,7 @@
       "dispatch": [
         "cmd_noainfo"
       ],
+      "primary_handler": "cmd_noainfo",
       "dispatch_source_word": "NOAINFO",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5076,6 +5474,7 @@
       "dispatch": [
         "cmd_noatell"
       ],
+      "primary_handler": "cmd_noatell",
       "dispatch_source_word": "NOATELL",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5089,6 +5488,7 @@
       "dispatch": [
         "cmd_noaberchat"
       ],
+      "primary_handler": "cmd_noaberchat",
       "dispatch_source_word": "NOABERCHAT",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5102,6 +5502,7 @@
       "dispatch": [
         "cmd_aautocon"
       ],
+      "primary_handler": "cmd_aautocon",
       "dispatch_source_word": "AAUTOCON",
       "dispatch_kind": "c-handler",
       "test_cases": [],
@@ -5115,6 +5516,7 @@
       "dispatch": [
         "cmd_acommstats"
       ],
+      "primary_handler": "cmd_acommstats",
       "dispatch_source_word": "ACOMMSTATS",
       "dispatch_kind": "c-handler",
       "test_cases": [],

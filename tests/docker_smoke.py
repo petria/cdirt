@@ -134,7 +134,9 @@ def assert_absent(player: Player, output: str, fragment: str) -> None:
 
 
 def run_scenarios(players: dict[str, Player], suffix: str) -> None:
-    scenarios = json.loads((Path(__file__).with_name("scenarios.json")).read_text())
+    scenarios = [scenario for scenario in json.loads(
+        (Path(__file__).with_name("scenarios.json")).read_text())
+        if scenario.get("smoke", True)]
     for scenario in scenarios:
         phrase = scenario["id"].replace("-", "") + suffix
         values = {"phrase": phrase, "actor": players["actor"].name,

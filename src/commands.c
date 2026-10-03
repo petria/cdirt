@@ -1641,7 +1641,7 @@ void lightcom () {
   char s[100];
 #endif
 
-  if (!ishere(ob1))
+  if (!ishere(ob1) && !iscarrby(ob1, mynum))
     return;
   else
     a = ob1;
@@ -1697,7 +1697,7 @@ void lightcom () {
 void extinguishcom () {
   int a;
 
-  if (!ishere(ob1))
+  if (!ishere(ob1) && !iscarrby(ob1, mynum))
     return;
   else
     a = ob1;

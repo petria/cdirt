@@ -32,5 +32,58 @@
     "excluded_text": ["{phrase}"],
     "exact_text": true,
     "smoke": true
+  },
+  {
+    "id": "light-carried-stick-at-start1",
+    "verbs": ["light", "extinguish", "unlight"],
+    "handlers": ["lightcom", "extinguishcom"],
+    "branch_cases": {
+      "lightcom": [
+        "carried-lightable-target-with-room-fire",
+        "already-lit-carried-target",
+        "non-lightable-target-rejected",
+        "lightable-target-on-floor",
+        "no-lit-source-rejected"
+      ],
+      "extinguishcom": [
+        "extinguish-carried-target",
+        "unlit-target-rejected",
+        "extinguish-target-on-floor"
+      ]
+    },
+    "runner": "docker_light_audit.py",
+    "audiences": {
+      "receive": ["actor"],
+      "exclude": ["same_room_witness", "remote_room"]
+    },
+    "command": "light stick",
+    "expected_lines": {
+      "actor": "Ok"
+    },
+    "excluded_text": ["Ok", "You can't light that!"],
+    "exact_text": true,
+    "smoke": false,
+    "prepare": [
+      {"command": "goto sherwood4"},
+      {"command": "get stick", "expected": ["Ok"]},
+      {"command": "goto start1"},
+      {"command": "look", "contains": ["Temple Of Paradise", "roaring fire"]}
+    ],
+    "steps": [
+      {"command": "light stick", "expected": ["Ok"], "actor_only": true},
+      {"command": "light stick", "expected": ["It's already lit."], "actor_only": true},
+      {"command": "light fire", "expected": ["You can't light that!"], "actor_only": true},
+      {"command": "extinguish stick", "expected": ["Ok"], "actor_only": true},
+      {"command": "extinguish stick", "expected": ["It's not lit!"], "actor_only": true},
+      {"command": "goto Nibelung79@nibelung", "contains": ["Trophy Room"], "summon_same_room": true},
+      {"command": "look", "contains": ["fire"]},
+      {"command": "drop stick", "expected": ["Ok"]},
+      {"command": "light stick", "expected": ["Ok"], "actor_only": true},
+      {"command": "extinguish stick", "expected": ["Ok"], "actor_only": true},
+      {"command": "get stick", "expected": ["Ok"]},
+      {"command": "extinguish fire", "expected": ["You can't extinguish that!"], "actor_only": true},
+      {"command": "goto sherwood4"},
+      {"command": "light stick", "expected": ["You have nothing to light things from."], "actor_only": true}
+    ]
   }
 ]

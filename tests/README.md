@@ -13,6 +13,7 @@ server scenarios:
 docker build -t cdirt:latest .
 python3 -m unittest discover -s tests -v
 python3 tests/docker_smoke.py
+python3 tests/docker_light_audit.py
 python3 tests/docker_quest_smoke.py
 python3 tests/docker_quest_audit.py
 python3 tests/docker_zone_walk.py --strict --report /tmp/cdirt-zone-walk.json
@@ -43,7 +44,11 @@ report; it runs in its own temporary `cdirt:latest` container.
 - `verb_catalog.json` tracks every registered word, aliases, and C dispatch
   route. Its generated `test_cases` are only the scenarios in `scenarios.json`.
   The Docker smoke also invokes each fallback word; this does not cover the C
-  handlers assigned to those verbs.
+  handlers assigned to those verbs. The catalog records each word's primary C
+  handler, and `coverage_report.py` reports handler and named branch coverage.
+- `docker_light_audit.py` covers carried and floor targets for `light` and
+  `extinguish`, including a lit room fire, state changes, invalid targets, and
+  actor-only output. It protects against silently ignoring carried targets.
 - `world_catalog.json` tracks every room header and declared exit, active zone
   files, quest table entries, and C `set_quest()` sites. Four hooks currently
   refer to quest constants absent from the active quest table; they are listed
@@ -65,9 +70,11 @@ report; it runs in its own temporary `cdirt:latest` container.
 - `coverage_report.py` reports remaining gaps. `--strict` exits nonzero until
   every registered word and active quest has a runtime scenario. The zone walk
   covers every inventoried room and its compiled exit list. Use `--verbose` to
-  list uncovered words and quests with their C trigger locations. A handler having one scenario
-  does not prove all its argument/state branches have been tested; those cases
-  and output audiences still need to be authored and reviewed explicitly.
+  list uncovered words, C handlers, and quests with their C trigger locations.
+  A handler having one scenario does not prove all its argument/state branches
+  have been tested; those cases and output audiences still need to be authored
+  and reviewed explicitly. `--strict-handlers` is a separate gate that remains
+  red until every routed C handler has at least one runtime scenario.
 
 Regenerate source inventories after changing verbs, quest definitions, zone
 files, or quest specials:

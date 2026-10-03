@@ -162,6 +162,7 @@ def main() -> None:
         macro = str(entry["word"]).upper()
         source_word, calls = id_routes.get(int(entry["verb_id"]), (macro, []))
         entry["dispatch"] = calls or ["doverb_default"]
+        entry["primary_handler"] = calls[-1] if calls else "doverb_default"
         entry["dispatch_source_word"] = source_word if calls else "DEFAULT"
         entry["dispatch_kind"] = "c-handler" if calls else "doverb-default"
         entry["test_cases"] = scenarios_by_word.get(str(entry["word"]), [])
