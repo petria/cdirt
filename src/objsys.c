@@ -750,7 +750,7 @@ Boolean has_inventory(int plr) {
 
     for (ct = 0 ; ct < pnumobs(plr) ; ct++) {
       i = pobj_nr(ct, plr);
-      if (!(iswornby(i, plr) || iswieldby(i, plr)))
+      if (!iswornby(i, plr))
         return(True);
     }
   return(False);
@@ -798,7 +798,7 @@ void aobjsat (int loc, int mode, int marg) {
     obj = int_number(++ct, inv)) {
 
     if (ovis (obj) > plev (mynum) || iswornby(obj, loc) ||
-      iswieldby(obj, loc) || otstbit(obj, OFL_DESTROYED))
+      otstbit(obj, OFL_DESTROYED))
         continue;
 
     *b = 0;   /* buffer for current object */

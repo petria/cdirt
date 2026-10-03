@@ -23,6 +23,7 @@ char	*showname(int loc);
 char	*xshowname(char *b, int loc);
 char	*buildname(char *b, int loc);
 int	find_loc_by_name(char *name);
+Boolean	find_loc_by_name_ex(char *name, int *loc);
 int	findroomnum(char *w);
 int	getroomnum(void);
 int	find_loc_by_id(long int id);

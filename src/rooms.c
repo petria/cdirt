@@ -446,27 +446,29 @@ char *showname (int loc) {
  * Return location, or 0 on error, or 1 if correct zonename (only) was given.
  ******************************************************************************/
 
-int find_loc_by_name (char *name) {
+Boolean find_loc_by_name_ex (char *name, int *loc) {
   char buff[MAX_COM_LEN], *b = buff;
-  int y, n;
+  int y, n, found;
   char *p;
 
   if ((p = strchr(name, '@'))) {
     *p = 0;
     if ((y = get_zone_by_name(p+1)) == -1) {
       bprintf("%s: no such zone.\n", p+1);
-      return(0);
+      return False;
     }
     else if ((n = ht_lookup(locations_z, name, 0, y, room_search)) == -1) {   
       bprintf("%s: no such location.\n", name);
-      return(0);
+      return False;
     }
-    else
-      return(n);
+    *loc = n;
+    return True;
   } 
 
-  if ((n = idtxt2int(name, LOC)) != -1)
-    return(n);
+  if ((n = idtxt2int(name, LOC)) != -1) {
+    *loc = n;
+    return True;
+  }
 
   for (p = name, b = buff ; isalpha (*p) ; p++, b++)
     *b = *p;
@@ -474,13 +476,31 @@ int find_loc_by_name (char *name) {
 
   n = atoi (p);
 
-  if (!*buff)
-    return exists (n) ? n : 0;
+  if (!*buff) {
+    if (!exists(n))
+      return False;
+    *loc = n;
+    return True;
+  }
 
-  if ((y = get_zone_by_name (buff)) != -1)
-    return n == 0 ? 1 : getlocid (y, n);
-  else
-    return 0;
+  if ((y = get_zone_by_name (buff)) == -1)
+    return False;
+
+  if (n == 0) {
+    *loc = 1;
+    return True;
+  }
+  if (n < 0 || (found = find_int_number (n - 1, zlocs (y))) == SET_END)
+    return False;
+
+  *loc = found;
+  return True;
+}
+
+int find_loc_by_name (char *name) {
+  int loc;
+
+  return find_loc_by_name_ex(name, &loc) ? loc : 0;
 }
 
 

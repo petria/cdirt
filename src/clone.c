@@ -475,7 +475,7 @@ Boolean destruct_location (int l) {
 
 void clonecom (void) {
   int id, a, zone;
-  char name[MAX_COM_LEN], new_name[MAX_COM_LEN];
+  char name[MAX_COM_LEN], loc_name[MAX_COM_LEN], new_name[MAX_COM_LEN];
   char *p, *q;
   PERSONA P, P2;
 
@@ -508,7 +508,8 @@ void clonecom (void) {
   }
   zone = get_wizzone_by_name(pname(mynum));
 
-  if ((a = find_loc_by_name(name)) != -1) {
+  strcpy(loc_name, name);
+  if (find_loc_by_name_ex(loc_name, &a)) {
     id = clone_location(a, zone, p);
 
     bprintf("[%s@%s]\n", lname(id), showname(id));
