@@ -102,7 +102,9 @@ case MOB_OAKTREE_SAPLING:  {
 
 #ifdef LOCMIN_THYRANNEN
 case MOB_THYRANNEN_DRAKNOR:
-      if (pscore (max_players+MOB_THYRANNEN_BROTHER1) == attacker &&
+      if (alive (max_players+MOB_THYRANNEN_BROTHER1) == -1 &&
+        alive (max_players+MOB_THYRANNEN_BROTHER2) == -1 &&
+        pscore (max_players+MOB_THYRANNEN_BROTHER1) == attacker &&
         pscore (max_players+MOB_THYRANNEN_BROTHER2) == attacker) {
         sendf(attacker, "With a hateful look on his face \001p%s\003 tells you "
              "'Power such as mine is\nincomprehensible to the likes of you.  "

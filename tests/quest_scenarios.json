@@ -1,0 +1,478 @@
+[
+  {
+    "id": "excalibur-horn-in-sea",
+    "quest": "Q_EXCALIBUR",
+    "name": "Excalibur",
+    "zones": [
+      "labyrinth",
+      "sea"
+    ],
+    "runner": "docker_quest_smoke.py",
+    "status": "runtime"
+  },
+  {
+    "id": "elvenforest-same-killer",
+    "quest": "Q_EFOREST",
+    "name": "ElvenForest",
+    "zones": [
+      "eforest"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto den@eforest",
+      "zap asmodeus",
+      "goto room@eforest",
+      "zap lich"
+    ]
+  },
+  {
+    "id": "shazareth-crown-pit",
+    "quest": "Q_TOWER",
+    "name": "Shazareth",
+    "zones": [
+      "tower",
+      "church"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto Sorceror@tower",
+      "zap shazareth",
+      "goto Treasure@tower",
+      "get crown",
+      "goto church@start",
+      "drop crown"
+    ]
+  },
+  {
+    "id": "holy-grail-seraph-cup",
+    "quest": "Q_GRAIL",
+    "name": "HolyGrail",
+    "zones": [
+      "catacomb"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto resting_place@catacomb",
+      "get cup"
+    ]
+  },
+  {
+    "id": "fire-kings-throne-pit",
+    "quest": "Q_FIERY_KING",
+    "name": "FireKings",
+    "zones": [
+      "waste",
+      "church"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto king@waste",
+      "zap djinni",
+      "get throne",
+      "goto church@start",
+      "drop throne"
+    ]
+  },
+  {
+    "id": "spike-glove-and-sapling",
+    "quest": "Q_SPIKE",
+    "name": "Spike",
+    "zones": [
+      "oaktree"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto Oaktree26@oaktree",
+      "push rock",
+      "get skeleton from depression",
+      "goto Oaktree37@oaktree",
+      "get picture",
+      "unlock safe with skeleton",
+      "open safe",
+      "get glove from safe",
+      "wear glove",
+      "goto Oaktree35@oaktree",
+      "zap sapling",
+      "get spike"
+    ]
+  },
+  {
+    "id": "painting-pit-trigger",
+    "quest": "Q_FIND_PAINTING",
+    "name": "Painting",
+    "zones": [
+      "frobozz",
+      "church"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto houseN@frobozz",
+      "open mailbox",
+      "get leaflet",
+      "goto outside@frobozz",
+      "push painting",
+      "put leaflet in window",
+      "push button",
+      "south",
+      "get painting",
+      "goto church@start",
+      "drop painting"
+    ]
+  },
+  {
+    "id": "draknor-prerequisite",
+    "quest": "Q_DRAKNOR",
+    "name": "Draknor",
+    "zones": [
+      "thyrannen"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto thyrannen58@thyrannen",
+      "zap draknor",
+      "goto thyrannen21@thyrannen",
+      "zap haggardly",
+      "goto thyrannen35@thyrannen",
+      "zap alchemist",
+      "goto thyrannen58@thyrannen",
+      "zap draknor"
+    ]
+  },
+  {
+    "id": "evolution-seven-fossils",
+    "quest": "Q_EVOLUTION",
+    "name": "Evolution",
+    "zones": [
+      "evolution"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto ordo3@evolution",
+      "dig",
+      "get astraspis",
+      "goto perm6@evolution",
+      "dig",
+      "get diplocaulus",
+      "goto tria3@evolution",
+      "examine leaves",
+      "get glevosaurus",
+      "goto eoce1@evolution",
+      "examine tree",
+      "get icaronycteris",
+      "goto cret8@evolution",
+      "get alphadon",
+      "goto jura3@evolution",
+      "push branch",
+      "get megazostrodon",
+      "goto jura13@evolution",
+      "push stone",
+      "get ardeosaurus",
+      "goto holo1@evolution",
+      "give astraspis to palaeontologist",
+      "give diplocaulus to palaeontologist",
+      "give glevosaurus to palaeontologist",
+      "give icaronycteris to palaeontologist",
+      "give alphadon to palaeontologist",
+      "give megazostrodon to palaeontologist",
+      "give ardeosaurus to palaeontologist"
+    ]
+  },
+  {
+    "id": "zodiac-five-items",
+    "quest": "Q_ZODIAC",
+    "name": "Zodiac",
+    "zones": [
+      "zodiac"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto aries@zodiac",
+      "zap aries",
+      "loot all",
+      "goto aquarius@zodiac",
+      "zap aquarius",
+      "loot all",
+      "goto libra@zodiac",
+      "zap libra",
+      "loot all",
+      "goto capricorn@zodiac",
+      "zap capricorn",
+      "loot all",
+      "goto lost1@zodiac",
+      "zap nightwing",
+      "loot all",
+      "get wine",
+      "goto library@zodiac",
+      "put fireball on pentagram",
+      "put waterball on pentagram",
+      "put airball on pentagram",
+      "put dirtball on pentagram",
+      "put wine on pentagram"
+    ]
+  },
+  {
+    "id": "sundisc-three-items",
+    "quest": "Q_SUNDISC",
+    "name": "SunDisc",
+    "zones": [
+      "ancient"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto Anc17@ancient",
+      "get feather",
+      "goto Anc60@ancient",
+      "get stone",
+      "goto Anc49@ancient",
+      "get disc",
+      "goto Anc36@ancient",
+      "put disc on pedestal"
+    ]
+  },
+  {
+    "id": "volcano-queen",
+    "quest": "Q_VOLCANO",
+    "name": "Volcano",
+    "zones": [
+      "volcano"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto bandilbar40@volcano",
+      "zap queen"
+    ]
+  },
+  {
+    "id": "sabre-ruby-repair",
+    "quest": "Q_SABRE",
+    "name": "Sabre",
+    "zones": [
+      "pirate"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto pirate31@pirate",
+      "get ruby",
+      "zap redbeard",
+      "goto pirate11@pirate",
+      "put ruby in sabre",
+      "loot all",
+      "put ruby in sabre"
+    ],
+    "checks": {
+      "4": {
+        "contains": [
+          "It isn't here."
+        ],
+        "absent": [
+          "Congratulations!"
+        ]
+      }
+    }
+  },
+  {
+    "id": "rainforest-skull-pit",
+    "quest": "Q_RAINFOREST",
+    "name": "Rainforest",
+    "zones": [
+      "rainforest",
+      "church"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto city3@rainforest",
+      "get skull",
+      "goto church@start",
+      "drop skull"
+    ]
+  },
+  {
+    "id": "noxypickle-eye-statue",
+    "quest": "Q_NOXYPICKLE",
+    "name": "Noxypickle",
+    "zones": [
+      "noxypickle"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto chamber@noxypickle",
+      "get cloak",
+      "get eye from cloak",
+      "goto temple@noxypickle",
+      "put eye in statue"
+    ]
+  },
+  {
+    "id": "talon-claw-pit",
+    "quest": "Q_TALON",
+    "name": "Talon",
+    "zones": [
+      "talon",
+      "church"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto talon50@talon",
+      "zap talon",
+      "goto talon51@talon",
+      "get claw",
+      "goto church@start",
+      "drop claw"
+    ]
+  },
+  {
+    "id": "abyss-guxx",
+    "quest": "Q_GUXX",
+    "name": "Abyss",
+    "zones": [
+      "abyss"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto cell@abyss",
+      "zap guxx"
+    ]
+  },
+  {
+    "id": "mithdan-crystal-pit",
+    "quest": "Q_MITHDAN",
+    "name": "Mithdan",
+    "zones": [
+      "mithdan",
+      "church"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto Mithdan51@mithdan",
+      "get crystal",
+      "get crystal",
+      "goto church@start",
+      "drop crystal"
+    ]
+  },
+  {
+    "id": "orchold-block-pit",
+    "quest": "Q_ORCHOLD",
+    "name": "Orchold",
+    "zones": [
+      "orchold",
+      "church"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto treasury@orchold",
+      "get block",
+      "goto church@start",
+      "drop block"
+    ]
+  },
+  {
+    "id": "ramses-mob-death",
+    "quest": "Q_RAMSES",
+    "name": "Ramses",
+    "zones": [
+      "cottage"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto cottage24@cottage",
+      "zap ramses"
+    ]
+  },
+  {
+    "id": "faffner-mob-death",
+    "quest": "Q_FAFFNER",
+    "name": "Faffner",
+    "zones": [
+      "nibelung"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto Nibelung87@nibelung",
+      "zap faffner"
+    ]
+  },
+  {
+    "id": "chlyon-forge",
+    "quest": "Q_CHLYON",
+    "name": "Chlyon",
+    "zones": [
+      "chlyon",
+      "cave"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto chlyon15@chlyon",
+      "get firestone",
+      "goto claymore@cave",
+      "get claymore",
+      "goto 342@cave",
+      "get ore",
+      "goto chlyon20@chlyon",
+      "open forge",
+      "put firestone in forge",
+      "put claymore in forge",
+      "light forge"
+    ]
+  },
+  {
+    "id": "mithril-forgemaster",
+    "quest": "Q_MITHRIL",
+    "name": "Mithril",
+    "zones": [
+      "cave"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto 342@cave",
+      "get ore",
+      "goto armory@cave",
+      "get warhammer",
+      "goto 336@cave",
+      "give ore to forgemaster"
+    ]
+  },
+  {
+    "id": "pink-elephant-beaker",
+    "quest": "Q_PINKELEPHANT",
+    "name": "PinkElephant",
+    "zones": [
+      "grove"
+    ],
+    "runner": "docker_quest_audit.py",
+    "status": "runtime",
+    "commands": [
+      "goto lab@grove",
+      "loot corpse",
+      "goto out_back@grove",
+      "get pipetman",
+      "goto lab@grove",
+      "put pipetman in beaker",
+      "zap platydonk",
+      "loot corpse",
+      "eat beaker"
+    ]
+  }
+]

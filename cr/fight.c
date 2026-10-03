@@ -359,7 +359,7 @@ void lootcom(void) {
 
   if (EQ(item1, "corpse")) {
     for (i = 0, j = -1 ; i < lnumchars(ploc(mynum)) ; i++) {
-       mob = lmob_nr(++i, ploc(mynum));
+       mob = lmob_nr(i, ploc(mynum));
        if (pstr(mob) < 0 && j == -1)
          j = mob;
        else if (pstr(mob) < 0) {
@@ -367,7 +367,10 @@ void lootcom(void) {
          return;
        }
      }
-     loot(j);
+     if (j == -1)
+       bprintf("There is no corpse here.\n");
+     else
+       loot(j);
   }
   else if (EQ(item1, "all")) {
     for (i = 0 ; i < lnumchars(ploc(mynum)) ; i++) {

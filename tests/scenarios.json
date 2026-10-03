@@ -1,0 +1,36 @@
+[
+  {
+    "id": "say-room-audience",
+    "verbs": ["say"],
+    "audiences": {
+      "receive": ["actor", "target", "same_room_witness"],
+      "exclude": ["remote_room"]
+    },
+    "command": "say {phrase}",
+    "expected_lines": {
+      "actor": "You say, \"{phrase}\"",
+      "target": "{actor} says, \"{phrase}\"",
+      "same_room_witness": "{actor} says, \"{phrase}\""
+    },
+    "excluded_text": ["{phrase}"],
+    "exact_text": true,
+    "smoke": true
+  },
+  {
+    "id": "sayto-target-and-room-audience",
+    "verbs": ["sayto"],
+    "audiences": {
+      "receive": ["actor", "target", "same_room_witness"],
+      "exclude": ["remote_room"]
+    },
+    "command": "sayto {target} {phrase}",
+    "expected_lines": {
+      "actor": "You say to {target}, \"{phrase}\"",
+      "target": "{actor} says to you \"{phrase}\"",
+      "same_room_witness": "{actor} says to {target}, \"{phrase}\""
+    },
+    "excluded_text": ["{phrase}"],
+    "exact_text": true,
+    "smoke": true
+  }
+]

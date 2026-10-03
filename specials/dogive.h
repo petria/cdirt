@@ -117,8 +117,8 @@ case MOB_VALLEY_CHICKEN:
 #ifdef LOCMIN_CAVE
 case MOB_CAVE_FORGEMASTER:
     if (ob == OBJ_CAVE_WARHAMMER || ob == OBJ_CAVE_ORE) {
-    if (iscarrby(OBJ_CAVE_WARHAMMER, pl) ||
-        iscarrby(OBJ_CAVE_ORE, pl)) {
+    if (iscarrby(OBJ_CAVE_WARHAMMER, mynum) &&
+        iscarrby(OBJ_CAVE_ORE, mynum)) {
           bprintf("With the Warhammer and Ore, The Forgemaster "
                   "creates and Axe of Mithril.\n");
           create(OBJ_CAVE_MITHRIL);
@@ -392,4 +392,3 @@ default:
     return;
   }
 #endif
-

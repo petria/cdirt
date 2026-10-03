@@ -1,0 +1,5124 @@
+{
+  "source": [
+    "data/verbs.src",
+    "src/parse.c"
+  ],
+  "verb_count": 390,
+  "unique_verb_ids": 356,
+  "output_api_call_sites": {
+    "bprintf": 2147,
+    "sendf": 242,
+    "sendl": 37,
+    "send_msg": 255,
+    "lsend_msg": 9,
+    "send_magic_msg": 34,
+    "sillycom": 20
+  },
+  "entries": [
+    {
+      "line": 1,
+      "word": "go",
+      "alias_of": null,
+      "verb_id": 1,
+      "dispatch": [
+        "bprintf",
+        "pfollow",
+        "dogocom"
+      ],
+      "dispatch_source_word": "GO",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 2,
+      "word": "north",
+      "alias_of": null,
+      "verb_id": 2,
+      "dispatch": [
+        "dodirn"
+      ],
+      "dispatch_source_word": "NORTH",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 3,
+      "word": "east",
+      "alias_of": null,
+      "verb_id": 3,
+      "dispatch": [
+        "dodirn"
+      ],
+      "dispatch_source_word": "EAST",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 4,
+      "word": "south",
+      "alias_of": null,
+      "verb_id": 4,
+      "dispatch": [
+        "dodirn"
+      ],
+      "dispatch_source_word": "SOUTH",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 5,
+      "word": "west",
+      "alias_of": null,
+      "verb_id": 5,
+      "dispatch": [
+        "dodirn"
+      ],
+      "dispatch_source_word": "WEST",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 6,
+      "word": "up",
+      "alias_of": null,
+      "verb_id": 6,
+      "dispatch": [
+        "dodirn"
+      ],
+      "dispatch_source_word": "UP",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 7,
+      "word": "down",
+      "alias_of": null,
+      "verb_id": 7,
+      "dispatch": [
+        "dodirn"
+      ],
+      "dispatch_source_word": "DOWN",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 8,
+      "word": "aboot",
+      "alias_of": null,
+      "verb_id": 8,
+      "dispatch": [
+        "cmd_aboot"
+      ],
+      "dispatch_source_word": "ABOOT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 9,
+      "word": "acct",
+      "alias_of": null,
+      "verb_id": 9,
+      "dispatch": [
+        "acctcom"
+      ],
+      "dispatch_source_word": "ACCT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 10,
+      "word": "actions",
+      "alias_of": null,
+      "verb_id": 10,
+      "dispatch": [
+        "actionscom"
+      ],
+      "dispatch_source_word": "ACTIONS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 11,
+      "word": "advisor",
+      "alias_of": "demi",
+      "verb_id": 11,
+      "dispatch": [
+        "com_handler"
+      ],
+      "dispatch_source_word": "DEMI",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 12,
+      "word": "aid",
+      "alias_of": null,
+      "verb_id": 12,
+      "dispatch": [
+        "spellcom"
+      ],
+      "dispatch_source_word": "AID",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 13,
+      "word": "ainfo",
+      "alias_of": null,
+      "verb_id": 13,
+      "dispatch": [
+        "cmd_ainfo"
+      ],
+      "dispatch_source_word": "AINFO",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 14,
+      "word": "alias",
+      "alias_of": null,
+      "verb_id": 14,
+      "dispatch": [
+        "aliascom"
+      ],
+      "dispatch_source_word": "ALIAS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 15,
+      "word": "aloof",
+      "alias_of": null,
+      "verb_id": 15,
+      "dispatch": [
+        "erreval",
+        "bprintf",
+        "sclrflg",
+        "ssetflg"
+      ],
+      "dispatch_source_word": "ALOOF",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 16,
+      "word": "aflags",
+      "alias_of": null,
+      "verb_id": 16,
+      "dispatch": [
+        "bprintf",
+        "obj_flags"
+      ],
+      "dispatch_source_word": "AFLAGS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 17,
+      "word": "achat",
+      "alias_of": null,
+      "verb_id": 17,
+      "dispatch": [
+        "cmd_achat"
+      ],
+      "dispatch_source_word": "ACHAT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 18,
+      "word": "agod",
+      "alias_of": null,
+      "verb_id": 18,
+      "dispatch": [
+        "cmd_achat"
+      ],
+      "dispatch_source_word": "AGOD",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 19,
+      "word": "acode",
+      "alias_of": null,
+      "verb_id": 19,
+      "dispatch": [
+        "cmd_achat"
+      ],
+      "dispatch_source_word": "ACODE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 20,
+      "word": "amudlist",
+      "alias_of": null,
+      "verb_id": 20,
+      "dispatch": [
+        "cmd_amudlist"
+      ],
+      "dispatch_source_word": "AMUDLIST",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 21,
+      "word": "amasslist",
+      "alias_of": null,
+      "verb_id": 21,
+      "dispatch": [
+        "cmd_amasslist"
+      ],
+      "dispatch_source_word": "AMASSLIST",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 22,
+      "word": "acopyright",
+      "alias_of": null,
+      "verb_id": 22,
+      "dispatch": [
+        "cmd_acopyright"
+      ],
+      "dispatch_source_word": "ACOPYRIGHT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 23,
+      "word": "apolicy",
+      "alias_of": null,
+      "verb_id": 23,
+      "dispatch": [
+        "cmd_apolicy"
+      ],
+      "dispatch_source_word": "APOLICY",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 24,
+      "word": "akick",
+      "alias_of": null,
+      "verb_id": 24,
+      "dispatch": [
+        "cmd_akick"
+      ],
+      "dispatch_source_word": "AKICK",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 25,
+      "word": "aversion",
+      "alias_of": null,
+      "verb_id": 25,
+      "dispatch": [
+        "cmd_aversion"
+      ],
+      "dispatch_source_word": "AVERSION",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 26,
+      "word": "anon",
+      "alias_of": null,
+      "verb_id": 26,
+      "dispatch": [
+        "anoncom"
+      ],
+      "dispatch_source_word": "ANON",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 27,
+      "word": "apply",
+      "alias_of": null,
+      "verb_id": 27,
+      "dispatch": [
+        "wearcom"
+      ],
+      "dispatch_source_word": "WEAR",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 28,
+      "word": "armor",
+      "alias_of": null,
+      "verb_id": 28,
+      "dispatch": [
+        "armorcom"
+      ],
+      "dispatch_source_word": "ARMOR",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 29,
+      "word": "ashutdown",
+      "alias_of": null,
+      "verb_id": 29,
+      "dispatch": [
+        "cmd_ashutdown"
+      ],
+      "dispatch_source_word": "ASHUTDOWN",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 30,
+      "word": "ask",
+      "alias_of": "tell",
+      "verb_id": 30,
+      "dispatch": [
+        "tellcom"
+      ],
+      "dispatch_source_word": "TELL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 31,
+      "word": "asmortal",
+      "alias_of": null,
+      "verb_id": 31,
+      "dispatch": [
+        "doverb_default"
+      ],
+      "dispatch_source_word": "DEFAULT",
+      "dispatch_kind": "doverb-default",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 32,
+      "word": "at",
+      "alias_of": null,
+      "verb_id": 32,
+      "dispatch": [
+        "incom"
+      ],
+      "dispatch_source_word": "AT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 33,
+      "word": "atell",
+      "alias_of": null,
+      "verb_id": 33,
+      "dispatch": [
+        "cmd_atell"
+      ],
+      "dispatch_source_word": "ATELL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 34,
+      "word": "areply",
+      "alias_of": null,
+      "verb_id": 34,
+      "dispatch": [
+        "cmd_areply"
+      ],
+      "dispatch_source_word": "AREPLY",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 35,
+      "word": "attack",
+      "alias_of": null,
+      "verb_id": 35,
+      "dispatch": [
+        "killcom"
+      ],
+      "dispatch_source_word": "KILL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 36,
+      "word": "atvis",
+      "alias_of": null,
+      "verb_id": 36,
+      "dispatch": [
+        "atviscom"
+      ],
+      "dispatch_source_word": "ATVIS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 37,
+      "word": "autoexit",
+      "alias_of": null,
+      "verb_id": 37,
+      "dispatch": [
+        "togglecom"
+      ],
+      "dispatch_source_word": "AUTOEXIT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 38,
+      "word": "away",
+      "alias_of": null,
+      "verb_id": 38,
+      "dispatch": [
+        "getreinput",
+        "awaymsgcom",
+        "togglecom",
+        "bprintf"
+      ],
+      "dispatch_source_word": "AWAY",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 39,
+      "word": "awho",
+      "alias_of": null,
+      "verb_id": 39,
+      "dispatch": [
+        "cmd_awho"
+      ],
+      "dispatch_source_word": "AWHO",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 40,
+      "word": "awiz",
+      "alias_of": null,
+      "verb_id": 40,
+      "dispatch": [
+        "com_handler"
+      ],
+      "dispatch_source_word": "AWIZ",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 41,
+      "word": "babel",
+      "alias_of": null,
+      "verb_id": 41,
+      "dispatch": [
+        "spellcom"
+      ],
+      "dispatch_source_word": "BABEL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 42,
+      "word": "backstab",
+      "alias_of": null,
+      "verb_id": 42,
+      "dispatch": [
+        "backstabcom"
+      ],
+      "dispatch_source_word": "BACKSTAB",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 43,
+      "word": "banlist",
+      "alias_of": null,
+      "verb_id": 43,
+      "dispatch": [
+        "banlistcom"
+      ],
+      "dispatch_source_word": "BANLIST",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 44,
+      "word": "banhost",
+      "alias_of": null,
+      "verb_id": 44,
+      "dispatch": [
+        "bancom"
+      ],
+      "dispatch_source_word": "BANHOST",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 45,
+      "word": "banchar",
+      "alias_of": null,
+      "verb_id": 45,
+      "dispatch": [
+        "bancom"
+      ],
+      "dispatch_source_word": "BANCHAR",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 46,
+      "word": "banacct",
+      "alias_of": null,
+      "verb_id": 46,
+      "dispatch": [
+        "bancom"
+      ],
+      "dispatch_source_word": "BANACCT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 47,
+      "word": "banwho",
+      "alias_of": null,
+      "verb_id": 47,
+      "dispatch": [
+        "bancom"
+      ],
+      "dispatch_source_word": "BANWHO",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 48,
+      "word": "bang",
+      "alias_of": null,
+      "verb_id": 48,
+      "dispatch": [
+        "erreval",
+        "broad"
+      ],
+      "dispatch_source_word": "BANG",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 49,
+      "word": "bash",
+      "alias_of": null,
+      "verb_id": 49,
+      "dispatch": [
+        "bashcom"
+      ],
+      "dispatch_source_word": "BASH",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 50,
+      "word": "become",
+      "alias_of": null,
+      "verb_id": 50,
+      "dispatch": [
+        "becom"
+      ],
+      "dispatch_source_word": "BECOME",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 51,
+      "word": "beep",
+      "alias_of": null,
+      "verb_id": 51,
+      "dispatch": [
+        "beepcom"
+      ],
+      "dispatch_source_word": "BEEP",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 52,
+      "word": "bhands",
+      "alias_of": null,
+      "verb_id": 52,
+      "dispatch": [
+        "spellcom"
+      ],
+      "dispatch_source_word": "BHANDS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 53,
+      "word": "blind",
+      "alias_of": null,
+      "verb_id": 53,
+      "dispatch": [
+        "spellcom"
+      ],
+      "dispatch_source_word": "BLIND",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 54,
+      "word": "blow",
+      "alias_of": null,
+      "verb_id": 54,
+      "dispatch": [
+        "blowcom"
+      ],
+      "dispatch_source_word": "BLOW",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 55,
+      "word": "blur",
+      "alias_of": null,
+      "verb_id": 55,
+      "dispatch": [
+        "spellcom"
+      ],
+      "dispatch_source_word": "BLUR",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 56,
+      "word": "bong",
+      "alias_of": null,
+      "verb_id": 56,
+      "dispatch": [
+        "bongcom"
+      ],
+      "dispatch_source_word": "BONG",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 57,
+      "word": "bob",
+      "alias_of": null,
+      "verb_id": 57,
+      "dispatch": [
+        "bobcom"
+      ],
+      "dispatch_source_word": "BOB",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 58,
+      "word": "break",
+      "alias_of": "attack",
+      "verb_id": 35,
+      "dispatch": [
+        "killcom"
+      ],
+      "dispatch_source_word": "KILL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 59,
+      "word": "breset",
+      "alias_of": null,
+      "verb_id": 58,
+      "dispatch": [
+        "bresetcom"
+      ],
+      "dispatch_source_word": "BRESET",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 60,
+      "word": "brief",
+      "alias_of": null,
+      "verb_id": 59,
+      "dispatch": [
+        "togglecom"
+      ],
+      "dispatch_source_word": "BRIEF",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 61,
+      "word": "bug",
+      "alias_of": null,
+      "verb_id": 60,
+      "dispatch": [
+        "bugcom"
+      ],
+      "dispatch_source_word": "BUG",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 62,
+      "word": "burn",
+      "alias_of": null,
+      "verb_id": 61,
+      "dispatch": [
+        "burncom"
+      ],
+      "dispatch_source_word": "BURN",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 63,
+      "word": "busy",
+      "alias_of": null,
+      "verb_id": 62,
+      "dispatch": [
+        "togglecom"
+      ],
+      "dispatch_source_word": "BUSY",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 64,
+      "word": "buy",
+      "alias_of": null,
+      "verb_id": 63,
+      "dispatch": [
+        "buycom"
+      ],
+      "dispatch_source_word": "BUY",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 65,
+      "word": "cfr",
+      "alias_of": null,
+      "verb_id": 64,
+      "dispatch": [
+        "cfrcom"
+      ],
+      "dispatch_source_word": "CFR",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 66,
+      "word": "change",
+      "alias_of": null,
+      "verb_id": 65,
+      "dispatch": [
+        "changecom"
+      ],
+      "dispatch_source_word": "CHANGE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 67,
+      "word": "challenge",
+      "alias_of": null,
+      "verb_id": 66,
+      "dispatch": [
+        "challengecom"
+      ],
+      "dispatch_source_word": "CHALLENGE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 68,
+      "word": "channel",
+      "alias_of": null,
+      "verb_id": 67,
+      "dispatch": [
+        "channelcom"
+      ],
+      "dispatch_source_word": "CHANNEL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 69,
+      "word": "chat",
+      "alias_of": "gossip",
+      "verb_id": 68,
+      "dispatch": [
+        "com_handler"
+      ],
+      "dispatch_source_word": "GOSSIP",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 70,
+      "word": "clear",
+      "alias_of": null,
+      "verb_id": 69,
+      "dispatch": [
+        "bprintf"
+      ],
+      "dispatch_source_word": "CLEAR",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 71,
+      "word": "clevel",
+      "alias_of": null,
+      "verb_id": 70,
+      "dispatch": [
+        "doverb_default"
+      ],
+      "dispatch_source_word": "DEFAULT",
+      "dispatch_kind": "doverb-default",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 72,
+      "word": "climb",
+      "alias_of": "go",
+      "verb_id": 1,
+      "dispatch": [
+        "bprintf",
+        "pfollow",
+        "dogocom"
+      ],
+      "dispatch_source_word": "GO",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 73,
+      "word": "close",
+      "alias_of": null,
+      "verb_id": 71,
+      "dispatch": [
+        "closecom"
+      ],
+      "dispatch_source_word": "CLOSE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 74,
+      "word": "clone",
+      "alias_of": null,
+      "verb_id": 72,
+      "dispatch": [
+        "clonecom"
+      ],
+      "dispatch_source_word": "CLONE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 75,
+      "word": "color",
+      "alias_of": null,
+      "verb_id": 73,
+      "dispatch": [
+        "bprintf",
+        "sclrflg",
+        "ssetflg"
+      ],
+      "dispatch_source_word": "COLOR",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 76,
+      "word": "coding",
+      "alias_of": null,
+      "verb_id": 74,
+      "dispatch": [
+        "togglecoding"
+      ],
+      "dispatch_source_word": "CODING",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 77,
+      "word": "compare",
+      "alias_of": null,
+      "verb_id": 75,
+      "dispatch": [
+        "comparecom"
+      ],
+      "dispatch_source_word": "COMPARE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 78,
+      "word": "configure",
+      "alias_of": null,
+      "verb_id": 76,
+      "dispatch": [
+        "configurecom"
+      ],
+      "dispatch_source_word": "CONFIGURE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 79,
+      "word": "converse",
+      "alias_of": null,
+      "verb_id": 77,
+      "dispatch": [
+        "conversecom"
+      ],
+      "dispatch_source_word": "CONVERSE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 80,
+      "word": "couples",
+      "alias_of": null,
+      "verb_id": 78,
+      "dispatch": [
+        "bprintf"
+      ],
+      "dispatch_source_word": "COUPLES",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 81,
+      "word": "credits",
+      "alias_of": null,
+      "verb_id": 79,
+      "dispatch": [
+        "bprintf"
+      ],
+      "dispatch_source_word": "CREDITS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 82,
+      "word": "cripple",
+      "alias_of": null,
+      "verb_id": 80,
+      "dispatch": [
+        "spellcom"
+      ],
+      "dispatch_source_word": "CRIPPLE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 83,
+      "word": "crash",
+      "alias_of": null,
+      "verb_id": 81,
+      "dispatch": [
+        "crashcom"
+      ],
+      "dispatch_source_word": "CRASH",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 84,
+      "word": "crawl",
+      "alias_of": null,
+      "verb_id": 82,
+      "dispatch": [
+        "crawlcom"
+      ],
+      "dispatch_source_word": "CRAWL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 85,
+      "word": "ctime",
+      "alias_of": null,
+      "verb_id": 83,
+      "dispatch": [
+        "doverb_default"
+      ],
+      "dispatch_source_word": "DEFAULT",
+      "dispatch_kind": "doverb-default",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 86,
+      "word": "cure",
+      "alias_of": null,
+      "verb_id": 84,
+      "dispatch": [
+        "curecom"
+      ],
+      "dispatch_source_word": "CURE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 87,
+      "word": "cut",
+      "alias_of": null,
+      "verb_id": 85,
+      "dispatch": [
+        "doverb_default"
+      ],
+      "dispatch_source_word": "DEFAULT",
+      "dispatch_kind": "doverb-default",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 88,
+      "word": "damage",
+      "alias_of": null,
+      "verb_id": 86,
+      "dispatch": [
+        "spellcom"
+      ],
+      "dispatch_source_word": "DAMAGE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 89,
+      "word": "deafen",
+      "alias_of": null,
+      "verb_id": 87,
+      "dispatch": [
+        "spellcom"
+      ],
+      "dispatch_source_word": "DEAFEN",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 90,
+      "word": "delete",
+      "alias_of": null,
+      "verb_id": 88,
+      "dispatch": [
+        "deletecom"
+      ],
+      "dispatch_source_word": "DELETE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 91,
+      "word": "destruct",
+      "alias_of": null,
+      "verb_id": 89,
+      "dispatch": [
+        "destructcom"
+      ],
+      "dispatch_source_word": "DESTRUCT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 92,
+      "word": "debug",
+      "alias_of": null,
+      "verb_id": 90,
+      "dispatch": [
+        "debugcom"
+      ],
+      "dispatch_source_word": "DEBUG",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 93,
+      "word": "demi",
+      "alias_of": "advisor",
+      "verb_id": 11,
+      "dispatch": [
+        "com_handler"
+      ],
+      "dispatch_source_word": "DEMI",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 94,
+      "word": "description",
+      "alias_of": null,
+      "verb_id": 91,
+      "dispatch": [
+        "change_desc"
+      ],
+      "dispatch_source_word": "DESCRIPTION",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 95,
+      "word": "dig",
+      "alias_of": null,
+      "verb_id": 92,
+      "dispatch": [
+        "digcom"
+      ],
+      "dispatch_source_word": "DIG",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 96,
+      "word": "drink",
+      "alias_of": null,
+      "verb_id": 93,
+      "dispatch": [
+        "eatcom"
+      ],
+      "dispatch_source_word": "EAT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 97,
+      "word": "drop",
+      "alias_of": null,
+      "verb_id": 94,
+      "dispatch": [
+        "dropobjcom"
+      ],
+      "dispatch_source_word": "DROP",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 98,
+      "word": "erasezone",
+      "alias_of": null,
+      "verb_id": 95,
+      "dispatch": [
+        "erasezonecom"
+      ],
+      "dispatch_source_word": "ERASEZONE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 99,
+      "word": "eat",
+      "alias_of": "drink",
+      "verb_id": 93,
+      "dispatch": [
+        "eatcom"
+      ],
+      "dispatch_source_word": "EAT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 100,
+      "word": "echo",
+      "alias_of": null,
+      "verb_id": 96,
+      "dispatch": [
+        "echocom"
+      ],
+      "dispatch_source_word": "ECHO",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 101,
+      "word": "echoall",
+      "alias_of": null,
+      "verb_id": 97,
+      "dispatch": [
+        "echoallcom"
+      ],
+      "dispatch_source_word": "ECHOALL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 102,
+      "word": "echoto",
+      "alias_of": null,
+      "verb_id": 98,
+      "dispatch": [
+        "echotocom"
+      ],
+      "dispatch_source_word": "ECHOTO",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 103,
+      "word": "edit",
+      "alias_of": null,
+      "verb_id": 99,
+      "dispatch": [
+        "editcom"
+      ],
+      "dispatch_source_word": "EDIT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 104,
+      "word": "eflags",
+      "alias_of": null,
+      "verb_id": 100,
+      "dispatch": [
+        "mob_flags"
+      ],
+      "dispatch_source_word": "EFLAGS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 105,
+      "word": "emote",
+      "alias_of": null,
+      "verb_id": 101,
+      "dispatch": [
+        "emotecom"
+      ],
+      "dispatch_source_word": "EMOTE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 106,
+      "word": "emoteall",
+      "alias_of": null,
+      "verb_id": 102,
+      "dispatch": [
+        "emoteallcom"
+      ],
+      "dispatch_source_word": "EMOTEALL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 107,
+      "word": "emoteto",
+      "alias_of": null,
+      "verb_id": 103,
+      "dispatch": [
+        "emotetocom"
+      ],
+      "dispatch_source_word": "EMOTETO",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 108,
+      "word": "empty",
+      "alias_of": null,
+      "verb_id": 104,
+      "dispatch": [
+        "emptycom"
+      ],
+      "dispatch_source_word": "EMPTY",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 109,
+      "word": "equipment",
+      "alias_of": null,
+      "verb_id": 105,
+      "dispatch": [
+        "equcom"
+      ],
+      "dispatch_source_word": "EQUIPMENT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 110,
+      "word": "examine",
+      "alias_of": null,
+      "verb_id": 106,
+      "dispatch": [
+        "examcom"
+      ],
+      "dispatch_source_word": "EXAMINE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 111,
+      "word": "exits",
+      "alias_of": null,
+      "verb_id": 107,
+      "dispatch": [
+        "exitcom"
+      ],
+      "dispatch_source_word": "EXITS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 112,
+      "word": "exorcise",
+      "alias_of": null,
+      "verb_id": 108,
+      "dispatch": [
+        "exorcom"
+      ],
+      "dispatch_source_word": "EXORCISE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 113,
+      "word": "extinguish",
+      "alias_of": null,
+      "verb_id": 109,
+      "dispatch": [
+        "extinguishcom"
+      ],
+      "dispatch_source_word": "EXTINGUISH",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 114,
+      "word": "fakequit",
+      "alias_of": null,
+      "verb_id": 110,
+      "dispatch": [
+        "fakequitcom"
+      ],
+      "dispatch_source_word": "FAKEQUIT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 115,
+      "word": "fdlist",
+      "alias_of": null,
+      "verb_id": 111,
+      "dispatch": [
+        "fdlistcom"
+      ],
+      "dispatch_source_word": "FDLIST",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 116,
+      "word": "fill",
+      "alias_of": null,
+      "verb_id": 112,
+      "dispatch": [
+        "fillcom"
+      ],
+      "dispatch_source_word": "FILL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 117,
+      "word": "find",
+      "alias_of": null,
+      "verb_id": 113,
+      "dispatch": [
+        "findcom"
+      ],
+      "dispatch_source_word": "FIND",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 118,
+      "word": "fireball",
+      "alias_of": null,
+      "verb_id": 114,
+      "dispatch": [
+        "spellcom"
+      ],
+      "dispatch_source_word": "FIREBALL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 119,
+      "word": "flee",
+      "alias_of": null,
+      "verb_id": 115,
+      "dispatch": [
+        "flee"
+      ],
+      "dispatch_source_word": "FLEE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 120,
+      "word": "flist",
+      "alias_of": null,
+      "verb_id": 116,
+      "dispatch": [
+        "forgetlist"
+      ],
+      "dispatch_source_word": "FLIST",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 121,
+      "word": "flowers",
+      "alias_of": null,
+      "verb_id": 117,
+      "dispatch": [
+        "flowercom"
+      ],
+      "dispatch_source_word": "FLOWERS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 122,
+      "word": "flush",
+      "alias_of": null,
+      "verb_id": 118,
+      "dispatch": [
+        "flushcom"
+      ],
+      "dispatch_source_word": "FLUSH",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 123,
+      "word": "follow",
+      "alias_of": null,
+      "verb_id": 119,
+      "dispatch": [
+        "followcom"
+      ],
+      "dispatch_source_word": "FOLLOW",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 124,
+      "word": "follist",
+      "alias_of": null,
+      "verb_id": 120,
+      "dispatch": [
+        "follist"
+      ],
+      "dispatch_source_word": "FOLLIST",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 125,
+      "word": "foo",
+      "alias_of": null,
+      "verb_id": 121,
+      "dispatch": [
+        "doverb_default"
+      ],
+      "dispatch_source_word": "DEFAULT",
+      "dispatch_kind": "doverb-default",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 126,
+      "word": "force",
+      "alias_of": null,
+      "verb_id": 122,
+      "dispatch": [
+        "forcecom"
+      ],
+      "dispatch_source_word": "FORCE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 127,
+      "word": "forceall",
+      "alias_of": null,
+      "verb_id": 123,
+      "dispatch": [
+        "forceallcom"
+      ],
+      "dispatch_source_word": "FORCEALL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 128,
+      "word": "forget",
+      "alias_of": null,
+      "verb_id": 124,
+      "dispatch": [
+        "forgetcom"
+      ],
+      "dispatch_source_word": "FORGET",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 129,
+      "word": "freaq",
+      "alias_of": null,
+      "verb_id": 125,
+      "dispatch": [
+        "freaqcom"
+      ],
+      "dispatch_source_word": "FREAQ",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 130,
+      "word": "frob",
+      "alias_of": null,
+      "verb_id": 126,
+      "dispatch": [
+        "frobcom"
+      ],
+      "dispatch_source_word": "FROB",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 131,
+      "word": "frost",
+      "alias_of": null,
+      "verb_id": 127,
+      "dispatch": [
+        "spellcom"
+      ],
+      "dispatch_source_word": "FROST",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 132,
+      "word": "gchat",
+      "alias_of": null,
+      "verb_id": 128,
+      "dispatch": [
+        "chatcom"
+      ],
+      "dispatch_source_word": "GCHAT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 133,
+      "word": "get",
+      "alias_of": null,
+      "verb_id": 129,
+      "dispatch": [
+        "getcom"
+      ],
+      "dispatch_source_word": "GET",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 134,
+      "word": "give",
+      "alias_of": null,
+      "verb_id": 130,
+      "dispatch": [
+        "givecom"
+      ],
+      "dispatch_source_word": "GIVE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 135,
+      "word": "global",
+      "alias_of": null,
+      "verb_id": 131,
+      "dispatch": [
+        "globalcom"
+      ],
+      "dispatch_source_word": "GLOBAL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 136,
+      "word": "gossip",
+      "alias_of": "chat",
+      "verb_id": 68,
+      "dispatch": [
+        "com_handler"
+      ],
+      "dispatch_source_word": "GOSSIP",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 137,
+      "word": "goto",
+      "alias_of": null,
+      "verb_id": 132,
+      "dispatch": [
+        "gotocom"
+      ],
+      "dispatch_source_word": "GOTO",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 138,
+      "word": "god",
+      "alias_of": null,
+      "verb_id": 133,
+      "dispatch": [
+        "com_handler"
+      ],
+      "dispatch_source_word": "GOD",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 139,
+      "word": "group",
+      "alias_of": null,
+      "verb_id": 134,
+      "dispatch": [
+        "group"
+      ],
+      "dispatch_source_word": "GROUP",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 140,
+      "word": "gtell",
+      "alias_of": null,
+      "verb_id": 135,
+      "dispatch": [
+        "gtell"
+      ],
+      "dispatch_source_word": "GTELL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 141,
+      "word": "glist",
+      "alias_of": null,
+      "verb_id": 136,
+      "dispatch": [
+        "glist"
+      ],
+      "dispatch_source_word": "GLIST",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 142,
+      "word": "heal",
+      "alias_of": null,
+      "verb_id": 137,
+      "dispatch": [
+        "healcom"
+      ],
+      "dispatch_source_word": "HEAL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 143,
+      "word": "healall",
+      "alias_of": null,
+      "verb_id": 138,
+      "dispatch": [
+        "healallcom"
+      ],
+      "dispatch_source_word": "HEALALL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 144,
+      "word": "hearback",
+      "alias_of": null,
+      "verb_id": 139,
+      "dispatch": [
+        "togglecom"
+      ],
+      "dispatch_source_word": "HEARBACK",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 145,
+      "word": "help",
+      "alias_of": null,
+      "verb_id": 140,
+      "dispatch": [
+        "helpcom"
+      ],
+      "dispatch_source_word": "HELP",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 146,
+      "word": "hit",
+      "alias_of": "attack",
+      "verb_id": 35,
+      "dispatch": [
+        "killcom"
+      ],
+      "dispatch_source_word": "KILL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 147,
+      "word": "hosts",
+      "alias_of": "tty",
+      "verb_id": 141,
+      "dispatch": [
+        "hostscom"
+      ],
+      "dispatch_source_word": "HOSTS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 148,
+      "word": "inventory",
+      "alias_of": null,
+      "verb_id": 142,
+      "dispatch": [
+        "inventory"
+      ],
+      "dispatch_source_word": "INVENTORY",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 149,
+      "word": "icestorm",
+      "alias_of": null,
+      "verb_id": 143,
+      "dispatch": [
+        "spellcom"
+      ],
+      "dispatch_source_word": "ICESTORM",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 150,
+      "word": "idle",
+      "alias_of": null,
+      "verb_id": 144,
+      "dispatch": [
+        "idlecom"
+      ],
+      "dispatch_source_word": "IDLE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 151,
+      "word": "iminvis",
+      "alias_of": null,
+      "verb_id": 145,
+      "dispatch": [
+        "doverb_default"
+      ],
+      "dispatch_source_word": "DEFAULT",
+      "dispatch_kind": "doverb-default",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 152,
+      "word": "in",
+      "alias_of": null,
+      "verb_id": 146,
+      "dispatch": [
+        "incom"
+      ],
+      "dispatch_source_word": "IN",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 153,
+      "word": "info",
+      "alias_of": null,
+      "verb_id": 147,
+      "dispatch": [
+        "infocom"
+      ],
+      "dispatch_source_word": "INFO",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 154,
+      "word": "invisible",
+      "alias_of": null,
+      "verb_id": 148,
+      "dispatch": [
+        "inviscom"
+      ],
+      "dispatch_source_word": "INVISIBLE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 155,
+      "word": "istari",
+      "alias_of": "prophet",
+      "verb_id": 149,
+      "dispatch": [
+        "com_handler"
+      ],
+      "dispatch_source_word": "ISTARI",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 156,
+      "word": "jump",
+      "alias_of": null,
+      "verb_id": 150,
+      "dispatch": [
+        "jumpcom"
+      ],
+      "dispatch_source_word": "JUMP",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 157,
+      "word": "kill",
+      "alias_of": "attack",
+      "verb_id": 35,
+      "dispatch": [
+        "killcom"
+      ],
+      "dispatch_source_word": "KILL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 158,
+      "word": "klock",
+      "alias_of": null,
+      "verb_id": 151,
+      "dispatch": [
+        "klockcom"
+      ],
+      "dispatch_source_word": "KLOCK",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 159,
+      "word": "knot",
+      "alias_of": null,
+      "verb_id": 152,
+      "dispatch": [
+        "doverb_default"
+      ],
+      "dispatch_source_word": "DEFAULT",
+      "dispatch_kind": "doverb-default",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 160,
+      "word": "look",
+      "alias_of": null,
+      "verb_id": 153,
+      "dispatch": [
+        "lookcom"
+      ],
+      "dispatch_source_word": "LOOK",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 161,
+      "word": "link",
+      "alias_of": null,
+      "verb_id": 154,
+      "dispatch": [
+        "linkcom"
+      ],
+      "dispatch_source_word": "LINK",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 162,
+      "word": "laston",
+      "alias_of": null,
+      "verb_id": 155,
+      "dispatch": [
+        "lastoncom"
+      ],
+      "dispatch_source_word": "LASTON",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 163,
+      "word": "lang",
+      "alias_of": null,
+      "verb_id": 156,
+      "dispatch": [
+        "langcom"
+      ],
+      "dispatch_source_word": "LANG",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 164,
+      "word": "levels",
+      "alias_of": null,
+      "verb_id": 157,
+      "dispatch": [
+        "levelscom"
+      ],
+      "dispatch_source_word": "LEVELS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 165,
+      "word": "levecho",
+      "alias_of": null,
+      "verb_id": 158,
+      "dispatch": [
+        "levechocom"
+      ],
+      "dispatch_source_word": "LEVECHO",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 166,
+      "word": "lflags",
+      "alias_of": null,
+      "verb_id": 159,
+      "dispatch": [
+        "loc_flags"
+      ],
+      "dispatch_source_word": "LFLAGS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 167,
+      "word": "lift",
+      "alias_of": null,
+      "verb_id": 160,
+      "dispatch": [
+        "opencom"
+      ],
+      "dispatch_source_word": "OPEN",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 168,
+      "word": "light",
+      "alias_of": null,
+      "verb_id": 161,
+      "dispatch": [
+        "lightcom"
+      ],
+      "dispatch_source_word": "LIGHT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 169,
+      "word": "lit",
+      "alias_of": null,
+      "verb_id": 162,
+      "dispatch": [
+        "spellcom",
+        "litcom"
+      ],
+      "dispatch_source_word": "LIT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 170,
+      "word": "load",
+      "alias_of": null,
+      "verb_id": 163,
+      "dispatch": [
+        "loadcom"
+      ],
+      "dispatch_source_word": "LOAD",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 171,
+      "word": "locations",
+      "alias_of": null,
+      "verb_id": 164,
+      "dispatch": [
+        "locationscom"
+      ],
+      "dispatch_source_word": "LOCATIONS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 172,
+      "word": "lock",
+      "alias_of": null,
+      "verb_id": 165,
+      "dispatch": [
+        "lockcom"
+      ],
+      "dispatch_source_word": "LOCK",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 173,
+      "word": "log",
+      "alias_of": null,
+      "verb_id": 166,
+      "dispatch": [
+        "writelog"
+      ],
+      "dispatch_source_word": "LOG",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 174,
+      "word": "loot",
+      "alias_of": null,
+      "verb_id": 167,
+      "dispatch": [
+        "lootcom"
+      ],
+      "dispatch_source_word": "LOOT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 175,
+      "word": "lose",
+      "alias_of": null,
+      "verb_id": 168,
+      "dispatch": [
+        "losecom"
+      ],
+      "dispatch_source_word": "LOSE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 176,
+      "word": "lsay",
+      "alias_of": null,
+      "verb_id": 169,
+      "dispatch": [
+        "lsaycom"
+      ],
+      "dispatch_source_word": "LSAY",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 177,
+      "word": "mail",
+      "alias_of": null,
+      "verb_id": 170,
+      "dispatch": [
+        "mailcom"
+      ],
+      "dispatch_source_word": "MAIL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 178,
+      "word": "makepig",
+      "alias_of": null,
+      "verb_id": 171,
+      "dispatch": [
+        "spellcom"
+      ],
+      "dispatch_source_word": "MAKEPIG",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 179,
+      "word": "mask",
+      "alias_of": null,
+      "verb_id": 172,
+      "dispatch": [
+        "mob_flags"
+      ],
+      "dispatch_source_word": "MASK",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 180,
+      "word": "maxstate",
+      "alias_of": null,
+      "verb_id": 173,
+      "dispatch": [
+        "maxstatecom"
+      ],
+      "dispatch_source_word": "MAXSTATE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 181,
+      "word": "meditate",
+      "alias_of": null,
+      "verb_id": 174,
+      "dispatch": [
+        "bprintf",
+        "trapch",
+        "mudlog"
+      ],
+      "dispatch_source_word": "MEDITATE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 182,
+      "word": "mflags",
+      "alias_of": null,
+      "verb_id": 175,
+      "dispatch": [
+        "mob_flags"
+      ],
+      "dispatch_source_word": "MFLAGS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 183,
+      "word": "missile",
+      "alias_of": null,
+      "verb_id": 176,
+      "dispatch": [
+        "spellcom"
+      ],
+      "dispatch_source_word": "MISSILE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 184,
+      "word": "mobiles",
+      "alias_of": null,
+      "verb_id": 177,
+      "dispatch": [
+        "mobilecom"
+      ],
+      "dispatch_source_word": "MOBILES",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 185,
+      "word": "monochrome",
+      "alias_of": "color",
+      "verb_id": 73,
+      "dispatch": [
+        "bprintf",
+        "sclrflg",
+        "ssetflg"
+      ],
+      "dispatch_source_word": "COLOR",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 186,
+      "word": "move",
+      "alias_of": null,
+      "verb_id": 178,
+      "dispatch": [
+        "pushcom"
+      ],
+      "dispatch_source_word": "PUSH",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 187,
+      "word": "mstat",
+      "alias_of": null,
+      "verb_id": 179,
+      "dispatch": [
+        "muserscom"
+      ],
+      "dispatch_source_word": "MSTAT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 188,
+      "word": "mute",
+      "alias_of": null,
+      "verb_id": 180,
+      "dispatch": [
+        "spellcom"
+      ],
+      "dispatch_source_word": "MUTE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 189,
+      "word": "musers",
+      "alias_of": null,
+      "verb_id": 181,
+      "dispatch": [
+        "muserscom"
+      ],
+      "dispatch_source_word": "MUSERS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 190,
+      "word": "mwho",
+      "alias_of": null,
+      "verb_id": 182,
+      "dispatch": [
+        "mwhocom"
+      ],
+      "dispatch_source_word": "MWHO",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 191,
+      "word": "newstyle",
+      "alias_of": null,
+      "verb_id": 183,
+      "dispatch": [
+        "togglecom"
+      ],
+      "dispatch_source_word": "NEWSTYLE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 192,
+      "word": "nflags",
+      "alias_of": null,
+      "verb_id": 184,
+      "dispatch": [
+        "mob_flags"
+      ],
+      "dispatch_source_word": "NFLAGS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 193,
+      "word": "noadv",
+      "alias_of": "ndgod",
+      "verb_id": 185,
+      "dispatch": [
+        "nolinecom"
+      ],
+      "dispatch_source_word": "NDGOD",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 194,
+      "word": "noanon",
+      "alias_of": null,
+      "verb_id": 186,
+      "dispatch": [
+        "nolinecom"
+      ],
+      "dispatch_source_word": "NOANON",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 195,
+      "word": "noawiz",
+      "alias_of": null,
+      "verb_id": 187,
+      "dispatch": [
+        "nolinecom"
+      ],
+      "dispatch_source_word": "NOAWIZ",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 196,
+      "word": "nobeep",
+      "alias_of": null,
+      "verb_id": 188,
+      "dispatch": [
+        "togglecom"
+      ],
+      "dispatch_source_word": "NOBEEP",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 197,
+      "word": "noblink",
+      "alias_of": null,
+      "verb_id": 189,
+      "dispatch": [
+        "togglecom"
+      ],
+      "dispatch_source_word": "NOBLINK",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 198,
+      "word": "nochat",
+      "alias_of": "nogossip",
+      "verb_id": 190,
+      "dispatch": [
+        "nolinecom"
+      ],
+      "dispatch_source_word": "NOCHAT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 199,
+      "word": "ndgod",
+      "alias_of": "noadv",
+      "verb_id": 185,
+      "dispatch": [
+        "nolinecom"
+      ],
+      "dispatch_source_word": "NDGOD",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 200,
+      "word": "nofight",
+      "alias_of": null,
+      "verb_id": 191,
+      "dispatch": [
+        "togglecom"
+      ],
+      "dispatch_source_word": "NOFIGHT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 201,
+      "word": "noflag",
+      "alias_of": null,
+      "verb_id": 192,
+      "dispatch": [
+        "togglecom"
+      ],
+      "dispatch_source_word": "NOFLAG",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 202,
+      "word": "nogod",
+      "alias_of": null,
+      "verb_id": 193,
+      "dispatch": [
+        "nolinecom"
+      ],
+      "dispatch_source_word": "NOGOD",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 203,
+      "word": "nogossip",
+      "alias_of": "nochat",
+      "verb_id": 190,
+      "dispatch": [
+        "nolinecom"
+      ],
+      "dispatch_source_word": "NOCHAT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 204,
+      "word": "noistari",
+      "alias_of": "noprophet",
+      "verb_id": 194,
+      "dispatch": [
+        "nolinecom"
+      ],
+      "dispatch_source_word": "NOISTARI",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 205,
+      "word": "noinv",
+      "alias_of": null,
+      "verb_id": 195,
+      "dispatch": [
+        "togglecom"
+      ],
+      "dispatch_source_word": "NOINV",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 206,
+      "word": "noisy",
+      "alias_of": null,
+      "verb_id": 196,
+      "dispatch": [
+        "erreval",
+        "bprintf",
+        "sclrflg",
+        "ssetflg"
+      ],
+      "dispatch_source_word": "QUIET",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 207,
+      "word": "nooracle",
+      "alias_of": null,
+      "verb_id": 197,
+      "dispatch": [
+        "togglecom"
+      ],
+      "dispatch_source_word": "NOORACLE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 208,
+      "word": "nopig",
+      "alias_of": null,
+      "verb_id": 198,
+      "dispatch": [
+        "nolinecom"
+      ],
+      "dispatch_source_word": "NOPIG",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 209,
+      "word": "noprophet",
+      "alias_of": "noistari",
+      "verb_id": 194,
+      "dispatch": [
+        "nolinecom"
+      ],
+      "dispatch_source_word": "NOISTARI",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 210,
+      "word": "nopuff",
+      "alias_of": null,
+      "verb_id": 199,
+      "dispatch": [
+        "togglecom"
+      ],
+      "dispatch_source_word": "NOPUFF",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 211,
+      "word": "nopunt",
+      "alias_of": null,
+      "verb_id": 200,
+      "dispatch": [
+        "nopuntcom"
+      ],
+      "dispatch_source_word": "NOPUNT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 212,
+      "word": "norun",
+      "alias_of": null,
+      "verb_id": 201,
+      "dispatch": [
+        "noruncom"
+      ],
+      "dispatch_source_word": "NORUN",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 213,
+      "word": "noshout",
+      "alias_of": null,
+      "verb_id": 202,
+      "dispatch": [
+        "noshoutcom"
+      ],
+      "dispatch_source_word": "NOSHOUT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 214,
+      "word": "noslain",
+      "alias_of": null,
+      "verb_id": 203,
+      "dispatch": [
+        "noslaincom"
+      ],
+      "dispatch_source_word": "NOSLAIN",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 215,
+      "word": "noswear",
+      "alias_of": null,
+      "verb_id": 204,
+      "dispatch": [
+        "togglecom"
+      ],
+      "dispatch_source_word": "NOSWEAR",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 216,
+      "word": "noupper",
+      "alias_of": null,
+      "verb_id": 205,
+      "dispatch": [
+        "nolinecom"
+      ],
+      "dispatch_source_word": "NOUPPER",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 217,
+      "word": "nowet",
+      "alias_of": null,
+      "verb_id": 206,
+      "dispatch": [
+        "togglecom"
+      ],
+      "dispatch_source_word": "NOWET",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 218,
+      "word": "nowiz",
+      "alias_of": null,
+      "verb_id": 207,
+      "dispatch": [
+        "nolinecom"
+      ],
+      "dispatch_source_word": "NOWIZ",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 219,
+      "word": "nowish",
+      "alias_of": null,
+      "verb_id": 208,
+      "dispatch": [
+        "nowishcom"
+      ],
+      "dispatch_source_word": "NOWISH",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 220,
+      "word": "objects",
+      "alias_of": null,
+      "verb_id": 209,
+      "dispatch": [
+        "objectscom"
+      ],
+      "dispatch_source_word": "OBJECTS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 221,
+      "word": "oflags",
+      "alias_of": null,
+      "verb_id": 210,
+      "dispatch": [
+        "obj_flags"
+      ],
+      "dispatch_source_word": "OFLAGS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 222,
+      "word": "open",
+      "alias_of": "lift",
+      "verb_id": 160,
+      "dispatch": [
+        "opencom"
+      ],
+      "dispatch_source_word": "OPEN",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 223,
+      "word": "options",
+      "alias_of": null,
+      "verb_id": 211,
+      "dispatch": [
+        "optionscom"
+      ],
+      "dispatch_source_word": "OPTIONS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 224,
+      "word": "pager",
+      "alias_of": null,
+      "verb_id": 212,
+      "dispatch": [
+        "setpager"
+      ],
+      "dispatch_source_word": "PAGER",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 225,
+      "word": "pat",
+      "alias_of": null,
+      "verb_id": 213,
+      "dispatch": [
+        "petcom"
+      ],
+      "dispatch_source_word": "PET",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 226,
+      "word": "peace",
+      "alias_of": null,
+      "verb_id": 214,
+      "dispatch": [
+        "peacecom"
+      ],
+      "dispatch_source_word": "PEACE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 227,
+      "word": "people",
+      "alias_of": null,
+      "verb_id": 215,
+      "dispatch": [
+        "usercom"
+      ],
+      "dispatch_source_word": "USERS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 228,
+      "word": "pet",
+      "alias_of": "pat",
+      "verb_id": 213,
+      "dispatch": [
+        "petcom"
+      ],
+      "dispatch_source_word": "PET",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 229,
+      "word": "pflags",
+      "alias_of": null,
+      "verb_id": 216,
+      "dispatch": [
+        "mob_flags"
+      ],
+      "dispatch_source_word": "PFLAGS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 230,
+      "word": "pick",
+      "alias_of": null,
+      "verb_id": 217,
+      "dispatch": [
+        "pickcom"
+      ],
+      "dispatch_source_word": "PICK",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 231,
+      "word": "pig",
+      "alias_of": null,
+      "verb_id": 218,
+      "dispatch": [
+        "pigcom"
+      ],
+      "dispatch_source_word": "PIG",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 232,
+      "word": "play",
+      "alias_of": null,
+      "verb_id": 219,
+      "dispatch": [
+        "playcom"
+      ],
+      "dispatch_source_word": "PLAY",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 233,
+      "word": "players",
+      "alias_of": "people",
+      "verb_id": 215,
+      "dispatch": [
+        "usercom"
+      ],
+      "dispatch_source_word": "USERS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 234,
+      "word": "ploc",
+      "alias_of": null,
+      "verb_id": 220,
+      "dispatch": [
+        "ploccom"
+      ],
+      "dispatch_source_word": "PLOC",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 235,
+      "word": "pn",
+      "alias_of": null,
+      "verb_id": 221,
+      "dispatch": [
+        "pncom"
+      ],
+      "dispatch_source_word": "PN",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 236,
+      "word": "policy",
+      "alias_of": null,
+      "verb_id": 222,
+      "dispatch": [
+        "policycom"
+      ],
+      "dispatch_source_word": "POLICY",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 237,
+      "word": "pose",
+      "alias_of": null,
+      "verb_id": 223,
+      "dispatch": [
+        "posecom"
+      ],
+      "dispatch_source_word": "POSE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 238,
+      "word": "pray",
+      "alias_of": null,
+      "verb_id": 224,
+      "dispatch": [
+        "praycom"
+      ],
+      "dispatch_source_word": "PRAY",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 239,
+      "word": "press",
+      "alias_of": "move",
+      "verb_id": 178,
+      "dispatch": [
+        "pushcom"
+      ],
+      "dispatch_source_word": "PUSH",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 240,
+      "word": "privs",
+      "alias_of": null,
+      "verb_id": 225,
+      "dispatch": [
+        "doverb_default"
+      ],
+      "dispatch_source_word": "DEFAULT",
+      "dispatch_kind": "doverb-default",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 241,
+      "word": "probation",
+      "alias_of": null,
+      "verb_id": 226,
+      "dispatch": [
+        "probationcom"
+      ],
+      "dispatch_source_word": "PROBATION",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 242,
+      "word": "prompt",
+      "alias_of": null,
+      "verb_id": 227,
+      "dispatch": [
+        "promptcom"
+      ],
+      "dispatch_source_word": "PROMPT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 243,
+      "word": "promote",
+      "alias_of": null,
+      "verb_id": 228,
+      "dispatch": [
+        "promote"
+      ],
+      "dispatch_source_word": "PROMOTE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 244,
+      "word": "prophet",
+      "alias_of": "istari",
+      "verb_id": 149,
+      "dispatch": [
+        "com_handler"
+      ],
+      "dispatch_source_word": "ISTARI",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 245,
+      "word": "protect",
+      "alias_of": null,
+      "verb_id": 229,
+      "dispatch": [
+        "spellcom"
+      ],
+      "dispatch_source_word": "PROTECT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 246,
+      "word": "pull",
+      "alias_of": "move",
+      "verb_id": 178,
+      "dispatch": [
+        "pushcom"
+      ],
+      "dispatch_source_word": "PUSH",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 247,
+      "word": "punt",
+      "alias_of": null,
+      "verb_id": 230,
+      "dispatch": [
+        "puntcom"
+      ],
+      "dispatch_source_word": "PUNT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 248,
+      "word": "puntall",
+      "alias_of": null,
+      "verb_id": 231,
+      "dispatch": [
+        "puntallcom"
+      ],
+      "dispatch_source_word": "PUNTALL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 249,
+      "word": "push",
+      "alias_of": "move",
+      "verb_id": 178,
+      "dispatch": [
+        "pushcom"
+      ],
+      "dispatch_source_word": "PUSH",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 250,
+      "word": "put",
+      "alias_of": null,
+      "verb_id": 232,
+      "dispatch": [
+        "putcom"
+      ],
+      "dispatch_source_word": "PUT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 251,
+      "word": "pzap",
+      "alias_of": null,
+      "verb_id": 233,
+      "dispatch": [
+        "pzapcom"
+      ],
+      "dispatch_source_word": "PZAP",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 252,
+      "word": "qinfo",
+      "alias_of": null,
+      "verb_id": 234,
+      "dispatch": [
+        "qinfocom"
+      ],
+      "dispatch_source_word": "QINFO",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 253,
+      "word": "qlist",
+      "alias_of": null,
+      "verb_id": 235,
+      "dispatch": [
+        "qlistcom"
+      ],
+      "dispatch_source_word": "QLIST",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 254,
+      "word": "quests",
+      "alias_of": null,
+      "verb_id": 236,
+      "dispatch": [
+        "questcom"
+      ],
+      "dispatch_source_word": "QUESTS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 255,
+      "word": "quiet",
+      "alias_of": "noisy",
+      "verb_id": 196,
+      "dispatch": [
+        "erreval",
+        "bprintf",
+        "sclrflg",
+        "ssetflg"
+      ],
+      "dispatch_source_word": "QUIET",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 256,
+      "word": "quit",
+      "alias_of": null,
+      "verb_id": 237,
+      "dispatch": [
+        "quit_game"
+      ],
+      "dispatch_source_word": "QUIT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 257,
+      "word": "raw",
+      "alias_of": null,
+      "verb_id": 238,
+      "dispatch": [
+        "rawcom"
+      ],
+      "dispatch_source_word": "RAW",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 258,
+      "word": "read",
+      "alias_of": "examine",
+      "verb_id": 106,
+      "dispatch": [
+        "examcom"
+      ],
+      "dispatch_source_word": "EXAMINE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 259,
+      "word": "reboot",
+      "alias_of": null,
+      "verb_id": 239,
+      "dispatch": [
+        "rebootcom"
+      ],
+      "dispatch_source_word": "REBOOT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 260,
+      "word": "remove",
+      "alias_of": null,
+      "verb_id": 240,
+      "dispatch": [
+        "removecom"
+      ],
+      "dispatch_source_word": "REMOVE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 261,
+      "word": "reply",
+      "alias_of": null,
+      "verb_id": 241,
+      "dispatch": [
+        "replycom"
+      ],
+      "dispatch_source_word": "REPLY",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 262,
+      "word": "report",
+      "alias_of": null,
+      "verb_id": 242,
+      "dispatch": [
+        "reportcom"
+      ],
+      "dispatch_source_word": "REPORT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 263,
+      "word": "resurrect",
+      "alias_of": null,
+      "verb_id": 243,
+      "dispatch": [
+        "resurcom"
+      ],
+      "dispatch_source_word": "RESURRECT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 264,
+      "word": "reset",
+      "alias_of": null,
+      "verb_id": 244,
+      "dispatch": [
+        "resetcom"
+      ],
+      "dispatch_source_word": "RESET",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 265,
+      "word": "restore",
+      "alias_of": null,
+      "verb_id": 245,
+      "dispatch": [
+        "restorecom"
+      ],
+      "dispatch_source_word": "RESTORE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 266,
+      "word": "review",
+      "alias_of": null,
+      "verb_id": 246,
+      "dispatch": [
+        "reviewcom"
+      ],
+      "dispatch_source_word": "REVIEW",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 267,
+      "word": "ring",
+      "alias_of": null,
+      "verb_id": 247,
+      "dispatch": [
+        "ringcom"
+      ],
+      "dispatch_source_word": "RING",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 268,
+      "word": "roll",
+      "alias_of": null,
+      "verb_id": 248,
+      "dispatch": [
+        "rollcom"
+      ],
+      "dispatch_source_word": "ROLL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 269,
+      "word": "rose",
+      "alias_of": null,
+      "verb_id": 249,
+      "dispatch": [
+        "rosecom"
+      ],
+      "dispatch_source_word": "ROSE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 270,
+      "word": "rub",
+      "alias_of": null,
+      "verb_id": 250,
+      "dispatch": [
+        "rubcom"
+      ],
+      "dispatch_source_word": "RUB",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 271,
+      "word": "say",
+      "alias_of": null,
+      "verb_id": 251,
+      "dispatch": [
+        "saycom"
+      ],
+      "dispatch_source_word": "SAY",
+      "dispatch_kind": "c-handler",
+      "test_cases": [
+        "say-room-audience"
+      ],
+      "output_cases": [
+        "say-room-audience"
+      ]
+    },
+    {
+      "line": 272,
+      "word": "sayto",
+      "alias_of": null,
+      "verb_id": 252,
+      "dispatch": [
+        "saytocom"
+      ],
+      "dispatch_source_word": "SAYTO",
+      "dispatch_kind": "c-handler",
+      "test_cases": [
+        "sayto-target-and-room-audience"
+      ],
+      "output_cases": [
+        "sayto-target-and-room-audience"
+      ]
+    },
+    {
+      "line": 273,
+      "word": "save",
+      "alias_of": null,
+      "verb_id": 253,
+      "dispatch": [
+        "saveother"
+      ],
+      "dispatch_source_word": "SAVE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 274,
+      "word": "saveall",
+      "alias_of": null,
+      "verb_id": 254,
+      "dispatch": [
+        "saveallcom"
+      ],
+      "dispatch_source_word": "SAVEALL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 275,
+      "word": "score",
+      "alias_of": null,
+      "verb_id": 255,
+      "dispatch": [
+        "xrscorecom"
+      ],
+      "dispatch_source_word": "SCORE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 276,
+      "word": "search",
+      "alias_of": "examine",
+      "verb_id": 106,
+      "dispatch": [
+        "examcom"
+      ],
+      "dispatch_source_word": "EXAMINE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 277,
+      "word": "seeext",
+      "alias_of": null,
+      "verb_id": 256,
+      "dispatch": [
+        "toggleseeext"
+      ],
+      "dispatch_source_word": "SEEEXT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 278,
+      "word": "seeidle",
+      "alias_of": null,
+      "verb_id": 257,
+      "dispatch": [
+        "seeidlecom"
+      ],
+      "dispatch_source_word": "SEEIDLE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 279,
+      "word": "seesocket",
+      "alias_of": null,
+      "verb_id": 258,
+      "dispatch": [
+        "toggleseesocket"
+      ],
+      "dispatch_source_word": "SEESOCKET",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 280,
+      "word": "set",
+      "alias_of": null,
+      "verb_id": 259,
+      "dispatch": [
+        "setcom"
+      ],
+      "dispatch_source_word": "SET",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 281,
+      "word": "setin",
+      "alias_of": null,
+      "verb_id": 260,
+      "dispatch": [
+        "set_msg"
+      ],
+      "dispatch_source_word": "SETIN",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 282,
+      "word": "setlook",
+      "alias_of": null,
+      "verb_id": 261,
+      "dispatch": [
+        "doverb_default"
+      ],
+      "dispatch_source_word": "DEFAULT",
+      "dispatch_kind": "doverb-default",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 283,
+      "word": "setmin",
+      "alias_of": null,
+      "verb_id": 262,
+      "dispatch": [
+        "set_msg"
+      ],
+      "dispatch_source_word": "SETMIN",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 284,
+      "word": "setmout",
+      "alias_of": null,
+      "verb_id": 263,
+      "dispatch": [
+        "set_msg"
+      ],
+      "dispatch_source_word": "SETMOUT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 285,
+      "word": "setout",
+      "alias_of": null,
+      "verb_id": 264,
+      "dispatch": [
+        "set_msg"
+      ],
+      "dispatch_source_word": "SETOUT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 286,
+      "word": "setsin",
+      "alias_of": null,
+      "verb_id": 265,
+      "dispatch": [
+        "set_msg"
+      ],
+      "dispatch_source_word": "SETSIN",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 287,
+      "word": "setsit",
+      "alias_of": null,
+      "verb_id": 266,
+      "dispatch": [
+        "set_msg"
+      ],
+      "dispatch_source_word": "SETSIT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 288,
+      "word": "setsout",
+      "alias_of": null,
+      "verb_id": 267,
+      "dispatch": [
+        "set_msg"
+      ],
+      "dispatch_source_word": "SETSOUT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 289,
+      "word": "setstart",
+      "alias_of": null,
+      "verb_id": 268,
+      "dispatch": [
+        "setstart"
+      ],
+      "dispatch_source_word": "SETSTART",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 290,
+      "word": "setstnd",
+      "alias_of": null,
+      "verb_id": 269,
+      "dispatch": [
+        "set_msg"
+      ],
+      "dispatch_source_word": "SETSTND",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 291,
+      "word": "setsum",
+      "alias_of": null,
+      "verb_id": 270,
+      "dispatch": [
+        "set_msg"
+      ],
+      "dispatch_source_word": "SETSUM",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 292,
+      "word": "settime",
+      "alias_of": null,
+      "verb_id": 271,
+      "dispatch": [
+        "doverb_default"
+      ],
+      "dispatch_source_word": "DEFAULT",
+      "dispatch_kind": "doverb-default",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 293,
+      "word": "setvin",
+      "alias_of": null,
+      "verb_id": 272,
+      "dispatch": [
+        "set_msg"
+      ],
+      "dispatch_source_word": "SETVIN",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 294,
+      "word": "setvout",
+      "alias_of": null,
+      "verb_id": 273,
+      "dispatch": [
+        "set_msg"
+      ],
+      "dispatch_source_word": "SETVOUT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 295,
+      "word": "setqin",
+      "alias_of": null,
+      "verb_id": 274,
+      "dispatch": [
+        "set_msg"
+      ],
+      "dispatch_source_word": "SETQIN",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 296,
+      "word": "setqout",
+      "alias_of": null,
+      "verb_id": 275,
+      "dispatch": [
+        "set_msg"
+      ],
+      "dispatch_source_word": "SETQOUT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 297,
+      "word": "sflags",
+      "alias_of": null,
+      "verb_id": 276,
+      "dispatch": [
+        "mob_flags"
+      ],
+      "dispatch_source_word": "SFLAGS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 298,
+      "word": "shall",
+      "alias_of": null,
+      "verb_id": 277,
+      "dispatch": [
+        "healallcom",
+        "saveallcom",
+        "erreval"
+      ],
+      "dispatch_source_word": "SHALL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 299,
+      "word": "shock",
+      "alias_of": null,
+      "verb_id": 278,
+      "dispatch": [
+        "spellcom"
+      ],
+      "dispatch_source_word": "SHOCK",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 300,
+      "word": "shout",
+      "alias_of": null,
+      "verb_id": 279,
+      "dispatch": [
+        "shoutcom"
+      ],
+      "dispatch_source_word": "SHOUT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 301,
+      "word": "shove",
+      "alias_of": "move",
+      "verb_id": 178,
+      "dispatch": [
+        "pushcom"
+      ],
+      "dispatch_source_word": "PUSH",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 302,
+      "word": "show",
+      "alias_of": null,
+      "verb_id": 280,
+      "dispatch": [
+        "showitem"
+      ],
+      "dispatch_source_word": "SHOW",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 303,
+      "word": "shut",
+      "alias_of": "close",
+      "verb_id": 71,
+      "dispatch": [
+        "closecom"
+      ],
+      "dispatch_source_word": "CLOSE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 304,
+      "word": "sit",
+      "alias_of": null,
+      "verb_id": 281,
+      "dispatch": [
+        "sitcom"
+      ],
+      "dispatch_source_word": "SIT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 305,
+      "word": "sic",
+      "alias_of": null,
+      "verb_id": 282,
+      "dispatch": [
+        "siccom"
+      ],
+      "dispatch_source_word": "SIC",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 306,
+      "word": "signal",
+      "alias_of": null,
+      "verb_id": 283,
+      "dispatch": [
+        "signalcom"
+      ],
+      "dispatch_source_word": "SIGNAL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 307,
+      "word": "silent",
+      "alias_of": null,
+      "verb_id": 284,
+      "dispatch": [
+        "silentcom"
+      ],
+      "dispatch_source_word": "SILENT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 308,
+      "word": "smash",
+      "alias_of": "attack",
+      "verb_id": 35,
+      "dispatch": [
+        "killcom"
+      ],
+      "dispatch_source_word": "KILL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 309,
+      "word": "sneak",
+      "alias_of": null,
+      "verb_id": 285,
+      "dispatch": [
+        "sneakcom"
+      ],
+      "dispatch_source_word": "SNEAK",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 310,
+      "word": "snoop",
+      "alias_of": null,
+      "verb_id": 286,
+      "dispatch": [
+        "snoopcom"
+      ],
+      "dispatch_source_word": "SNOOP",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 311,
+      "word": "socket",
+      "alias_of": null,
+      "verb_id": 287,
+      "dispatch": [
+        "socketcom"
+      ],
+      "dispatch_source_word": "SOCKET",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 312,
+      "word": "spells",
+      "alias_of": null,
+      "verb_id": 288,
+      "dispatch": [
+        "spellscom"
+      ],
+      "dispatch_source_word": "SPELLS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 313,
+      "word": "stand",
+      "alias_of": null,
+      "verb_id": 289,
+      "dispatch": [
+        "standcom"
+      ],
+      "dispatch_source_word": "STAND",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 314,
+      "word": "start",
+      "alias_of": null,
+      "verb_id": 290,
+      "dispatch": [
+        "startcom"
+      ],
+      "dispatch_source_word": "START",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 315,
+      "word": "stats",
+      "alias_of": null,
+      "verb_id": 291,
+      "dispatch": [
+        "showplayer"
+      ],
+      "dispatch_source_word": "STATS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 316,
+      "word": "steal",
+      "alias_of": null,
+      "verb_id": 292,
+      "dispatch": [
+        "stealcom"
+      ],
+      "dispatch_source_word": "STEAL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 317,
+      "word": "stop",
+      "alias_of": null,
+      "verb_id": 293,
+      "dispatch": [
+        "stopcom"
+      ],
+      "dispatch_source_word": "STOP",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 318,
+      "word": "store",
+      "alias_of": null,
+      "verb_id": 294,
+      "dispatch": [
+        "storecom"
+      ],
+      "dispatch_source_word": "STORE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 319,
+      "word": "summon",
+      "alias_of": null,
+      "verb_id": 295,
+      "dispatch": [
+        "sumcom"
+      ],
+      "dispatch_source_word": "SUMMON",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 320,
+      "word": "suggest",
+      "alias_of": null,
+      "verb_id": 296,
+      "dispatch": [
+        "suggestcom"
+      ],
+      "dispatch_source_word": "SUGGEST",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 321,
+      "word": "syslog",
+      "alias_of": null,
+      "verb_id": 297,
+      "dispatch": [
+        "syslogcom"
+      ],
+      "dispatch_source_word": "SYSLOG",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 322,
+      "word": "system",
+      "alias_of": null,
+      "verb_id": 298,
+      "dispatch": [
+        "systemcom"
+      ],
+      "dispatch_source_word": "SYSTEM",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 323,
+      "word": "take",
+      "alias_of": "get",
+      "verb_id": 129,
+      "dispatch": [
+        "getcom"
+      ],
+      "dispatch_source_word": "GET",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 324,
+      "word": "tell",
+      "alias_of": "ask",
+      "verb_id": 30,
+      "dispatch": [
+        "tellcom"
+      ],
+      "dispatch_source_word": "TELL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 325,
+      "word": "throw",
+      "alias_of": null,
+      "verb_id": 299,
+      "dispatch": [
+        "throwcom"
+      ],
+      "dispatch_source_word": "THROW",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 326,
+      "word": "tickle",
+      "alias_of": null,
+      "verb_id": 300,
+      "dispatch": [
+        "ticklecom"
+      ],
+      "dispatch_source_word": "TICKLE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 327,
+      "word": "tie",
+      "alias_of": null,
+      "verb_id": 301,
+      "dispatch": [
+        "tiecom"
+      ],
+      "dispatch_source_word": "TIE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 328,
+      "word": "time",
+      "alias_of": null,
+      "verb_id": 302,
+      "dispatch": [
+        "timecom"
+      ],
+      "dispatch_source_word": "TIME",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 329,
+      "word": "tiptoe",
+      "alias_of": null,
+      "verb_id": 303,
+      "dispatch": [
+        "gotocom"
+      ],
+      "dispatch_source_word": "TIPTOE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 330,
+      "word": "title",
+      "alias_of": null,
+      "verb_id": 304,
+      "dispatch": [
+        "change_title"
+      ],
+      "dispatch_source_word": "TITLE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 331,
+      "word": "tournament",
+      "alias_of": null,
+      "verb_id": 305,
+      "dispatch": [
+        "tournamentcom"
+      ],
+      "dispatch_source_word": "TOURNAMENT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 332,
+      "word": "touch",
+      "alias_of": "move",
+      "verb_id": 178,
+      "dispatch": [
+        "pushcom"
+      ],
+      "dispatch_source_word": "PUSH",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 333,
+      "word": "tout",
+      "alias_of": null,
+      "verb_id": 306,
+      "dispatch": [
+        "toutcom"
+      ],
+      "dispatch_source_word": "TOUT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 334,
+      "word": "trace",
+      "alias_of": null,
+      "verb_id": 307,
+      "dispatch": [
+        "tracecom"
+      ],
+      "dispatch_source_word": "TRACE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 335,
+      "word": "translocate",
+      "alias_of": null,
+      "verb_id": 308,
+      "dispatch": [
+        "sumcom"
+      ],
+      "dispatch_source_word": "TRANSLOCATE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 336,
+      "word": "treasures",
+      "alias_of": null,
+      "verb_id": 309,
+      "dispatch": [
+        "treasurecom"
+      ],
+      "dispatch_source_word": "TREASURES",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 337,
+      "word": "tty",
+      "alias_of": "hosts",
+      "verb_id": 141,
+      "dispatch": [
+        "hostscom"
+      ],
+      "dispatch_source_word": "HOSTS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 338,
+      "word": "turn",
+      "alias_of": "move",
+      "verb_id": 178,
+      "dispatch": [
+        "pushcom"
+      ],
+      "dispatch_source_word": "PUSH",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 339,
+      "word": "txtraw",
+      "alias_of": null,
+      "verb_id": 310,
+      "dispatch": [
+        "textrawcom"
+      ],
+      "dispatch_source_word": "TXTRAW",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 340,
+      "word": "typo",
+      "alias_of": null,
+      "verb_id": 311,
+      "dispatch": [
+        "typocom"
+      ],
+      "dispatch_source_word": "TYPO",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 341,
+      "word": "unban",
+      "alias_of": null,
+      "verb_id": 312,
+      "dispatch": [
+        "doverb_default"
+      ],
+      "dispatch_source_word": "DEFAULT",
+      "dispatch_kind": "doverb-default",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 342,
+      "word": "unlight",
+      "alias_of": "extinguish",
+      "verb_id": 109,
+      "dispatch": [
+        "extinguishcom"
+      ],
+      "dispatch_source_word": "EXTINGUISH",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 343,
+      "word": "unlock",
+      "alias_of": null,
+      "verb_id": 313,
+      "dispatch": [
+        "unlockcom"
+      ],
+      "dispatch_source_word": "UNLOCK",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 344,
+      "word": "untie",
+      "alias_of": null,
+      "verb_id": 314,
+      "dispatch": [
+        "untiecom"
+      ],
+      "dispatch_source_word": "UNTIE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 345,
+      "word": "unveil",
+      "alias_of": null,
+      "verb_id": 315,
+      "dispatch": [
+        "unveilcom"
+      ],
+      "dispatch_source_word": "UNVEIL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 346,
+      "word": "upper",
+      "alias_of": null,
+      "verb_id": 316,
+      "dispatch": [
+        "com_handler"
+      ],
+      "dispatch_source_word": "UPPER",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 347,
+      "word": "update",
+      "alias_of": null,
+      "verb_id": 317,
+      "dispatch": [
+        "updatecom"
+      ],
+      "dispatch_source_word": "UPDATE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 348,
+      "word": "uptime",
+      "alias_of": null,
+      "verb_id": 318,
+      "dispatch": [
+        "uptimecom"
+      ],
+      "dispatch_source_word": "UPTIME",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 349,
+      "word": "use",
+      "alias_of": null,
+      "verb_id": 319,
+      "dispatch": [
+        "usecom"
+      ],
+      "dispatch_source_word": "USE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 350,
+      "word": "users",
+      "alias_of": "people",
+      "verb_id": 215,
+      "dispatch": [
+        "usercom"
+      ],
+      "dispatch_source_word": "USERS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 351,
+      "word": "ustats",
+      "alias_of": "people",
+      "verb_id": 215,
+      "dispatch": [
+        "usercom"
+      ],
+      "dispatch_source_word": "USERS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 352,
+      "word": "value",
+      "alias_of": null,
+      "verb_id": 320,
+      "dispatch": [
+        "valuecom"
+      ],
+      "dispatch_source_word": "VALUE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 353,
+      "word": "version",
+      "alias_of": null,
+      "verb_id": 321,
+      "dispatch": [
+        "bprintf"
+      ],
+      "dispatch_source_word": "VERSION",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 354,
+      "word": "visible",
+      "alias_of": null,
+      "verb_id": 322,
+      "dispatch": [
+        "viscom"
+      ],
+      "dispatch_source_word": "VISIBLE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 355,
+      "word": "viewcom",
+      "alias_of": null,
+      "verb_id": 323,
+      "dispatch": [
+        "viewcom"
+      ],
+      "dispatch_source_word": "VIEWCOM",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 356,
+      "word": "vote",
+      "alias_of": null,
+      "verb_id": 324,
+      "dispatch": [
+        "votecom"
+      ],
+      "dispatch_source_word": "VOTE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 357,
+      "word": "vtouch",
+      "alias_of": null,
+      "verb_id": 325,
+      "dispatch": [
+        "spellcom"
+      ],
+      "dispatch_source_word": "VTOUCH",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 358,
+      "word": "wall",
+      "alias_of": null,
+      "verb_id": 326,
+      "dispatch": [
+        "doverb_default"
+      ],
+      "dispatch_source_word": "DEFAULT",
+      "dispatch_kind": "doverb-default",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 359,
+      "word": "who",
+      "alias_of": null,
+      "verb_id": 327,
+      "dispatch": [
+        "whocom"
+      ],
+      "dispatch_source_word": "WHO",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 360,
+      "word": "whon",
+      "alias_of": null,
+      "verb_id": 328,
+      "dispatch": [
+        "whoncom"
+      ],
+      "dispatch_source_word": "WHON",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 361,
+      "word": "war",
+      "alias_of": null,
+      "verb_id": 329,
+      "dispatch": [
+        "warcom"
+      ],
+      "dispatch_source_word": "WAR",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 362,
+      "word": "wave",
+      "alias_of": null,
+      "verb_id": 330,
+      "dispatch": [
+        "wavecom"
+      ],
+      "dispatch_source_word": "WAVE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 363,
+      "word": "wear",
+      "alias_of": "apply",
+      "verb_id": 27,
+      "dispatch": [
+        "wearcom"
+      ],
+      "dispatch_source_word": "WEAR",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 364,
+      "word": "wearall",
+      "alias_of": null,
+      "verb_id": 331,
+      "dispatch": [
+        "wearall"
+      ],
+      "dispatch_source_word": "WEARALL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 365,
+      "word": "weather",
+      "alias_of": null,
+      "verb_id": 332,
+      "dispatch": [
+        "weathercom"
+      ],
+      "dispatch_source_word": "WEATHER",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 366,
+      "word": "where",
+      "alias_of": null,
+      "verb_id": 333,
+      "dispatch": [
+        "wherecom"
+      ],
+      "dispatch_source_word": "WHERE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 367,
+      "word": "wield",
+      "alias_of": null,
+      "verb_id": 334,
+      "dispatch": [
+        "wieldcom"
+      ],
+      "dispatch_source_word": "WIELD",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 368,
+      "word": "wipe",
+      "alias_of": null,
+      "verb_id": 335,
+      "dispatch": [
+        "wipecom"
+      ],
+      "dispatch_source_word": "WIPE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 369,
+      "word": "wish",
+      "alias_of": null,
+      "verb_id": 336,
+      "dispatch": [
+        "wishcom"
+      ],
+      "dispatch_source_word": "WISH",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 370,
+      "word": "wiz",
+      "alias_of": null,
+      "verb_id": 337,
+      "dispatch": [
+        "com_handler"
+      ],
+      "dispatch_source_word": "WIZ",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 371,
+      "word": "wizlist",
+      "alias_of": null,
+      "verb_id": 338,
+      "dispatch": [
+        "wizlistcom"
+      ],
+      "dispatch_source_word": "WIZLIST",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 372,
+      "word": "wizlock",
+      "alias_of": null,
+      "verb_id": 339,
+      "dispatch": [
+        "wizlock"
+      ],
+      "dispatch_source_word": "WIZLOCK",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 373,
+      "word": "wload",
+      "alias_of": null,
+      "verb_id": 340,
+      "dispatch": [
+        "wloadcom"
+      ],
+      "dispatch_source_word": "WLOAD",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 374,
+      "word": "yell",
+      "alias_of": "shout",
+      "verb_id": 279,
+      "dispatch": [
+        "shoutcom"
+      ],
+      "dispatch_source_word": "SHOUT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 375,
+      "word": "zap",
+      "alias_of": null,
+      "verb_id": 341,
+      "dispatch": [
+        "zapcom"
+      ],
+      "dispatch_source_word": "ZAP",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 376,
+      "word": "zones",
+      "alias_of": null,
+      "verb_id": 342,
+      "dispatch": [
+        "zonescom"
+      ],
+      "dispatch_source_word": "ZONES",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 377,
+      "word": "seenumbers",
+      "alias_of": null,
+      "verb_id": 343,
+      "dispatch": [
+        "togglecom"
+      ],
+      "dispatch_source_word": "SEENUMBERS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 378,
+      "word": "awaymsg",
+      "alias_of": null,
+      "verb_id": 344,
+      "dispatch": [
+        "awaymsgcom"
+      ],
+      "dispatch_source_word": "AWAYMSG",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 379,
+      "word": "awaybeeps",
+      "alias_of": null,
+      "verb_id": 345,
+      "dispatch": [
+        "togglecom"
+      ],
+      "dispatch_source_word": "AWAYBEEPS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 380,
+      "word": "iusers",
+      "alias_of": null,
+      "verb_id": 346,
+      "dispatch": [
+        "iuserscom"
+      ],
+      "dispatch_source_word": "IUSERS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 381,
+      "word": "unusede",
+      "alias_of": null,
+      "verb_id": 347,
+      "dispatch": [
+        "doverb_default"
+      ],
+      "dispatch_source_word": "DEFAULT",
+      "dispatch_kind": "doverb-default",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 382,
+      "word": "unusedf",
+      "alias_of": null,
+      "verb_id": 348,
+      "dispatch": [
+        "doverb_default"
+      ],
+      "dispatch_source_word": "DEFAULT",
+      "dispatch_kind": "doverb-default",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 383,
+      "word": "noachat",
+      "alias_of": null,
+      "verb_id": 349,
+      "dispatch": [
+        "cmd_noachat"
+      ],
+      "dispatch_source_word": "NOACHAT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 384,
+      "word": "noacode",
+      "alias_of": null,
+      "verb_id": 350,
+      "dispatch": [
+        "cmd_noacode"
+      ],
+      "dispatch_source_word": "NOACODE",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 385,
+      "word": "noagod",
+      "alias_of": null,
+      "verb_id": 351,
+      "dispatch": [
+        "cmd_noagod"
+      ],
+      "dispatch_source_word": "NOAGOD",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 386,
+      "word": "noainfo",
+      "alias_of": null,
+      "verb_id": 352,
+      "dispatch": [
+        "cmd_noainfo"
+      ],
+      "dispatch_source_word": "NOAINFO",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 387,
+      "word": "noatell",
+      "alias_of": null,
+      "verb_id": 353,
+      "dispatch": [
+        "cmd_noatell"
+      ],
+      "dispatch_source_word": "NOATELL",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 388,
+      "word": "noaberchat",
+      "alias_of": null,
+      "verb_id": 354,
+      "dispatch": [
+        "cmd_noaberchat"
+      ],
+      "dispatch_source_word": "NOABERCHAT",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 389,
+      "word": "aautocon",
+      "alias_of": null,
+      "verb_id": 355,
+      "dispatch": [
+        "cmd_aautocon"
+      ],
+      "dispatch_source_word": "AAUTOCON",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    },
+    {
+      "line": 390,
+      "word": "acommstats",
+      "alias_of": null,
+      "verb_id": 356,
+      "dispatch": [
+        "cmd_acommstats"
+      ],
+      "dispatch_source_word": "ACOMMSTATS",
+      "dispatch_kind": "c-handler",
+      "test_cases": [],
+      "output_cases": []
+    }
+  ]
+}

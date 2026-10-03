@@ -155,7 +155,9 @@ case OBJ_PIRATE_TABLE:
 
 
 case OBJ_PIRATE_SABRE:
-    if (a == OBJ_PIRATE_RUBY) /* Repair sabre */  {
+    if (a == OBJ_PIRATE_RUBY &&
+        (iscarrby(OBJ_PIRATE_SABRE, mynum) ||
+         ishere(OBJ_PIRATE_SABRE))) /* Repair an accessible sabre */ {
     bprintf("You put the ruby in the hilt, the sabre glows an eerie green.\n");
     send_msg(sendloc(mynum), 0, pvis(mynum), LVL_MAX, mynum, NOBODY,
       "%s puts the ruby in the hilt, the sabre glows an eerie green.\n",
@@ -204,9 +206,8 @@ case OBJ_PIRATE_SABRE:
     return;
 #endif
 
-/*                          put this in sometime?
 #ifdef LOCMIN_FROBOZZ
-  case OBJ_FFROBOZZ_WINDOW_OUTSIDE:
+  case OBJ_FROBOZZ_WINDOW_OUTSIDE:
     if (a != OBJ_FROBOZZ_LEAFLET_MAILBOX)
       bprintf ("Nothing happens.\n");
     else if (state (OBJ_FROBOZZ_VAULTDOOR_OUTSIDE) == 2) {
@@ -218,7 +219,6 @@ case OBJ_PIRATE_SABRE:
       bprintf ("Nothing happens.\n");
     return;
 #endif
-*/
 
 #ifdef LOCMIN_MOOR
   case OBJ_MOOR_ALTAR:

@@ -84,6 +84,8 @@ End             = glove
 Name            = pipetman
 Location        = IN_ROOM:out_back 
 Linked          = beaker
+State           = 0
+MaxState        = 1
 BValue          = 20
 Size            = 2
 Weight          = 2
@@ -346,4 +348,3 @@ Out Back in the Bushes^
 too special about this area, except that seeing all these nice bushes gives you
 the urge Mother Nature usually provides.
 ^
-

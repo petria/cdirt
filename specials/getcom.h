@@ -68,7 +68,8 @@
 
 
 #ifdef LOCMIN_RAINFOREST
-  if (ploc(mynum) == LOC_RAINFOREST_CITY3) {
+  if (ob != OBJ_RAINFOREST_SKULL &&
+      ploc(mynum) == LOC_RAINFOREST_CITY3) {
     bprintf("The hand of an ancient god strikes from above, crushing you for "
       "your\ninsolence!  You black out, and when you open your eyes again, you "
       "are in\ndifferent surroundings...\n\n");
@@ -250,4 +251,3 @@ if (container == OBJ_ZODIAC_PENTAGRAM)
     return -1;
   }
 #endif
-
