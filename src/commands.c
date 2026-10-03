@@ -469,7 +469,7 @@ void examcom (void) {
     break;
 #endif
 
-#if defined(LOCMIN_ISLAND) && defined(LOCMIN_LABARYNTH)
+#if defined(LOCMIN_ISLAND) && defined(LOCMIN_LABYRINTH)
   case OBJ_ISLAND_BONE:
     bprintf ("There is a flash and you are teleported...\n");
     setploc (mynum, LOC_LABYRINTH_K);
@@ -1583,7 +1583,7 @@ void blowcom (void) {
   char s[100];
 #endif
 
-  if (!ishere(ob1))
+  if (!ishere(ob1) && !iscarrby(ob1, mynum))
     return;
   else
     a = ob1;
@@ -1610,7 +1610,7 @@ void blowcom (void) {
 #if defined(LOCMIN_LABYRINTH) && defined(LOCMIN_SEA)
   case OBJ_LABYRINTH_HORN:
     broad ("\001dA mighty horn blast echoes around you.\n\003");
-    if (ploc (mynum) >= LOC_SEA_TREASURE && ploc (mynum) <= LOC_SEA_1 &&
+    if (ploc (mynum) >= LOC_SEA_1 && ploc (mynum) <= LOC_SEA_TREASURE &&
 	oarmor (OBJ_SEA_EXCALIBUR) == 0) {
       setoloc (OBJ_SEA_EXCALIBUR, ploc (mynum), IN_ROOM);
       setobjstate (OBJ_SEA_EXCALIBUR, 1);

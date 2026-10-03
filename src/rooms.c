@@ -237,12 +237,15 @@ void exitcom (Boolean use_args) {
       if (newch >= DOOR) {
 	drnum = newch - DOOR;
 	droff = olinked (drnum);
-	if (!state (drnum))
-	  newch = obj_loc (droff);
+	if (state (drnum))
+	  continue;
+	newch = obj_loc (droff);
       }
-      else if (newch == -1)
+
+      if (newch == -1)
 	continue;
-      else if (plev (mynum) < LVL_WIZARD)
+
+      if (plev (mynum) < LVL_WIZARD)
 	bprintf ("  &+y%-5s &+Y: &+G%s\n", Exits[a], sdesc (newch));
       else {
 	v = findzone (newch, st);

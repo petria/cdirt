@@ -1102,6 +1102,7 @@ int get1objfrom (int ob, int container) {
 void getcom (void) {
   char buff1[80];
   char buff2[80];
+  int container, obj;
 
   sprintf(buff1, "What's a %s?", item1);
   sprintf(buff2, "What's a %s?", item2);
@@ -1124,9 +1125,13 @@ void getcom (void) {
       getallfr(ob2);
   }
   else if (strcasestr(strbuf, "from")) {
-    if ((cantake(ob1, "Get from what?", buff1) != -1) &&
-        (cantake(ob2, "Get from what?", buff2) != -1))
-      get1objfrom(ob1, ob2);
+    if ((container = cantake(ob2, "Get from what?", buff2)) != -1) {
+      obj = findob(mynum, item1, CONT, container);
+      if (obj == -1)
+        bprintf("It isn't here.\n");
+      else
+        get1objfrom(obj, container);
+    }
   }
   else {         			                 /* get <obj> */
     if (cantake(ob1, "Take what?", buff1) == -1);
