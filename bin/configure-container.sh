@@ -27,5 +27,8 @@ printf '%s\n' \
 
 mv /mud/.config.pri.tmp /mud/.config.pri
 mv /mud/.config.mkfile.tmp /mud/.config.mkfile
+# Basic configure defaults enable the historical external AberChat network.
+# Docker deployments keep it disabled across rebuilds and container restarts.
+sed -i 's/^#define ABERCHAT$/#undef ABERCHAT/' /mud/.config.pri
 cat /mud/.config.pri /mud/.config.sec > /mud/include/config.h
 cat /mud/.config.mkfile /mud/.makefile.in > /mud/src/Makefile

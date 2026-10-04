@@ -442,6 +442,10 @@ char *get_arg(char *txt) {
 }
 
 int aberchat_boot(void) {
+#ifndef ABERCHAT
+  /* Respect the build option even when an administrator invokes aboot. */
+  return 0;
+#else
   if (aberfd == -1) {
     if ((aberfd = makesock(SERVER, SERVER_PORT)) == -1)
       return 0;
@@ -453,6 +457,7 @@ int aberchat_boot(void) {
     }
   }
   return 2;
+#endif
 }
 
 Boolean aberchat_shutdown(void) {

@@ -33,14 +33,14 @@ Mancini (for help with the original Crossroads)
 Build the image from this directory:
 
 ```sh
-docker build -t cdirt:local .
+docker build -t cdirt:latest .
 ```
 
 Start C-Dirt with a persistent data volume and publish its default port:
 
 ```sh
 docker run -d --name cdirt --restart unless-stopped \
-  -p 6715:6715 -v cdirt-data:/mud/data cdirt:local
+  -p 6715:6715 -v cdirt-data:/mud/data cdirt:latest
 ```
 
 Connect from the host:
@@ -53,7 +53,7 @@ The image creates the initial `Master` account using the unveil password
 `AberMUD`. Choose a different password when building for your own use:
 
 ```sh
-docker build --build-arg CDIRT_UNVEIL_PASS='your-password' -t cdirt:local .
+docker build --build-arg CDIRT_UNVEIL_PASS='your-password' -t cdirt:latest .
 ```
 
 The password must be 1–24 characters. The image runs the daemon as an
@@ -71,6 +71,12 @@ until explicitly removed.
 This build uses Ubuntu 22.04, GCC, Make, and libcrypt-dev. It generates
 C-Dirt's configuration and zone-derived headers, then compiles the game and
 utilities without running the interactive native `configure` flow.
+
+Docker builds disable AberChat at compile time. The game does not connect to
+the historical external chat server at startup or reconnect in the background;
+the administrator's `aboot` command cannot establish a connection either.
+Local player communication continues to work. This avoids the legacy reconnect
+buffer overflow; it does not repair that code or the emergency recovery defect.
 
 The C-Dirt flag system divides flags into logical 32-bit lanes. The bit masks
 use unsigned shifts so bit 31 remains a single lane bit on 64-bit builds.
