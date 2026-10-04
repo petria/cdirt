@@ -319,13 +319,8 @@ char *uppercase (char *str) {
 }
 
 void *xmalloc (int nelem, int elem_size) {
-  void *p;
-
-  if ((p = calloc (nelem, elem_size)) == NULL) {
-    printf ("No room to allocate bytes.\n");
-    exit(1);
-  }
-  return p;
+  if (nelem < 0 || elem_size <= 0) memory_failure();
+  return memory_alloc((size_t)nelem, (size_t)elem_size);
 }
 
 /* Should be identical to the one in config.c */
@@ -338,19 +333,12 @@ char *my_crypt (char *buf, char *pw) {
 }
 
 void *resize_array (void *start, int elem_size, int oldlen, int newlen) {
-  void *p = NULL;
-
-  if (oldlen < 0 || newlen < 0)
-    return(NULL);
-
-  if (newlen != 0)
-    p = calloc(newlen, elem_size);
-
-  if (start != NULL) {
-    if (newlen != 0)
-      memcpy (p, start, min (oldlen, newlen) * elem_size);
-    FREE (start);
-  }
+  void *p;
+  if (oldlen < 0 || newlen < 0 || elem_size <= 0) memory_failure();
+  p = memory_alloc((size_t)newlen, (size_t)elem_size);
+  if (start && oldlen && newlen)
+    memcpy(p, start, (size_t)min(oldlen, newlen) * (size_t)elem_size);
+  free(start);
   return p;
 }
 
@@ -361,8 +349,9 @@ void init_intset (int_set * p, int len) {
 }
 
 void free_intset (int_set * p) {
-  if (p->list != NULL)
-    FREE (p->list);
+  free(p->list);
+  p->list = NULL;
+  p->len = p->maxlen = 0;
 }
 
 Boolean add_int (int n, int_set * p) {
@@ -385,9 +374,8 @@ Boolean remove_int(int n, int_set * p) {
   if (p->list == NULL || p->len == 0)
     return False;
 
-  for (i = 0; p->list[i] != n; i++)
-    if (i == p->len)                  /* no int found */
-      return(False);
+  for (i = 0; i < p->len && p->list[i] != n; i++) ;
+  if (i == p->len) return False;
 
   p->list[i] = p->list[p->len - 1];   /* copy last elem to deleted elem */
   (p->len)--;                         /* make list shorter */
@@ -419,18 +407,15 @@ int foreach_int (int_set * p, int (*func) (int)) {
   return n;
 }
 
-Boolean check_for_possible_resize (int_set * p) {
-  int oldlen = p->maxlen;
-
-  if (p->len == p->maxlen)
-    p->maxlen = p->len < 20 ? 2 * (p->len + 1) : p->len + 25;
-  else if (p->maxlen > 0 && p->len < p->maxlen / 5)
-    p->maxlen /= 2;
-  else
-    return False;
-
-  p->list = resize_array (p->list, sizeof (int), oldlen, p->maxlen);
-
+Boolean check_for_possible_resize (int_set *p) {
+  int next = p->maxlen;
+  if (p->len == next) {
+    if (p->len > INT_MAX - 25) memory_failure();
+    next = p->len < 20 ? 2 * (p->len + 1) : p->len + 25;
+  } else if (next > 0 && p->len < next / 5) next /= 2;
+  else return False;
+  p->list = resize_array(p->list, sizeof(int), p->maxlen, next);
+  p->maxlen = next;
   return True;
 }
 

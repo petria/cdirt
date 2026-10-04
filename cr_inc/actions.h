@@ -17,7 +17,7 @@ void    playcom(void);
 void    rosecom(void);
 void    wipecom(void);
 void    flushcom(void);
-void    astrcpy(int, char *, char *);
+char   *astrcpy(int, char *);
 int     boot_actions(void);
 
 #endif

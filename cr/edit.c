@@ -151,9 +151,11 @@ void free_list() {
   Text_Ptr tmpptr = NULL;
   
   for (txt_ptr = txt_start; txt_ptr != NULL; txt_ptr = txt_ptr->next) {
+    if (tmpptr) free(tmpptr->line);
     FREE(tmpptr);
     tmpptr = txt_ptr;
   }
+  if (tmpptr) free(tmpptr->line);
   FREE(tmpptr);
   txt_curr = txt_start = NULL;
   numlines = 0;
@@ -167,17 +169,10 @@ void new_line(char *input) {
 
   newline = NEW(Text_Line, 1);
 
-  for (j = 0 ; input[j] != '\0' ; j++) {
-    newline->line[j] = input[j];
-    if (input[j] == '\n')
-      newline_found = True;
-  }
-
-  if (newline_found)                          /* restore null */
-    newline->line[j] = '\0';
-  else {
-    newline->line[j] = '\n';
-    newline->line[j + 1] = '\0';
+  { Text text = {0};
+    text_append(&text, input);
+    if (!strchr(input, '\n')) text_char(&text, '\n');
+    newline->line = text_take(&text);
   }
 
   newline->next = NULL;
@@ -214,12 +209,14 @@ void delete_line(int linenum) {
   if ((linenum - 1) == 0) {
     tmpptr = txt_start;
     txt_start = txt_start->next;
+    if (tmpptr) free(tmpptr->line);
     FREE(tmpptr);
   }
   else {
     queue_line(linenum - 2);
     tmpptr = txt_curr->next;
     txt_curr->next = txt_curr->next->next;
+    if (tmpptr) free(tmpptr->line);
     FREE(tmpptr);
   }
   numlines--;
@@ -344,18 +341,20 @@ void send_mail() {
     /* Internet email */
 #ifdef INTERNET_EMAIL
     if( is_internet_email( cur_player->work_msg->mailto ) ) {
-      char sendmail[200];
-      char title[TITLE_LEN];
-      char type = 'w';
+      char *sendmail;
+      char *title;
+      const char *type = "w";
       FILE *fptr;
 
-      strip_color( title, make_title( ptitle(mynum), pname(mynum) ) );
+      title = COPY(make_title(ptitle(mynum), pname(mynum)));
+      strip_color(title, title);
 
-      sprintf( sendmail, "%s -f%s -F \"%s\" -odb %s", SENDMAIL,
+      sendmail = text_format("%s -f%s -F \"%s\" -odb %s", SENDMAIL,
                          pname(mynum),
 			 title,
                          cur_player->work_msg->mailto);
-      fptr = popen( sendmail, &type );
+      fptr = popen(sendmail, type);
+      free(sendmail); free(title);
 
       if( !fptr ) {
         bprintf( "Odd, couldn't send the mail.  Sorry.\n" );

@@ -12,7 +12,7 @@ void strformat (char *, Boolean);
 int count_colors(char *);
 char * do_colorcode(char *, Boolean *, Boolean);
 char *do_specialcode(char *, Boolean);
-void apply_filecodes(char *);
+char *apply_filecodes(const char *);
 void strip_color (char *dests, char *srcs);
 void pager (char *);
 

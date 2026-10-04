@@ -42,7 +42,7 @@ int main() {
     FD_ZERO(&output_set);
     FD_SET(main_sock, &input_set);
 
-    for (i = 0 ; i < width ; i++) {
+    for (i = 0 ; i < MAX_CONNECT ; i++) {
       if (fdesc(i) != -1) {
 	FD_SET(fdesc(i), &input_set);
         if (output(i))
@@ -109,19 +109,21 @@ int makesock(void) {
 }
 
 void write_packet(int fd) {
-  int num_wrote;
-
+  ssize_t n;
+  size_t len;
   conn = find_index(fd);
-  num_wrote = write(fd, writepos(conn), strlen(writepos(conn)) + 1);
-  writepos(conn) += num_wrote;
-
-  if (*(writepos(conn) - 1) == 0) {
-    *writebuff(conn) = 0;
-    writepos(conn) = writebuff(conn);
-    output(conn) = False;
+  if (conn < 0) return;
+  len = strlen(writepos(conn)) + 1;
+  n = write(fd, writepos(conn), len);
+  if (n < 0) {
+    if (errno != EINTR && errno != EAGAIN && errno != EWOULDBLOCK) end_conn(fd);
+    return;
   }
+  if (!n) return;
+  if ((size_t)n == len) {
+    *writebuff(conn) = 0; writepos(conn) = writebuff(conn); output(conn) = False;
+  } else writepos(conn) += n;
 }
-
 int escapechars(int conn) {
   char buff[READLEN * 2];
   char *p, *b;
@@ -136,7 +138,7 @@ int escapechars(int conn) {
   }
   *b = 0;
 
-  if (strlen(buff) > READLEN)
+  if (strlen(buff) >= READLEN)
     return(-1);
   else {
     strcpy(connects[conn].readbuff, buff);
@@ -161,7 +163,7 @@ void ht_add(char *ip_addr, char *hostname) {
 
   i = ht_pos(ip_addr);
 
-  nelem = malloc(sizeof(ht_elem));
+  nelem = memory_alloc(1, sizeof(ht_elem));
   nelem->next = NULL;
   nelem->ip_addr = COPY(ip_addr);
   nelem->hostname = COPY(hostname);
@@ -170,8 +172,8 @@ void ht_add(char *ip_addr, char *hostname) {
     htable[i] = nelem;
   else {
     elem = htable[i];
-    while ((elem = elem->next));
-    elem = nelem;
+    while (elem->next) elem = elem->next;
+    elem->next = nelem;
   }
 }
 
@@ -205,15 +207,18 @@ void read_packet(int fd) {
   char *rslt;
 
   conn = find_index(fd);
-  num_read = read(fd, readpos(conn), (100 - (readpos(conn) - readbuff(conn))));
-  readpos(conn) += num_read;
-
+  if (conn < 0) return;
+  if (readpos(conn) - readbuff(conn) >= 100) { end_conn(fd); return; }
+  num_read = read(fd, readpos(conn), 100 - (readpos(conn) - readbuff(conn)));
+  if (num_read < 0 && (errno == EINTR || errno == EAGAIN || errno == EWOULDBLOCK)) return;
   if (num_read < 1) {
     end_conn(fd);
     return;
   }
 
-  if (*(readpos(conn) - 1) == 0) {
+  readpos(conn) += num_read;
+  if (readpos(conn) - readbuff(conn) == 100) {
+    if (readbuff(conn)[99]) { end_conn(fd); return; }
 
     readpos(conn) = readbuff(conn);
 
@@ -221,7 +226,7 @@ void read_packet(int fd) {
       return;
 
     plrnum = -1;
-    sscanf(readbuff(conn), "%d%s", &plrnum, ip_addr);
+    sscanf(readbuff(conn), "%d%15s", &plrnum, ip_addr);
 
     if (!*ip_addr || plrnum == -1)
       return;
@@ -236,7 +241,7 @@ void read_packet(int fd) {
         else
           rslt = ip_addr;
       } 
-      sprintf(writebuff(conn), "%-3d%-96s", plrnum, rslt);
+      snprintf(writebuff(conn), WRITELEN, "%-3d%-96.96s", plrnum, rslt);
       output(conn) = True;
     }
   }
@@ -279,8 +284,7 @@ void new_conn(int mainfd) {
     perror("fcntl()");
     return;
   }
-  if ((i = find_new_index(fd)) == -1)
-    return;
+  if (fd >= FD_SETSIZE || (i = find_new_index(fd)) == -1) { close(fd); return; }
 
   h = gethostbyaddr((char *)&sin.sin_addr, sizeof(sin.sin_addr), AF_INET);
  
@@ -302,7 +306,7 @@ void end_conn(int fd) {
   close(fd);
 
   mud = find_index(fd);
-  init_conn(mud);
+  if (mud >= 0) init_conn(mud);
 }
 
 /**************************************************************************

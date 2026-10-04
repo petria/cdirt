@@ -59,7 +59,7 @@ int boot_actions(void) {
   FILE *f;
   int num_booted, str_size;
   char buff[BLEN], flagstr[FLEN], action[ALEN];
-  Actionptr cur_act = (Actionptr) NEW(Action, 1);
+  Actionptr cur_act = NULL;
 
   num_booted = 0;
   str_size = 0;
@@ -68,11 +68,10 @@ int boot_actions(void) {
   if (!(f = FOPEN(DATA_DIR "/actions", "r")))
     return(-1);
 
-  while(!feof(f)) {
-    fgets(buff, BLEN - 1, f);
+  while (fgets(buff, sizeof(buff), f)) {
 
     if (*buff == ':') {
-      if (sscanf(buff, ":%s %s", action, flagstr) != 2)
+      if (sscanf(buff, ":%29s %99s", action, flagstr) != 2)
         break;
       else {
         if (num_booted++ > 0)            /* add prev. action */
@@ -83,7 +82,7 @@ int boot_actions(void) {
         cur_act->flags = set_flags(flagstr);
       }
     }
-    else if ((p = strchr(buff, ':'))) {
+    else if (cur_act && (p = strchr(buff, ':'))) {
       *p = 0;
       if (!strcmp(buff, "me"))
         cur_act->tome = COPY(p + 1);
@@ -100,7 +99,7 @@ int boot_actions(void) {
       str_size += strlen(p + 1) + 1;
     }
   }
-  add_action(&actions, cur_act);
+  if (cur_act) add_action(&actions, cur_act);
   FCLOSE(f);
   return(0);
 }
@@ -176,7 +175,7 @@ void dump_act_vb (char *s) {
 }
 
 void dump_action(Actionptr v) {
-  char buff[BLEN];
+  char *buff = NULL;
 
   if (v == NULL)
     return;
@@ -192,22 +191,23 @@ void dump_action(Actionptr v) {
     bprintf ("Aloof ");
   bprintf ("\n");
   if (v->flags & F_ALL) {
-    astrcpy (-1, buff, v->toall);
+    free(buff); buff = astrcpy(-1, v->toall);
     bprintf ("Msg to all: %s", buff);
-    astrcpy (-1, buff, v->tome);
+    free(buff); buff = astrcpy(-1, v->tome);
     bprintf ("Msg to me: %s", buff);
   }
   if (v->flags & F_SINGLE) {
-    astrcpy (-1, buff, v->totarget);
+    free(buff); buff = astrcpy(-1, v->totarget);
     bprintf ("Msg to target: %s", buff);
-    astrcpy (-1, buff, v->tosender);
+    free(buff); buff = astrcpy(-1, v->tosender);
     bprintf ("Msg to sender: %s", buff);
     if (v->toothers) {
-      astrcpy (-1, buff, v->toothers);
+      free(buff); buff = astrcpy(-1, v->toothers);
       bprintf ("Msg to others: %s", buff);
     }
   }
   bprintf ("\n");
+  free(buff);
 }
 
 Actionptr find_act(char *word, Actionptr base) {
@@ -226,7 +226,7 @@ Actionptr find_act(char *word, Actionptr base) {
 int do_action(Actionptr v) {
   int p = -1;
   Boolean bad_player = False;
-  char buff[BLEN], *aptr;
+  char *buff = NULL, *aptr;
 
   if ((aptr = strchr(strbuf, ' '))) {     /* has a recepient */
     aptr++;
@@ -255,116 +255,105 @@ int do_action(Actionptr v) {
     plev(mynum) < LVL_WIZARD)
       bprintf("%s doesnt want to be bothered with your actions.\n", pname(p));
   else if (p < 0) {
-    astrcpy(p, buff, v->toall);
+    free(buff); buff = astrcpy(p, v->toall);
     sillycom(buff);
-    astrcpy(p, buff, v->tome);
-    bprintf(buff);
+    free(buff); buff = astrcpy(p, v->tome);
+    bprintf("%s", buff);
   }
   else {
-    astrcpy(p, buff, v->totarget);
-    sendf(p, buff);
+    free(buff); buff = astrcpy(p, v->totarget);
+    sendf(p, "%s", buff);
     if (v->toothers) {
-      astrcpy(p, buff, v->toothers);
-      send_msg(sendloc(p), 0, pvis(mynum), LVL_MAX, mynum, p, buff);
+      free(buff); buff = astrcpy(p, v->toothers);
+      send_msg(sendloc(p), 0, pvis(mynum), LVL_MAX, mynum, p, "%s", buff);
     }
-    astrcpy(p, buff, v->tosender);
-    bprintf(buff);
+    free(buff); buff = astrcpy(p, v->tosender);
+    bprintf("%s", buff);
     if ((v->flags & F_HOSTILE) && p >= max_players)
       hit_player(p, mynum, pwpn(p));
   }
+  free(buff);
   return(0);
 }
 
-void astrcpy(int plr, char *outs, char *line) {
-  char *p, *op;
-
-  *outs = 0;
-
-  bzero(outs, BLEN);
-
-  if (plr != -1 && ploc(plr) != ploc(mynum)) {
-    strcpy(outs, "From far away, ");
-    op = outs + strlen(outs);
-  }
-  else
-    op = outs;
-
-  for (p = line ; *p ; p++) {
-    if (*p != '%')
-      *op++ = *p;
+char *astrcpy(int plr, char *line) {
+  Text text = {0};
+  char *p;
+  if (!line) return text_take(&text);
+  if (plr != -1 && ploc(plr) != ploc(mynum)) text_append(&text, "From far away, ");
+  for (p = line; *p; p++) {
+    if (*p != '%') text_char(&text, *p);
     else if (*(++p)) {
       switch (*p) {
         case 'a':
-          strcat(outs, "\001p");
-          strcat(outs, pname(mynum));
-          strcat(outs, "\003");
+          text_append(&text, "\001p");
+          text_append(&text, pname(mynum));
+          text_append(&text, "\003");
           break;
         case '^':
           if (psex(mynum))
-            strcat(outs, "her");
+            text_append(&text, "her");
           else
-            strcat(outs, "his");
+            text_append(&text, "his");
           break;
         case '~':
           if (psex(mynum))
-            strcat(outs, "her");
+            text_append(&text, "her");
           else
-            strcat(outs, "him");
+            text_append(&text, "him");
           break;
         case '@':
           if (psex(mynum))
-            strcat(outs, "she");
+            text_append(&text, "she");
           else
-            strcat(outs, "he");
+            text_append(&text, "he");
           break;
         case '$':
           if (plr == -1)
-            strcat(outs, "[his/her]");
+            text_append(&text, "[his/her]");
           else if (psex(plr))
-            strcat(outs, "her");
+            text_append(&text, "her");
           else
-            strcat(outs, "his");
+            text_append(&text, "his");
           break;
         case '#':
           if (plr == -1)
-            strcat(outs, "[him/her]");
+            text_append(&text, "[him/her]");
           else if (psex(plr))
-            strcat(outs, "her");
+            text_append(&text, "her");
           else
-            strcat(outs, "him");
+            text_append(&text, "him");
           break;
         case '!':
           if (plr == -1)
-            strcat(outs, "[he/she]");
+            text_append(&text, "[he/she]");
           else if (psex(plr))
-            strcat(outs, "she");
+            text_append(&text, "she");
           else
-            strcat(outs, "he");
+            text_append(&text, "he");
           break;
        case '+':
           if (plr == -1)
-            strcat(outs, "[his/her]");
+            text_append(&text, "[his/her]");
           else if (psex(plr))
-            strcat(outs, "his");
+            text_append(&text, "his");
           else
-            strcat(outs, "hers");
+            text_append(&text, "hers");
           break;
         case 't':
           if (plr == -1)
-            strcat(outs, "[target]");
+            text_append(&text, "[target]");
           else {
-            strcat(outs, "\001p");
-            strcat(outs, pname(plr));
-            strcat(outs, "\003");
+            text_append(&text, "\001p");
+            text_append(&text, pname(plr));
+            text_append(&text, "\003");
           }
           break;
       }
-      op += strlen(op);
-    }
+    } else break;
   }
-  *op = 0;
+  return text_take(&text);
 }
-
 void flowercom (void) {
   int a;
 

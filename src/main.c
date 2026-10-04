@@ -454,12 +454,18 @@ void write_packet(int fd) {
 
   n_wrote = write(fd, out_read(me), len);
 
+  if (n_wrote < 0) {
+    if (errno == EINTR || errno == EAGAIN || errno == EWOULDBLOCK) return;
+    close_sock(fd); return;
+  }
+  if (!n_wrote) return;
 #ifdef IO_STATS
   bytes_sent += n_wrote;
 #endif
 
-  if (*(out_read(me) + n_wrote))          /* more bytes to send */
-    out_read(me) += n_wrote;
+  out_read(me) += n_wrote;
+  if (out_read(me) < out_write(me))       /* more bytes to send */
+    return;
   else {
     if (out_size(me) > M_BUFFLEN) {       /* shrink buffer */
       FREE(out_buffer(me));
@@ -479,9 +485,11 @@ void write_packet(int fd) {
 }
 
 void close_sock(int fd) {
-  int i, new_width;
+  int i;
 
-  setup_globals(find_pl_index(fd));
+  i = find_pl_index(fd);
+  if (i < 0) return;
+  setup_globals(i);
 
   shutdown(fd, 2);
   if (cur_player->iamon)
@@ -492,11 +500,6 @@ void close_sock(int fd) {
   cur_player->is_conn = False;
   sock_fds[fd] = -1;
 
-  for (i = 0, new_width = 0 ; i < width ; i++)
-    if (sock_fds[i] != -1)
-      new_width = i;
-
-  width = new_width; 
   close(fd);
 }
 
@@ -593,7 +596,12 @@ void read_packet (int fd) {
   buff_start = inp_buffer(me);
   buffptr = inp_ptr(me);
 
-  if ((num_read = read (fd, buffptr, CUTOFF_LEN - (buffptr - buff_start))) < 1)
+  if (buffptr < buff_start || buffptr - buff_start >= CUTOFF_LEN) {
+    inp_ptr(me) = buffptr = buff_start;
+  }
+  num_read = read(fd, buffptr, CUTOFF_LEN - (buffptr - buff_start));
+  if (num_read < 0 && (errno == EINTR || errno == EAGAIN || errno == EWOULDBLOCK)) return;
+  if (num_read < 1)
     {
       if (!num_read)                      /* 0-byte packets = connection cut */
 	quit_player(-1);

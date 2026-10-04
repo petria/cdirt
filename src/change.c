@@ -878,38 +878,27 @@ static void change_room_desc (int loc, char *room_name) {
 #define LOAD_INCR 256
 
 void load_from_file(char *filename) {
-  char *p, *q;
-  FILE *f;
-  int len = LOAD_INCR * 2;
-
-  f = FOPEN(filename, "r");
-  p = q = NEW(char, len);
-
-  while(!feof(f)) {
-    fgets(q, LOAD_INCR - 1, f);
-    if (strchr(q, '^')) {
-      bprintf("Text block cannot contain the ^ character.\n");
-      FCLOSE(f);
+  Text text = {0};
+  char line[LOAD_INCR];
+  char **target = (char **)cur_player->work2[0];
+  FILE *f = FOPEN(filename, "r");
+  if (!f) return;
+  while (fgets(line, sizeof(line), f)) {
+    if (strchr(line, '^') || strchr(line, '"')) {
+      bprintf(strchr(line, '^') ?
+              "Text block cannot contain the ^ character.\n" :
+              "Text block cannot contain the \" character.\n");
+      FCLOSE(f); free(text.data); return;
     }
-    else if (strchr(q, '"')) {
-      bprintf("Text block cannot contain the \" character.\n");
-      FCLOSE(f);
-    }
-    q = q + strlen(q);
-    if (len - (q - p) < LOAD_INCR) {
-      len += LOAD_INCR;
-      p = resize_array(p, sizeof(char), len, len + LOAD_INCR);
-    }
+    text_append(&text, line);
   }
-
+  if (ferror(f)) { FCLOSE(f); free(text.data); return; }
   FCLOSE(f);
-
-  *(q + strlen(q) - 1) = 0;                        /* remove newline */
-
-  if (*(char **) (cur_player->work2[0]))        /* set whatever desc */
-    FREE(*(char **) (cur_player->work2[0]));
-  *(char **) (cur_player->work2[0]) = p;
-  bprintf((char *) &cur_player->work2[1]);
+  if (text.len && text.data[text.len - 1] == '\n')
+    text.data[--text.len] = 0;
+  free(*target);
+  *target = text_take(&text);
+  bprintf("%s", (char *)&cur_player->work2[1]);
 }
 
 static void change_mob_desc (int mob, char *mob_name) {

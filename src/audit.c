@@ -15,6 +15,8 @@
 #include "zones.h"
 #include "mud.h"
 #include "timing.h"
+#include "spell.h"
+#include "verbs.h"
 
 #define LIMIT 131072
 #define TRACE_LIMIT 1024
@@ -92,6 +94,10 @@ static void snapshot_player(FILE *f, int p) {
     ploc(p), plev(p), pstr(p), pscore(p), pclass(p), pwpn(p), pfighting(p),
     psitting(p), pvis(p), p < max_players && is_conn(p) ? "true" : "false");
   ids(f, pinv(p));
+  { int count = 0; SPELL_DURATION *d;
+    if (p < max_players) for (d = players[p].duration; d; d = d->next) count++;
+    fprintf(f, ",\"durations\":%d", count);
+  }
   fputs(",\"sflags\":", f); audit_bits(f, mbits(p), mindex, Sflags, SFLAGS, SFL_MAX);
   fputs(",\"pflags\":", f); audit_bits(f, mbits(p), mindex, Pflags, PFLAGS, PFL_MAX);
   fputs(",\"mflags\":", f); audit_bits(f, mbits(p), mindex, Mflags, MFLAGS, MFL_MAX);
@@ -163,7 +169,7 @@ void audit_action(const char *name) {
 void audit_output(int p, const unsigned char *s, unsigned long n) {
   char *next;
   if (control < 0 || !depth || p < 0 || p >= max_players) return;
-  if (lengths[p] + n >= LIMIT) { overflow = 1; return; }
+  if (n >= LIMIT || lengths[p] >= LIMIT - n) { overflow = 1; return; }
   if (!audit_messages[p]) snprintf(output_names[p], sizeof(*output_names), "%s", pname(p));
   next = realloc(audit_messages[p], lengths[p] + n + 1);
   if (!next) { overflow = 1; return; }
@@ -183,7 +189,7 @@ static const char *fixture(char **v, int n) {
   long number;
   char *end;
   if (n != 5) return "fixture requires kind, identity, field, value";
-  if (strcmp(v[3], "room") && strcmp(v[3], "carrier") && strcmp(v[3], "container")) {
+  if (strcmp(v[3], "room") && strcmp(v[3], "carrier") && strcmp(v[3], "container") && strcmp(v[3], "title")) {
     errno = 0; number = strtol(v[4], &end, 10);
     if (errno || !*v[4] || *end || number < INT_MIN || number > INT_MAX)
       return "invalid numeric fixture value";
@@ -196,6 +202,18 @@ static const char *fixture(char **v, int n) {
       setploc(id, loc);
     }
     else if (!strcmp(v[3], "level")) { if (val < 1 || val > LVL_MAX) return "invalid level"; setplev(id, val); }
+    else if (!strcmp(v[3], "title")) {
+      if (id >= max_players || strlen(v[4]) >= sizeof(players[id].ptitle)) return "invalid title";
+      strcpy(players[id].ptitle, v[4]);
+    }
+    else if (!strcmp(v[3], "duration:lit")) {
+      if (id >= max_players || val < 0 || val > 3600) return "invalid duration";
+      push_duration(id, VERB_LIT, val, 0);
+    }
+    else if (!strcmp(v[3], "duration:wipe")) {
+      if (id >= max_players) return "invalid player";
+      wipe_duration(id);
+    }
     else if (!strcmp(v[3], "strength")) setpstr(id, val);
     else if (!strcmp(v[3], "score")) setpscore(id, val);
     else if (!strcmp(v[3], "class")) { if (val < WARRIOR || val > MAGE) return "invalid class"; setpclass(id, val); }
@@ -222,7 +240,7 @@ static const char *fixture(char **v, int n) {
       if ((loc = character(v[4])) < 0) return "unknown carrier";
       setoloc(id, loc, CARRIED_BY);
     }
-    else if (!strcmp(v[3], "container")) {
+    else if (!strcmp(v[3], "container") && strcmp(v[3], "title")) {
       if ((loc = object(v[4])) < 0 || loc == id || !otstbit(loc, OFL_CONTAINER)) return "invalid container";
       ancestor = loc; hops = 0;
       while (ocarrf(ancestor) == IN_CONTAINER) {

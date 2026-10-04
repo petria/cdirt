@@ -228,7 +228,7 @@ void tally_votes(Boolean show_summary,
   FILE *vfptr, *tmpptr, *qptr;
   char vpath[BUFF_LEN], tmppath[BUFF_LEN], qpath[BUFF_LEN];
   char buff[BUFF_LEN];
-  Voteptr votes[MAX_VOTES] = {NULL};
+  Voteptr votes[MAX_VOTES + 1] = {NULL};
   int i, yes, no, abs, qnum, nv, j;
 
   i = 0;
@@ -236,20 +236,16 @@ void tally_votes(Boolean show_summary,
 
   replace_input_handler(cur_player->old_inp_handler);
   sprintf(vpath, "%s/results.%s", VOTE_DIR, file_base);
-  if ((vfptr = FOPEN(vpath, "r")) != NULL)
-    for (i = 0; i < MAX_VOTES ; i++) {
-      votes[i] = NEW(p_vote, 1);
-      if (feof(vfptr)) {
-        FCLOSE(vfptr);
-        break;
-      }
-      fscanf(vfptr, "%s %d %d %d\n", votes[i]->player, &votes[i]->yes,
-	     &votes[i]->no, &votes[i]->abs);
-      if (!strcmp(votes[i]->player, pname(mynum)))
-	i--;
+  if ((vfptr = FOPEN(vpath, "r")) != NULL) {
+    p_vote record;
+    while (i < MAX_VOTES && fscanf(vfptr, "%79s %d %d %d", record.player,
+                                  &record.yes, &record.no, &record.abs) == 4) {
+      if (!strcmp(record.player, pname(mynum))) continue;
+      votes[i] = NEW(p_vote, 1); *votes[i++] = record;
     }
-  else
-    votes[i] = NEW(p_vote, 1);
+    FCLOSE(vfptr);
+  }
+  votes[i] = NEW(p_vote, 1);
 
   strcpy(votes[i]->player, pname(mynum));
   votes[i]->yes = v_yes;
@@ -260,21 +256,22 @@ void tally_votes(Boolean show_summary,
     sprintf(tmppath, "%s/SUMMARY.%s", TEMP_DIR, pname(mynum));
     if ((tmpptr = FOPEN(tmppath, "w")) == NULL) {
       bprintf(TMP_ERROR);
-      return;
+      goto cleanup;
     }
     sprintf(qpath, "%s/%s", VOTE_DIR, file_base);
     if ((qptr = FOPEN(qpath, "r")) == NULL)
-      return;
+      goto cleanup;
 
     if (complete_summary)
       fprintf(tmpptr, "\n&+r[&+CGod view, full listing&+r]\n");
     
     for (qnum = 1 ; qnum < maxnum ; qnum++) {
-      if (!valid_line(fgets(buff, BUFF_LEN, qptr)) || (not_voted(qnum) &&
+      if (!fgets(buff, BUFF_LEN, qptr)) break;
+      if (!valid_line(buff) || (not_voted(qnum) &&
 	  !complete_summary))
 	continue;
       fprintf(tmpptr, "\n");
-      fprintf(tmpptr, buff);
+      fprintf(tmpptr, "%s", buff);
       
       yes = no = abs = nv = 0;
       for (j = 0 ; j <= i ; j++) {
@@ -319,24 +316,28 @@ void tally_votes(Boolean show_summary,
     }
   }
 
+  if (show_summary) FCLOSE(qptr);
   if ((vfptr = FOPEN(vpath, "w")) == NULL) {
     bprintf("Sorry, couldn't open vote file for writing\n");
     mudlog("ERROR: in tally_votes, unable to open vote results file "
 	   "for writing.\n");
-    return;
+    goto cleanup;
   }
 
   for (j = 0 ; j <= i ; j++) {
     fprintf(vfptr, "%s %d %d %d\n", votes[j]->player, votes[j]->yes,
 	    votes[j]->no, votes[j]->abs);
-    FREE(votes[j]);
+    FREE(votes[j]); votes[j] = NULL;
   }
 
   FCLOSE(vfptr);
 
   if (show_summary) {
-    FCLOSE(tmpptr);
+    FCLOSE(tmpptr); tmpptr = NULL;
     v_clean_up();
     bprintf("\001f%s\003", tmppath);
   }
+cleanup:
+  if (tmpptr) FCLOSE(tmpptr);
+  for (j = 0; j <= i; j++) free(votes[j]);
 }

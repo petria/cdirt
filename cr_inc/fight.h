@@ -1,4 +1,4 @@
-void    __add_codes(int, int, Bodypart *, char *, int, char *);
+char   *__add_codes(int, int, Bodypart *, int, char *);
 void    __generalmsg(int, int, Bodypart *, char *);
 int     applyfunc(int, int func(Bodypart *, int, FILE *), int, FILE *);
 int     take_bodypart_helper(Bodypart *, int, FILE *);

@@ -25,6 +25,7 @@
 #include "store.h"
 #include "objsys.h"
 #include "wizlist.h"
+#include "mail.h"
 
 extern void p_sendto(int, char *);
 extern void do_packet(int, char *);
@@ -47,51 +48,29 @@ static int vislev[] =
 #define SOCK_FORMAT "&+B[&+CSocket (%d): &+W%s&+B]\n"
 
 void sock_msg (char *format, ...) {
-  int plx;
-  int me = real_mynum;
-  va_list pvar;
-  char *hostptr, *userptr, *ptr;
-  char buffer[200];
-  char hostmsg[200];
-  char usermsg[200];
-  char sockmessage[200];
-
-  if (is_host_silent(hostname(mynum)) || crashing)
-    return;
-
-  va_start (pvar, format);
-  vsprintf (buffer, format, pvar);
-  va_end(pvar);
-
-  hostptr = hostmsg;
-  userptr = usermsg;
-  for (ptr = buffer ; *ptr ; ptr++) {
-    if (*ptr != '%')
-      *hostptr++ = *userptr++ = *ptr;
-    else if (*(ptr + 1) == 'H') {
-      strcpy(hostptr, hostname(mynum));
-      strcpy(userptr, username(mynum));
-      hostptr += strlen(hostname(mynum));
-      userptr += strlen(username(mynum));
-      ptr++;
+  int plx, me = real_mynum;
+  va_list args;
+  char *buffer, *ptr, *message;
+  Text host = {0}, user = {0};
+  if (me < 0 || me >= max_players || is_host_silent(hostname(me)) || crashing) return;
+  va_start(args, format); buffer = text_vformat(format, args); va_end(args);
+  for (ptr = buffer; *ptr; ptr++) {
+    if (*ptr != '%') { text_char(&host, *ptr); text_char(&user, *ptr); }
+    else if (ptr[1] == 'H') {
+      text_append(&host, hostname(me)); text_append(&user, username(me)); ptr++;
     }
   }
-  *hostptr = *userptr = 0;
-
-  for (plx = 0 ; plx < max_players ; plx++) {
-    if (is_in_game(plx) && ptstflg(plx, PFL_SEESOCKET) && 
-	pvis(me) < plev(plx) && plx != me) {
-
-      if (ptstflg(plx, PFL_SEEUSER))
-	sprintf(sockmessage, SOCK_FORMAT, fildes(me), usermsg);
-      else
-	sprintf(sockmessage, SOCK_FORMAT, fildes(me), hostmsg);
-      p_sendto(plx, sockmessage);
+  text_reserve(&host, 0); text_reserve(&user, 0);
+  for (plx = 0; plx < max_players; plx++) {
+    if (is_in_game(plx) && ptstflg(plx, PFL_SEESOCKET) && pvis(me) < plev(plx) && plx != me) {
+      message = text_format(SOCK_FORMAT, fildes(me),
+                           ptstflg(plx, PFL_SEEUSER) ? user.data : host.data);
+      p_sendto(plx, message); free(message);
     }
   }
+  free(buffer); free(host.data); free(user.data);
   setup_globals(me);
 }
-
 void push_input_handler (void (*h) (char *str))
 {
   INP_HANDLER *i;
@@ -144,7 +123,6 @@ int find_free_player_slot (void) {
 
     last_cmd(i) = logged_on(i) = global_clock;
     rlast_cmd(i) = logged_on(i) = global_clock;
-    players[i].duration = NEW (SPELL_DURATION, 1);
     players[i].duration = NULL;
   }
   return i;
@@ -692,6 +670,7 @@ void get_command (char *cmd) {
 
 void free_player(void) {
   INP_HANDLER *tmp;
+  free_work_message(); free_mail_list();
 
   while (inp_handler(real_mynum)) {
     tmp = inp_handler(real_mynum);
@@ -699,23 +678,29 @@ void free_player(void) {
     FREE(tmp);
   }
 
-  FREE(out_buffer(real_mynum));
-  FREE(cur_player->prompt);
+  free(out_buffer(real_mynum));
+  out_buffer(real_mynum) = out_read(real_mynum) = out_write(real_mynum) = NULL;
+  out_size(real_mynum) = 0;
+  free(cur_player->wd_him); cur_player->wd_him = NULL;
+  free(cur_player->wd_her); cur_player->wd_her = NULL;
+  free(cur_player->wd_it); cur_player->wd_it = NULL;
+  cur_player->wd_them = NULL;
+  free(cur_player->prompt); cur_player->prompt = NULL;
+  free(cur_player->awaymsg); cur_player->awaymsg = NULL;
+  free(cur_player->setin); cur_player->setin = NULL;
+  free(cur_player->setout); cur_player->setout = NULL;
+  free(cur_player->setmin); cur_player->setmin = NULL;
+  free(cur_player->setmout); cur_player->setmout = NULL;
+  free(cur_player->setvin); cur_player->setvin = NULL;
+  free(cur_player->setvout); cur_player->setvout = NULL;
+  free(cur_player->setqin); cur_player->setqin = NULL;
+  free(cur_player->setqout); cur_player->setqout = NULL;
+  free(cur_player->setsit); cur_player->setsit = NULL;
+  free(cur_player->setstand); cur_player->setstand = NULL;
+  free(cur_player->setsum); cur_player->setsum = NULL;
+  free(cur_player->setsumin); cur_player->setsumin = NULL;
+  free(cur_player->setsumout); cur_player->setsumout = NULL;
 
-  if (plev(mynum) > LVL_WIZARD) {
-    FREE(cur_player->setin);
-    FREE(cur_player->setout);
-    FREE(cur_player->setmout);
-    FREE(cur_player->setvin);
-    FREE(cur_player->setvout);
-    FREE(cur_player->setqin);
-    FREE(cur_player->setqout);
-    FREE(cur_player->setsit);
-    FREE(cur_player->setstand);
-    FREE(cur_player->setsum);
-    FREE(cur_player->setsumin);
-    FREE(cur_player->setsumout);
-  }
 }
 
 void make_linkdead(int plr) {
@@ -862,7 +847,7 @@ void remove_from_game(void) {
 }
 
 void quit_msg(char *to_me, char *to_others) {
-  char tline[100];
+  Text border = {0};
   char *line = "&+B------------------------------------"
                "-------------------------------------------";
 
@@ -870,8 +855,9 @@ void quit_msg(char *to_me, char *to_others) {
      send_msg (DEST_ALL, MODE_QUIET, max (pvis (mynum), LVL_WIZARD), LVL_MAX,
               mynum, NOBODY, "&+B[&+R%s&+B]\n", to_others);
   
-  sprintf(tline, "%s&+C%s&+B", "&+B---", MUD_NAME);
-  strncat(tline, line + 3, 79 - strlen(MUD_NAME) - 3);
+  text_append(&border, "&+B---&+C"); text_append(&border, MUD_NAME); text_append(&border, "&+B");
+  if (strlen(MUD_NAME) < 76) text_bytes(&border, line + 3, 76 - strlen(MUD_NAME));
 
-  bprintf("\n%s\n\n%s\n\n%s\n", tline, to_me, line);
+  bprintf("\n%s\n\n%s\n\n%s\n", border.data, to_me, line);
+  free(border.data);
 }

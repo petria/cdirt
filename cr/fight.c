@@ -38,20 +38,16 @@ void __fightmsg(int attacker, int victim,
    GMSG(msg[i]);
 }
 
-void __generalmsg(int attacker, int victim, Bodypart *area, char *msg)
-{
-   char buff[300];
-
-   CODES(buff, ATTACKER, msg);
-   sendf(attacker, buff);
-
-   CODES(buff, VICTIM, msg);
-   sendf(victim, buff);
-
-   CODES(buff, OTHER, msg);
-   send_msg(sendloc(attacker), MODE_NSFLAG | MS(SFL_NOFIGHT),
-            LVL_MIN, LVL_MAX, attacker, victim, buff);
- }
+void __generalmsg(int attacker, int victim, Bodypart *area, char *msg) {
+  char *text = __add_codes(attacker, victim, area, ATTACKER, msg);
+  sendf(attacker, "%s", text); free(text);
+  text = __add_codes(attacker, victim, area, VICTIM, msg);
+  sendf(victim, "%s", text); free(text);
+  text = __add_codes(attacker, victim, area, OTHER, msg);
+  send_msg(sendloc(attacker), MODE_NSFLAG | MS(SFL_NOFIGHT),
+           LVL_MIN, LVL_MAX, attacker, victim, "%s", text);
+  free(text);
+}
 
 void set_player_parts(int plr) {
   bodyname(head(plr)) = plr_head;
@@ -546,115 +542,109 @@ void player_died(int attacker, int victim, int hit_type) {
   }
 }
 
-void __add_codes(int attacker, int victim, Bodypart *area,
-                 char *deststr, int type, char *msg) 
-{
-   char *ptr;
-   char *d;
-
-   *deststr = 0;
-
-   for (ptr = msg, d = deststr ; *ptr ; ptr++) {
-     if (*ptr != '%')
-       *d++ = *ptr;
-     else {
+char *__add_codes(int attacker, int victim, Bodypart *area, int type, char *msg) {
+  Text text = {0};
+  char *ptr, *result;
+  for (ptr = msg; *ptr; ptr++) {
+    if (*ptr != '%') text_char(&text, *ptr);
+    else {
+      if (!ptr[1]) break;
        switch (*(ptr + 1)) {
        case 'b':
-         strcpy(d, area->name);
+         text_append(&text, area->name);
          break;
        case 'w':
-         strcpy(d, oname(pwpn(attacker)));
+         text_append(&text, oname(pwpn(attacker)));
          break;
        case 'a':
          if (type == ATTACKER)
-           strcpy(d, "you");
+           text_append(&text, "you");
          else
-           sprintf(d, "\001p%s\003", pname(attacker));
+           { char *part = text_format("\001p%s\003", pname(attacker)); text_append(&text, part); free(part); }
          break;
        case 'g':
          if (type == ATTACKER)
-           strcpy(d, "your");
+           text_append(&text, "your");
          else if (ststflg(attacker, SFL_FEMALE))
-           strcpy(d, "her");
+           text_append(&text, "her");
          else
-           strcpy(d, "his");
+           text_append(&text, "his");
          break;
        case 'd':
          if (type == VICTIM)
-           strcpy(d, "you");
+           text_append(&text, "you");
          else
-           sprintf(d, "\001p%s\003", pname(victim));
+           { char *part = text_format("\001p%s\003", pname(victim)); text_append(&text, part); free(part); }
          break;
        case 'p':
          if (type == VICTIM)
-           strcpy(d, "your");
+           text_append(&text, "your");
          else
-           sprintf(d, "\001p%s\003's", pname(victim));
+           { char *part = text_format("\001p%s\003's", pname(victim)); text_append(&text, part); free(part); }
          break;
        case 'e':
          if (type == ATTACKER)
-           strcpy(d, "your");
+           text_append(&text, "your");
          else
-           sprintf(d, "\001p%s\003's", pname(attacker));
+           { char *part = text_format("\001p%s\003's", pname(attacker)); text_append(&text, part); free(part); }
          break;
        case 'r':
          if (hasarmr(area)) {
            if (type == VICTIM)
-             sprintf(d, "your %s", oname(area->armor));
+             { char *part = text_format("your %s", oname(area->armor)); text_append(&text, part); free(part); }
            else
-             sprintf(d, "%s %s", psex(victim) ? "her":"his",oname(area->armor));
+             { char *part = text_format("%s %s", psex(victim) ? "her":"his",oname(area->armor)); text_append(&text, part); free(part); }
          }
          else {
            if (type == VICTIM)
-             sprintf(d, "your %s", bodyname(*area));
+             { char *part = text_format("your %s", bodyname(*area)); text_append(&text, part); free(part); }
            else
-             sprintf(d, "%s %s", psex(victim) ? "her":"his", bodyname(*area));
+             { char *part = text_format("%s %s", psex(victim) ? "her":"his", bodyname(*area)); text_append(&text, part); free(part); }
          }
          break;
        case 's':
          if (type == ATTACKER)
-           strcpy(d, "");
+           text_append(&text, "");
          else
-           strcpy(d, "s");
+           text_append(&text, "s");
          break;
        case 't':
          if (type == ATTACKER || type == OTHER)
-           strcpy(d, "s");
+           text_append(&text, "s");
          else
-           strcpy(d, "");
+           text_append(&text, "");
          break;
        case 'S':
          if (type == ATTACKER)
-           strcpy(d, "");
+           text_append(&text, "");
          else
-           strcpy(d, "S");
+           text_append(&text, "S");
          break;
        case 'T':
          if (type == ATTACKER || type == OTHER)
-           strcpy(d, "S");
+           text_append(&text, "S");
          else
-           strcpy(d, "");
+           text_append(&text, "");
          break;
        case 'q':
          if (type == VICTIM)
-           strcpy(d, "you");
+           text_append(&text, "you");
          else {
            if (ststflg(victim, SFL_FEMALE))
-             strcpy(d, "she");
+             text_append(&text, "she");
            else
-             strcpy(d, "he");
+             text_append(&text, "he");
          }
          break;
        }
-       ptr++;
-       d+= strlen(d);
-     }
-   }
-   *d++ = '\n';
-   *d = 0;
-   *deststr = toupper(*deststr);
+      ptr++;
+    }
+  }
+  text_char(&text, '\n');
+  result = text_take(&text);
+  *result = toupper((unsigned char)*result);
+  return result;
 }
-
 /* bodypart primitives */
 
 Boolean has_foot (int plr) {

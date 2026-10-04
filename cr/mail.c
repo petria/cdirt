@@ -9,6 +9,24 @@
 #include <sys/ioctl.h>
 #include <errno.h>
 
+void free_work_message(void) {
+  Messageptr node;
+  if (!cur_player->work_msg) return;
+  for (node = cur_player->first_msg; node; node = node->next)
+    if (node == cur_player->work_msg) { cur_player->work_msg = NULL; return; }
+  free(cur_player->work_msg->subject); free(cur_player->work_msg);
+  cur_player->work_msg = NULL;
+}
+void free_mail_list(void) {
+  Messageptr node = cur_player->first_msg, next;
+  while (node) {
+    next = node->next;
+    if (cur_player->work_msg == node) cur_player->work_msg = NULL;
+    free(node->subject); free(node); node = next;
+  }
+  cur_player->first_msg = cur_player->cur_msg = NULL;
+}
+
 void mailcom(void) {
   if (aliased(real_mynum)) {
     bprintf ("&#You cannot use the mailer while you are aliased.\n");
@@ -43,6 +61,7 @@ void new(char *input){
   time_t t;
   struct tm *tm;
 
+  free_work_message();
   cur_player->work_msg = NEW(Message, 1);
   cur_player->work_msg->next = NULL;
   cur_player->work_msg->prev = NULL;
@@ -136,10 +155,8 @@ void get_subject(char *input) {
     replace_input_handler(get_subject);
   }
   else {
-    if (*input == 0)
-      strcpy(cur_player->work_msg->subject, "None");
-    else
-      strcpy(cur_player->work_msg->subject, input);
+    free(cur_player->work_msg->subject);
+    cur_player->work_msg->subject = COPY(*input ? input : "None");
     write_msg(False, NULL);
   }
 }
@@ -147,7 +164,7 @@ void get_subject(char *input) {
 void savemail(void) {
   char mailpath[256], tmppath[256];
   int tmpfd, saved, deleted;
-  Messageptr message;
+  Messageptr message, next;
 
   sprintf(mailpath, "%s/%s", MAIL_DIR, pname(mynum));
   sprintf(tmppath, "%s/MAIL.%s", TEMP_DIR, pname(mynum));
@@ -158,7 +175,8 @@ void savemail(void) {
   else {
     saved = deleted = 0;
     for (message = cur_player->first_msg ;
-	 message != NULL ; message = message->next) {
+	 message != NULL ; message = next) {
+      next = message->next;
 
       if (message->status == MAIL_STATUS_NEW)
 	message->status = MAIL_STATUS_OLD;
@@ -169,8 +187,11 @@ void savemail(void) {
       }
       else
 	deleted++;
-      FREE(message->prev);
+      if (cur_player->work_msg == message) cur_player->work_msg = NULL;
+      free(message->subject);
+      free(message);
     }
+    cur_player->first_msg = cur_player->cur_msg = NULL;
     CLOSE(tmpfd);
     if (saved == 0)
       unlink(mailpath);
@@ -363,32 +384,39 @@ void list(char *inp){
   }
 }
 
+/* Caller owns the complete line; mail subjects/replies are not truncated. */
+char *mail_read_line(int fd) {
+  Text text = {0};
+  char c;
+  ssize_t n;
+  for (;;) {
+    n = read(fd, &c, 1);
+    if (n < 0 && errno == EINTR) continue;
+    if (n <= 0) {
+      if (!n && text.len) return text_take(&text);
+      free(text.data); return NULL;
+    }
+    if (c == '\n') return text_take(&text);
+    text_char(&text, c);
+  }
+}
+
 /* copy mail text from the current message to an opened fd */
 
 void write_text(int outfd) {
-  char buff[M_BUFLEN];
-  char path[256];
-  int n_read;
-  int mailfd;
-
+  char path[256], *line;
+  int fd;
   sprintf(path, "%s/%s", MAIL_DIR, pname(mynum));
-  if ((mailfd = OPEN(path, O_RDONLY, 0644)) == -1) {
-    bprintf("Unable to open player's mail file.\n");
-    return;
+  if ((fd = OPEN(path, O_RDONLY, 0644)) == -1) {
+    bprintf("Unable to open player's mail file.\n"); return;
   }
-  lseek(mailfd, cur_player->cur_msg->text, SEEK_SET);
-  do {
-    n_read = cdirt_getline(mailfd, buff);
-    if (!strstr(buff, DELIM)) {
-      write(outfd, buff, n_read);
-      write(outfd, "\n", 1);
-    }
-    else
-      break;
-  } while(n_read != -1);
-  CLOSE(mailfd);
+  lseek(fd, cur_player->cur_msg->text, SEEK_SET);
+  while ((line = mail_read_line(fd))) {
+    if (strstr(line, DELIM)) { free(line); break; }
+    write(outfd, line, strlen(line)); write(outfd, "\n", 1); free(line);
+  }
+  CLOSE(fd);
 }
-
 /* save headers to player's mail file */
 
 void store_header(int fd) {
@@ -479,11 +507,12 @@ void replymsg(char *input) {
   strftime(newmessage->date, LINE_LEN, "%a %b %d, %I:%M%P", tm); 
   strcpy(newmessage->mailto, cur_player->cur_msg->mailfrom);
   if(!strncmp(cur_player->cur_msg->subject, "Re:", 3 ))
-    strcpy(newmessage->subject, cur_player->cur_msg->subject);
+    newmessage->subject = COPY(cur_player->cur_msg->subject);
   else
-    sprintf(newmessage->subject, "Re: %s", cur_player->cur_msg->subject);
+    newmessage->subject = text_format("Re: %s", cur_player->cur_msg->subject);
 
   /* Make it our work message */
+  free_work_message();
   cur_player->work_msg = newmessage;
 
   /* Tell them the info and get the text */
@@ -531,14 +560,17 @@ Messageptr queue_msg(Messageptr first, int i) {
 
 /* cdirt_getline : reads from FD, returns number of characters read, w/o newline */
 
-int cdirt_getline(int fd, char *str) {
-  char *ptr;
-
-  for (ptr = str ; read(fd, ptr, 1) > 0 ; ptr++)
-    if (*ptr == '\n') {
-      *ptr = '\0';
-      return ptr - str;
-    }
+int cdirt_getline(int fd, char *str, size_t capacity) {
+  size_t n = 0;
+  char c;
+  ssize_t got;
+  if (!capacity) return -1;
+  str[0] = 0;
+  while ((got = read(fd, &c, 1)) > 0) {
+    if (c == '\n') return (int)n;
+    if (n + 1 >= capacity) { str[n] = 0; return -1; }
+    str[n++] = c; str[n] = 0;
+  }
   return -1;
 }
 
@@ -546,10 +578,9 @@ void loadmail(void) {
   Messageptr message;
   char path[LINE_LEN];
   int j, fd, newmsgs = 0, unreadmsgs = 0;
-  char line[MAX_COM_LEN];
+  char *line = NULL;
 
-  cur_player->first_msg = NEW(Message, 1);
-  cur_player->first_msg = NULL;
+  free_mail_list();
 
   sprintf(path, "%s/%s", MAIL_DIR, pname(mynum));
   if ((fd = OPEN(path, O_RDONLY, 0644)) == -1) { 
@@ -562,9 +593,11 @@ void loadmail(void) {
       Messageptr newmessage = NULL;
       newmessage = NEW(Message, 1);    
 
-      if (cdirt_getline(fd, line) != -1)
+      free(line); line = mail_read_line(fd);
+      if (line && strlen(line) >= 6 && strlen(line + 6) < sizeof(newmessage->mailfrom))
 	strcpy(newmessage->mailfrom, &line[6]);
       else {
+        free(newmessage); free(line);
 	if (!newmsgs && !unreadmsgs)
 	  bprintf("You have no unread mail.\n");
 	else if (!newmsgs && unreadmsgs)
@@ -579,11 +612,14 @@ void loadmail(void) {
 	CLOSE(fd);
         return;
       }
-      cdirt_getline(fd, line);
-      strcpy(newmessage->subject, &line[9]);
-      cdirt_getline(fd, line);
+      free(line); line = mail_read_line(fd);
+      if (!line || strlen(line) < 9) { free(line); free(newmessage); CLOSE(fd); return; }
+      newmessage->subject = COPY(&line[9]);
+      free(line); line = mail_read_line(fd);
+      if (!line || strlen(line) < 6 || strlen(line + 6) >= sizeof(newmessage->date)) { free(line); free(newmessage->subject); free(newmessage); CLOSE(fd); return; }
       strcpy(newmessage->date, &line[6]);
-      cdirt_getline(fd, line);
+      free(line); line = mail_read_line(fd);
+      if (!line || strlen(line) < 9) { free(line); free(newmessage->subject); free(newmessage); CLOSE(fd); return; }
       newmessage->status = line[8];
       newmessage->text = lseek(fd, 0L, SEEK_CUR);
 
@@ -595,7 +631,10 @@ void loadmail(void) {
       strcpy(newmessage->mailto, pname(mynum));
 
       do {                                   /* skip to next entry */
-	cdirt_getline(fd, line);
+        free(line); line = mail_read_line(fd);
+        if (!line) {
+          free(newmessage->subject); free(newmessage); CLOSE(fd); return;
+        }
       } while(!strstr(line, DELIM));
 
       newmessage->next = NULL;

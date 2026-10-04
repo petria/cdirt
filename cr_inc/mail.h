@@ -24,6 +24,8 @@
 
 
 void mailcom(void);
+void free_work_message(void);
+void free_mail_list(void);
 void new(char *);
 void viewmsg(void);
 void list(char *inp);
@@ -40,7 +42,7 @@ void get_notes(char *input);
 void check_for_internet_mail( );
 void prompt_print(char *);
 void replymsg(char *);
-int cdirt_getline(int fd, char *str);
+int cdirt_getline(int fd, char *str, size_t capacity);
 
 /* macros */
 #define work_msg(C)               players[C].work_msg

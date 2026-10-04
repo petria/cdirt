@@ -50,7 +50,7 @@ progerror (char *name)
 }
 
 void mudlog (char *format,...) {
-  char buff[256], buff2[256], timestr[20];
+  char *buff, *buff2, timestr[20];
   va_list pvar;
   struct tm *now;
   time_t timenum;
@@ -60,12 +60,14 @@ void mudlog (char *format,...) {
   strftime(timestr, 20, "%b%d %H:%M", now);
 
   va_start (pvar, format);
-  vsprintf (buff, format, pvar);
+  buff = text_vformat(format, pvar);
   va_end (pvar);
 
   fprintf(clogptr, "%s %s\n", timestr, buff);
+  buff2 = COPY(buff);
   strip_color(buff2, buff);
   fprintf(logptr, "%s %s\n", timestr, buff2);
+  free(buff2); free(buff);
 }
 
 void open_plr_log (void)

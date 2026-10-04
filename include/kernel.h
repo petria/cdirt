@@ -20,9 +20,10 @@
 #include "extern.h"
 #include "files.h"
 
-#define NEW(t, c)               ((t *)calloc(c, sizeof(t)))
-#define BCOPY(s, l)		memcpy(calloc(1, l), s, l)
-#define COPY(s)			strcpy(NEW(char, strlen(s) + 1), s)
+#include "memory.h"
+#define NEW(t, c) ((t *)memory_alloc((c), sizeof(t)))
+#define BCOPY(s, l) memory_copy((s), (l))
+#define COPY(s) memory_string(s)
 #define EMPTY(p)		(*(p) == '\0')
 #define EQ(a, b)		(strcasecmp((a), (b)) == 0)
 #define WIZZONE_EXIST_H  72L      /* How many hours will a wizard's zone be

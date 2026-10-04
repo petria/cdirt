@@ -23,7 +23,7 @@ struct _f {
   int strength;
   int score;
   char *oldprompt;
-  char name[PNAME_LEN];
+  char name[MNAME_LEN + 1];
 };
 
 

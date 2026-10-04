@@ -193,7 +193,7 @@ send_msg (int destination,	/* Where to send to */
 	  char *format,...)
 {				/* Format with args -> text to send */
   va_list pvar;
-  char bf[2048];
+  char *bf;
   struct _send_msg_box b;
   char *bb;
 
@@ -205,33 +205,36 @@ send_msg (int destination,	/* Where to send to */
   b.lang = NFL_ENGLISH;
   bb = format;
   va_start (pvar, format);
-  vsprintf (bf, bb, pvar);
+  bf = text_vformat(bb, pvar);
   va_end (pvar);
   send_g_msg (destination, check_send_msg, (intptr_t) &b, bf);
+  free(bf);
 }
 
 /* sends to a player or mobile */
 
 void sendf (int plr, char *format,...) {
-  char b[2048];
+  char *b;
   va_list pvar;
 
   va_start (pvar, format);
-  vsprintf (b, format, pvar);
+  b = text_vformat(format, pvar);
   va_end (pvar);
   send_g_msg(int2idx(plr, MOB), NULL, 0, b);
+  free(b);
 }
 
 /* sends to a location */
 
 void sendl (int loc, char *format,...) {
-  char b[2048];
+  char *b;
   va_list pvar;
 
   va_start (pvar, format);
-  vsprintf (b, format, pvar);
+  b = text_vformat(format, pvar);
   va_end (pvar);
   send_g_msg(int2idx(loc, LOC), NULL, 0, b);
+  free(b);
 }
 
 void
@@ -245,7 +248,7 @@ lsend_msg (int destination,	/* Where to send to */
 	   char *format,...)
 {				/* Format with args -> text to send */
   va_list pvar;
-  char bf[2048];
+  char *bf;
   struct _send_msg_box b;
   char *bb;
 
@@ -258,8 +261,9 @@ lsend_msg (int destination,	/* Where to send to */
   bb = format;
 
   va_start (pvar, format);
-  vsprintf (bf, bb, pvar);
+  bf = text_vformat(bb, pvar);
   va_end (pvar);
 
   send_g_msg (destination, check_send_msg, (intptr_t) &b, bf);
+  free(bf);
 }

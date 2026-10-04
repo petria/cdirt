@@ -39,16 +39,19 @@ time_t time (time_t * v);
 #define NUM_ENT     40               /* number of variables to save/load */
 #define LLEN        4096              /* max length of a pfile line      */
 #define TOKEN_LEN   11               /* Length of space before value     */
-#define NOVAL      (long int *) 0
-#define INT         0
-#define CHAR        1
-#define PTR         2
+#include <inttypes.h>
+#define NOVAL NULL
+#define INT 0
+#define CHAR 1
+#define PTR 2
+#define UINT 3
+#define TIME 4
 
 typedef struct __iorec {
-  short int type;            /* Type of value: int char ptr */
-  char *token;               /* Name of text token */
-  char **sval;               /* String value to load */
-  long int *ival;            /* Integer to load */
+  short type;
+  char *token;
+  void *field;
+  size_t size;
 } IORec;
 
 extern char *levnam(int lev, int class, Boolean sex);
@@ -66,57 +69,57 @@ int save_load_plr(PERSONA *d, char *player, Boolean save, Boolean new) {
 
     /* arrays */
 
-    {CHAR, "Title",       (char **) &(d->player.ptitle),    NOVAL},
-    {CHAR, "Passwd",      (char **) &(d->player.passwd),    NOVAL},
-    {CHAR, "Username",    (char **) &(d->rplr.usrname),     NOVAL},
-    {CHAR, "LastHost",    (char **) &(d->rplr.hostname),    NOVAL},
+    {CHAR, "Title", &(d->player.ptitle), sizeof(d->player.ptitle)},
+    {CHAR, "Passwd", &(d->player.passwd), sizeof(d->player.passwd)},
+    {CHAR, "Username", &(d->rplr.usrname), sizeof(d->rplr.usrname)},
+    {CHAR, "LastHost", &(d->rplr.hostname), sizeof(d->rplr.hostname)},
 
     /* pointers to char */
 
-    {PTR,  "Awaymsg",     &(d->player.awaymsg),             NOVAL},
-    {PTR,  "Prompt",      &(d->player.prompt),              NOVAL},
-    {PTR,  "Setin",       &(d->player.setin),               NOVAL},
-    {PTR,  "Setout",      &(d->player.setout),              NOVAL},
-    {PTR,  "Setmin",      &(d->player.setmin),              NOVAL},
-    {PTR,  "Setmout",     &(d->player.setmout),             NOVAL},
-    {PTR,  "Setvin",      &(d->player.setvin),              NOVAL},
-    {PTR,  "Setvout",     &(d->player.setvout),             NOVAL},
-    {PTR,  "Setqin",      &(d->player.setqin),              NOVAL},
-    {PTR,  "Setqout",     &(d->player.setqout),             NOVAL},
-    {PTR,  "Setsit",      &(d->player.setsit),              NOVAL},
-    {PTR,  "Setstand",    &(d->player.setstand),            NOVAL},
-    {PTR,  "Setsum",      &(d->player.setsum),              NOVAL},
-    {PTR,  "Setsin",      &(d->player.setsumin),            NOVAL},
-    {PTR,  "Setsout",     &(d->player.setsumout),           NOVAL},
-    {PTR,  "Home",        &(d->ublock.phome),               NOVAL},
+    {PTR, "Awaymsg", &(d->player.awaymsg), sizeof(d->player.awaymsg)},
+    {PTR, "Prompt", &(d->player.prompt), sizeof(d->player.prompt)},
+    {PTR, "Setin", &(d->player.setin), sizeof(d->player.setin)},
+    {PTR, "Setout", &(d->player.setout), sizeof(d->player.setout)},
+    {PTR, "Setmin", &(d->player.setmin), sizeof(d->player.setmin)},
+    {PTR, "Setmout", &(d->player.setmout), sizeof(d->player.setmout)},
+    {PTR, "Setvin", &(d->player.setvin), sizeof(d->player.setvin)},
+    {PTR, "Setvout", &(d->player.setvout), sizeof(d->player.setvout)},
+    {PTR, "Setqin", &(d->player.setqin), sizeof(d->player.setqin)},
+    {PTR, "Setqout", &(d->player.setqout), sizeof(d->player.setqout)},
+    {PTR, "Setsit", &(d->player.setsit), sizeof(d->player.setsit)},
+    {PTR, "Setstand", &(d->player.setstand), sizeof(d->player.setstand)},
+    {PTR, "Setsum", &(d->player.setsum), sizeof(d->player.setsum)},
+    {PTR, "Setsin", &(d->player.setsumin), sizeof(d->player.setsumin)},
+    {PTR, "Setsout", &(d->player.setsumout), sizeof(d->player.setsumout)},
+    {PTR, "Home", &(d->ublock.phome), sizeof(d->ublock.phome)},
 
     /* integers */
 
-    {INT,  "PLines",      NULL,                (long *) &d->player.pager.len},
-    {INT,  "CarryCap",    NULL,                (long *) &d->player.pcarry},
-    {INT,  "Score",       NULL,                (long *) &d->ublock.pscore},
-    {INT,  "Strength",    NULL,                (long *) &d->ublock.pstr},
-    {INT,  "Damage",      NULL,                (long *) &d->ublock.pdam},
-    {INT,  "Armor",       NULL,                (long *) &d->ublock.parmor},
-    {INT,  "Visibility",  NULL,                (long *) &d->ublock.pvis},
-    {INT,  "Level",       NULL,                (long *) &d->ublock.plev},
-    {INT,  "Wimpy",       NULL,                (long *) &d->ublock.pwimpy},
-    {INT,  "Magic",       NULL,                (long *) &d->player.pmagic},
-    {INT,  "Channel",     NULL,                (long *) &d->player.pchannel},
-    {INT,  "Killed",      NULL,                (long *) &d->player.pkilled},
-    {INT,  "Died",        NULL,                (long *) &d->player.pdied},
-    {INT,  "Coins",       NULL,                (long *) &d->player.coins},
-    {INT,  "Class",       NULL,                (long *) &d->ublock.class},
+    {INT, "PLines", &d->player.pager.len, sizeof(d->player.pager.len)},
+    {INT, "CarryCap", &d->player.pcarry, sizeof(d->player.pcarry)},
+    {UINT, "Score", &d->ublock.pscore, sizeof(d->ublock.pscore)},
+    {INT, "Strength", &d->ublock.pstr, sizeof(d->ublock.pstr)},
+    {INT, "Damage", &d->ublock.pdam, sizeof(d->ublock.pdam)},
+    {INT, "Armor", &d->ublock.parmor, sizeof(d->ublock.parmor)},
+    {INT, "Visibility", &d->ublock.pvis, sizeof(d->ublock.pvis)},
+    {INT, "Level", &d->ublock.plev, sizeof(d->ublock.plev)},
+    {INT, "Wimpy", &d->ublock.pwimpy, sizeof(d->ublock.pwimpy)},
+    {INT, "Magic", &d->player.pmagic, sizeof(d->player.pmagic)},
+    {INT, "Channel", &d->player.pchannel, sizeof(d->player.pchannel)},
+    {INT, "Killed", &d->player.pkilled, sizeof(d->player.pkilled)},
+    {INT, "Died", &d->player.pdied, sizeof(d->player.pdied)},
+    {INT, "Coins", &d->player.coins, sizeof(d->player.coins)},
+    {INT, "Class", &d->ublock.class, sizeof(d->ublock.class)},
 
     /* long ints */
 
-    {INT,  "FirstOn",     NULL,                     &d->player.first_on},
-    {INT,  "TimeOn",      NULL,                     &d->player.time_on},
-    {INT,  "MortalTime",  NULL,                     &d->player.mortal_time},
-    {INT,  "WizTime",     NULL,                     &d->player.wiz_time},
-    {INT,  "LastOn",      NULL,                     &d->player.last_on}};
+    {TIME, "FirstOn", &d->player.first_on, sizeof(d->player.first_on)},
+    {TIME, "TimeOn", &d->player.time_on, sizeof(d->player.time_on)},
+    {TIME, "MortalTime", &d->player.mortal_time, sizeof(d->player.mortal_time)},
+    {TIME, "WizTime", &d->player.wiz_time, sizeof(d->player.wiz_time)},
+    {TIME, "LastOn", &d->player.last_on, sizeof(d->player.last_on)}};
 
-  if (!valid_fname(player) && (save || new)) {
+  if (!valid_fname(player) || !*player || strlen(player) >= sizeof(d->ublock.pname)) {
     bprintf("Sorry, that name has illegal characters.\n");
     return(0);
   }
@@ -136,12 +139,16 @@ int save_load_plr(PERSONA *d, char *player, Boolean save, Boolean new) {
     }
 
     for (pptr = p_rec ; pptr < p_rec + NUM_ENT ; pptr++) {
-      if (pptr->type == INT && *(pptr->ival))
-        fprintf(fptr, "%-11s%ld\n", pptr->token, *(pptr->ival));
-      else if (pptr->type == CHAR && *(pptr->sval))
-        fprintf(fptr, "%-11s%s\n", pptr->token, (char *) pptr->sval);
-      else if (pptr->type == PTR && *(pptr->sval))
-        fprintf(fptr, "%-11s%s\n", pptr->token, *(pptr->sval));
+      if (pptr->type == INT && *(int *)pptr->field)
+        fprintf(fptr, "%-11s%d\n", pptr->token, *(int *)pptr->field);
+      else if (pptr->type == UINT && *(unsigned *)pptr->field)
+        fprintf(fptr, "%-11s%u\n", pptr->token, *(unsigned *)pptr->field);
+      else if (pptr->type == TIME && *(time_t *)pptr->field)
+        fprintf(fptr, "%-11s%jd\n", pptr->token, (intmax_t)*(time_t *)pptr->field);
+      else if (pptr->type == CHAR && *(char *)pptr->field)
+        fprintf(fptr, "%-11s%s\n", pptr->token, (char *)pptr->field);
+      else if (pptr->type == PTR && *(char **)pptr->field)
+        fprintf(fptr, "%-11s%s\n", pptr->token, *(char **)pptr->field);
     }
     store_parts(fptr, d);
     store_flags(fptr, d);
@@ -166,18 +173,14 @@ int save_load_plr(PERSONA *d, char *player, Boolean save, Boolean new) {
     for (i = 0 ; i < NUM_STORE_SLOTS ; i++)
       d->rplr.storage[i] = -1;
 
-    while (1) {
-      fgets(line, LLEN - 1, fptr);
-
-      if (feof(fptr))
-        break;
+    while (fgets(line, sizeof(line), fptr)) {
 
       if (strlen(line) < TOKEN_LEN + 1) {
         mudlog("UAF: Error in player record %s", player);
-        FCLOSE(fptr);
-        return(-1);
+        goto corrupt;
       }
-      line[strlen(line) - 1] = 0;
+      if (!strchr(line, '\n') && !feof(fptr)) goto corrupt;
+      line[strcspn(line, "\r\n")] = 0;
       
       token = line;
       value = line + TOKEN_LEN;
@@ -197,25 +200,53 @@ int save_load_plr(PERSONA *d, char *player, Boolean save, Boolean new) {
       else {                                                     /* table */
         for (pptr = p_rec ; pptr < p_rec + NUM_ENT ; pptr++)
           if (!strncmp(pptr->token, token, strlen(pptr->token))) {
-            if (pptr->type == INT)
-              *(pptr->ival) = atol(value);
-            else if (pptr->type == CHAR)
-              strcpy((char *) pptr->sval, value);
-            else if (pptr->type == PTR)
-              *(pptr->sval) = COPY(value);
+            if (pptr->type == INT || pptr->type == UINT || pptr->type == TIME) {
+              char *end;
+              intmax_t number;
+              errno = 0;
+              number = strtoimax(value, &end, 10);
+              if (errno || end == value || *end) goto corrupt;
+              if (pptr->type == INT) {
+                if (number < INT_MIN || number > INT_MAX) goto corrupt;
+                *(int *)pptr->field = (int)number;
+              } else if (pptr->type == UINT) {
+                if (number < 0 || (uintmax_t)number > UINT_MAX) goto corrupt;
+                *(unsigned *)pptr->field = (unsigned)number;
+              } else {
+                time_t stamp = (time_t)number;
+                if ((intmax_t)stamp != number) goto corrupt;
+                *(time_t *)pptr->field = stamp;
+              }
+            } else if (pptr->type == CHAR) {
+              if (strlen(value) >= pptr->size) goto corrupt;
+              memcpy(pptr->field, value, strlen(value) + 1);
+            } else if (pptr->type == PTR) {
+              if ((!strcmp(pptr->token, "Prompt") && strlen(value) > PROMPT_LEN) ||
+                  (!strncmp(pptr->token, "Set", 3) && strlen(value) >= SETIN_MAX)) goto corrupt;
+              free(*(char **)pptr->field);
+              *(char **)pptr->field = COPY(value);
+            }
             break;
           }
         if (pptr == p_rec + NUM_ENT) {
           mudlog("UAF: Unknown token in %s", player);
-          FCLOSE(fptr);
-          return(-1);
+          goto corrupt;
         }
       } 
     }
   }
 
+  if (ferror(fptr)) goto corrupt;
   FCLOSE(fptr);
   return(1);
+corrupt:
+  mudlog("UAF: Error in player record %s", player);
+  FCLOSE(fptr);
+  if (!save) {
+    for (pptr = p_rec; pptr < p_rec + NUM_ENT; pptr++)
+      if (pptr->type == PTR) { free(*(char **)pptr->field); *(char **)pptr->field = NULL; }
+  }
+  return -1;
 }
 
 void pers2player (PERSONA * d, int plx) {
@@ -338,7 +369,7 @@ char *ipname (int plr)
 char *build_setin (int type, char *notused, char *s, char *n, char *d, char *v){
   char *p, *q, *r;
   char temp[SETIN_MAX];
-  static char buff[SETIN_MAX + PNAME_LEN * 2];  /* allows for 2 victims */
+  static char *buff; /* borrowed until the next build_setin call */
 
   if(s == NULL) {
     switch(type) {
@@ -388,50 +419,29 @@ char *build_setin (int type, char *notused, char *s, char *n, char *d, char *v){
     s = temp;
   }
 
-  for (p = buff, q = s; *q;) {
-    if (*q != '%')
-      *p++ = *q++;
-    else {
-      switch (*++q) {
-      case 'n':
-        if (n)
-          sprintf(p, "\001p%s\003", n);
-          p += strlen(n) + 3;
+  {
+    Text text = {0};
+    for (q = s; *q;) {
+      if (*q != '%') { text_char(&text, *q++); continue; }
+      q++;
+      switch (*q) {
+      case 'n': case 'v':
+        r = *q == 'n' ? n : v;
+        if (r) { text_append(&text, "\001p"); text_append(&text, r); text_char(&text, 003); }
         break;
-      case 'v':
-        if (v)
-          sprintf(p, "\001p%s\003", v);
-          p += strlen(v) + 3;
-        break;
-      case 'd':
-        if (d)
-          for (r = d; *r;)
-            *p++ = *r++;
-        break;
-      case 'N':
-        for (r = xname (n); *r != 0;)
-          *p++ = *r++;
-        break;
-      case 'f':
-        for (r = (psex (mynum) ? "her" : "his"); *r != 0;)
-          *p++ = *r++;
-        break;
-      case 'F':
-        for (r = (psex (mynum) ? "her" : "him"); *r != 0;)
-          *p++ = *r++;
-        break;
-      case 0:
-        --q;
-        break;
-      default:
-        *p++ = *q;
+      case 'd': text_append(&text, d); break;
+      case 'N': if (n) text_append(&text, xname(n)); break;
+      case 'f': text_append(&text, psex(mynum) ? "her" : "his"); break;
+      case 'F': text_append(&text, psex(mynum) ? "her" : "him"); break;
+      case 0: break;
+      default: text_char(&text, *q); break;
       }
-      ++q;
+      if (*q) q++;
     }
+    if (text.len && text.data[text.len - 1] == '\n') text.data[--text.len] = 0;
+    free(buff);
+    buff = text_take(&text);
   }
-  if (p[-1] == '\n')
-    --p;
-  *p = 0;
   return buff;
 }
 

@@ -13,6 +13,7 @@
 #include <dirent.h>
 #include <string.h>
 #include <malloc.h>
+#include <stddef.h>
 #include <stdlib.h>
 #include "bootstrap.h"
 #include "global.h"
@@ -297,7 +298,8 @@ int boot_arrays(int bzones) {
   iplrs = NEW (IO_REC, max_players);
 #endif
 
-  zones = NEW (ZONE, bzones * 2);
+  if (bzones < 0 || bzones > INT_MAX / BASEMULT || bzones > INT_MAX / 2) memory_failure();
+  zones = NEW (ZONE, (size_t)bzones * 2);
   ublock = NEW (UBLOCK_REC, bzones * BASEMULT);
   objs = NEW (OBJECT, bzones * BASEMULT);
   room_data = NEW (Location, bzones * BASEMULT);
@@ -325,7 +327,7 @@ int boot_verbs (void) {
   fscanf (fpr, "%d", &numverbs);
 
   for (i = 0; i < numverbs; i++) {
-    fscanf (fpr, "%s %d", verbstr, &verbnum);
+    if (fscanf(fpr, "%63s %d", verbstr, &verbnum) != 2) { fclose(fpr); return -1; }
     add_tree(&verb_t, verbstr, verbnum);
   }
   return(0);
@@ -479,6 +481,7 @@ int string2num(int *num, char *str) {
 }
 
 void resize_zones(void) {
+  if (zones_len > INT_MAX - BASE_INCR) memory_failure();
   if (numzon < zones_len)
     return;
   
@@ -488,15 +491,23 @@ void resize_zones(void) {
 }
 
 void resize_ublock(void) {
+  if (ublock_len > INT_MAX - BASE_INCR) memory_failure();
   if (numchars < ublock_len)
     return;
 
+#ifndef GEN
+  ptrdiff_t current = cur_ublock ? cur_ublock - ublock : -1;
+#endif
   ublock = (UBLOCK_REC *) resize_array(ublock, sizeof(UBLOCK_REC), 
            ublock_len, ublock_len + BASE_INCR);
   ublock_len += BASE_INCR;
+#ifndef GEN
+  if (current >= 0) cur_ublock = ublock + current;
+#endif
 }
 
 void resize_objects(void) {
+  if (objects_len > INT_MAX - BASE_INCR) memory_failure();
   if (numobs < objects_len)
     return;
 
@@ -506,6 +517,7 @@ void resize_objects(void) {
 }
 
 void resize_locs(void) {
+  if (locations_len > INT_MAX - BASE_INCR) memory_failure();
   if (numloc < locations_len)
     return;
   room_data = (Location *) resize_array(room_data, sizeof(Location),

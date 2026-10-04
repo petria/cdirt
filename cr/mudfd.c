@@ -25,9 +25,9 @@ extern void mudlog (char *, ...);
 
 struct __fd_entry {
   struct __fd_entry *next;
-  char msg[20];
-  char path[256];
-  char stdmode[3];
+  char *msg;
+  char *path;
+  char *stdmode;
   int mode;
   int fd;
   FILE *fptr;
@@ -61,6 +61,7 @@ int close1(int fd, FILE *fptr) {
       else
 	close(fd);
 
+      free(temp->msg); free(temp->path); free(temp->stdmode);
       free(temp);
       return 0;
     }
@@ -80,15 +81,15 @@ void __mclose (int fd) {
 }
 
 FILE *__mfopen (char *file, int line, char *path, char *mode) {
-  char message[80];
-  sprintf(message, "%s:%d", file, line);
-  return((FILE *) open1(message, path, 0, 0, mode));
+  char *message = text_format("%s:%d", file, line);
+  FILE *result = open1(message, path, 0, 0, mode);
+  free(message); return result;
 }
 
 int __mopen (char *file, int line, char *pathname, int flags, mode_t mode) {
-  char message[80];
-  sprintf(message, "%s:%d", file, line);
-  return((int) (intptr_t) open1(message, pathname, flags, mode, NULL));
+  char *message = text_format("%s:%d", file, line);
+  int result = (int)(intptr_t)open1(message, pathname, flags, mode, NULL);
+  free(message); return result;
 }
 
 void * open1(char *message, char *pathname, 
@@ -101,23 +102,25 @@ void * open1(char *message, char *pathname,
     mudlog("Error in open1(), no memory to allocate");
     return((void *) NULL);
   }
-  strcpy(newptr->msg, message);
-  strcpy(newptr->path, pathname);
+  newptr->msg = COPY(message);
+  newptr->path = COPY(pathname);
   newptr->next = NULL;
 
   if (stdmode != NULL) {
     if ((fptr = fopen(pathname, stdmode)) == NULL) {
       /* mudlog("fopen: %s", pathname); */
+      free(newptr->msg); free(newptr->path);
       free(newptr);
       return NULL;
     }
     newptr->fptr = fptr;
     newptr->fd = fileno(fptr);
-    strcpy(newptr->stdmode, stdmode);
+    newptr->stdmode = COPY(stdmode);
   }
   else {
     if ((fd = open(pathname, flags, mode)) == -1) {
       perror("open");
+      free(newptr->msg); free(newptr->path);
       free(newptr);
       return (void *) (intptr_t) -1;
     }
@@ -142,7 +145,7 @@ void fdlistcom (FILE *outptr) {
   Fdptr ptr;
 
   char type[9] = "[Player]";
-  char mode[8] = "unknown";
+  char mode[11] = "unknown";
 
   for (ptr = fd_first ; ptr != NULL ; ptr = ptr->next) {
     if (find_pl_index(ptr->fd) == -1)  /* there is no player for this fd */

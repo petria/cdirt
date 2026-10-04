@@ -6,7 +6,7 @@
   "verb_count": 390,
   "unique_verb_ids": 356,
   "output_api_call_sites": {
-    "bprintf": 2150,
+    "bprintf": 2149,
     "sendf": 242,
     "sendl": 37,
     "send_msg": 255,
@@ -209,7 +209,7 @@
       "handler_sources": {
         "cmd_aboot": {
           "file": "cr/client.c",
-          "line": 275
+          "line": 279
         }
       },
       "dispatch_source_word": "ABOOT",
@@ -259,7 +259,7 @@
       "handler_sources": {
         "actionscom": {
           "file": "cr/actions.c",
-          "line": 120
+          "line": 119
         }
       },
       "dispatch_source_word": "ACTIONS",
@@ -334,7 +334,7 @@
       "handler_sources": {
         "cmd_ainfo": {
           "file": "cr/client.c",
-          "line": 251
+          "line": 255
         }
       },
       "dispatch_source_word": "AINFO",
@@ -431,7 +431,7 @@
       "handler_sources": {
         "cmd_achat": {
           "file": "cr/client.c",
-          "line": 76
+          "line": 80
         }
       },
       "dispatch_source_word": "ACHAT",
@@ -456,7 +456,7 @@
       "handler_sources": {
         "cmd_achat": {
           "file": "cr/client.c",
-          "line": 76
+          "line": 80
         }
       },
       "dispatch_source_word": "AGOD",
@@ -481,7 +481,7 @@
       "handler_sources": {
         "cmd_achat": {
           "file": "cr/client.c",
-          "line": 76
+          "line": 80
         }
       },
       "dispatch_source_word": "ACODE",
@@ -506,7 +506,7 @@
       "handler_sources": {
         "cmd_amudlist": {
           "file": "cr/client.c",
-          "line": 315
+          "line": 319
         }
       },
       "dispatch_source_word": "AMUDLIST",
@@ -531,7 +531,7 @@
       "handler_sources": {
         "cmd_amasslist": {
           "file": "cr/client.c",
-          "line": 319
+          "line": 323
         }
       },
       "dispatch_source_word": "AMASSLIST",
@@ -556,7 +556,7 @@
       "handler_sources": {
         "cmd_acopyright": {
           "file": "cr/client.c",
-          "line": 353
+          "line": 357
         }
       },
       "dispatch_source_word": "ACOPYRIGHT",
@@ -581,7 +581,7 @@
       "handler_sources": {
         "cmd_apolicy": {
           "file": "cr/client.c",
-          "line": 332
+          "line": 336
         }
       },
       "dispatch_source_word": "APOLICY",
@@ -606,7 +606,7 @@
       "handler_sources": {
         "cmd_akick": {
           "file": "cr/client.c",
-          "line": 140
+          "line": 144
         }
       },
       "dispatch_source_word": "AKICK",
@@ -631,7 +631,7 @@
       "handler_sources": {
         "cmd_aversion": {
           "file": "cr/client.c",
-          "line": 386
+          "line": 390
         }
       },
       "dispatch_source_word": "AVERSION",
@@ -681,7 +681,7 @@
       "handler_sources": {
         "wearcom": {
           "file": "cr/fight.c",
-          "line": 930
+          "line": 920
         }
       },
       "dispatch_source_word": "WEAR",
@@ -706,7 +706,7 @@
       "handler_sources": {
         "armorcom": {
           "file": "cr/fight.c",
-          "line": 853
+          "line": 843
         }
       },
       "dispatch_source_word": "ARMOR",
@@ -731,7 +731,7 @@
       "handler_sources": {
         "cmd_ashutdown": {
           "file": "cr/client.c",
-          "line": 297
+          "line": 301
         }
       },
       "dispatch_source_word": "ASHUTDOWN",
@@ -824,7 +824,7 @@
       "handler_sources": {
         "cmd_atell": {
           "file": "cr/client.c",
-          "line": 92
+          "line": 96
         }
       },
       "dispatch_source_word": "ATELL",
@@ -849,7 +849,7 @@
       "handler_sources": {
         "cmd_areply": {
           "file": "cr/client.c",
-          "line": 121
+          "line": 125
         }
       },
       "dispatch_source_word": "AREPLY",
@@ -874,7 +874,7 @@
       "handler_sources": {
         "killcom": {
           "file": "cr/fight.c",
-          "line": 1577
+          "line": 1567
         }
       },
       "dispatch_source_word": "KILL",
@@ -982,7 +982,7 @@
       "handler_sources": {
         "cmd_awho": {
           "file": "cr/client.c",
-          "line": 372
+          "line": 376
         }
       },
       "dispatch_source_word": "AWHO",
@@ -1451,7 +1451,7 @@
       "handler_sources": {
         "killcom": {
           "file": "cr/fight.c",
-          "line": 1577
+          "line": 1567
         }
       },
       "dispatch_source_word": "KILL",
@@ -1676,7 +1676,7 @@
       "handler_sources": {
         "challengecom": {
           "file": "cr/fight.c",
-          "line": 302
+          "line": 298
         }
       },
       "dispatch_source_word": "CHALLENGE",
@@ -1839,7 +1839,7 @@
       "handler_sources": {
         "clonecom": {
           "file": "src/clone.c",
-          "line": 476
+          "line": 474
         }
       },
       "dispatch_source_word": "CLONE",
@@ -2070,7 +2070,7 @@
       "handler_sources": {
         "crawlcom": {
           "file": "cr/fight.c",
-          "line": 1762
+          "line": 1752
         }
       },
       "dispatch_source_word": "CRAWL",
@@ -2231,7 +2231,7 @@
       "handler_sources": {
         "destructcom": {
           "file": "src/clone.c",
-          "line": 562
+          "line": 560
         }
       },
       "dispatch_source_word": "DESTRUCT",
@@ -2306,7 +2306,7 @@
       "handler_sources": {
         "change_desc": {
           "file": "src/change.c",
-          "line": 1001
+          "line": 990
         }
       },
       "dispatch_source_word": "DESCRIPTION",
@@ -2406,7 +2406,7 @@
       "handler_sources": {
         "erasezonecom": {
           "file": "src/clone.c",
-          "line": 820
+          "line": 833
         }
       },
       "dispatch_source_word": "ERASEZONE",
@@ -2681,7 +2681,7 @@
       "handler_sources": {
         "equcom": {
           "file": "cr/fight.c",
-          "line": 857
+          "line": 847
         }
       },
       "dispatch_source_word": "EQUIPMENT",
@@ -2835,7 +2835,7 @@
       "handler_sources": {
         "fdlistcom": {
           "file": "cr/mudfd.c",
-          "line": 141
+          "line": 144
         }
       },
       "dispatch_source_word": "FDLIST",
@@ -2935,7 +2935,7 @@
       "handler_sources": {
         "flee": {
           "file": "cr/fight.c",
-          "line": 1432
+          "line": 1422
         }
       },
       "dispatch_source_word": "FLEE",
@@ -2985,7 +2985,7 @@
       "handler_sources": {
         "flowercom": {
           "file": "cr/actions.c",
-          "line": 368
+          "line": 357
         }
       },
       "dispatch_source_word": "FLOWERS",
@@ -3603,7 +3603,7 @@
       "handler_sources": {
         "killcom": {
           "file": "cr/fight.c",
-          "line": 1577
+          "line": 1567
         }
       },
       "dispatch_source_word": "KILL",
@@ -3846,7 +3846,7 @@
       "handler_sources": {
         "jumpcom": {
           "file": "src/mobile.c",
-          "line": 1879
+          "line": 1886
         }
       },
       "dispatch_source_word": "JUMP",
@@ -3871,7 +3871,7 @@
       "handler_sources": {
         "killcom": {
           "file": "cr/fight.c",
-          "line": 1577
+          "line": 1567
         }
       },
       "dispatch_source_word": "KILL",
@@ -3964,7 +3964,7 @@
       "handler_sources": {
         "linkcom": {
           "file": "src/clone.c",
-          "line": 796
+          "line": 809
         }
       },
       "dispatch_source_word": "LINK",
@@ -4199,7 +4199,7 @@
       "handler_sources": {
         "loadcom": {
           "file": "src/clone.c",
-          "line": 761
+          "line": 774
         }
       },
       "dispatch_source_word": "LOAD",
@@ -4299,7 +4299,7 @@
       "handler_sources": {
         "lootcom": {
           "file": "cr/fight.c",
-          "line": 357
+          "line": 353
         }
       },
       "dispatch_source_word": "LOOT",
@@ -4374,7 +4374,7 @@
       "handler_sources": {
         "mailcom": {
           "file": "cr/mail.c",
-          "line": 12
+          "line": 30
         }
       },
       "dispatch_source_word": "MAIL",
@@ -4449,7 +4449,7 @@
       "handler_sources": {
         "maxstatecom": {
           "file": "src/clone.c",
-          "line": 850
+          "line": 863
         }
       },
       "dispatch_source_word": "MAXSTATE",
@@ -5560,7 +5560,7 @@
       "handler_sources": {
         "petcom": {
           "file": "cr/actions.c",
-          "line": 403
+          "line": 392
         }
       },
       "dispatch_source_word": "PET",
@@ -5635,7 +5635,7 @@
       "handler_sources": {
         "petcom": {
           "file": "cr/actions.c",
-          "line": 403
+          "line": 392
         }
       },
       "dispatch_source_word": "PET",
@@ -5885,7 +5885,7 @@
       "handler_sources": {
         "praycom": {
           "file": "cr/actions.c",
-          "line": 481
+          "line": 470
         }
       },
       "dispatch_source_word": "PRAY",
@@ -6424,7 +6424,7 @@
       "handler_sources": {
         "removecom": {
           "file": "cr/fight.c",
-          "line": 896
+          "line": 886
         }
       },
       "dispatch_source_word": "REMOVE",
@@ -6549,7 +6549,7 @@
       "handler_sources": {
         "restorecom": {
           "file": "cr/fight.c",
-          "line": 171
+          "line": 167
         }
       },
       "dispatch_source_word": "RESTORE",
@@ -6649,7 +6649,7 @@
       "handler_sources": {
         "rosecom": {
           "file": "cr/actions.c",
-          "line": 451
+          "line": 440
         }
       },
       "dispatch_source_word": "ROSE",
@@ -6757,7 +6757,7 @@
       "handler_sources": {
         "saveother": {
           "file": "cr/uaf.c",
-          "line": 265
+          "line": 296
         }
       },
       "dispatch_source_word": "SAVE",
@@ -6782,7 +6782,7 @@
       "handler_sources": {
         "saveallcom": {
           "file": "cr/uaf.c",
-          "line": 307
+          "line": 338
         }
       },
       "dispatch_source_word": "SAVEALL",
@@ -6957,7 +6957,7 @@
       "handler_sources": {
         "set_msg": {
           "file": "src/mobile.c",
-          "line": 1461
+          "line": 1468
         }
       },
       "dispatch_source_word": "SETIN",
@@ -7000,7 +7000,7 @@
       "handler_sources": {
         "set_msg": {
           "file": "src/mobile.c",
-          "line": 1461
+          "line": 1468
         }
       },
       "dispatch_source_word": "SETMIN",
@@ -7025,7 +7025,7 @@
       "handler_sources": {
         "set_msg": {
           "file": "src/mobile.c",
-          "line": 1461
+          "line": 1468
         }
       },
       "dispatch_source_word": "SETMOUT",
@@ -7050,7 +7050,7 @@
       "handler_sources": {
         "set_msg": {
           "file": "src/mobile.c",
-          "line": 1461
+          "line": 1468
         }
       },
       "dispatch_source_word": "SETOUT",
@@ -7075,7 +7075,7 @@
       "handler_sources": {
         "set_msg": {
           "file": "src/mobile.c",
-          "line": 1461
+          "line": 1468
         }
       },
       "dispatch_source_word": "SETSIN",
@@ -7100,7 +7100,7 @@
       "handler_sources": {
         "set_msg": {
           "file": "src/mobile.c",
-          "line": 1461
+          "line": 1468
         }
       },
       "dispatch_source_word": "SETSIT",
@@ -7125,7 +7125,7 @@
       "handler_sources": {
         "set_msg": {
           "file": "src/mobile.c",
-          "line": 1461
+          "line": 1468
         }
       },
       "dispatch_source_word": "SETSOUT",
@@ -7175,7 +7175,7 @@
       "handler_sources": {
         "set_msg": {
           "file": "src/mobile.c",
-          "line": 1461
+          "line": 1468
         }
       },
       "dispatch_source_word": "SETSTND",
@@ -7200,7 +7200,7 @@
       "handler_sources": {
         "set_msg": {
           "file": "src/mobile.c",
-          "line": 1461
+          "line": 1468
         }
       },
       "dispatch_source_word": "SETSUM",
@@ -7243,7 +7243,7 @@
       "handler_sources": {
         "set_msg": {
           "file": "src/mobile.c",
-          "line": 1461
+          "line": 1468
         }
       },
       "dispatch_source_word": "SETVIN",
@@ -7268,7 +7268,7 @@
       "handler_sources": {
         "set_msg": {
           "file": "src/mobile.c",
-          "line": 1461
+          "line": 1468
         }
       },
       "dispatch_source_word": "SETVOUT",
@@ -7293,7 +7293,7 @@
       "handler_sources": {
         "set_msg": {
           "file": "src/mobile.c",
-          "line": 1461
+          "line": 1468
         }
       },
       "dispatch_source_word": "SETQIN",
@@ -7318,7 +7318,7 @@
       "handler_sources": {
         "set_msg": {
           "file": "src/mobile.c",
-          "line": 1461
+          "line": 1468
         }
       },
       "dispatch_source_word": "SETQOUT",
@@ -7375,7 +7375,7 @@
         },
         "saveallcom": {
           "file": "cr/uaf.c",
-          "line": 307
+          "line": 338
         }
       },
       "dispatch_source_word": "SHALL",
@@ -7625,7 +7625,7 @@
       "handler_sources": {
         "killcom": {
           "file": "cr/fight.c",
-          "line": 1577
+          "line": 1567
         }
       },
       "dispatch_source_word": "KILL",
@@ -7775,7 +7775,7 @@
       "handler_sources": {
         "startcom": {
           "file": "src/mobile.c",
-          "line": 1040
+          "line": 1042
         }
       },
       "dispatch_source_word": "START",
@@ -7850,7 +7850,7 @@
       "handler_sources": {
         "stopcom": {
           "file": "src/mobile.c",
-          "line": 1027
+          "line": 1029
         }
       },
       "dispatch_source_word": "STOP",
@@ -8075,7 +8075,7 @@
       "handler_sources": {
         "ticklecom": {
           "file": "cr/actions.c",
-          "line": 381
+          "line": 370
         }
       },
       "dispatch_source_word": "TICKLE",
@@ -8876,7 +8876,7 @@
       "handler_sources": {
         "whocom": {
           "file": "src/mobile.c",
-          "line": 136
+          "line": 133
         }
       },
       "dispatch_source_word": "WHO",
@@ -8951,7 +8951,7 @@
       "handler_sources": {
         "wavecom": {
           "file": "cr/actions.c",
-          "line": 422
+          "line": 411
         }
       },
       "dispatch_source_word": "WAVE",
@@ -8976,7 +8976,7 @@
       "handler_sources": {
         "wearcom": {
           "file": "cr/fight.c",
-          "line": 930
+          "line": 920
         }
       },
       "dispatch_source_word": "WEAR",
@@ -9076,7 +9076,7 @@
       "handler_sources": {
         "wieldcom": {
           "file": "cr/fight.c",
-          "line": 127
+          "line": 123
         }
       },
       "dispatch_source_word": "WIELD",
@@ -9101,7 +9101,7 @@
       "handler_sources": {
         "wipecom": {
           "file": "cr/actions.c",
-          "line": 527
+          "line": 516
         }
       },
       "dispatch_source_word": "WIPE",
@@ -9176,7 +9176,7 @@
       "handler_sources": {
         "wizlistcom": {
           "file": "src/wizlist.c",
-          "line": 218
+          "line": 220
         }
       },
       "dispatch_source_word": "WIZLIST",
@@ -9462,7 +9462,7 @@
       "handler_sources": {
         "cmd_noachat": {
           "file": "cr/client.c",
-          "line": 216
+          "line": 220
         }
       },
       "dispatch_source_word": "NOACHAT",
@@ -9487,7 +9487,7 @@
       "handler_sources": {
         "cmd_noacode": {
           "file": "cr/client.c",
-          "line": 223
+          "line": 227
         }
       },
       "dispatch_source_word": "NOACODE",
@@ -9512,7 +9512,7 @@
       "handler_sources": {
         "cmd_noagod": {
           "file": "cr/client.c",
-          "line": 230
+          "line": 234
         }
       },
       "dispatch_source_word": "NOAGOD",
@@ -9537,7 +9537,7 @@
       "handler_sources": {
         "cmd_noainfo": {
           "file": "cr/client.c",
-          "line": 237
+          "line": 241
         }
       },
       "dispatch_source_word": "NOAINFO",
@@ -9562,7 +9562,7 @@
       "handler_sources": {
         "cmd_noatell": {
           "file": "cr/client.c",
-          "line": 244
+          "line": 248
         }
       },
       "dispatch_source_word": "NOATELL",
@@ -9587,7 +9587,7 @@
       "handler_sources": {
         "cmd_noaberchat": {
           "file": "cr/client.c",
-          "line": 209
+          "line": 213
         }
       },
       "dispatch_source_word": "NOABERCHAT",
@@ -9612,7 +9612,7 @@
       "handler_sources": {
         "cmd_aautocon": {
           "file": "cr/client.c",
-          "line": 265
+          "line": 269
         }
       },
       "dispatch_source_word": "AAUTOCON",
@@ -9637,7 +9637,7 @@
       "handler_sources": {
         "cmd_acommstats": {
           "file": "cr/client.c",
-          "line": 155
+          "line": 159
         }
       },
       "dispatch_source_word": "ACOMMSTATS",

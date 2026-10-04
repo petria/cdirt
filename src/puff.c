@@ -50,18 +50,15 @@ static char *puff_speech[] =
 int
 randplr (void)
 {
-  int r, i, a[256], a_len = 0;
+  int r, i, *a = NEW(int, max_players), a_len = 0;
 
   for (i = 0; i < max_players; i++)
     if (is_in_game (i) && (pvis (i) <= 0)) {
       a[a_len++] = i;
     }
-  if (!a_len) {
-    return -1;
-  } else {
-    r = rand () % a_len;
-    return a[r];
-  }
+  r = a_len ? a[rand() % a_len] : -1;
+  free(a);
+  return r;
 }
 
 void

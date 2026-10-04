@@ -1,0 +1,1702 @@
+{
+  "method": "Static site inventory and ownership/capacity review; not exhaustive runtime proof.",
+  "entries": [
+    {
+      "file": "src/audit.c",
+      "line": 148,
+      "allocator": "calloc",
+      "source": "audit_messages = calloc(max_players, sizeof(*audit_messages));",
+      "category": "test instrumentation",
+      "review": "Audit arrays checked on allocation; bounded capture uses subtraction check and temporary realloc; no production path."
+    },
+    {
+      "file": "src/audit.c",
+      "line": 149,
+      "allocator": "calloc",
+      "source": "output_names = calloc(max_players, sizeof(*output_names));",
+      "category": "test instrumentation",
+      "review": "Audit arrays checked on allocation; bounded capture uses subtraction check and temporary realloc; no production path."
+    },
+    {
+      "file": "src/audit.c",
+      "line": 150,
+      "allocator": "calloc",
+      "source": "lengths = calloc(max_players, sizeof(*lengths));",
+      "category": "test instrumentation",
+      "review": "Audit arrays checked on allocation; bounded capture uses subtraction check and temporary realloc; no production path."
+    },
+    {
+      "file": "src/audit.c",
+      "line": 174,
+      "allocator": "realloc",
+      "source": "next = realloc(audit_messages[p], lengths[p] + n + 1);",
+      "category": "test instrumentation",
+      "review": "Audit arrays checked on allocation; bounded capture uses subtraction check and temporary realloc; no production path."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 65,
+      "allocator": "NEW",
+      "source": "v = (XTABLE *) NEW(XTABLE, 1);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 296,
+      "allocator": "NEW",
+      "source": "players = NEW (PLAYER_REC, max_players);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 297,
+      "allocator": "NEW",
+      "source": "rplrs = NEW (RPLR_REC, max_players);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 298,
+      "allocator": "NEW",
+      "source": "iplrs = NEW (IO_REC, max_players);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 302,
+      "allocator": "NEW",
+      "source": "zones = NEW (ZONE, (size_t)bzones * 2);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 303,
+      "allocator": "NEW",
+      "source": "ublock = NEW (UBLOCK_REC, bzones * BASEMULT);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 304,
+      "allocator": "NEW",
+      "source": "objs = NEW (OBJECT, bzones * BASEMULT);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 305,
+      "allocator": "NEW",
+      "source": "room_data = NEW (Location, bzones * BASEMULT);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 488,
+      "allocator": "resize_array",
+      "source": "zones = (ZONE *) resize_array(zones, sizeof(ZONE), zones_len,",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 501,
+      "allocator": "resize_array",
+      "source": "ublock = (UBLOCK_REC *) resize_array(ublock, sizeof(UBLOCK_REC),",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 514,
+      "allocator": "resize_array",
+      "source": "objs = (OBJECT *) resize_array(objs, sizeof(OBJECT),",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 523,
+      "allocator": "resize_array",
+      "source": "room_data = (Location *) resize_array(room_data, sizeof(Location),",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 642,
+      "allocator": "COPY",
+      "source": "ublock[xchar].ploc_reset = (intptr_t) COPY(value);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 685,
+      "allocator": "COPY",
+      "source": "pftxt(xchar) = COPY(value);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 707,
+      "allocator": "COPY",
+      "source": "pzname(xchar) = COPY(name);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 708,
+      "allocator": "COPY",
+      "source": "pname_reset(xchar) = COPY(pname(xchar));",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 722,
+      "allocator": "COPY",
+      "source": "pexam(xchar) = COPY(value);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 782,
+      "allocator": "COPY",
+      "source": "oname(xobj) = COPY(value);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 791,
+      "allocator": "COPY",
+      "source": "oname(xobj) = COPY(value);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 799,
+      "allocator": "COPY",
+      "source": "oaltname(xobj) = COPY(value);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 804,
+      "allocator": "COPY",
+      "source": "objs[xobj].oloc_reset = (intptr_t) COPY(value);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 807,
+      "allocator": "COPY",
+      "source": "objs[xobj].linked = (intptr_t) COPY(value);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 826,
+      "allocator": "COPY",
+      "source": "olongt(xobj, 0) = COPY(value);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 829,
+      "allocator": "COPY",
+      "source": "olongt(xobj, 1) = COPY(value);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 832,
+      "allocator": "COPY",
+      "source": "olongt(xobj, 2) = COPY(value);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 835,
+      "allocator": "COPY",
+      "source": "olongt(xobj, 3) = COPY(value);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 870,
+      "allocator": "COPY",
+      "source": "objs[xobj].oexam_text = COPY(value);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 894,
+      "allocator": "COPY",
+      "source": "ozname(xobj) = COPY(name);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 980,
+      "allocator": "COPY",
+      "source": "room_data[xloc].r_name = COPY(buff);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 997,
+      "allocator": "COPY",
+      "source": "room_data[xloc].r_name = COPY(buff);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 1020,
+      "allocator": "COPY",
+      "source": "room_data[xloc].r_exit_reset[rslt] = (intptr_t) COPY(p+2);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 1041,
+      "allocator": "COPY",
+      "source": "room_data[xloc].r_short = COPY(buff);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 1042,
+      "allocator": "COPY",
+      "source": "room_data[xloc].r_long = COPY(p);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/bootstrap.c",
+      "line": 1073,
+      "allocator": "COPY",
+      "source": "zones[xzon].z_name = COPY(str);",
+      "category": "world/generator",
+      "review": "Owned world strings and arrays; checked allocation/growth; current ublock pointer rebased."
+    },
+    {
+      "file": "src/change.c",
+      "line": 703,
+      "allocator": "COPY",
+      "source": "pftxt (a) = COPY (buff);",
+      "category": "description editor",
+      "review": "Builder owns pending text; validation/read failure leaves old target intact; success transfers ownership."
+    },
+    {
+      "file": "src/change.c",
+      "line": 803,
+      "allocator": "COPY",
+      "source": "pname_reset (num) = COPY (wordbuf);",
+      "category": "description editor",
+      "review": "Builder owns pending text; validation/read failure leaves old target intact; success transfers ownership."
+    },
+    {
+      "file": "src/change.c",
+      "line": 827,
+      "allocator": "COPY",
+      "source": "zname (num) = COPY (new_name);",
+      "category": "description editor",
+      "review": "Builder owns pending text; validation/read failure leaves old target intact; success transfers ownership."
+    },
+    {
+      "file": "src/change.c",
+      "line": 1040,
+      "allocator": "NEW",
+      "source": "p = NEW (PERSONA, 1);",
+      "category": "description editor",
+      "review": "Builder owns pending text; validation/read failure leaves old target intact; success transfers ownership."
+    },
+    {
+      "file": "src/change.c",
+      "line": 1071,
+      "allocator": "NEW",
+      "source": "cur_player->work = (intptr_t) (p = NEW (PERSONA, 1));",
+      "category": "description editor",
+      "review": "Builder owns pending text; validation/read failure leaves old target intact; success transfers ownership."
+    },
+    {
+      "file": "src/clone.c",
+      "line": 45,
+      "allocator": "COPY",
+      "source": "oname(newobj) = COPY(new_name);",
+      "category": "world clones",
+      "review": "Unique names and descriptions owned by clones; exact copies; collection heads independently initialized."
+    },
+    {
+      "file": "src/clone.c",
+      "line": 47,
+      "allocator": "COPY",
+      "source": "oname(newobj) = COPY(oname(obj));",
+      "category": "world clones",
+      "review": "Unique names and descriptions owned by clones; exact copies; collection heads independently initialized."
+    },
+    {
+      "file": "src/clone.c",
+      "line": 52,
+      "allocator": "COPY",
+      "source": "oaltname(newobj) = COPY(oaltname(obj));",
+      "category": "world clones",
+      "review": "Unique names and descriptions owned by clones; exact copies; collection heads independently initialized."
+    },
+    {
+      "file": "src/clone.c",
+      "line": 56,
+      "allocator": "COPY",
+      "source": "buff = COPY(ozname(obj));",
+      "category": "world clones",
+      "review": "Unique names and descriptions owned by clones; exact copies; collection heads independently initialized."
+    },
+    {
+      "file": "src/clone.c",
+      "line": 59,
+      "allocator": "text_format",
+      "source": "free(buff); buff = text_format(\"%s%d\", ozname(obj), i);",
+      "category": "world clones",
+      "review": "Unique names and descriptions owned by clones; exact copies; collection heads independently initialized."
+    },
+    {
+      "file": "src/clone.c",
+      "line": 69,
+      "allocator": "COPY",
+      "source": "olongt(newobj, i) = COPY(olongt(obj, i));",
+      "category": "world clones",
+      "review": "Unique names and descriptions owned by clones; exact copies; collection heads independently initialized."
+    },
+    {
+      "file": "src/clone.c",
+      "line": 72,
+      "allocator": "COPY",
+      "source": "oexam_text(newobj) = COPY(oexam_text(obj));",
+      "category": "world clones",
+      "review": "Unique names and descriptions owned by clones; exact copies; collection heads independently initialized."
+    },
+    {
+      "file": "src/clone.c",
+      "line": 224,
+      "allocator": "COPY",
+      "source": "pname_reset(numchars) = COPY(new_name);",
+      "category": "world clones",
+      "review": "Unique names and descriptions owned by clones; exact copies; collection heads independently initialized."
+    },
+    {
+      "file": "src/clone.c",
+      "line": 228,
+      "allocator": "COPY",
+      "source": "pname_reset(numchars) = COPY(pname_reset(mob));",
+      "category": "world clones",
+      "review": "Unique names and descriptions owned by clones; exact copies; collection heads independently initialized."
+    },
+    {
+      "file": "src/clone.c",
+      "line": 232,
+      "allocator": "COPY",
+      "source": "pexam(numchars) = COPY(pexam(mob));",
+      "category": "world clones",
+      "review": "Unique names and descriptions owned by clones; exact copies; collection heads independently initialized."
+    },
+    {
+      "file": "src/clone.c",
+      "line": 234,
+      "allocator": "COPY",
+      "source": "pftxt(numchars) = new_name == NULL ? COPY(pftxt(mob)) : text_format(\"%s is here.\", new_name);",
+      "category": "world clones",
+      "review": "Unique names and descriptions owned by clones; exact copies; collection heads independently initialized."
+    },
+    {
+      "file": "src/clone.c",
+      "line": 234,
+      "allocator": "text_format",
+      "source": "pftxt(numchars) = new_name == NULL ? COPY(pftxt(mob)) : text_format(\"%s is here.\", new_name);",
+      "category": "world clones",
+      "review": "Unique names and descriptions owned by clones; exact copies; collection heads independently initialized."
+    },
+    {
+      "file": "src/clone.c",
+      "line": 251,
+      "allocator": "COPY",
+      "source": "buff = COPY(pzname(mob));",
+      "category": "world clones",
+      "review": "Unique names and descriptions owned by clones; exact copies; collection heads independently initialized."
+    },
+    {
+      "file": "src/clone.c",
+      "line": 255,
+      "allocator": "text_format",
+      "source": "free(buff); buff = text_format(\"%s%d\", pzname(mob), i);",
+      "category": "world clones",
+      "review": "Unique names and descriptions owned by clones; exact copies; collection heads independently initialized."
+    },
+    {
+      "file": "src/clone.c",
+      "line": 359,
+      "allocator": "COPY",
+      "source": "lshort (c_numloc) = new_name != NULL ? COPY (new_name)",
+      "category": "world clones",
+      "review": "Unique names and descriptions owned by clones; exact copies; collection heads independently initialized."
+    },
+    {
+      "file": "src/clone.c",
+      "line": 360,
+      "allocator": "COPY",
+      "source": ": lshort (l) != NULL ? COPY (lshort (l)) : NULL;",
+      "category": "world clones",
+      "review": "Unique names and descriptions owned by clones; exact copies; collection heads independently initialized."
+    },
+    {
+      "file": "src/clone.c",
+      "line": 363,
+      "allocator": "COPY",
+      "source": "llong (c_numloc) = COPY (llong (l));",
+      "category": "world clones",
+      "review": "Unique names and descriptions owned by clones; exact copies; collection heads independently initialized."
+    },
+    {
+      "file": "src/clone.c",
+      "line": 380,
+      "allocator": "COPY",
+      "source": "buff = COPY(lname(l));",
+      "category": "world clones",
+      "review": "Unique names and descriptions owned by clones; exact copies; collection heads independently initialized."
+    },
+    {
+      "file": "src/clone.c",
+      "line": 384,
+      "allocator": "text_format",
+      "source": "free(buff); buff = text_format(\"%s%d\", lname(l), i);",
+      "category": "world clones",
+      "review": "Unique names and descriptions owned by clones; exact copies; collection heads independently initialized."
+    },
+    {
+      "file": "src/comm.c",
+      "line": 431,
+      "allocator": "text_format",
+      "source": "question = text_format(\"%s: %s\", NAME, text);",
+      "category": "Bob input",
+      "review": "Owned exact question string released after synchronous robot call."
+    },
+    {
+      "file": "src/commands.c",
+      "line": 78,
+      "allocator": "COPY",
+      "source": "pawaymsg(mynum) = COPY( txt );",
+      "category": "player preferences",
+      "review": "Owned away/prompt strings; previous value released; raw prompt length unchanged."
+    },
+    {
+      "file": "src/commands.c",
+      "line": 1559,
+      "allocator": "COPY",
+      "source": "cur_player->prompt = COPY( buff );",
+      "category": "player preferences",
+      "review": "Owned away/prompt strings; previous value released; raw prompt length unchanged."
+    },
+    {
+      "file": "src/frob.c",
+      "line": 73,
+      "allocator": "NEW",
+      "source": "f = NEW (struct _f, 1);",
+      "category": "frob session",
+      "review": "Owned context and prompt backup; name storage covers mobile names; freed on completion."
+    },
+    {
+      "file": "src/frob.c",
+      "line": 81,
+      "allocator": "COPY",
+      "source": "f->oldprompt = COPY (cur_player->cprompt);",
+      "category": "frob session",
+      "review": "Owned context and prompt backup; name storage covers mobile names; freed on completion."
+    },
+    {
+      "file": "src/log.c",
+      "line": 63,
+      "allocator": "text_vformat",
+      "source": "buff = text_vformat(format, pvar);",
+      "category": "logging",
+      "review": "Exact formatted string and non-expanding color-strip copy; both freed after write."
+    },
+    {
+      "file": "src/log.c",
+      "line": 67,
+      "allocator": "COPY",
+      "source": "buff2 = COPY(buff);",
+      "category": "logging",
+      "review": "Exact formatted string and non-expanding color-strip copy; both freed after write."
+    },
+    {
+      "file": "src/main.c",
+      "line": 473,
+      "allocator": "NEW",
+      "source": "out_buffer(me) = NEW(char, M_BUFFLEN);",
+      "category": "socket buffers",
+      "review": "Per-player output storage; negative write results ignored or close connection; queued byte counts govern progress."
+    },
+    {
+      "file": "src/main.c",
+      "line": 576,
+      "allocator": "NEW",
+      "source": "out_buffer(plx) = NEW (char, M_BUFFLEN);",
+      "category": "socket buffers",
+      "review": "Per-player output storage; negative write results ignored or close connection; queued byte counts govern progress."
+    },
+    {
+      "file": "src/mobile.c",
+      "line": 65,
+      "allocator": "text_format",
+      "source": "return text_format(\"%02d:%02d:%02d\", t/3600, (t%3600)/60, t%60);",
+      "category": "player rendering",
+      "review": "Stored travel strings owned by player; rendered title borrowed scratch; WHO and HTML temporaries freed; prompt storage has derived bound."
+    },
+    {
+      "file": "src/mobile.c",
+      "line": 122,
+      "allocator": "COPY",
+      "source": "buff = COPY(make_title(ptitle(a[i]), pname(a[i])));",
+      "category": "player rendering",
+      "review": "Stored travel strings owned by player; rendered title borrowed scratch; WHO and HTML temporaries freed; prompt storage has derived bound."
+    },
+    {
+      "file": "src/mobile.c",
+      "line": 168,
+      "allocator": "text_format",
+      "source": "{ char *part = text_format(\"&+w%s, tHe ToTAL aNd AbSoLuTE Frea&+GQ&*!\",pname(a[i])); text_append(&rendered, part); free(part); }",
+      "category": "player rendering",
+      "review": "Stored travel strings owned by player; rendered title borrowed scratch; WHO and HTML temporaries freed; prompt storage has derived bound."
+    },
+    {
+      "file": "src/mobile.c",
+      "line": 170,
+      "allocator": "text_format",
+      "source": "{ char *part = text_format(\"&+w%s\", make_title (ptitle (a[i]), pname (a[i]))); text_append(&rendered, part); free(part); }",
+      "category": "player rendering",
+      "review": "Stored travel strings owned by player; rendered title borrowed scratch; WHO and HTML temporaries freed; prompt storage has derived bound."
+    },
+    {
+      "file": "src/mobile.c",
+      "line": 266,
+      "allocator": "memory_alloc",
+      "source": "pad = memory_alloc(memory_add(len, 2), 1);",
+      "category": "player rendering",
+      "review": "Stored travel strings owned by player; rendered title borrowed scratch; WHO and HTML temporaries freed; prompt storage has derived bound."
+    },
+    {
+      "file": "src/mobile.c",
+      "line": 1186,
+      "allocator": "COPY",
+      "source": "wd_them(real_mynum) = wd_her(real_mynum) = COPY(pname(plx));",
+      "category": "player rendering",
+      "review": "Stored travel strings owned by player; rendered title borrowed scratch; WHO and HTML temporaries freed; prompt storage has derived bound."
+    },
+    {
+      "file": "src/mobile.c",
+      "line": 1191,
+      "allocator": "COPY",
+      "source": "wd_them(real_mynum) = wd_him(real_mynum) = COPY(pname(plx));",
+      "category": "player rendering",
+      "review": "Stored travel strings owned by player; rendered title borrowed scratch; WHO and HTML temporaries freed; prompt storage has derived bound."
+    },
+    {
+      "file": "src/mobile.c",
+      "line": 1394,
+      "allocator": "text_take",
+      "source": "free(scratch); scratch = text_take(&text);",
+      "category": "player rendering",
+      "review": "Stored travel strings owned by player; rendered title borrowed scratch; WHO and HTML temporaries freed; prompt storage has derived bound."
+    },
+    {
+      "file": "src/mud.c",
+      "line": 56,
+      "allocator": "text_vformat",
+      "source": "va_start(args, format); buffer = text_vformat(format, args); va_end(args);",
+      "category": "connections",
+      "review": "Input handlers owned by player; travel/prompt/mail/pronoun strings released and cleared on disconnect; socket text released."
+    },
+    {
+      "file": "src/mud.c",
+      "line": 66,
+      "allocator": "text_format",
+      "source": "message = text_format(SOCK_FORMAT, fildes(me),",
+      "category": "connections",
+      "review": "Input handlers owned by player; travel/prompt/mail/pronoun strings released and cleared on disconnect; socket text released."
+    },
+    {
+      "file": "src/mud.c",
+      "line": 78,
+      "allocator": "NEW",
+      "source": "i = NEW (INP_HANDLER, 1);",
+      "category": "connections",
+      "review": "Input handlers owned by player; travel/prompt/mail/pronoun strings released and cleared on disconnect; socket text released."
+    },
+    {
+      "file": "src/objsys.c",
+      "line": 899,
+      "allocator": "COPY",
+      "source": "wd_it(realplr) = COPY(oname(objnum));",
+      "category": "object pronouns",
+      "review": "Owned exact object-name copy; previous it pointer released."
+    },
+    {
+      "file": "src/objsys.c",
+      "line": 1371,
+      "allocator": "COPY",
+      "source": "wd_it(real_mynum) = COPY(oname(a));",
+      "category": "object pronouns",
+      "review": "Owned exact object-name copy; previous it pointer released."
+    },
+    {
+      "file": "src/parse.c",
+      "line": 92,
+      "allocator": "COPY",
+      "source": "plastcom(real_mynum) = COPY(txt);",
+      "category": "command history",
+      "review": "Owned exact copy, previous command released before replacement."
+    },
+    {
+      "file": "src/puff.c",
+      "line": 53,
+      "allocator": "NEW",
+      "source": "int r, i, *a = NEW(int, max_players), a_len = 0;",
+      "category": "timer selection",
+      "review": "Slot-count-sized array; freed after random selection."
+    },
+    {
+      "file": "src/sendsys.c",
+      "line": 208,
+      "allocator": "text_vformat",
+      "source": "bf = text_vformat(bb, pvar);",
+      "category": "message formatting",
+      "review": "Exact formatted heap strings freed after synchronous delivery."
+    },
+    {
+      "file": "src/sendsys.c",
+      "line": 221,
+      "allocator": "text_vformat",
+      "source": "b = text_vformat(format, pvar);",
+      "category": "message formatting",
+      "review": "Exact formatted heap strings freed after synchronous delivery."
+    },
+    {
+      "file": "src/sendsys.c",
+      "line": 234,
+      "allocator": "text_vformat",
+      "source": "b = text_vformat(format, pvar);",
+      "category": "message formatting",
+      "review": "Exact formatted heap strings freed after synchronous delivery."
+    },
+    {
+      "file": "src/sendsys.c",
+      "line": 264,
+      "allocator": "text_vformat",
+      "source": "bf = text_vformat(bb, pvar);",
+      "category": "message formatting",
+      "review": "Exact formatted heap strings freed after synchronous delivery."
+    },
+    {
+      "file": "src/spell.c",
+      "line": 464,
+      "allocator": "text_take",
+      "source": "free(scratch); scratch = text_take(&text); return scratch;",
+      "category": "spell durations",
+      "review": "Owned nodes; head detached before wipe; expiry unlinks; magic scratch borrowed until next call."
+    },
+    {
+      "file": "src/spell.c",
+      "line": 616,
+      "allocator": "NEW",
+      "source": "new = NEW (SPELL_DURATION, 1);",
+      "category": "spell durations",
+      "review": "Owned nodes; head detached before wipe; expiry unlinks; magic scratch borrowed until next call."
+    },
+    {
+      "file": "src/utils/dns-serv.c",
+      "line": 166,
+      "allocator": "memory_alloc",
+      "source": "nelem = memory_alloc(1, sizeof(ht_elem));",
+      "category": "DNS cache",
+      "review": "Node/string storage owned by process-lifetime cache; collision chaining repaired."
+    },
+    {
+      "file": "src/utils/dns-serv.c",
+      "line": 168,
+      "allocator": "COPY",
+      "source": "nelem->ip_addr = COPY(ip_addr);",
+      "category": "DNS cache",
+      "review": "Node/string storage owned by process-lifetime cache; collision chaining repaired."
+    },
+    {
+      "file": "src/utils/dns-serv.c",
+      "line": 169,
+      "allocator": "COPY",
+      "source": "nelem->hostname = COPY(hostname);",
+      "category": "DNS cache",
+      "review": "Node/string storage owned by process-lifetime cache; collision chaining repaired."
+    },
+    {
+      "file": "src/utils/dns-serv.h",
+      "line": 53,
+      "allocator": "COPY",
+      "source": "#define COPY(s) memory_string(s)",
+      "category": "DNS macros",
+      "review": "Same single-evaluation checked string helper."
+    },
+    {
+      "file": "src/utils/dns-serv.h",
+      "line": 53,
+      "allocator": "memory_string",
+      "source": "#define COPY(s) memory_string(s)",
+      "category": "DNS macros",
+      "review": "Same single-evaluation checked string helper."
+    },
+    {
+      "file": "src/utils.c",
+      "line": 109,
+      "allocator": "NEW",
+      "source": "newptr = (T_elemptr) NEW(T_elem, 1);",
+      "category": "collections",
+      "review": "Checked growth and integer bounds; absent removal bounded; hash/tree strings owned by their nodes; ban copies checked."
+    },
+    {
+      "file": "src/utils.c",
+      "line": 111,
+      "allocator": "NEW",
+      "source": "newptr->str = (char *) NEW(char, (strlen(s) + 1));",
+      "category": "collections",
+      "review": "Checked growth and integer bounds; absent removal bounded; hash/tree strings owned by their nodes; ban copies checked."
+    },
+    {
+      "file": "src/utils.c",
+      "line": 174,
+      "allocator": "strdup",
+      "source": "p = strdup(a);                              /* ignore case */",
+      "category": "collections",
+      "review": "Checked growth and integer bounds; absent removal bounded; hash/tree strings owned by their nodes; ban copies checked."
+    },
+    {
+      "file": "src/utils.c",
+      "line": 175,
+      "allocator": "strdup",
+      "source": "q = strdup(b);",
+      "category": "collections",
+      "review": "Checked growth and integer bounds; absent removal bounded; hash/tree strings owned by their nodes; ban copies checked."
+    },
+    {
+      "file": "src/utils.c",
+      "line": 321,
+      "allocator": "xmalloc",
+      "source": "void *xmalloc (int nelem, int elem_size) {",
+      "category": "collections",
+      "review": "Checked growth and integer bounds; absent removal bounded; hash/tree strings owned by their nodes; ban copies checked."
+    },
+    {
+      "file": "src/utils.c",
+      "line": 323,
+      "allocator": "memory_alloc",
+      "source": "return memory_alloc((size_t)nelem, (size_t)elem_size);",
+      "category": "collections",
+      "review": "Checked growth and integer bounds; absent removal bounded; hash/tree strings owned by their nodes; ban copies checked."
+    },
+    {
+      "file": "src/utils.c",
+      "line": 335,
+      "allocator": "resize_array",
+      "source": "void *resize_array (void *start, int elem_size, int oldlen, int newlen) {",
+      "category": "collections",
+      "review": "Checked growth and integer bounds; absent removal bounded; hash/tree strings owned by their nodes; ban copies checked."
+    },
+    {
+      "file": "src/utils.c",
+      "line": 338,
+      "allocator": "memory_alloc",
+      "source": "p = memory_alloc((size_t)newlen, (size_t)elem_size);",
+      "category": "collections",
+      "review": "Checked growth and integer bounds; absent removal bounded; hash/tree strings owned by their nodes; ban copies checked."
+    },
+    {
+      "file": "src/utils.c",
+      "line": 347,
+      "allocator": "NEW",
+      "source": "p->list = NEW(int, len);",
+      "category": "collections",
+      "review": "Checked growth and integer bounds; absent removal bounded; hash/tree strings owned by their nodes; ban copies checked."
+    },
+    {
+      "file": "src/utils.c",
+      "line": 417,
+      "allocator": "resize_array",
+      "source": "p->list = resize_array(p->list, sizeof(int), p->maxlen, next);",
+      "category": "collections",
+      "review": "Checked growth and integer bounds; absent removal bounded; hash/tree strings owned by their nodes; ban copies checked."
+    },
+    {
+      "file": "src/utils.c",
+      "line": 424,
+      "allocator": "NEW",
+      "source": "p->table = NEW (table_entry *, p->len = size);",
+      "category": "collections",
+      "review": "Checked growth and integer bounds; absent removal bounded; hash/tree strings owned by their nodes; ban copies checked."
+    },
+    {
+      "file": "src/utils.c",
+      "line": 433,
+      "allocator": "NEW",
+      "source": "table_entry *p = NEW (table_entry, 1);",
+      "category": "collections",
+      "review": "Checked growth and integer bounds; absent removal bounded; hash/tree strings owned by their nodes; ban copies checked."
+    },
+    {
+      "file": "src/utils.c",
+      "line": 527,
+      "allocator": "NEW",
+      "source": "ptr->next = (HASH_TABLE *) NEW(HASH_TABLE, 1);",
+      "category": "collections",
+      "review": "Checked growth and integer bounds; absent removal bounded; hash/tree strings owned by their nodes; ban copies checked."
+    },
+    {
+      "file": "src/utils.c",
+      "line": 528,
+      "allocator": "COPY",
+      "source": "ptr->next->key = COPY(key);",
+      "category": "collections",
+      "review": "Checked growth and integer bounds; absent removal bounded; hash/tree strings owned by their nodes; ban copies checked."
+    },
+    {
+      "file": "src/utils.c",
+      "line": 532,
+      "allocator": "COPY",
+      "source": "ptr->key = COPY(key);",
+      "category": "collections",
+      "review": "Checked growth and integer bounds; absent removal bounded; hash/tree strings owned by their nodes; ban copies checked."
+    },
+    {
+      "file": "src/utils.c",
+      "line": 545,
+      "allocator": "COPY",
+      "source": "ptr->key = COPY(\"\");",
+      "category": "collections",
+      "review": "Checked growth and integer bounds; absent removal bounded; hash/tree strings owned by their nodes; ban copies checked."
+    },
+    {
+      "file": "src/wizard.c",
+      "line": 781,
+      "allocator": "COPY",
+      "source": "phome(p) = COPY(buff);",
+      "category": "player home",
+      "review": "Owned exact home string; per-player temporary record uses existing persistence ownership."
+    },
+    {
+      "file": "src/wizard.c",
+      "line": 793,
+      "allocator": "COPY",
+      "source": "d.ublock.phome = COPY(buff);",
+      "category": "player home",
+      "review": "Owned exact home string; per-player temporary record uses existing persistence ownership."
+    },
+    {
+      "file": "src/wizlist.c",
+      "line": 54,
+      "allocator": "NEW",
+      "source": "r = NEW (struct _w, 1);",
+      "category": "wizard list",
+      "review": "Checked node allocation and bounded parsed names; demoted nodes released."
+    },
+    {
+      "file": "src/wizlist.c",
+      "line": 119,
+      "allocator": "NEW",
+      "source": "p = NEW (struct _w, 1);",
+      "category": "wizard list",
+      "review": "Checked node allocation and bounded parsed names; demoted nodes released."
+    },
+    {
+      "file": "src/zones.c",
+      "line": 72,
+      "allocator": "COPY",
+      "source": "zname(numzon) = COPY(zonename);",
+      "category": "zones",
+      "review": "Owned zone name and collections; world-lifetime storage."
+    },
+    {
+      "file": "cr/actions.c",
+      "line": 79,
+      "allocator": "NEW",
+      "source": "cur_act = (Actionptr) NEW(Action, 1);",
+      "category": "social actions",
+      "review": "Owned loader nodes/strings, successful fgets and bounded tokens; exact expanded strings freed after send."
+    },
+    {
+      "file": "cr/actions.c",
+      "line": 80,
+      "allocator": "COPY",
+      "source": "cur_act->name = COPY(action);",
+      "category": "social actions",
+      "review": "Owned loader nodes/strings, successful fgets and bounded tokens; exact expanded strings freed after send."
+    },
+    {
+      "file": "cr/actions.c",
+      "line": 88,
+      "allocator": "COPY",
+      "source": "cur_act->tome = COPY(p + 1);",
+      "category": "social actions",
+      "review": "Owned loader nodes/strings, successful fgets and bounded tokens; exact expanded strings freed after send."
+    },
+    {
+      "file": "cr/actions.c",
+      "line": 90,
+      "allocator": "COPY",
+      "source": "cur_act->toall = COPY(p + 1);",
+      "category": "social actions",
+      "review": "Owned loader nodes/strings, successful fgets and bounded tokens; exact expanded strings freed after send."
+    },
+    {
+      "file": "cr/actions.c",
+      "line": 92,
+      "allocator": "COPY",
+      "source": "cur_act->totarget = COPY(p + 1);",
+      "category": "social actions",
+      "review": "Owned loader nodes/strings, successful fgets and bounded tokens; exact expanded strings freed after send."
+    },
+    {
+      "file": "cr/actions.c",
+      "line": 94,
+      "allocator": "COPY",
+      "source": "cur_act->tosender = COPY(p + 1);",
+      "category": "social actions",
+      "review": "Owned loader nodes/strings, successful fgets and bounded tokens; exact expanded strings freed after send."
+    },
+    {
+      "file": "cr/actions.c",
+      "line": 96,
+      "allocator": "COPY",
+      "source": "cur_act->toothers = COPY(p + 1);",
+      "category": "social actions",
+      "review": "Owned loader nodes/strings, successful fgets and bounded tokens; exact expanded strings freed after send."
+    },
+    {
+      "file": "cr/actions.c",
+      "line": 282,
+      "allocator": "text_take",
+      "source": "if (!line) return text_take(&text);",
+      "category": "social actions",
+      "review": "Owned loader nodes/strings, successful fgets and bounded tokens; exact expanded strings freed after send."
+    },
+    {
+      "file": "cr/actions.c",
+      "line": 355,
+      "allocator": "text_take",
+      "source": "return text_take(&text);",
+      "category": "social actions",
+      "review": "Owned loader nodes/strings, successful fgets and bounded tokens; exact expanded strings freed after send."
+    },
+    {
+      "file": "cr/bprintf.c",
+      "line": 141,
+      "allocator": "text_vformat",
+      "source": "buffer = text_vformat(format, pvar);",
+      "category": "output rendering",
+      "review": "Exact varargs and file-code results freed; local special arguments freed; output reserves before each write/rebase."
+    },
+    {
+      "file": "cr/bprintf.c",
+      "line": 194,
+      "allocator": "resize_array",
+      "source": "resize_array(out_buffer(real_mynum), sizeof(char),",
+      "category": "output rendering",
+      "review": "Exact varargs and file-code results freed; local special arguments freed; output reserves before each write/rebase."
+    },
+    {
+      "file": "cr/bprintf.c",
+      "line": 351,
+      "allocator": "NEW",
+      "source": "arg = NEW(char, (size_t)(src - start) + 1);",
+      "category": "output rendering",
+      "review": "Exact varargs and file-code results freed; local special arguments freed; output reserves before each write/rebase."
+    },
+    {
+      "file": "cr/bprintf.c",
+      "line": 399,
+      "allocator": "text_format",
+      "source": "{ char *port_text = text_format(\"%d\", PORT);",
+      "category": "output rendering",
+      "review": "Exact varargs and file-code results freed; local special arguments freed; output reserves before each write/rebase."
+    },
+    {
+      "file": "cr/bprintf.c",
+      "line": 493,
+      "allocator": "text_format",
+      "source": "{ char *port_text = text_format(\"%d\", PORT); text_append(&text, port_text); free(port_text); }",
+      "category": "output rendering",
+      "review": "Exact varargs and file-code results freed; local special arguments freed; output reserves before each write/rebase."
+    },
+    {
+      "file": "cr/bprintf.c",
+      "line": 514,
+      "allocator": "text_take",
+      "source": "return text_take(&text);",
+      "category": "output rendering",
+      "review": "Exact varargs and file-code results freed; local special arguments freed; output reserves before each write/rebase."
+    },
+    {
+      "file": "cr/client.c",
+      "line": 931,
+      "allocator": "COPY",
+      "source": "atarget(plr) = COPY(target);",
+      "category": "AberChat",
+      "review": "Exact reply-target copies; existing 236792e queue/reconnect fix; disabled in Docker configuration."
+    },
+    {
+      "file": "cr/client.c",
+      "line": 936,
+      "allocator": "COPY",
+      "source": "amud(plr) = COPY(mud);",
+      "category": "AberChat",
+      "review": "Exact reply-target copies; existing 236792e queue/reconnect fix; disabled in Docker configuration."
+    },
+    {
+      "file": "cr/edit.c",
+      "line": 170,
+      "allocator": "NEW",
+      "source": "newline = NEW(Text_Line, 1);",
+      "category": "editor",
+      "review": "Exact owned line text released with each node; owned sendmail command/title freed after popen."
+    },
+    {
+      "file": "cr/edit.c",
+      "line": 175,
+      "allocator": "text_take",
+      "source": "newline->line = text_take(&text);",
+      "category": "editor",
+      "review": "Exact owned line text released with each node; owned sendmail command/title freed after popen."
+    },
+    {
+      "file": "cr/edit.c",
+      "line": 349,
+      "allocator": "COPY",
+      "source": "title = COPY(make_title(ptitle(mynum), pname(mynum)));",
+      "category": "editor",
+      "review": "Exact owned line text released with each node; owned sendmail command/title freed after popen."
+    },
+    {
+      "file": "cr/edit.c",
+      "line": 352,
+      "allocator": "text_format",
+      "source": "sendmail = text_format(\"%s -f%s -F \\\"%s\\\" -odb %s\", SENDMAIL,",
+      "category": "editor",
+      "review": "Exact owned line text released with each node; owned sendmail command/title freed after popen."
+    },
+    {
+      "file": "cr/fight.c",
+      "line": 563,
+      "allocator": "text_format",
+      "source": "{ char *part = text_format(\"\\001p%s\\003\", pname(attacker)); text_append(&text, part); free(part); }",
+      "category": "combat output",
+      "review": "Each substitution and complete message owns exact storage; freed after synchronous output; templates never used as printf format."
+    },
+    {
+      "file": "cr/fight.c",
+      "line": 577,
+      "allocator": "text_format",
+      "source": "{ char *part = text_format(\"\\001p%s\\003\", pname(victim)); text_append(&text, part); free(part); }",
+      "category": "combat output",
+      "review": "Each substitution and complete message owns exact storage; freed after synchronous output; templates never used as printf format."
+    },
+    {
+      "file": "cr/fight.c",
+      "line": 583,
+      "allocator": "text_format",
+      "source": "{ char *part = text_format(\"\\001p%s\\003's\", pname(victim)); text_append(&text, part); free(part); }",
+      "category": "combat output",
+      "review": "Each substitution and complete message owns exact storage; freed after synchronous output; templates never used as printf format."
+    },
+    {
+      "file": "cr/fight.c",
+      "line": 589,
+      "allocator": "text_format",
+      "source": "{ char *part = text_format(\"\\001p%s\\003's\", pname(attacker)); text_append(&text, part); free(part); }",
+      "category": "combat output",
+      "review": "Each substitution and complete message owns exact storage; freed after synchronous output; templates never used as printf format."
+    },
+    {
+      "file": "cr/fight.c",
+      "line": 594,
+      "allocator": "text_format",
+      "source": "{ char *part = text_format(\"your %s\", oname(area->armor)); text_append(&text, part); free(part); }",
+      "category": "combat output",
+      "review": "Each substitution and complete message owns exact storage; freed after synchronous output; templates never used as printf format."
+    },
+    {
+      "file": "cr/fight.c",
+      "line": 596,
+      "allocator": "text_format",
+      "source": "{ char *part = text_format(\"%s %s\", psex(victim) ? \"her\":\"his\",oname(area->armor)); text_append(&text, part); free(part); }",
+      "category": "combat output",
+      "review": "Each substitution and complete message owns exact storage; freed after synchronous output; templates never used as printf format."
+    },
+    {
+      "file": "cr/fight.c",
+      "line": 600,
+      "allocator": "text_format",
+      "source": "{ char *part = text_format(\"your %s\", bodyname(*area)); text_append(&text, part); free(part); }",
+      "category": "combat output",
+      "review": "Each substitution and complete message owns exact storage; freed after synchronous output; templates never used as printf format."
+    },
+    {
+      "file": "cr/fight.c",
+      "line": 602,
+      "allocator": "text_format",
+      "source": "{ char *part = text_format(\"%s %s\", psex(victim) ? \"her\":\"his\", bodyname(*area)); text_append(&text, part); free(part); }",
+      "category": "combat output",
+      "review": "Each substitution and complete message owns exact storage; freed after synchronous output; templates never used as printf format."
+    },
+    {
+      "file": "cr/fight.c",
+      "line": 644,
+      "allocator": "text_take",
+      "source": "result = text_take(&text);",
+      "category": "combat output",
+      "review": "Each substitution and complete message owns exact storage; freed after synchronous output; templates never used as printf format."
+    },
+    {
+      "file": "cr/idlookup.c",
+      "line": 40,
+      "allocator": "text_format",
+      "source": "char *identity = text_format(\"%s@%s\", username(mynum), hostname(mynum));",
+      "category": "IDENT",
+      "review": "Temporary identity string freed; bounded stream/field storage; no overlapping formatting."
+    },
+    {
+      "file": "cr/mail.c",
+      "line": 65,
+      "allocator": "NEW",
+      "source": "cur_player->work_msg = NEW(Message, 1);",
+      "category": "mail",
+      "review": "Owned subjects and nodes; work pointer may borrow list node; distinct cleanup avoids double frees; bounded file reads."
+    },
+    {
+      "file": "cr/mail.c",
+      "line": 159,
+      "allocator": "COPY",
+      "source": "cur_player->work_msg->subject = COPY(*input ? input : \"None\");",
+      "category": "mail",
+      "review": "Owned subjects and nodes; work pointer may borrow list node; distinct cleanup avoids double frees; bounded file reads."
+    },
+    {
+      "file": "cr/mail.c",
+      "line": 396,
+      "allocator": "text_take",
+      "source": "if (!n && text.len) return text_take(&text);",
+      "category": "mail",
+      "review": "Owned subjects and nodes; work pointer may borrow list node; distinct cleanup avoids double frees; bounded file reads."
+    },
+    {
+      "file": "cr/mail.c",
+      "line": 399,
+      "allocator": "text_take",
+      "source": "if (c == '\\n') return text_take(&text);",
+      "category": "mail",
+      "review": "Owned subjects and nodes; work pointer may borrow list node; distinct cleanup avoids double frees; bounded file reads."
+    },
+    {
+      "file": "cr/mail.c",
+      "line": 500,
+      "allocator": "NEW",
+      "source": "newmessage = NEW(Message, 1);",
+      "category": "mail",
+      "review": "Owned subjects and nodes; work pointer may borrow list node; distinct cleanup avoids double frees; bounded file reads."
+    },
+    {
+      "file": "cr/mail.c",
+      "line": 510,
+      "allocator": "COPY",
+      "source": "newmessage->subject = COPY(cur_player->cur_msg->subject);",
+      "category": "mail",
+      "review": "Owned subjects and nodes; work pointer may borrow list node; distinct cleanup avoids double frees; bounded file reads."
+    },
+    {
+      "file": "cr/mail.c",
+      "line": 512,
+      "allocator": "text_format",
+      "source": "newmessage->subject = text_format(\"Re: %s\", cur_player->cur_msg->subject);",
+      "category": "mail",
+      "review": "Owned subjects and nodes; work pointer may borrow list node; distinct cleanup avoids double frees; bounded file reads."
+    },
+    {
+      "file": "cr/mail.c",
+      "line": 541,
+      "allocator": "NEW",
+      "source": "Messageptr message = NEW(Message, 1);",
+      "category": "mail",
+      "review": "Owned subjects and nodes; work pointer may borrow list node; distinct cleanup avoids double frees; bounded file reads."
+    },
+    {
+      "file": "cr/mail.c",
+      "line": 594,
+      "allocator": "NEW",
+      "source": "newmessage = NEW(Message, 1);",
+      "category": "mail",
+      "review": "Owned subjects and nodes; work pointer may borrow list node; distinct cleanup avoids double frees; bounded file reads."
+    },
+    {
+      "file": "cr/mail.c",
+      "line": 617,
+      "allocator": "COPY",
+      "source": "newmessage->subject = COPY(&line[9]);",
+      "category": "mail",
+      "review": "Owned subjects and nodes; work pointer may borrow list node; distinct cleanup avoids double frees; bounded file reads."
+    },
+    {
+      "file": "cr/mudfd.c",
+      "line": 84,
+      "allocator": "text_format",
+      "source": "char *message = text_format(\"%s:%d\", file, line);",
+      "category": "tracked files",
+      "review": "Owned source/path/mode strings; full copies; released on close or failed open."
+    },
+    {
+      "file": "cr/mudfd.c",
+      "line": 90,
+      "allocator": "text_format",
+      "source": "char *message = text_format(\"%s:%d\", file, line);",
+      "category": "tracked files",
+      "review": "Owned source/path/mode strings; full copies; released on close or failed open."
+    },
+    {
+      "file": "cr/mudfd.c",
+      "line": 101,
+      "allocator": "NEW",
+      "source": "if ((newptr = (Fdptr) NEW(Fd_ent, 1)) == NULL) {",
+      "category": "tracked files",
+      "review": "Owned source/path/mode strings; full copies; released on close or failed open."
+    },
+    {
+      "file": "cr/mudfd.c",
+      "line": 105,
+      "allocator": "COPY",
+      "source": "newptr->msg = COPY(message);",
+      "category": "tracked files",
+      "review": "Owned source/path/mode strings; full copies; released on close or failed open."
+    },
+    {
+      "file": "cr/mudfd.c",
+      "line": 106,
+      "allocator": "COPY",
+      "source": "newptr->path = COPY(pathname);",
+      "category": "tracked files",
+      "review": "Owned source/path/mode strings; full copies; released on close or failed open."
+    },
+    {
+      "file": "cr/mudfd.c",
+      "line": 118,
+      "allocator": "COPY",
+      "source": "newptr->stdmode = COPY(stdmode);",
+      "category": "tracked files",
+      "review": "Owned source/path/mode strings; full copies; released on close or failed open."
+    },
+    {
+      "file": "cr/noswear.c",
+      "line": 75,
+      "allocator": "COPY",
+      "source": "char *wbuff, *srcbuff = COPY(srcstr);",
+      "category": "text filter",
+      "review": "Owned copy, tokens and output builder freed after synchronous output; original RNG/spacing rules preserved."
+    },
+    {
+      "file": "cr/noswear.c",
+      "line": 84,
+      "allocator": "COPY",
+      "source": "wbuff = COPY(oldword);",
+      "category": "text filter",
+      "review": "Owned copy, tokens and output builder freed after synchronous output; original RNG/spacing rules preserved."
+    },
+    {
+      "file": "cr/splotch.c",
+      "line": 71,
+      "allocator": "COPY",
+      "source": "if (!words) words = COPY(\"\");",
+      "category": "Splotch",
+      "review": "Owned expanded question/response/words; replacements resize; scratch is borrowed; input lookahead and table bounds checked."
+    },
+    {
+      "file": "cr/splotch.c",
+      "line": 72,
+      "allocator": "COPY",
+      "source": "if (!response) response = COPY(\"\");",
+      "category": "Splotch",
+      "review": "Owned expanded question/response/words; replacements resize; scratch is borrowed; input lookahead and table bounds checked."
+    },
+    {
+      "file": "cr/splotch.c",
+      "line": 267,
+      "allocator": "COPY",
+      "source": "free(response); response = COPY(text+1);",
+      "category": "Splotch",
+      "review": "Owned expanded question/response/words; replacements resize; scratch is borrowed; input lookahead and table bounds checked."
+    },
+    {
+      "file": "cr/splotch.c",
+      "line": 351,
+      "allocator": "COPY",
+      "source": "if (!grline(filename, add)) { free(response); response = COPY(\"hmmm\"); return; }",
+      "category": "Splotch",
+      "review": "Owned expanded question/response/words; replacements resize; scratch is borrowed; input lookahead and table bounds checked."
+    },
+    {
+      "file": "cr/splotch.c",
+      "line": 354,
+      "allocator": "text_take",
+      "source": "free(response); response = text_take(&result);",
+      "category": "Splotch",
+      "review": "Owned expanded question/response/words; replacements resize; scratch is borrowed; input lookahead and table bounds checked."
+    },
+    {
+      "file": "cr/splotch.c",
+      "line": 370,
+      "allocator": "text_format",
+      "source": "char *path = text_format(\"words/%s\", infile);",
+      "category": "Splotch",
+      "review": "Owned expanded question/response/words; replacements resize; scratch is borrowed; input lookahead and table bounds checked."
+    },
+    {
+      "file": "cr/splotch.c",
+      "line": 401,
+      "allocator": "COPY",
+      "source": "char *s = COPY(input), *old, *replacement;",
+      "category": "Splotch",
+      "review": "Owned expanded question/response/words; replacements resize; scratch is borrowed; input lookahead and table bounds checked."
+    },
+    {
+      "file": "cr/splotch.c",
+      "line": 439,
+      "allocator": "text_take",
+      "source": "free(*target); *target = text_take(&text);",
+      "category": "Splotch",
+      "review": "Owned expanded question/response/words; replacements resize; scratch is borrowed; input lookahead and table bounds checked."
+    },
+    {
+      "file": "cr/splotch.c",
+      "line": 465,
+      "allocator": "COPY",
+      "source": "free(scratch); scratch = COPY(s);",
+      "category": "Splotch",
+      "review": "Owned expanded question/response/words; replacements resize; scratch is borrowed; input lookahead and table bounds checked."
+    },
+    {
+      "file": "cr/splotch.c",
+      "line": 567,
+      "allocator": "COPY",
+      "source": "char    *winwords = COPY(\"\");",
+      "category": "Splotch",
+      "review": "Owned expanded question/response/words; replacements resize; scratch is borrowed; input lookahead and table bounds checked."
+    },
+    {
+      "file": "cr/splotch.c",
+      "line": 635,
+      "allocator": "COPY",
+      "source": "free(words); words = COPY(p1+strlen(key1)+1);",
+      "category": "Splotch",
+      "review": "Owned expanded question/response/words; replacements resize; scratch is borrowed; input lookahead and table bounds checked."
+    },
+    {
+      "file": "cr/splotch.c",
+      "line": 646,
+      "allocator": "COPY",
+      "source": "free(words); words = COPY(p1+strlen(key1)+1);",
+      "category": "Splotch",
+      "review": "Owned expanded question/response/words; replacements resize; scratch is borrowed; input lookahead and table bounds checked."
+    },
+    {
+      "file": "cr/splotch.c",
+      "line": 658,
+      "allocator": "COPY",
+      "source": "free(winwords); winwords = COPY(words);",
+      "category": "Splotch",
+      "review": "Owned expanded question/response/words; replacements resize; scratch is borrowed; input lookahead and table bounds checked."
+    },
+    {
+      "file": "cr/splotch.c",
+      "line": 663,
+      "allocator": "COPY",
+      "source": "free(words); words = COPY(winwords);",
+      "category": "Splotch",
+      "review": "Owned expanded question/response/words; replacements resize; scratch is borrowed; input lookahead and table bounds checked."
+    },
+    {
+      "file": "cr/splotch.c",
+      "line": 671,
+      "allocator": "COPY",
+      "source": "free(words); words = COPY(winwords);",
+      "category": "Splotch",
+      "review": "Owned expanded question/response/words; replacements resize; scratch is borrowed; input lookahead and table bounds checked."
+    },
+    {
+      "file": "cr/splotch.c",
+      "line": 785,
+      "allocator": "memory_alloc",
+      "source": "next = memory_alloc(memory_add(memory_add(len, (size_t)delta), 1), 1);",
+      "category": "Splotch",
+      "review": "Owned expanded question/response/words; replacements resize; scratch is borrowed; input lookahead and table bounds checked."
+    },
+    {
+      "file": "cr/uaf.c",
+      "line": 443,
+      "allocator": "text_take",
+      "source": "buff = text_take(&text);",
+      "category": "player files/travel",
+      "review": "Typed fields; fixed strings checked; owned pointer replacement and corrupt-record cleanup; travel result borrowed until next call."
+    },
+    {
+      "file": "cr/vote.c",
+      "line": 244,
+      "allocator": "NEW",
+      "source": "votes[i] = NEW(p_vote, 1); *votes[i++] = record;",
+      "category": "vote records",
+      "review": "Bounded record tokens; extra slot for current voter; success/failure releases allocated nodes."
+    },
+    {
+      "file": "cr/vote.c",
+      "line": 248,
+      "allocator": "NEW",
+      "source": "votes[i] = NEW(p_vote, 1);",
+      "category": "vote records",
+      "review": "Bounded record tokens; extra slot for current voter; success/failure releases allocated nodes."
+    },
+    {
+      "file": "include/bootstrap.h",
+      "line": 27,
+      "allocator": "NEW",
+      "source": "#define NEW(t, c) ((t *)memory_alloc((c), sizeof(t)))",
+      "category": "generator macros",
+      "review": "Same checked helpers as daemon."
+    },
+    {
+      "file": "include/bootstrap.h",
+      "line": 27,
+      "allocator": "memory_alloc",
+      "source": "#define NEW(t, c) ((t *)memory_alloc((c), sizeof(t)))",
+      "category": "generator macros",
+      "review": "Same checked helpers as daemon."
+    },
+    {
+      "file": "include/bootstrap.h",
+      "line": 28,
+      "allocator": "BCOPY",
+      "source": "#define BCOPY(s, l) memory_copy((s), (l))",
+      "category": "generator macros",
+      "review": "Same checked helpers as daemon."
+    },
+    {
+      "file": "include/bootstrap.h",
+      "line": 28,
+      "allocator": "memory_copy",
+      "source": "#define BCOPY(s, l) memory_copy((s), (l))",
+      "category": "generator macros",
+      "review": "Same checked helpers as daemon."
+    },
+    {
+      "file": "include/bootstrap.h",
+      "line": 29,
+      "allocator": "COPY",
+      "source": "#define COPY(s) memory_string(s)",
+      "category": "generator macros",
+      "review": "Same checked helpers as daemon."
+    },
+    {
+      "file": "include/bootstrap.h",
+      "line": 29,
+      "allocator": "memory_string",
+      "source": "#define COPY(s) memory_string(s)",
+      "category": "generator macros",
+      "review": "Same checked helpers as daemon."
+    },
+    {
+      "file": "include/kernel.h",
+      "line": 24,
+      "allocator": "NEW",
+      "source": "#define NEW(t, c) ((t *)memory_alloc((c), sizeof(t)))",
+      "category": "daemon macros",
+      "review": "Checked helpers replace raw allocation macros."
+    },
+    {
+      "file": "include/kernel.h",
+      "line": 24,
+      "allocator": "memory_alloc",
+      "source": "#define NEW(t, c) ((t *)memory_alloc((c), sizeof(t)))",
+      "category": "daemon macros",
+      "review": "Checked helpers replace raw allocation macros."
+    },
+    {
+      "file": "include/kernel.h",
+      "line": 25,
+      "allocator": "BCOPY",
+      "source": "#define BCOPY(s, l) memory_copy((s), (l))",
+      "category": "daemon macros",
+      "review": "Checked helpers replace raw allocation macros."
+    },
+    {
+      "file": "include/kernel.h",
+      "line": 25,
+      "allocator": "memory_copy",
+      "source": "#define BCOPY(s, l) memory_copy((s), (l))",
+      "category": "daemon macros",
+      "review": "Checked helpers replace raw allocation macros."
+    },
+    {
+      "file": "include/kernel.h",
+      "line": 26,
+      "allocator": "COPY",
+      "source": "#define COPY(s) memory_string(s)",
+      "category": "daemon macros",
+      "review": "Checked helpers replace raw allocation macros."
+    },
+    {
+      "file": "include/kernel.h",
+      "line": 26,
+      "allocator": "memory_string",
+      "source": "#define COPY(s) memory_string(s)",
+      "category": "daemon macros",
+      "review": "Checked helpers replace raw allocation macros."
+    },
+    {
+      "file": "include/memory.h",
+      "line": 19,
+      "allocator": "memory_alloc",
+      "source": "static inline void *memory_alloc(size_t count, size_t size) {",
+      "category": "shared primitives",
+      "review": "Overflow-checked sizes, single evaluation, explicit zero allocation, controlled failure and owned Text capacity."
+    },
+    {
+      "file": "include/memory.h",
+      "line": 23,
+      "allocator": "calloc",
+      "source": "p = calloc(count, size);",
+      "category": "shared primitives",
+      "review": "Overflow-checked sizes, single evaluation, explicit zero allocation, controlled failure and owned Text capacity."
+    },
+    {
+      "file": "include/memory.h",
+      "line": 27,
+      "allocator": "memory_copy",
+      "source": "static inline void *memory_copy(const void *s, size_t len) {",
+      "category": "shared primitives",
+      "review": "Overflow-checked sizes, single evaluation, explicit zero allocation, controlled failure and owned Text capacity."
+    },
+    {
+      "file": "include/memory.h",
+      "line": 28,
+      "allocator": "memory_alloc",
+      "source": "void *p = memory_alloc(len, 1);",
+      "category": "shared primitives",
+      "review": "Overflow-checked sizes, single evaluation, explicit zero allocation, controlled failure and owned Text capacity."
+    },
+    {
+      "file": "include/memory.h",
+      "line": 32,
+      "allocator": "memory_string",
+      "source": "static inline char *memory_string(const char *s) {",
+      "category": "shared primitives",
+      "review": "Overflow-checked sizes, single evaluation, explicit zero allocation, controlled failure and owned Text capacity."
+    },
+    {
+      "file": "include/memory.h",
+      "line": 33,
+      "allocator": "memory_copy",
+      "source": "return memory_copy(s, memory_add(strlen(s), 1));",
+      "category": "shared primitives",
+      "review": "Overflow-checked sizes, single evaluation, explicit zero allocation, controlled failure and owned Text capacity."
+    },
+    {
+      "file": "include/memory.h",
+      "line": 35,
+      "allocator": "text_vformat",
+      "source": "static inline char *text_vformat(const char *fmt, va_list args) {",
+      "category": "shared primitives",
+      "review": "Overflow-checked sizes, single evaluation, explicit zero allocation, controlled failure and owned Text capacity."
+    },
+    {
+      "file": "include/memory.h",
+      "line": 43,
+      "allocator": "memory_alloc",
+      "source": "s = memory_alloc(memory_add((size_t)n, 1), 1);",
+      "category": "shared primitives",
+      "review": "Overflow-checked sizes, single evaluation, explicit zero allocation, controlled failure and owned Text capacity."
+    },
+    {
+      "file": "include/memory.h",
+      "line": 49,
+      "allocator": "text_format",
+      "source": "static inline char *text_format(const char *fmt, ...) {",
+      "category": "shared primitives",
+      "review": "Overflow-checked sizes, single evaluation, explicit zero allocation, controlled failure and owned Text capacity."
+    },
+    {
+      "file": "include/memory.h",
+      "line": 53,
+      "allocator": "text_vformat",
+      "source": "s = text_vformat(fmt, args);",
+      "category": "shared primitives",
+      "review": "Overflow-checked sizes, single evaluation, explicit zero allocation, controlled failure and owned Text capacity."
+    },
+    {
+      "file": "include/memory.h",
+      "line": 69,
+      "allocator": "realloc",
+      "source": "p = realloc(t->data, cap);",
+      "category": "shared primitives",
+      "review": "Overflow-checked sizes, single evaluation, explicit zero allocation, controlled failure and owned Text capacity."
+    },
+    {
+      "file": "include/memory.h",
+      "line": 83,
+      "allocator": "text_take",
+      "source": "static inline char *text_take(Text *t) {",
+      "category": "shared primitives",
+      "review": "Overflow-checked sizes, single evaluation, explicit zero allocation, controlled failure and owned Text capacity."
+    },
+    {
+      "file": "include/utils.h",
+      "line": 52,
+      "allocator": "xmalloc",
+      "source": "void\t*xmalloc(int nelem, int elem_size);",
+      "category": "declarations",
+      "review": "Allocator and resize helper declarations; implementations are reviewed in src/utils.c."
+    },
+    {
+      "file": "include/utils.h",
+      "line": 57,
+      "allocator": "resize_array",
+      "source": "void *resize_array(void *start, int elem_size, int oldlen, int newlen);",
+      "category": "declarations",
+      "review": "Allocator and resize helper declarations; implementations are reviewed in src/utils.c."
+    }
+  ],
+  "unreviewed": 0
+}

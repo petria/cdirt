@@ -384,7 +384,7 @@ Boolean cast_spell (int caster, int victim, struct SPELL *spell) {
 
 void mob_cast_spell (int caster, int victim) {
   struct SPELL *spell;
-  struct SPELL *choices[32];
+  struct SPELL *choices[sizeof(spell_table) / sizeof(spell_table[0])];
   int len;
 
   if (ststflg(caster, SFL_DUMB))
@@ -441,45 +441,27 @@ void send_magic_msg (int dest, int caster, int victim, char *msg, int type)
 
   if (type == ROOM || type == TOROOM)
     send_msg(int2idx(dest, LOC), 0, LVL_MIN, LVL_MAX, caster, victim,
-	      make_magic_msg (xx, msg, c, v));
+	      "%s", make_magic_msg (xx, msg, c, v));
   else
     send_msg(int2idx(dest, MOB), 0, LVL_MIN, LVL_MAX, NOBODY, NOBODY,
-	      make_magic_msg (xx, msg, c, v));
+	      "%s", make_magic_msg (xx, msg, c, v));
 }
 
-char *
-make_magic_msg (char *b, char *s, char *c, char *v)
-{
-  char *p, *q, *r;
-
-  for (p = b, q = s; *q != 0;) {
-    if (*q != '%')
-      *p++ = *q++;
+char *make_magic_msg(char *unused, char *s, char *c, char *v) {
+  static char *scratch;
+  Text text = {0};
+  char *q;
+  for (q = s; *q; q++) {
+    if (*q != '%') text_char(&text, *q);
     else {
-      switch (*++q) {
-      case 'c':		/* Caster */
-	if (c == NULL)
-	  return NULL;
-	for (r = c; *r != 0;)
-	  *p++ = *r++;
-	break;
-      case 'v':		/* Victim */
-	if (v == NULL)
-	  return NULL;
-	for (r = v; *r != 0;)
-	  *p++ = *r++;
-	break;
-      case 0:
-	--q;
-	break;
-      default:
-	*p++ = *q;
-      }
-      ++q;
+      q++;
+      if (!*q) break;
+      if (*q == 'c') text_append(&text, c);
+      else if (*q == 'v') text_append(&text, v);
+      else text_char(&text, *q);
     }
   }
-  *p = 0;
-  return b;
+  free(scratch); scratch = text_take(&text); return scratch;
 }
 
 /************************************************************************
@@ -492,6 +474,7 @@ void wipe_duration (int plr) {
   SPELL_DURATION *ptr, *fptr;
 
   ptr = players[plr].duration;
+  players[plr].duration = NULL;
 
   while (ptr) {
     duration_end(plr, ptr->spell, ptr->tmp);

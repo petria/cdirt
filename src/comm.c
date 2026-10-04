@@ -16,7 +16,7 @@
 
 #ifdef BOB
   #include <sys/file.h>
-  extern char response[400];
+  extern char *response;
   extern char my_nick[20];
   #define NAME "Bob"
   void bobcom (char *text, int plx, Boolean is_tell);
@@ -414,7 +414,7 @@ void tellcom (int plr) {
 #ifdef BOB
 void bobcom (char *text, int plx, Boolean is_tell)
 {
-  char question[MAX_COM_LEN];
+  char *question;
 
   if (!dfile)
     init();
@@ -428,8 +428,8 @@ void bobcom (char *text, int plx, Boolean is_tell)
     return;
 
   strcpy(my_nick, NAME);
-  sprintf(question, "%s: %s", NAME, text);
-  ask(pname(plx),  question);
+  question = text_format("%s: %s", NAME, text);
+  ask(pname(plx), question); free(question);
   response[0] = toupper(response[0]);
 
   if (is_tell)

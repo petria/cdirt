@@ -49,7 +49,8 @@ typedef struct _ht_elem ht_elem;
 #define readbuff(x)  connects[x].readbuff
 #define output(x)    connects[x].output
 
-#define COPY(s)                 strcpy((char *) malloc(strlen(s) + 1), s)
+#include "memory.h"
+#define COPY(s) memory_string(s)
 #define False                   0
 #define True                    1
 

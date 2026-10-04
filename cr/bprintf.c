@@ -53,7 +53,7 @@ void strip_color (char *dests, char *srcs) {
           *out++ = *src++;
           continue;
       case '=':
-        if (colorcode (*(src + 2)) && colorcode (*(src + 3)))
+        if (src[2] && colorcode(src[2]) && src[3] && colorcode(src[3]))
 	  src += 4;
 	else                                      
           *out++ = *src++;    
@@ -86,7 +86,7 @@ int count_colors(char *inp) {
         src++;
         continue;
       case '=':
-        if (colorcode (*(src + 2)) && colorcode (*(src + 3)))
+        if (src[2] && colorcode(src[2]) && src[3] && colorcode(src[3]))
           nchars += 4;
         src ++;
         continue;
@@ -129,7 +129,7 @@ void snoop_txt(int me, char *buffer) {
 
 void bprintf (char *format, ...) {
   va_list pvar;
-  static char buffer[M_BUFFLEN];
+  char *buffer;
   int me = real_mynum;
   Boolean has_color;
 
@@ -138,7 +138,7 @@ void bprintf (char *format, ...) {
 
   has_color = ststflg(me, SFL_COLOR);
   va_start(pvar, format);
-  vsprintf(buffer, format, pvar);
+  buffer = text_vformat(format, pvar);
   va_end(pvar);
 
   dest = NULL;
@@ -150,6 +150,7 @@ void bprintf (char *format, ...) {
     write_plr_log(buffer);  
   if (snooped(me))
     snoop_txt(me, buffer);
+  free(buffer);
 }
 
 /* colorsel: pick a color for a string based on a percentage */
@@ -188,7 +189,7 @@ void init_memory(void) {
   else writelen = dest - out_buffer(real_mynum);
 
   if (out_size(real_mynum) - writelen < HIGH_MARK) {
-
+    if (out_size(real_mynum) > INT_MAX - M_BUFFLEN) memory_failure();
     out_buffer(real_mynum) = (unsigned char *)
       resize_array(out_buffer(real_mynum), sizeof(char),
   	 	   out_size(real_mynum), M_BUFFLEN + out_size(real_mynum));
@@ -219,6 +220,7 @@ void strformat (char *srcs, Boolean has_color) {
 #endif
 
   while (*src != 0) {
+    init_memory();
     if (*src != '&' && !(iscntrl(*src)))                /* normal case */
       *dest++ = *src++;
     else if (*src == '\n') {                            /* newline needs LF */
@@ -234,6 +236,7 @@ void strformat (char *srcs, Boolean has_color) {
     else
       src = do_specialcode(src, has_color);            /* \001[X][Arg] */
   }
+  init_memory();
   if (is_color) {                                /* reset text after line */
     strcpy ((char *) dest, CRESET);
     is_color = False;
@@ -249,7 +252,7 @@ void strformat (char *srcs, Boolean has_color) {
 
 char * do_colorcode(char *srcs, Boolean *is_color, Boolean has_color) 
 {
-  static unsigned char *src;
+  unsigned char *src;
   src = srcs;
 
   switch (*(src + 1)) {
@@ -283,7 +286,7 @@ char * do_colorcode(char *srcs, Boolean *is_color, Boolean has_color)
     else *dest++ = *src++;
     break;
   case '=':
-    if (colorcode (*(src + 2)) && colorcode (*(src + 3))) {
+    if (src[2] && colorcode(src[2]) && src[3] && colorcode(src[3])) {
       if (has_color) {
 	strcpy ((char *) dest, "\033[1;40;30m");
 	dest[5] = colorcode (*(src + 3));
@@ -334,16 +337,21 @@ char * do_colorcode(char *srcs, Boolean *is_color, Boolean has_color)
 
 char *do_specialcode(char *srcs, Boolean has_color) {
   char *delim, *src;
-  static char arg[256];
+  char *arg = NULL;
   int i;
 
   src = srcs;
 
   if (*src == 001) {                               /* special code */
     delim = ++src;
-    for (src++, i = 0; *src && *src != 003 ; src++, i++)
-      arg[i] = *src;
-    arg[i] = 0; src++;
+    if (!*src) return src;
+    src++;
+    { char *start = src;
+      while (*src && *src != 003) src++;
+      arg = NEW(char, (size_t)(src - start) + 1);
+      memcpy(arg, start, (size_t)(src - start));
+    }
+    if (*src == 003) src++;
 
     switch(*delim) {
     case 'A':
@@ -388,8 +396,8 @@ char *do_specialcode(char *srcs, Boolean has_color) {
       ADD_LINE (MASTERUSER);
       break;
     case '#':
-      sprintf(dest, "%d", PORT);
-      dest += 4;
+      { char *port_text = text_format("%d", PORT);
+        ADD_LINE(port_text); free(port_text); }
       break;
     case 'T':
       ADD_LINE (LASTBUILD);
@@ -429,6 +437,7 @@ char *do_specialcode(char *srcs, Boolean has_color) {
   }
   else
     *dest++ = *src++;                       /* something unknown */
+  free(arg);
   return src;
 }
 
@@ -458,57 +467,51 @@ void quit_pager (void) {
   strcpy(cur_player->cprompt, cur_player->pager.prompt);
 }
 
-void apply_filecodes(char *inputstr) {
-  char *b, *p, *buff;
-
-  buff = COPY(inputstr);
-
-  for (p = buff, b = inputstr ; *p ; p++) {
-    if (*p != '&') 
-      *b++ = *p;
+char *apply_filecodes(const char *inputstr) {
+  Text text = {0};
+  const char *p;
+  for (p = inputstr; *p; p++) {
+    if (*p != '&') text_char(&text, *p);
     else {
       switch (*(p+1)) {
         case 'V':
-          strcpy(b, VERSION);
+          text_append(&text, VERSION);
           break;
         case '@':
-          strcpy(b, EMAIL);
+          text_append(&text, EMAIL);
           break;
         case '$':
-          strcpy(b, MUD_NAME);
+          text_append(&text, MUD_NAME);
           break;
         case 'U':
-          strcpy(b, MASTERUSER);
+          text_append(&text, MASTERUSER);
           break;
         case '?':
-          strcpy(b, HOMEPAGE);
+          text_append(&text, HOMEPAGE);
           break;
         case '#':
-          sprintf(b, "%d", PORT);
+          { char *port_text = text_format("%d", PORT); text_append(&text, port_text); free(port_text); }
           break;
         case 'T':
-          strcpy(b, LASTBUILD);
+          text_append(&text, LASTBUILD);
           break;
         case 'H':
-          strcpy(b, _HOSTNAME_);
+          text_append(&text, _HOSTNAME_);
           break;
         case 'O':
-          strcpy(b, _OS_);
+          text_append(&text, _OS_);
           break;
         case '~':
-          strcpy(b, _ARCH_);
+          text_append(&text, _ARCH_);
           break;
         default:
-          *b++ = *p;
+          text_char(&text, *p);
           continue;
       }
-      b += strlen(b);
       p++;
     }
   }
-  *b = 0;
-
-  FREE(buff);
+  return text_take(&text);
 }
 
 void pager (char *c) {
@@ -518,11 +521,10 @@ void pager (char *c) {
 
   if (c == NULL || tolower(*c) != 'q') {
     for (ct = 1 ; ct < ppager(real_mynum) ; ct++) {
-      fgets(ch, 255, cur_player->pager.file);
-      if (!feof(cur_player->pager.file)) {
+      if (fgets(ch, sizeof(ch), cur_player->pager.file)) {
         if (c == NULL) {
-          apply_filecodes(ch);
-          ADD_LINE(ch);
+          char *expanded = apply_filecodes(ch);
+          ADD_LINE(expanded); free(expanded);
         }
         else
           bprintf("%s", ch);
@@ -546,8 +548,8 @@ void pfile (char *filename, Boolean has_color) {
   else {
     while (fgets (x, sizeof (x), a)) {
       if (!feof(a)) {
-        apply_filecodes(x);
-        ADD_LINE (x);
+        char *expanded = apply_filecodes(x);
+        ADD_LINE(expanded); free(expanded);
       }
       else break;
     }

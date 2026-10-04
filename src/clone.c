@@ -33,7 +33,7 @@ extern void load_zone(char *, Boolean);
 
 int clone_object (int obj, int new_zone, char *new_name, int loc, int carrf) {
   int i, newobj;
-  char buff[MAX_COM_LEN];
+  char *buff;
 
   resize_objects();
 
@@ -53,15 +53,15 @@ int clone_object (int obj, int new_zone, char *new_name, int loc, int carrf) {
     ht_add(oalts_n, oaltname(newobj), newobj);
   }
 
-  strcpy(buff, ozname(obj));
+  buff = COPY(ozname(obj));
   if (ht_lookup(objects_z, ozname(obj), 0, new_zone, obj_search) != -1)
     for (i = 1 ; ; i++) {
-      sprintf(buff + strlen(ozname(obj)), "%d", i);
+      free(buff); buff = text_format("%s%d", ozname(obj), i);
       if (ht_lookup(objects_z, buff, 0, new_zone, obj_search) == -1)
         break;
     }
 
-  ozname(newobj) = COPY(buff);
+  ozname(newobj) = buff;
   ht_add(objects_z, ozname(newobj), newobj);
 
   for (i = 0; i < 4; i++)
@@ -212,7 +212,7 @@ Boolean destruct_object (int obj) {
 }
  
 int clone_mobile (int mob, int new_zone, char *new_name) {
-  char buff[MAX_COM_LEN];
+  char *buff;
   int i;
 
   resize_ublock();
@@ -231,9 +231,7 @@ int clone_mobile (int mob, int new_zone, char *new_name) {
   if (pexam(mob) != NULL)
     pexam(numchars) = COPY(pexam(mob));
   if (pftxt (mob) != NULL) {
-    char b[128];
-    pftxt(numchars) = COPY (new_name == NULL ? pftxt (mob)
-	: (sprintf (b, "%s is here.", new_name), b));
+    pftxt(numchars) = new_name == NULL ? COPY(pftxt(mob)) : text_format("%s is here.", new_name);
   }
 
   init_intset(pinv(numchars), 4);
@@ -250,16 +248,16 @@ int clone_mobile (int mob, int new_zone, char *new_name) {
 
   /* ensures a new unique zone name : */
 
-  strcpy(buff, pzname(mob));
+  buff = COPY(pzname(mob));
 
   if (ht_lookup(ublock_z, pzname(mob), 0, new_zone, mob_search) != -1)
     for (i = 1 ; ; i++) {
-      sprintf(buff + strlen(pzname(mob)), "%d", i);
+      free(buff); buff = text_format("%s%d", pzname(mob), i);
       if (ht_lookup(ublock_z, buff, 0, new_zone, mob_search) == -1)
 	break;
     }
 
-  pzname(numchars) = COPY(buff);
+  pzname(numchars) = buff;
       
   ht_add(ublock_z, pzname(numchars), numchars);
   ht_add(ublock_n, pname(numchars), numchars);
@@ -348,7 +346,7 @@ Boolean destruct_mobile (int mob) {
 
 int clone_location (int l, int new_zone, char *new_name) {
   int i;
-  char buff[MAX_COM_LEN];
+  char *buff;
   int c_numloc = numloc;
 
   resize_locs();
@@ -379,17 +377,17 @@ int clone_location (int l, int new_zone, char *new_name) {
   }
   ++numloc;
 
-  strcpy(buff, lname(l));
+  buff = COPY(lname(l));
 
   if (ht_lookup(locations_z, lname(l), 0, new_zone, room_search) != -1) {
     for (i = 1 ; ; i++) {
-      sprintf(buff + strlen(lname(l)), "%d", i);
+      free(buff); buff = text_format("%s%d", lname(l), i);
       if (ht_lookup(locations_z, buff, 0, new_zone, room_search) == -1)
         break;
     }
   }
 
-  lname(c_numloc) = COPY(buff);
+  lname(c_numloc) = buff;
   ht_add(locations_z, lname(c_numloc), c_numloc);
   return(c_numloc);
 }

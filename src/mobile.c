@@ -33,8 +33,7 @@ extern char *ocorpse[];
 extern HASH_TABLE ublock_n[];
 
 char *make_prompt (char *, char *, char *, char *, char *, char *, char *);
-char *time_format (int);
-void makepad (char *, char *, int);
+char *makepad(char *, int);
 char *makenewline (char *, int);
 void check_mobile(int);
 
@@ -61,13 +60,9 @@ static char *emmy[] =
   };
 #endif
 
-char *time_format (int t)
-{
-  char *s;
-
-  s = (char *)calloc (10, sizeof(char));
-  sprintf (s, "%02d:%02d:%02d", t/3600, (t%3600)/60, t%60);
-  return s;
+/* Caller owns the returned string. */
+char *time_format(int t) {
+  return text_format("%02d:%02d:%02d", t/3600, (t%3600)/60, t%60);
 }
 
 int cmp_player (const void *a, const void  *b)
@@ -90,7 +85,7 @@ int cmp_player (const void *a, const void  *b)
 #ifdef SAVE_HTML
 void storeplayers() {
   int a[max_players], i;
-  char buff[256];
+  char *buff;
   FILE *htmlptr;  
 
   int len = 0;
@@ -124,9 +119,11 @@ void storeplayers() {
           len, (len > 1) ? 's' : ' ');
   
   for (i = 0 ; i < len ; i++) {
-    strip_color(buff, make_title (ptitle(a[i]), pname(a[i])));
+    buff = COPY(make_title(ptitle(a[i]), pname(a[i])));
+    strip_color(buff, buff);
     fprintf(htmlptr, "<tr><td>%s</td><td>%s</td><td>%s</td></tr>\n", 
             pname(a[i]), player_level(a[i]), buff);
+    free(buff);
   }
  fprintf(htmlptr, "</table></body></html>\n");
  FCLOSE(htmlptr);
@@ -135,8 +132,10 @@ void storeplayers() {
 
 void whocom (void) {
   int i, tlen, clen, txt_len;
-  char level[30], pad[TITLE_LEN], title[TITLE_LEN], mud[34];
-  int a[256], a_len = 0;
+  char level[30], *pad = NULL, *mud;
+  Text rendered = {0};
+  char *title;
+  int a[max_players], a_len = 0;
   char *ptr;
 
   for (i = 0; i < max_players; i++)
@@ -162,73 +161,75 @@ COL_1 "I" COL_2 "-------------" COL_1 "I" COL_2 "-------------------------------
     else
       strcpy (level, player_level(a[i]));
 
+    free(rendered.data); rendered = (Text){0};
     if (i == a_len)
-      strcpy (title, "&+BBob&N wants to talk to you!");
+      text_append(&rendered, "&+BBob&N wants to talk to you!");
     else if (ststflg (a[i], SFL_FREAQ))
-      sprintf (title, "&+w%s, tHe ToTAL aNd AbSoLuTE Frea&+GQ&*!",pname(a[i]));
+      { char *part = text_format("&+w%s, tHe ToTAL aNd AbSoLuTE Frea&+GQ&*!",pname(a[i])); text_append(&rendered, part); free(part); }
     else
-      sprintf (title, "&+w%s", make_title (ptitle (a[i]), pname (a[i])));
+      { char *part = text_format("&+w%s", make_title (ptitle (a[i]), pname (a[i]))); text_append(&rendered, part); free(part); }
 
     if (i != a_len) {
       if (!ststflg (mynum, SFL_NOFLAG)) {
         if (ststflg (a[i], SFL_NOCHAT))
-	  strcat (title, " &+R[&+WNo&+cChat&+R]");
+	  text_append(&rendered, " &+R[&+WNo&+cChat&+R]");
         if (ststflg (a[i], SFL_NOANON))
-	  strcat (title, " &+R[&+WNo&NAnon&+R]");
+	  text_append(&rendered, " &+R[&+WNo&NAnon&+R]");
         if (ststflg (a[i], SFL_AWAY))
-          strcat (title, " &+R[&+YAway&+R]");
+          text_append(&rendered, " &+R[&+YAway&+R]");
         if (ststflg (a[i], SFL_BUSY))
-	  strcat (title, " &+R[&+MBusy&+R]");
+	  text_append(&rendered, " &+R[&+MBusy&+R]");
         if (ststflg (a[i], SFL_CODING))  
-	  strcat (title, " &+R[&+CCoding&+R]");
+	  text_append(&rendered, " &+R[&+CCoding&+R]");
         if (linkdead(a[i]))
-          strcat (title, " &+C[&=WmLinkDead&N&+C]&N");
+          text_append(&rendered, " &+C[&=WmLinkDead&N&+C]&N");
         if (players[a[i]].inmailer)
-          strcat (title, " &+Y[In Mailer]&N");
+          text_append(&rendered, " &+Y[In Mailer]&N");
 	if (newplr(a[i]))
-	  strcat (title, " &+C[New Player]");
+	  text_append(&rendered, " &+C[New Player]");
 	
 	if (plev (mynum) >= LVL_WIZARD) {
 	  if (ststflg (a[i], SFL_QUIET))
-	    strcat (title, " &+R[&+cQuiet&+R]");
+	    text_append(&rendered, " &+R[&+cQuiet&+R]");
 	  if (ststflg (a[i], SFL_NOWIZ))
-	    strcat (title, " &+R[&+WNo&+MWiz&+R]");
+	    text_append(&rendered, " &+R[&+WNo&+MWiz&+R]");
 	  if (ststflg (a[i], SFL_NOWISH))
-	    strcat (title, " &+R[&+WNo&+BWish&+R]");
+	    text_append(&rendered, " &+R[&+WNo&+BWish&+R]");
 	}
 	if (plev (mynum) > LVL_ISTARI && ststflg (a[i], SFL_NOISTARI))
-	  strcat (title, " &+R[&+WNo&+GIstari&+R]");
+	  text_append(&rendered, " &+R[&+WNo&+GIstari&+R]");
 	
 	if (plev (mynum) > LVL_ARCHWIZARD && ststflg (a[i], SFL_NOAWIZ))
-	  strcat (title, " &+R[&+WNo&+rAWiz&+R]");
+	  text_append(&rendered, " &+R[&+WNo&+rAWiz&+R]");
 	
 	if (plev (mynum) > LVL_DEMI &&ststflg (a[i], SFL_NODEMI))
-	  strcat (title, " &+R[&+WNo&+yDemi&+W]");
+	  text_append(&rendered, " &+R[&+WNo&+yDemi&+W]");
 	
 	if (plev (mynum) > LVL_SHALAFI && ststflg (a[i], SFL_NOGOD))
-	  strcat (title, " &+R[&+WNo&+BGod&+R]");
+	  text_append(&rendered, " &+R[&+WNo&+BGod&+R]");
 	
 	if (plev (mynum) > LVL_GOD && ststflg (a[i], SFL_NOUPPER))
-	  strcat (title, " &+R[&+WNo&+bUpper&+R]");
+	  text_append(&rendered, " &+R[&+WNo&+bUpper&+R]");
       }
     }
+    title = rendered.data;
     tlen = strlen(title);
     clen = count_colors(title);
     txt_len = tlen - clen;
 
     if (txt_len < 61) {
-      makepad(pad, title, 60);
+      free(pad); pad = makepad(title, 60);
       bprintf(COL_2 "| &N%-12s" COL_2 "|&N %s " COL_2 "|\n", level, pad);
     }
     else {
       ptr = makenewline(title, 60);
       *ptr = 0;
-      makepad(pad, title, 60);
+      free(pad); pad = makepad(title, 60);
       bprintf(COL_2 "| &N%-12s" COL_2 "|&N %s " COL_2 "|\n", level, pad);
       txt_len -= 60;
 
       while(txt_len > 0) {
-        makepad(pad, ptr + 1, 60);
+        free(pad); pad = makepad(ptr + 1, 60);
         bprintf(COL_2 "|             |&N %s " COL_2 "|\n", pad);
         ptr = makenewline(ptr + 1, 60);
         *ptr = 0;
@@ -240,10 +241,10 @@ COL_1 "I" COL_2 "-------------" COL_1 "I" COL_2 "-------------------------------
 
   if (strlen(MUD_NAME) > 33) {
     mudlog("ERROR: MUD_NAME too long");
-    return;
+    free(pad); free(rendered.data); return;
   }
 
-  makepad(mud, MUD_NAME, 33);
+  mud = makepad(MUD_NAME, 33);
 
 bprintf(COL_1 "I" COL_2 "-------------" COL_1 "+" COL_2 
        "---------------------------------------------------------------"
@@ -253,22 +254,21 @@ bprintf(COL_1 "I" COL_2 "-------------" COL_1 "+" COL_2
 "-----------------------------------------------------------------------------" 
         COL_1 "+\n", a_len > 1 ? "are" : "is", a_len, a_len > 1 ? "s" : "", 
         mud, a_len > 1 ? "" : "  ");
+  free(mud); free(pad); free(rendered.data);
 }
 
-void makepad (char *pad, char *text, int len) {
-  char *s1, *s2;
-
-  len += count_colors(text);
+/* Caller owns the padded string; preserve the historical extra space. */
+char *makepad(char *text, int width) {
+  size_t len, copied;
+  char *pad;
+  if (width < 0) memory_failure();
+  len = memory_add((size_t)width, (size_t)count_colors(text));
+  pad = memory_alloc(memory_add(len, 2), 1);
   memset(pad, ' ', len + 1);
-  *(pad + len + 1) = 0;
-
-  for (s1 = text, s2 = pad ; *s1 ; s1++, s2++)
-    if (len-- == 0)
-      break;
-    else
-      *s2 = *s1;
+  copied = strlen(text); if (copied > len) copied = len;
+  memcpy(pad, text, copied);
+  return pad;
 }
-
 
 /* go to the LEN-th non-colorcode character, back up to space */
 
@@ -283,10 +283,10 @@ char *makenewline (char *str, int len) {
         ptr++;
         break;
       case '+': case '-':
-        ptr += 2;
+        ptr += ptr[2] ? 2 : 1;
         break;
       case '=':
-        ptr += 3;
+        ptr += ptr[2] && ptr[3] ? 3 : strlen(ptr) - 1;
         break;
       case '>':     /* not working properly */
         *ptr = 0;
@@ -300,7 +300,7 @@ char *makenewline (char *str, int len) {
   }
 
   /* back up to the last whitespace */
-  for ( ; *ptr ; ptr--)
+  for ( ; ptr > str && *ptr ; ptr--)
     if (isspace(*ptr))
       return(ptr);
   return(str);
@@ -309,7 +309,7 @@ char *makenewline (char *str, int len) {
 void whoncom (void)
 {
   int i;
-  int a[256], a_len = 0;
+  int a[max_players], a_len = 0;
 
   for (i = 0; i < max_players; i++)
     if (is_in_game (i) && (pvis (i) <= plev (mynum) || i == mynum)) {
@@ -461,7 +461,7 @@ void usercom (void) {
   };
 
   int i, j;
-  int a[256], a_len = 0;
+  int a[max_players], a_len = 0;
   char idlebuff[64];
 
   for (i = 0; i < max_players; i++)
@@ -861,7 +861,7 @@ void causefight (int mon) {
   #ifdef LOCMIN_CHURCH
       else if (mtstflg(mon, MFL_CROSS) &&
         carries_obj_type(plx, OBJ_CHURCH_CROSS) > -1)
-          sendf(plx, "%s seems afraid of your holy symbol.\n");
+          sendf(plx, "%s seems afraid of your holy symbol.\n", pname(mon));
   #endif
 
       else if (mtstflg (mon, MFL_NOHEAT) && hasobjtype(plx, OFL_LIT))
@@ -895,8 +895,10 @@ void check_mobile (int mon) {
   /* mobile fight control */
 
   if ((j = pfighting(mon)) != -1) {
-    if (!is_in_game(j) || ploc(mon) != ploc(j) || testpeace(mon))
-      pfighting(mon) = pfighting(j) = -1;
+    if (j < 0 || j >= numchars || !is_in_game(j) || ploc(mon) != ploc(j) || testpeace(mon)) {
+      pfighting(mon) = -1;
+      if (j >= 0 && j < numchars) pfighting(j) = -1;
+    }
     else if (j != -1)
       hit_player(mon, j, pwpn(mon));
     return;
@@ -1380,12 +1382,17 @@ ptothlp (int pl)
   return -1;
 }
 
-char *make_title (char *title, char *name)
-{
-  static char buff[PNAME_LEN + TITLE_LEN + 20];
-
-  sprintf (buff, (EMPTY (title) ? "%s the Unknown" : title), name);
-  return buff;
+char *make_title(char *title, char *name) {
+  static char *scratch; /* borrowed until next call */
+  Text text = {0};
+  const char *p = *title ? title : "%s the Unknown";
+  for (; *p; p++) {
+    if (*p == '%' && p[1] == 's') { text_append(&text, name); p++; }
+    else if (*p == '%' && p[1] == '%') { text_char(&text, '%'); p++; }
+    else text_char(&text, *p);
+  }
+  free(scratch); scratch = text_take(&text);
+  return scratch;
 }
 
 
@@ -1469,7 +1476,7 @@ void set_msg (char **b, Boolean dir_ok, Boolean sum) {
   getreinput (k);
 
   if (!*k) {
-    FREE(*b);
+    FREE(*b); *b = NULL;
     bprintf("Message reset to default.\n");
   }
   else if (check_setin (k, dir_ok, sum)) {
@@ -1643,7 +1650,7 @@ make_prompt (char *buff, char *prompt,
       ++q;
     }
   }
-  if (p[-1] == '\n')
+  if (p > buff && p[-1] == '\n')
     --p;
   *p = 0;
   return buff;
@@ -1652,8 +1659,8 @@ make_prompt (char *buff, char *prompt,
 char *
 build_prompt (int plx)
 {
-  static char b[PROMPT_LEN + 30];
-  char xx[PROMPT_LEN + 40];
+  static char b[EXPANDED_PROMPT_LEN];
+  char xx[EXPANDED_PROMPT_LEN];
   char h[40];
   char c[40];
   char l[40];
@@ -1672,7 +1679,7 @@ build_prompt (int plx)
   }
 
   sprintf (h, "%d/%d", pstr (plx), maxstrength (plx));	/* Health */
-  sprintf (c, "%d", pscore (plx));	                /* Score  */
+  sprintf (c, "%u", pscore (plx));	                /* Score  */
   sprintf (l, "%d", plev (plx));	                /* Level  */
   sprintf (n, "%s", pname (plx));               	/* Name   */
   sprintf (m, "%d/%d", pmagic (plx), maxmagic (plx));	/* Mana   */

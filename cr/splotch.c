@@ -30,9 +30,9 @@ struct template {
   int     tnext;             /* next reply (1 <= tnext <= talts) */
 }         templ[TEMPLSIZ];
 
-char   response[400];        /* response to be returned */
+char   *response;        /* response to be returned */
 char   my_nick[20];
-char   words[400];           /* a template has been matched, this is % */
+char   *words;           /* a template has been matched, this is % */
 FILE   *dfile;               /* file pointer to main dictionary file */
 int    maxtempl;             /* templ[maxtempl] is last entry */
 int    oldkeywd[HISTORY];    /* queue of indices of most recent keys */
@@ -44,8 +44,8 @@ void init(void);
 void buildtempl(void);
 void usetempl(int);
 int grline(char *, char *);
-void expand(char *);
-void swap(char *, char *, char *);
+char *expand(char *);
+void swap(char **, char *, char *);
 void strlower(char *);
 char *lower(char *);
 void fixfile(char *);
@@ -57,22 +57,31 @@ void gswap(char *, char *);
 void shift(int, int);
 
 /***************************************************************************
-  ask(person, question) takes two null terminated strings, one is the 
-  question and the other is the person who asked the question.  The function 
+  ask(person, question) takes two null terminated strings, one is the
+  question and the other is the person who asked the question.  The function
   returns the int value which represents the template used (0 or greater).
-  if no match was found, a -1 is returned.  ask always sets the global 
+  if no match was found, a -1 is returned.  ask always sets the global
   variable "response" to contain an appropriate response, or if no match was
   found, an reply from the last entry in the dictionary. (a default reply)
  ***************************************************************************/
 
-void ask(person, question)
+static void ask_expanded(char *, char *);
+void ask(char *person, char *question) {
+  char *expanded = expand(question);
+  if (!words) words = COPY("");
+  if (!response) response = COPY("");
+  ask_expanded(person, expanded);
+  free(expanded);
+}
+
+static void ask_expanded(person, question)
      char    person[20];            /* person who asked the question */
      char    question[400];         /* input line from user */
 
 {
   int     i,j;
                                      /* expand also strlowers() */
-  expand(question);                  /* swap word according to syn.dict file */
+  /* The public wrapper owns the expanded question. */
 
   if (DEBUG)
    fprintf(stderr, "<<expanded>>\n");
@@ -91,12 +100,12 @@ void ask(person, question)
       }
     usetempl(i);                      /* build response */
     return;
-  }              
+  }
   else {                              /* no match found */
 
     if ((random() % 100)+1)         /* HISTORY NOT IMPEMENTED! */
        usetempl(maxtempl);          /* use a neutral response */
-    else {                            /* use an old key */ 
+    else {                            /* use an old key */
       i = (random() % HISTORY);
       i = oldkeywd[i];
       if (DEBUG)
@@ -119,9 +128,9 @@ void ask(person, question)
 void init()
 {
   int    i;
-  
+
   /* initialization section, zero array, open files */
-  
+
   for (i=0; i < HISTORY; i++)
     oldkeywd[i] = -1;                /* no previous keywords */
 
@@ -130,7 +139,7 @@ void init()
     fprintf(stderr, "ERROR: unable to read %s\n",DICTFILE);
     exit(1);
   }
-  
+
   if (DEBUG)
     fprintf(stderr, "<<using dict file %s>>>\n", DICTFILE);
 
@@ -147,7 +156,7 @@ void init()
 
 /**************************************************************************
   buildtempl() reads the MAINDICT file and fills in the template table.
-  Each entry in the template table refers to a single template and all of 
+  Each entry in the template table refers to a single template and all of
   its replies.
  ***************************************************************************/
 
@@ -156,20 +165,20 @@ void buildtempl()
   char    line[400];
   char    temp[400];
   int     i;
- 
-  
+
+
   i=0;   /* first template starts at zero */
-  
+
   /* loop, one pass per template (including all replies) */
-  while (!feof(dfile)) {
+  while (i < TEMPLSIZ && !feof(dfile)) {
     fgets(line, sizeof(line), dfile);
-    
+
     while (((line[0] == '#') || isspace(line[0])) && (!feof(dfile)))
       fgets(line, sizeof(line), dfile);
-    
+
     if (feof(dfile))
       break;
-    
+
     /* read in template */
     strcpy(templ[i].tplate, line);
 
@@ -180,10 +189,10 @@ void buildtempl()
       templ[i].priority = 9;                /* default priority */
     else
       templ[i].priority = atoi(line);
-    
+
     /* set number of alternate replies to 0 */
     templ[i].talts = 0;
-    
+
     /* count number or responses, start with asterisk */
     if (line[0] != '*')
       fgets(line, sizeof(line), dfile);
@@ -195,9 +204,9 @@ void buildtempl()
       templ[i].talts++;
       fgets(line, sizeof(line), dfile);
     }
-    
+
     /* pick a random starting point for the responses */
-    templ[i].tnext = 1 + (random() % (templ[i].talts));
+    templ[i].tnext = templ[i].talts ? 1 + random() % templ[i].talts : 1;
     if (templ[i].tnext > templ[i].talts)
       templ[i].tnext = 1;
 
@@ -206,7 +215,7 @@ void buildtempl()
 
     if (VERBOSE)
       fprintf(stderr, "<<Template[%i]=:%s:>>\n",i,temp);
-    
+
 
     i++;   /* next template */
 
@@ -214,18 +223,18 @@ void buildtempl()
       fprintf(stderr, "ERROR: template array too small\n");
       exit(1);
     }
-    
+
   }
-  
+
   /* all templates have been read and stored */
   maxtempl = i -1;
 }
 
- 
+
 
 
 /**************************************************************************
- usetempl() a template has been sucessfully matched.  generate output 
+ usetempl() a template has been sucessfully matched.  generate output
 **************************************************************************/
 void usetempl(i)
      int     i;
@@ -244,19 +253,19 @@ void usetempl(i)
 
   fseek(dfile, templ[i].toffset, 0);	/* seek the template */
   fgets(text, sizeof(text), dfile);
-       
+
   if (templ[i].tnext > templ[i].talts)
     templ[i].tnext = 1;
   n = templ[i].tnext;
   templ[i].tnext++;
-  
+
   /* skip to the proper alternative */
   for (k = 1; k < n; k++)
     fgets(text, sizeof(text), dfile);
-  
+
   /* make reply using template */
-  strcpy(response, text+1);
-  if (response[strlen(response)-1] == '\n')
+  free(response); response = COPY(text+1);
+  if (*response && response[strlen(response)-1] == '\n')
     response[strlen(response)-1]='\0';
 
   if (words[0] != '\0') {
@@ -264,7 +273,7 @@ void usetempl(i)
     p=strstr(words, ",");          /* chop off trailing cluases */
     if (p != NULL)
        p[0]='\0';
-    
+
     p=strstr(words, ". ");
     if (p != NULL)
       p[0]='\0';
@@ -278,14 +287,14 @@ void usetempl(i)
       p[0]='\0';
 
 
-    p=strstr(words, ";");                      
+    p=strstr(words, ";");
     if (p != NULL)
        p[0]='\0';
 
     p=strstr(words, "!");
     if (p != NULL)
        p[0]='\0';
-    
+
     p=strstr(words, ":");
     if (p != NULL)
       p[0]='\0';
@@ -293,7 +302,7 @@ void usetempl(i)
     sprintf(text, " %s", lower(my_nick));
     sprintf(text2,"than %s", lower(my_nick));
     pp=strstr(words, text2);
-    p=strstr(words, text);                        
+    p=strstr(words, text);
     if ((p != NULL) && (pp == NULL))
        p[0]='\0';
 
@@ -302,16 +311,16 @@ void usetempl(i)
       p[0]='\0';
 
 
-    if (ispunct(words[strlen(words)-1]))
+    if (*words && ispunct((unsigned char)words[strlen(words)-1]))
       words[strlen(words)-1]='\0';
 
     fix();                           /* fix grammer */
-    
-    swap (response, "%", words);
+
+    swap(&response, "%", words);
   }
 
-  swap(response, lower(my_nick), "I");          /* should use NAME */
-  swap(response, "%", " ");
+  swap(&response, lower(my_nick), "I");          /* should use NAME */
+  swap(&response, "%", " ");
   for (i=0; words[i] != '\0'; i++)
     words[i]=words[i] & 0177;
 
@@ -331,84 +340,53 @@ void usetempl(i)
 
   /* do file insertians */
 
-  while (strstr(response, "@") != NULL) {
-    p1=0;
-    p2=0;
-    strcpy (filename, "\0");
-    strcpy (new, "\0");
-    strcpy (add, "\0");
-    
-    while (response[p1] != '@')
-      new[p1]=response[p1++];   
-
-    p1++;
-    new[p1-1]='\0';
-    while (! (response[p1] == '.') && response[p1] != '\0')
-      filename[p2++]=response[p1++];
-    filename[p2++]=response[p1++];
-    filename[p2++]=response[p1++];
-    filename[p2]='\0';
-    if (! grline(filename, add)) {              /* problem reading file */
-      strcpy (response, "hmmm");                /* error msg printed by */
-      return;                                   /* grline()             */
-    }
-    
-    if (response[p1] != '\0')
-      sprintf(text, "%s%s%s", new, add, &response[p1]);
-    else sprintf(text, "%s%s",new,add);
-    strcpy(response, text); 
-  } 
-}
-
-
-
-
-
- 
-  
-/*****************************/
-/* gets random line from file*/
-/*****************************/ 
-int grline(infile,s1)
-char infile[25], s1[256];
-  
-{
-  int i,r,x;
-  FILE *fp;
-  char fname[25];
-  
-  sprintf(fname, "words/%s", infile);
-  
-  if ((fp=FOPEN(fname, "r")) == NULL)
-    {
-       fprintf(stderr, "\n ERROR! could not open :%s: \n",infile);
-       return(0);
-    }
-
-  fgets (s1, 256, fp);
-  while ((s1[0] == '#') || (isspace(s1[0])))
-    fgets(s1, 256, fp);
-
-  if (atoi(s1)==0)
-  {
-    FCLOSE(fp);
-    fixfile(fname);
-    fp=FOPEN(fname,"r");
-    fgets(s1, 256, fp);
-    while ((s1[0] == '#') || (isspace(s1[0])))
-      fgets(s1, 256, fp);
+  while ((p = strchr(response, '@'))) {
+    char *dot = strchr(p + 1, '.');
+    size_t length;
+    Text result = {0};
+    if (!dot || !dot[1]) break;
+    length = (size_t)(dot - p) + 1;
+    if (length >= sizeof(filename)) break;
+    memcpy(filename, p + 1, length); filename[length] = 0;
+    if (!grline(filename, add)) { free(response); response = COPY("hmmm"); return; }
+    text_bytes(&result, response, p - response);
+    text_append(&result, add); text_append(&result, dot + 2);
+    free(response); response = text_take(&result);
   }
 
-  x=atoi(s1);
-  r=(random() % x)+1;
-  for (i=1; i<=r && (! feof(fp)); i++)
-      fgets(s1, 256, fp);
-  s1[strlen(s1)-1]='\0';
-  FCLOSE(fp);
-  return(1);
-  
 }
- 
+
+
+
+
+
+
+
+/*****************************/
+/* gets random line from file*/
+/*****************************/
+int grline(char *infile, char *line) {
+  FILE *fp;
+  char *path = text_format("words/%s", infile);
+  int count, chosen, i;
+  fp = FOPEN(path, "r");
+  if (!fp) { fprintf(stderr, "\n ERROR! could not open :%s: \n", infile); free(path); return 0; }
+  do { if (!fgets(line, 256, fp)) { FCLOSE(fp); free(path); return 0; } }
+  while (line[0] == '#' || isspace((unsigned char)line[0]));
+  if (atoi(line) == 0) {
+    FCLOSE(fp); fixfile(path); fp = FOPEN(path, "r");
+    if (!fp) { free(path); return 0; }
+    do { if (!fgets(line, 256, fp)) { FCLOSE(fp); free(path); return 0; } }
+    while (line[0] == '#' || isspace((unsigned char)line[0]));
+  }
+  count = atoi(line);
+  if (count <= 0) { FCLOSE(fp); free(path); return 0; }
+  chosen = random() % count + 1;
+  for (i = 0; i < chosen; i++) if (!fgets(line, 256, fp)) { FCLOSE(fp); free(path); return 0; }
+  if (*line && line[strlen(line) - 1] == '\n') line[strlen(line) - 1] = 0;
+  FCLOSE(fp); free(path); return 1;
+}
+
 
 
 
@@ -418,106 +396,48 @@ char infile[25], s1[256];
 /***************************************************************************
    expand() takes a string pointer.  Using they syn.dict file (format is
    given in the syn.dict file itself) it expands synonyms.
-****************************************************************************/ 
-void expand (s)
-char *s;
-{
-   char *old;
-   char *new;
-   char line[255];
-   FILE *fp;
-
-   strcat(line, "#");
-   strlower(s);
-   fp=FOPEN("syn.dict","r");
-   if (fp == NULL)
-     {
-        fprintf(stderr, "ERROR: Could not open the file syn.dict\n");
-        return;
-     }
-   else
-     {
-       while(!feof(fp))
-         {
-           fgets(line,255,fp);
-           while ((line[0] == '#') || (isspace(line[0])))
-             fgets(line,255,fp);
-           
-           strlower(line);
-           
-           new = strtok (line, ":\n");
-           old = strtok (NULL, ":\n");
-           while (old != NULL)
-             {
-               swap(s,old,new);        
-               old = strtok (NULL, ":\n");
-             }
-         }
-       FCLOSE(fp);
-     }
-}              
+****************************************************************************/
+char *expand(char *input) {
+  char *s = COPY(input), *old, *replacement;
+  char line[255];
+  FILE *fp;
+  strlower(s);
+  fp = FOPEN("syn.dict", "r");
+  if (!fp) { fprintf(stderr, "ERROR: Could not open the file syn.dict\n"); return s; }
+  while (fgets(line, sizeof(line), fp)) {
+    if (line[0] == '#' || isspace((unsigned char)line[0])) continue;
+    strlower(line);
+    replacement = strtok(line, ":\n");
+    if (!replacement) continue;
+    while ((old = strtok(NULL, ":\n"))) swap(&s, old, replacement);
+  }
+  FCLOSE(fp); return s;
+}
 
 
 
 
 
 /*********************************************************************
-   swap() takes a string pointer and a two words.  All occurances of 
+   swap() takes a string pointer and a two words.  All occurances of
    the first word are replaced by the second word.
  *********************************************************************/
- 
-void swap(s, old, new)
-char *s, *old, *new;
-{
-   char *n;
-   char *n0;
-   char *i;
-   char *s0;
-   char *new0;
-  
-   i=NULL;
-   
-   n=(char *) NEW(char, 255);   
-   n0=n;
-   s0=s;
-   new0=new;
-   
-   while ((i=strstr(s,old)) != NULL)
-         {
-            while (s != i)
-            {
-               *n=*s;
-               s++;
-               n++;
-            }
-            
-            if ( (isspace(i[strlen(old)]) || ispunct(i[strlen(old)]) ||
-                  i[strlen(old)] == '\0')  && 
-               (s==s0 || isspace(s[-1]) || ispunct(s[-1])) )
-               
-               {
-                  new = new0;
-                  while (*new)
-                        {
-                           *n=*new;
-                           new++;
-                           n++;
-                        }
-                  s += strlen(old);       
-               }      
-            else
-               {
-                  *n=*s;
-                  s++;
-                  n++;
-               }   
-         } 
-         
 
-   strcpy(n,s);
-   strcpy(s0,n0);
+void swap(char **target, char *old, char *replacement) {
+  Text text = {0};
+  const char *start = *target, *s = start, *hit;
+  size_t n = strlen(old);
+  if (!n) return;
+  while ((hit = strstr(s, old))) {
+    text_bytes(&text, s, hit - s);
+    if ((isspace((unsigned char)hit[n]) || ispunct((unsigned char)hit[n]) || !hit[n]) &&
+        (hit == start || isspace((unsigned char)hit[-1]) || ispunct((unsigned char)hit[-1]))) {
+      text_append(&text, replacement); s = hit + n;
+    } else { text_char(&text, *hit); s = hit + 1; }
+  }
+  text_append(&text, s);
+  free(*target); *target = text_take(&text);
 }
-
 
 
 
@@ -530,28 +450,22 @@ void strlower(s)
 char *s;
 {
    register int i;
-   
+
    for (i=0; s[i]; ++i)
        s[i] = tolower (s[i]);
-     
-}
- 
 
-
-
-char *lower(s)
-char  *s;
-{
-  int i;
-  static char tmp[400];
-  
-  for (i=0; s[i]; ++i)
-    tmp[i] = tolower(s[i]);
-  tmp[i]='\0';
-  return(tmp);
-    
 }
 
+
+
+
+char *lower(char *s) {
+  static char *scratch;
+  char *p;
+  free(scratch); scratch = COPY(s);
+  for (p = scratch; *p; p++) *p = tolower((unsigned char)*p);
+  return scratch;
+}
 
 
 /***************************************************************************
@@ -592,7 +506,7 @@ char fname[50];
       return;
     }
   fgets(line, 255, fp);
-  
+
   while ((line[0] == '#') || (isspace(line[0])))
     {
       fputs(line,tmpfp);
@@ -618,7 +532,7 @@ char fname[50];
     }
   FCLOSE(tmpfp);
   FCLOSE(fp);
-  
+
   fp=FOPEN(fname, "w");
   tmpfp=FOPEN("tmp", "r");
   fgets(line,255,tmpfp);
@@ -650,7 +564,7 @@ int trytempl(question)
   char    *key;
   char    key1[400];                 /* first half of a % template */
   char    key2[400];                 /* second half of a % template */
-  char    winwords[400];
+  char    *winwords = COPY("");
   int     firstime;
   int     p,j;
   char    *p1,*p2;
@@ -706,7 +620,7 @@ int trytempl(question)
 		  key1[0]=key[0];
 		  p=0;
 		  j=0;
-		  while ((key1[p++]=key[j++])!='\%');    
+		  while ((key1[p++]=key[j++])!='\%');
 		  key1[p-2]='\0';
 
 		  if ((key[p] != '\0') && (key[p] != '\n') )  { /* xxx % xxx */
@@ -716,44 +630,46 @@ int trytempl(question)
 		    if (p1 != NULL)
 		      if (!ispunct(p1[strlen(p1)-1])) {
 			p2=phrasefind(p1+1, key2);
-			if (p1 != NULL && p2 != NULL) {     /* both keys found */
+			if (p1 != NULL && p2 != NULL && p2 - p1 >= strlen(key1) + 2) { /* both keys found */
 			  found=1;
-			  strcpy(words, p1+strlen(key1)+1);
+			  free(words); words = COPY(p1+strlen(key1)+1);
 			  words[p2-p1-strlen(key1)-2]='\0'; /* -2 for spaces */
 			}
 		      }
 		  }
 		  else {		    /* xxxx % */
 		    p1=phrasefind(question, key1);
-		    if ((p1 != NULL)&& p1[strlen(key1)] != '\0') 
+		    if ((p1 != NULL)&& p1[strlen(key1)] != '\0')
 		      {
 		      /* if (!ispunct(p1[strlen(p1)-1])) { */
 			found=1;
-			strcpy(words, p1+strlen(key1)+1);
-		      } 
+			free(words); words = COPY(p1+strlen(key1)+1);
+		      }
 		  }
 		}
       }
     }
-   
+
     if (found && done)
       {
         if (templ[i].priority >score) {
-  	  winner=i; 
+          winner=i;
 	  score=templ[i].priority;
-	  strcpy(winwords, words);
+	  free(winwords); winwords = COPY(words);
 /*	  printf ("the new template is %s\n",templ[i].tplate); */
 	}
-	  
+
 	if (templ[i].priority == 9) {
-	  strcpy(words, winwords);
-	  return(winner);
+	  free(words); words = COPY(winwords);
+	  free(winwords);
+  return(winner);
 	}
       }
     found=0;
     done=0;
   }
-  strcpy(words, winwords);
+  free(words); words = COPY(winwords);
+  free(winwords);
   return(winner);
 }
 
@@ -803,7 +719,7 @@ int   n;
 void fix()
 {
   int i;
-  
+
   gswap("that you", "that I");
   gswap("my", "your");
   gswap("you", "me");
@@ -819,7 +735,7 @@ void fix()
 
   for (i=0; words[i] != '\0'; i++)
     words[i] = (words[i] & 0177);              /* readjust parity */
- 
+
 }
 
 
@@ -831,7 +747,7 @@ replacement text to  mark them as already modified
 */
 void gswap(old, new)
 	char    old[], new[];
-{     
+{
 	int     i, nlen, olen, flag, base, delim;
 	olen = 0;
 	while (old[olen] != 0)
@@ -841,6 +757,7 @@ void gswap(old, new)
 		nlen++;
 
 	for (base = 0; words[base] != 0; base++) {
+                if ((size_t)olen > strlen(words + base)) break;
 		flag = 1;
 		for (i = 0; i < olen; i++)
 			if (old[i] != words[base + i]) {
@@ -859,21 +776,16 @@ void gswap(old, new)
 
 
 
-void shift(base, delta)
-	int     base, delta;
-{
-	int     i, k;
-	if (delta == 0)
-		return;
-	if (delta > 0) {
-		k = base;
-		while (words[k] != 0)
-			k++;
-		for (i = k; i >= base; i--)
-			words[i + delta] = words[i];
-	} else	/* delta <0 */
-		for (i = 0; i == 0 || words[base + i - 1] != 0; i++)
-			words[base + i] = words[base + i - delta];
+void shift(int base, int delta) {
+  size_t len = strlen(words);
+  char *next;
+  if (!delta) return;
+  if (base < 0 || (size_t)base > len || (delta < 0 && (size_t)(-delta) > len - base)) return;
+  if (delta > 0) {
+    next = memory_alloc(memory_add(memory_add(len, (size_t)delta), 1), 1);
+    memcpy(next, words, base);
+    memcpy(next + base + delta, words + base, len - base + 1);
+    free(words); words = next;
+  } else memmove(words + base, words + base - delta, len - base + delta + 1);
 }
-
 

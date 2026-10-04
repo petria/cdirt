@@ -34,7 +34,8 @@ typedef short ACTION;
 /* mail structure */
 
 struct M_message {
-  char subject[LINE_LEN], mailfrom[LINE_LEN], mailto[LINE_LEN], date[LINE_LEN];
+  char *subject;
+  char mailfrom[LINE_LEN], mailto[LINE_LEN], date[LINE_LEN];
   char status;
   off_t text;
 
@@ -57,7 +58,7 @@ struct Fd_Entry {                  /* redo this */
 typedef struct Fd_Entry Fd_entry;
 
 struct txt_line {
-  char line[MAX_COM_LEN];
+  char *line;
   struct txt_line *next;
 };
 typedef struct txt_line Text_Line;
@@ -100,12 +101,16 @@ struct _body {
 };
 typedef struct _body Body;
 
+/* 60 raw bytes, at most 30 substitutions of two 11-digit signed ints
+ * plus '/', with wrapper/color headroom. Raw prompt limits are unchanged. */
+#define EXPANDED_PROMPT_LEN (PROMPT_LEN * 24 + 64)
+
 /* Pager Structure */
 
 typedef struct _PAGER {
   FILE          *file;
   INP_HANDLER   *old_handler;
-  char          prompt[PROMPT_LEN+40];
+  char          prompt[EXPANDED_PROMPT_LEN];
   int           len;
 } PAGER;
 
@@ -317,6 +322,8 @@ typedef struct _a_player {
   char          edit_prompt[64];               /* editor prompt           */
   int           resfd;                         /* FD for resolver         */
   int           respos;                        /* Position for resolv snd */
+  size_t        ident_len;
+  char          ident_reply[2048];
   int           dnsfd;                         /* FD for DNS lookup       */
   int           dnspos;                        /* Position for dns snd    */
   Boolean       limbo;                         /* Plr is resolving/dnsing */
@@ -344,8 +351,8 @@ typedef struct _a_player {
   Messageptr    first_msg;                     /* First mail message      */
   Messageptr    work_msg;                      /* Outgoing mail and such  */
   char		passwd[PASSWD_LEN];            /* Passwd                  */
-  char		cprompt[PROMPT_LEN+30];        /* Color prompt            */
-  char		old_cprompt[PROMPT_LEN+30];    /* Place to store old one */
+  char		cprompt[EXPANDED_PROMPT_LEN];        /* Color prompt            */
+  char		old_cprompt[EXPANDED_PROMPT_LEN];    /* Place to store old one */
   char          *wd_them;                      /* Them --> plr           */
   char		*prompt;                       /* prompt to build        */
   char		*setin;

@@ -1620,7 +1620,7 @@ void
 follist (void)
 {
   int i, j;
-  int a[256], a_len = 0;
+  int a[max_players], a_len = 0;
   int me = real_mynum;
 
   if (plev (mynum) < LVL_WIZARD) {

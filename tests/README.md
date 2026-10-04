@@ -138,3 +138,13 @@ docker build -t cdirt:latest .
 See [VERB_AUDIT.md](VERB_AUDIT.md) for findings and review limits. Refresh the
 route contracts with `python3 tests/build_verb_contracts.py` after regenerating
 the verb catalog; authored scenarios and review notes are preserved.
+
+## Allocation and timer regressions
+
+See [the memory repair report](../doc/memory-safety-20261004.md) for changes,
+ownership contracts, sanitizer build arguments and coverage limits.
+`test_memory_safety.py` compiles actual C helper functions with ASan/UBSan.
+`docker_memory_audit.py` requires a sanitizer/audit-enabled `cdirt:latest` and
+uses only a disposable server, including a writable HTML output directory.
+Regenerate `allocation_inventory.json` with `build_allocation_inventory.py`
+after allocation-site changes; new files require an explicit review entry.

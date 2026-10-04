@@ -71,18 +71,17 @@ void wlower(char *word) {
 
 void noswear(const char *srcstr) {
   char *oldword, *begptr, *endptr, *word;
-  char str[300], wbuff[300], buff[1024], srcbuff[1024];
+  Text text = {0};
+  char *wbuff, *srcbuff = COPY(srcstr);
   int oldlen, oldloc;
 
-  *buff = *str = 0;
   if (!ststflg(mynum, SFL_NEWSTYLE))
-    strcpy(buff, "\n");
+    text_char(&text, '\n');
 
-  strcpy(srcbuff, srcstr);
   oldword = strtok(srcbuff, " ");
 
-  do {
-    strcpy(wbuff, oldword);
+  while (oldword) {
+    wbuff = COPY(oldword);
     oldlen = strlen(oldword);
     wlower(oldword);
 
@@ -119,22 +118,29 @@ void noswear(const char *srcstr) {
       endptr = begptr + 4;
     }
     else {
-      strcat(buff, wbuff);
+      text_append(&text, wbuff);
+      free(wbuff);
+      oldword = strtok(NULL, " ");
+      if (oldword) text_char(&text, ' ');
       continue;
     }
 
     oldloc = oldlen - strlen(begptr);
 
     if (oldloc)
-      strncat(buff, oldword, oldloc);             /* add on head */
+      text_bytes(&text, oldword, oldloc);             /* add on head */
 
-    strcat(buff, word);                           /* add word */
+    text_append(&text, word);                           /* add word */
    
     if (endptr)
-      strcat(buff, endptr);                       /* add on tail */
+      text_append(&text, endptr);                       /* add on tail */
 
-  } while((oldword = strtok(NULL, " ")) && strcat(buff, " "));
- 
-  bprintf("%s", buff);
+    free(wbuff);
+    oldword = strtok(NULL, " ");
+    if (oldword) text_char(&text, ' ');
+  }
+  text_reserve(&text, 0);
+  bprintf("%s", text.data);
+  free(text.data); free(srcbuff);
 }
 

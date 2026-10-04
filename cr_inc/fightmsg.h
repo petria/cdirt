@@ -1,4 +1,4 @@
-#define CODES(x, y, z)  __add_codes(attacker, victim, area, x, y, z)
+#define CODES(x, y, z) ((x) = __add_codes(attacker, victim, area, y, z))
 #define FMSG(x, y)      __fightmsg(attacker, victim, area, x, y)
 #define GMSG(x)         __generalmsg(attacker, victim, area, x)
 

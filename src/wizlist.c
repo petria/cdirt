@@ -41,7 +41,7 @@ int boot_wizlist (void) {
     return(0);
   }
   while (fgets (buff, sizeof buff, f) != NULL) {
-    sscanf (buff, "%s %s", name, lev);
+    if (sscanf(buff, "%99s %99s", name, lev) != 2) continue;
     if ((plev = tlookup (lev, MWizLevels)) < 0 &&
 	(plev = tlookup (lev, FWizLevels)) < 0) {
       printf ("Error in wizlist, invalid wizlevel %s.\n", lev);
@@ -96,6 +96,7 @@ update_wizlist (char *name, int new_wlevel)
 {
   struct _w *p, *q, *r;
   Boolean m = False;
+  if (strlen(name) > PNAME_LEN) return;
 
   for (q = NULL, p = wizlist; p != NULL && !EQ (p->name, name);
        q = p, p = p->next) ;
@@ -131,6 +132,7 @@ update_wizlist (char *name, int new_wlevel)
     }
     m = True;
   }
+  if (m && p && new_wlevel <= LEV_MORTAL) free(p);
   if (m) {
     /* Wizlist is changed, dump it */
     dump_wizlist ();
