@@ -325,7 +325,8 @@ void examcom (void) {
       if ((x = FOPEN(text, "r")) != NULL) {
 	FCLOSE(x);
 	bprintf ("\001f%s\003", text);
-      }
+      } else
+        bprintf ("A typical, run of the mill %s.\n", pname (a));
     }
     if (a >= max_players) {
       for(tabnum = 0; tabnum < 5; tabnum++) {
@@ -669,7 +670,10 @@ void examcom (void) {
 #endif
   }
 
-  bprintf("%s\n", oexam_text(a));
+  if (oexam_text(a) != NULL)
+    bprintf("%s\n", oexam_text(a));
+  else
+    bprintf("You see nothing special.\n");
 }
 
 void

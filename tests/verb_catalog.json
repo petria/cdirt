@@ -6,7 +6,7 @@
   "verb_count": 390,
   "unique_verb_ids": 356,
   "output_api_call_sites": {
-    "bprintf": 2149,
+    "bprintf": 2151,
     "sendf": 242,
     "sendl": 37,
     "send_msg": 255,
@@ -359,7 +359,7 @@
       "handler_sources": {
         "aliascom": {
           "file": "src/commands.c",
-          "line": 1294
+          "line": 1298
         }
       },
       "dispatch_source_word": "ALIAS",
@@ -799,7 +799,7 @@
       "handler_sources": {
         "incom": {
           "file": "src/commands.c",
-          "line": 675
+          "line": 679
         }
       },
       "dispatch_source_word": "AT",
@@ -924,7 +924,7 @@
       "handler_sources": {
         "togglecom": {
           "file": "src/commands.c",
-          "line": 2101
+          "line": 2105
         }
       },
       "dispatch_source_word": "AUTOEXIT",
@@ -957,7 +957,7 @@
         },
         "togglecom": {
           "file": "src/commands.c",
-          "line": 2101
+          "line": 2105
         }
       },
       "dispatch_source_word": "AWAY",
@@ -1251,7 +1251,7 @@
       "handler_sources": {
         "becom": {
           "file": "src/commands.c",
-          "line": 1372
+          "line": 1376
         }
       },
       "dispatch_source_word": "BECOME",
@@ -1276,7 +1276,7 @@
       "handler_sources": {
         "beepcom": {
           "file": "src/commands.c",
-          "line": 2131
+          "line": 2135
         }
       },
       "dispatch_source_word": "BEEP",
@@ -1351,7 +1351,7 @@
       "handler_sources": {
         "blowcom": {
           "file": "src/commands.c",
-          "line": 1580
+          "line": 1584
         }
       },
       "dispatch_source_word": "BLOW",
@@ -1501,7 +1501,7 @@
       "handler_sources": {
         "togglecom": {
           "file": "src/commands.c",
-          "line": 2101
+          "line": 2105
         }
       },
       "dispatch_source_word": "BRIEF",
@@ -1526,7 +1526,7 @@
       "handler_sources": {
         "bugcom": {
           "file": "src/commands.c",
-          "line": 1018
+          "line": 1022
         }
       },
       "dispatch_source_word": "BUG",
@@ -1576,7 +1576,7 @@
       "handler_sources": {
         "togglecom": {
           "file": "src/commands.c",
-          "line": 2101
+          "line": 2105
         }
       },
       "dispatch_source_word": "BUSY",
@@ -1909,7 +1909,7 @@
       "handler_sources": {
         "comparecom": {
           "file": "src/commands.c",
-          "line": 2324
+          "line": 2328
         }
       },
       "dispatch_source_word": "COMPARE",
@@ -2656,7 +2656,7 @@
       "handler_sources": {
         "emptycom": {
           "file": "src/commands.c",
-          "line": 1458
+          "line": 1462
         }
       },
       "dispatch_source_word": "EMPTY",
@@ -2781,7 +2781,7 @@
       "handler_sources": {
         "extinguishcom": {
           "file": "src/commands.c",
-          "line": 1707
+          "line": 1711
         }
       },
       "dispatch_source_word": "EXTINGUISH",
@@ -3035,7 +3035,7 @@
       "handler_sources": {
         "followcom": {
           "file": "src/commands.c",
-          "line": 2044
+          "line": 2048
         }
       },
       "dispatch_source_word": "FOLLOW",
@@ -3328,7 +3328,7 @@
       "handler_sources": {
         "globalcom": {
           "file": "src/commands.c",
-          "line": 1227
+          "line": 1231
         }
       },
       "dispatch_source_word": "GLOBAL",
@@ -3553,7 +3553,7 @@
       "handler_sources": {
         "togglecom": {
           "file": "src/commands.c",
-          "line": 2101
+          "line": 2105
         }
       },
       "dispatch_source_word": "HEARBACK",
@@ -3578,7 +3578,7 @@
       "handler_sources": {
         "helpcom": {
           "file": "src/commands.c",
-          "line": 1061
+          "line": 1065
         }
       },
       "dispatch_source_word": "HELP",
@@ -3746,7 +3746,7 @@
       "handler_sources": {
         "incom": {
           "file": "src/commands.c",
-          "line": 675
+          "line": 679
         }
       },
       "dispatch_source_word": "IN",
@@ -3771,7 +3771,7 @@
       "handler_sources": {
         "infocom": {
           "file": "src/commands.c",
-          "line": 1182
+          "line": 1186
         }
       },
       "dispatch_source_word": "INFO",
@@ -3896,7 +3896,7 @@
       "handler_sources": {
         "klockcom": {
           "file": "src/commands.c",
-          "line": 2295
+          "line": 2299
         }
       },
       "dispatch_source_word": "KLOCK",
@@ -3989,7 +3989,7 @@
       "handler_sources": {
         "lastoncom": {
           "file": "src/commands.c",
-          "line": 2174
+          "line": 2178
         }
       },
       "dispatch_source_word": "LASTON",
@@ -4139,7 +4139,7 @@
       "handler_sources": {
         "lightcom": {
           "file": "src/commands.c",
-          "line": 1650
+          "line": 1654
         }
       },
       "dispatch_source_word": "LIGHT",
@@ -4324,7 +4324,7 @@
       "handler_sources": {
         "losecom": {
           "file": "src/commands.c",
-          "line": 2086
+          "line": 2090
         }
       },
       "dispatch_source_word": "LOSE",
@@ -4589,7 +4589,7 @@
       "handler_sources": {
         "pushcom": {
           "file": "src/commands.c",
-          "line": 1727
+          "line": 1731
         }
       },
       "dispatch_source_word": "PUSH",
@@ -4714,7 +4714,7 @@
       "handler_sources": {
         "togglecom": {
           "file": "src/commands.c",
-          "line": 2101
+          "line": 2105
         }
       },
       "dispatch_source_word": "NEWSTYLE",
@@ -4839,7 +4839,7 @@
       "handler_sources": {
         "togglecom": {
           "file": "src/commands.c",
-          "line": 2101
+          "line": 2105
         }
       },
       "dispatch_source_word": "NOBEEP",
@@ -4864,7 +4864,7 @@
       "handler_sources": {
         "togglecom": {
           "file": "src/commands.c",
-          "line": 2101
+          "line": 2105
         }
       },
       "dispatch_source_word": "NOBLINK",
@@ -4939,7 +4939,7 @@
       "handler_sources": {
         "togglecom": {
           "file": "src/commands.c",
-          "line": 2101
+          "line": 2105
         }
       },
       "dispatch_source_word": "NOFIGHT",
@@ -4964,7 +4964,7 @@
       "handler_sources": {
         "togglecom": {
           "file": "src/commands.c",
-          "line": 2101
+          "line": 2105
         }
       },
       "dispatch_source_word": "NOFLAG",
@@ -5064,7 +5064,7 @@
       "handler_sources": {
         "togglecom": {
           "file": "src/commands.c",
-          "line": 2101
+          "line": 2105
         }
       },
       "dispatch_source_word": "NOINV",
@@ -5110,7 +5110,7 @@
       "handler_sources": {
         "togglecom": {
           "file": "src/commands.c",
-          "line": 2101
+          "line": 2105
         }
       },
       "dispatch_source_word": "NOORACLE",
@@ -5185,7 +5185,7 @@
       "handler_sources": {
         "togglecom": {
           "file": "src/commands.c",
-          "line": 2101
+          "line": 2105
         }
       },
       "dispatch_source_word": "NOPUFF",
@@ -5310,7 +5310,7 @@
       "handler_sources": {
         "togglecom": {
           "file": "src/commands.c",
-          "line": 2101
+          "line": 2105
         }
       },
       "dispatch_source_word": "NOSWEAR",
@@ -5360,7 +5360,7 @@
       "handler_sources": {
         "togglecom": {
           "file": "src/commands.c",
-          "line": 2101
+          "line": 2105
         }
       },
       "dispatch_source_word": "NOWET",
@@ -5510,7 +5510,7 @@
       "handler_sources": {
         "optionscom": {
           "file": "src/commands.c",
-          "line": 2233
+          "line": 2237
         }
       },
       "dispatch_source_word": "OPTIONS",
@@ -5535,7 +5535,7 @@
       "handler_sources": {
         "setpager": {
           "file": "src/commands.c",
-          "line": 2205
+          "line": 2209
         }
       },
       "dispatch_source_word": "PAGER",
@@ -5735,7 +5735,7 @@
       "handler_sources": {
         "playcom": {
           "file": "src/commands.c",
-          "line": 1564
+          "line": 1568
         }
       },
       "dispatch_source_word": "PLAY",
@@ -5810,7 +5810,7 @@
       "handler_sources": {
         "pncom": {
           "file": "src/commands.c",
-          "line": 999
+          "line": 1003
         }
       },
       "dispatch_source_word": "PN",
@@ -5835,7 +5835,7 @@
       "handler_sources": {
         "policycom": {
           "file": "src/commands.c",
-          "line": 1206
+          "line": 1210
         }
       },
       "dispatch_source_word": "POLICY",
@@ -5910,7 +5910,7 @@
       "handler_sources": {
         "pushcom": {
           "file": "src/commands.c",
-          "line": 1727
+          "line": 1731
         }
       },
       "dispatch_source_word": "PUSH",
@@ -5978,7 +5978,7 @@
       "handler_sources": {
         "promptcom": {
           "file": "src/commands.c",
-          "line": 1543
+          "line": 1547
         }
       },
       "dispatch_source_word": "PROMPT",
@@ -6078,7 +6078,7 @@
       "handler_sources": {
         "pushcom": {
           "file": "src/commands.c",
-          "line": 1727
+          "line": 1731
         }
       },
       "dispatch_source_word": "PUSH",
@@ -6153,7 +6153,7 @@
       "handler_sources": {
         "pushcom": {
           "file": "src/commands.c",
-          "line": 1727
+          "line": 1731
         }
       },
       "dispatch_source_word": "PUSH",
@@ -6228,7 +6228,7 @@
       "handler_sources": {
         "qinfocom": {
           "file": "src/commands.c",
-          "line": 1160
+          "line": 1164
         }
       },
       "dispatch_source_word": "QINFO",
@@ -6524,7 +6524,7 @@
       "handler_sources": {
         "resetcom": {
           "file": "src/commands.c",
-          "line": 736
+          "line": 740
         }
       },
       "dispatch_source_word": "RESET",
@@ -6574,7 +6574,7 @@
       "handler_sources": {
         "reviewcom": {
           "file": "src/commands.c",
-          "line": 880
+          "line": 884
         }
       },
       "dispatch_source_word": "REVIEW",
@@ -6599,7 +6599,7 @@
       "handler_sources": {
         "ringcom": {
           "file": "src/commands.c",
-          "line": 971
+          "line": 975
         }
       },
       "dispatch_source_word": "RING",
@@ -6624,7 +6624,7 @@
       "handler_sources": {
         "rollcom": {
           "file": "src/commands.c",
-          "line": 1439
+          "line": 1443
         }
       },
       "dispatch_source_word": "ROLL",
@@ -7450,7 +7450,7 @@
       "handler_sources": {
         "pushcom": {
           "file": "src/commands.c",
-          "line": 1727
+          "line": 1731
         }
       },
       "dispatch_source_word": "PUSH",
@@ -7525,7 +7525,7 @@
       "handler_sources": {
         "sitcom": {
           "file": "src/commands.c",
-          "line": 943
+          "line": 947
         }
       },
       "dispatch_source_word": "SIT",
@@ -7750,7 +7750,7 @@
       "handler_sources": {
         "standcom": {
           "file": "src/commands.c",
-          "line": 984
+          "line": 988
         }
       },
       "dispatch_source_word": "STAND",
@@ -7925,7 +7925,7 @@
       "handler_sources": {
         "suggestcom": {
           "file": "src/commands.c",
-          "line": 1031
+          "line": 1035
         }
       },
       "dispatch_source_word": "SUGGEST",
@@ -8225,7 +8225,7 @@
       "handler_sources": {
         "pushcom": {
           "file": "src/commands.c",
-          "line": 1727
+          "line": 1731
         }
       },
       "dispatch_source_word": "PUSH",
@@ -8318,7 +8318,7 @@
       "handler_sources": {
         "treasurecom": {
           "file": "src/commands.c",
-          "line": 1520
+          "line": 1524
         }
       },
       "dispatch_source_word": "TREASURES",
@@ -8368,7 +8368,7 @@
       "handler_sources": {
         "pushcom": {
           "file": "src/commands.c",
-          "line": 1727
+          "line": 1731
         }
       },
       "dispatch_source_word": "PUSH",
@@ -8418,7 +8418,7 @@
       "handler_sources": {
         "typocom": {
           "file": "src/commands.c",
-          "line": 1046
+          "line": 1050
         }
       },
       "dispatch_source_word": "TYPO",
@@ -8461,7 +8461,7 @@
       "handler_sources": {
         "extinguishcom": {
           "file": "src/commands.c",
-          "line": 1707
+          "line": 1711
         }
       },
       "dispatch_source_word": "EXTINGUISH",
@@ -8540,7 +8540,7 @@
       "handler_sources": {
         "unveilcom": {
           "file": "src/commands.c",
-          "line": 835
+          "line": 839
         }
       },
       "dispatch_source_word": "UNVEIL",
@@ -9326,7 +9326,7 @@
       "handler_sources": {
         "togglecom": {
           "file": "src/commands.c",
-          "line": 2101
+          "line": 2105
         }
       },
       "dispatch_source_word": "SEENUMBERS",
@@ -9376,7 +9376,7 @@
       "handler_sources": {
         "togglecom": {
           "file": "src/commands.c",
-          "line": 2101
+          "line": 2105
         }
       },
       "dispatch_source_word": "AWAYBEEPS",

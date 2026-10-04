@@ -112,3 +112,40 @@ semantics and async-signal-safe crash recovery are outside these repairs.
 Detailed disposable-run artifacts are under `/tmp/cdirt-memory-audit/`, with
 build/unit/runner logs in `/tmp/cdirt-memory-*.log`. These results cover the
 listed cases; they do not prove every verb branch or timer event correct.
+
+## Existing LP64 player records: deployment follow-up
+
+The first deployment exposed a migration omission: the old saver also read
+eight bytes through each `long *` descriptor pointing to a four-byte field.
+On this little-endian LP64 host, the decimal file value therefore contained
+the intended field in its low 32 bits and an adjacent field in its high bits.
+The new strict loader rejected these oversized values. For example Rydis's
+`Damage 94489280520` represented damage 8 combined with adjacent armor 22.
+`Level 51539607556` represented level 4 combined with weapon index 12.
+
+Use `utils/migrate_lp64_players.py` for records known to originate from that
+old little-endian 64-bit saver. Stop the MUD and retain a full data backup
+first. The default is a dry run; applying requires explicit format selection
+and a fresh backup directory:
+
+```sh
+python3 utils/migrate_lp64_players.py /path/to/players
+python3 utils/migrate_lp64_players.py /path/to/players \
+  --apply --legacy-lp64 --backup-dir /path/to/fresh-record-backups
+```
+
+The migration extracts the signed or unsigned low 32 bits for integer fields;
+timestamps, password hashes, text, flags and other lines remain byte-for-byte
+unchanged. It validates candidates before writing, backs up all affected
+records, and replaces each file atomically. Run under the file owner or root
+to retain ownership; when copying repaired files into Docker restore their
+`mud` ownership. Do not use it on an unknown format or an unrelated corrupt
+record. It cannot reconstruct game state already lost to earlier corruption.
+The daemon's strict numeric validation remains in place.
+
+Three live records required migration: Exquest, Master and Rydis. The complete
+pre-migration data is retained at
+`/tmp/cdirt-lp64-migration-20261004T083237Z/original-data`. Port 6715 was
+restarted with the existing normal `cdirt:latest` image after the data repair.
+A socket login with Rydis now reaches the password prompt; no password was
+submitted during that check.
