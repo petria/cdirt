@@ -12,6 +12,7 @@ void    linkcom(void);
 void	loadcom(void);
 void    destruct_clones(int);
 void	storecom(char *, Boolean);
+void    store_zone_for_reboot(char *);
 void	destructcom(char *args);
 void	maxstatecom(void);
 void    erasezonecom(void);

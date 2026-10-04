@@ -3,6 +3,10 @@
  *********************************************************************/
 
 #include <stdlib.h>
+#include <errno.h>
+#include <stdio.h>
+#include <stdarg.h>
+#include <string.h>
 #include <sys/time.h>
 #include <sys/types.h>
 #include <unistd.h>
@@ -447,6 +451,10 @@ int aberchat_boot(void) {
   return 0;
 #else
   if (aberfd == -1) {
+    /* Pending packets belong to one connection, never to its successor. */
+    *abuffer = 0;
+    aber_output = False;
+    auth = False;
     if ((aberfd = makesock(SERVER, SERVER_PORT)) == -1)
       return 0;
     else {
@@ -466,8 +474,14 @@ Boolean aberchat_shutdown(void) {
     mudlog("ABERCHAT: Shutdown");
     close(aberfd);
     aberfd = -1;
+    auth = False;
+    aber_output = False;
+    *abuffer = 0;
     return True;
   }
+  auth = False;
+  aber_output = False;
+  *abuffer = 0;
   return False;
 }
 
@@ -498,6 +512,8 @@ void aberchat_socketdetails(time_t now) {
 
 void aprintf(char *format,...) {
   char buffer[WRITELEN];
+  int length;
+  size_t queued;
   Boolean ok = False;
   va_list pvar;
 
@@ -518,28 +534,42 @@ void aprintf(char *format,...) {
 
   if (ok) {
     va_start(pvar, format);
-    vsprintf(buffer, format, pvar);
+    length = vsnprintf(buffer, sizeof(buffer), format, pvar);
     va_end(pvar);
-    strcat(abuffer, buffer);
+    queued = strlen(abuffer);
+    if (length < 0 || (size_t)length >= sizeof(buffer) ||
+        (size_t)length >= sizeof(abuffer) - queued) {
+      mudlog("ABERCHAT: Output buffer capacity exceeded; closing connection");
+      aberchat_shutdown();
+      return;
+    }
+    memcpy(abuffer + queued, buffer, (size_t)length + 1);
     aber_output = True;
   }
   return;
 }
 
 void aberchat_writepacket(int fd) {
-  static char *pos = abuffer;
-  int n_wrote;
+  size_t pending;
+  ssize_t n_wrote;
 
-  n_wrote = write(fd, pos, strlen(pos) + 1);
-  pos += n_wrote;
-
-  if (n_wrote == -1)
+  if (fd != aberfd || fd < 0 || !aber_output)
     return;
-  else if (!*(pos - 1)) {
+  pending = strlen(abuffer) + 1;
+  n_wrote = write(fd, abuffer, pending);
+  if (n_wrote < 0) {
+    if (errno != EINTR && errno != EAGAIN && errno != EWOULDBLOCK)
+      aberchat_shutdown();
+    return;
+  }
+  if (n_wrote == 0)
+    return;
+  if ((size_t)n_wrote == pending) {
     *abuffer = 0;
-    pos = abuffer;
     aber_output = False;
   }
+  else
+    memmove(abuffer, abuffer + n_wrote, pending - (size_t)n_wrote);
 }
 
 void aberchat_readpacket(int fd) {

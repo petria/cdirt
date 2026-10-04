@@ -88,7 +88,7 @@ void run_reboot (Boolean crash, Boolean will_update) {
   autosave();
 
   for (i = num_const_zon ; i < numzon ; i++) {
-    storecom(zname(i), True);
+    store_zone_for_reboot(zname(i));
     if ((plx = fpbn(zname(i))) != -1)
       sendf(plx, "&+G[Zone AutoSaved]\n");
   }

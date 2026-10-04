@@ -616,23 +616,38 @@ void destructcom (char *args) {
 }
 
 
+static void store_zone (char *player, Boolean silent);
+
 void storecom (char *player, Boolean silent) {
+  if (mynum < 0 || mynum >= numchars)
+    return;
+  if (!ptstflg(mynum, PFL_LD_STORE) || !ptstflg(mynum, PFL_CLONE)) {
+    erreval();
+    return;
+  }
+  store_zone(player, silent);
+}
+
+/* Internal persistence has no invoking player and must not inspect mynum. */
+void store_zone_for_reboot (char *player) {
+  store_zone(player, True);
+}
+
+static void store_zone (char *player, Boolean silent) {
   FILE *f;
   char path[256], loc[256];
   int i, ct, z, j, q, nz;
   
-  sprintf(path, "%s/WIZ_ZONES/%s", DATA_DIR, player);
- 
-  if (!ptstflg (mynum, PFL_LD_STORE) || !ptstflg(mynum, PFL_CLONE)) {
-    erreval ();
+  if (snprintf(path, sizeof(path), "%s/WIZ_ZONES/%s", DATA_DIR, player)
+      >= (int)sizeof(path)) {
+    mudlog("STORE: Wizard zone path too long");
     return;
   }
-  else if (!(f = FOPEN(path, "w"))) {
+  if (!(f = FOPEN(path, "w"))) {
     if (!silent)
       bprintf("Unable to write your wiz zone, sorry.\n");
     return;
   }
-  
   z = get_wizzone_by_name(player);
 
   fprintf(f, "%%mobiles\n\n");  

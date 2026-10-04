@@ -75,8 +75,9 @@ utilities without running the interactive native `configure` flow.
 Docker builds disable AberChat at compile time. The game does not connect to
 the historical external chat server at startup or reconnect in the background;
 the administrator's `aboot` command cannot establish a connection either.
-Local player communication continues to work. This avoids the legacy reconnect
-buffer overflow; it does not repair that code or the emergency recovery defect.
+Local player communication continues to work. The legacy output queue is also
+bounded and reset between connections, and internal reboot saves no longer
+inspect an invoking player's permissions. See doc/core-crash-20261004.md.
 
 The C-Dirt flag system divides flags into logical 32-bit lanes. The bit masks
 use unsigned shifts so bit 31 remains a single lane bit on 64-bit builds.
