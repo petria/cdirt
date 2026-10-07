@@ -1,6 +1,8 @@
 #ifndef XR_WEATHER
 #define XR_WEATHER
 
+#include <stdint.h>
+
 void xrchange_weather( );
 void weathercom (void);
 void start_weather( int weather );
@@ -12,8 +14,8 @@ int rain2num( int plr, int value );
 int wind2num( int value );
 void rainmsgs( int oldvalue );
 void windmsgs( int oldwind );
-char *raintest_func( int plr, int arg, char *msg );
-char *windtest_func( int plr, int arg, char *msg );
+char *raintest_func( int plr, intptr_t arg, char *msg );
+char *windtest_func( int plr, intptr_t arg, char *msg );
 
 /* Defines for start_weather */
 #define WEATHER_SUNNY 0

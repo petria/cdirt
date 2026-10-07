@@ -2,6 +2,8 @@
 
 #include <stdio.h>
 #include <dirent.h>
+#include <stdlib.h>
+#include <string.h>
 #include "config.h"
 #define ID_COUNTER 	BASE_LOC "/data/WIZ_ZONES/ID_COUNTER"
 #define False 0
@@ -26,7 +28,11 @@ int main() {
     exit(1);
   }
 
-  fscanf(idptr, "%ld", &id_counter);
+  if (fscanf(idptr, "%d", &id_counter) != 1) {
+    fprintf(stderr, "ID_COUNTER does not contain a valid integer\n");
+    fclose(idptr);
+    return 1;
+  }
   fclose(idptr);
   id_counter++;   /* just to be safe */
 
@@ -42,7 +48,7 @@ int main() {
 	  for (i = 0 ; !feof(fp) ; i++) {
 	    fgets(text[i], 256, fp);
 	    if (!strncmp(text[i], "ID", 2)) {
-	      sprintf(text[i], "ID         %ld\n", id_counter++);
+	      sprintf(text[i], "ID         %d\n", id_counter++);
 	      id_found = True;
 	    }
 	  }
@@ -53,7 +59,7 @@ int main() {
 	    for (i = 0 ; i < num_read ; i++)
  	      fputs(text[i], fp);
 	    if (!id_found)
-	      fprintf(fp, "ID         %ld\n", id_counter++);
+	      fprintf(fp, "ID         %d\n", id_counter++);
 	    fclose(fp);
 	  }
 	  else
@@ -66,7 +72,7 @@ int main() {
   if ((idptr = fopen(ID_COUNTER, "w")) == NULL)
     exit(1);
 
-  fprintf(idptr, "%ld\n", id_counter);
+  fprintf(idptr, "%d\n", id_counter);
   fclose(idptr);
   printf("Stored ID_COUNTER = %d\n", id_counter);
   return(0);

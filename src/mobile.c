@@ -752,7 +752,7 @@ void list_people (void) {
 	bprintf ("(");
 
       if (i >= max_players) {
-	if (pstr(i) > 0)
+	if (pstr(i) >= 0)
 	  bprintf ("%s", pftxt (i));
 	else
           {
@@ -762,7 +762,7 @@ void list_people (void) {
 	    char buff[100];
 
             time(&cur_time);
-            t_elapsed = cur_time - ublock[i - max_players].death_time;
+            t_elapsed = cur_time - ublock[i].death_time;
 	    if (t_elapsed < 2 * SECS_IN_A_MIN)       p = 0;
 	    else if (t_elapsed < 5 * SECS_IN_A_MIN)  p = 1;
 	    else if (t_elapsed < 8 * SECS_IN_A_MIN)  p = 2;

@@ -402,6 +402,7 @@ void player_died(int attacker, int victim, int hit_type) {
   Bodypart *area = 0;
 
   pstr(victim) = -1;
+  time(&ublock[victim].death_time);
 
   for (x = 0 ; x < numchars ; x++)
     if (pfighting(x) == victim)
@@ -455,8 +456,6 @@ void player_died(int attacker, int victim, int hit_type) {
         sendf(attacker, "&+C%s appears to have had something with %s "
           "when %s died.\n&N", pname(victim), psex(victim) ? "her" : "him",
             psex(victim) ? "she" : "he");
-
-      time(&ublock[victim - max_players].death_time);
 
       if (((q = is_grouped(attacker)) >= 0) && (ploc(q) == ploc(attacker)))
         setpscore(victim, q);          /* leader of group gets kill */

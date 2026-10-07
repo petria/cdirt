@@ -3,7 +3,7 @@
 void v_clean_up(void) {
   strcpy(cur_player->cprompt, (char *) build_prompt(mynum));
   cur_player->work = 0;
-  bzero(cur_player->work2, 64);
+  memset(cur_player->work2, 0, sizeof(cur_player->work2));
   return;
 } 
 
@@ -12,23 +12,26 @@ void load_votes(char *file_base) {
   FILE *vfptr;
   char vpath[PATH_LEN];
   char player[BUFF_LEN];
+  int yes, no, abstain;
+
+  v_yes = v_no = v_abs = 0;
 
   sprintf(vpath, "%s/results.%s", VOTE_DIR, file_base);
 
   if ((vfptr = FOPEN(vpath, "r")) == NULL)
     return;
   else
-    while(!feof(vfptr)) {
-      fscanf(vfptr, "%s %d %d %d\n", player, &v_yes, &v_no, &v_abs);
+    while (fscanf(vfptr, "%255s %d %d %d", player,
+                  &yes, &no, &abstain) == 4) {
       if (!strcmp(player, pname(mynum))) {  /* found, use these values */
+        v_yes = yes;
+        v_no = no;
+        v_abs = abstain;
 	FCLOSE(vfptr);
 	return;
       }
     }
   /* not found, defaults */
-  v_yes = 0;
-  v_no = 0;
-  v_abs = 0;
   FCLOSE(vfptr);
 }
 

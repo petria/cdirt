@@ -2,6 +2,9 @@
 #include <dirent.h>
 #include <time.h>
 #include <sys/stat.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 #include "config.h"
 #define SECS_A_DAY 60 * 60 * 24
 

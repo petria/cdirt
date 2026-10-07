@@ -296,13 +296,13 @@ void examcom (void) {
     return;
   }
   if ((a = pl1) != -1 && ploc (a) == ploc (mynum)) {
-    if (pstr (a) < 1) {
+    if (a >= max_players && pstr (a) < 0) {
       time_t cur_time;
       int t_elapsed, p;
       char buff[100];
 
       time(&cur_time);
-      t_elapsed = cur_time - ublock[a - max_players].death_time;
+      t_elapsed = cur_time - ublock[a].death_time;
 
       if (t_elapsed < 2 * SECS_IN_A_MIN) p = 0;
       else if (t_elapsed < 5 * SECS_IN_A_MIN) p = 1;

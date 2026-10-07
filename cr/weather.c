@@ -412,20 +412,20 @@ void windmsgs( int oldwind ) {
   return;
 }
 
-char *windtest_func( int plr, int arg, char *msg ) {
+char *windtest_func( int plr, intptr_t arg, char *msg ) {
   if( !ltstflg( ploc( plr ), LFL_OUTDOORS ) || ststflg( plr, SFL_NOWET ) ||
       ststflg( plr, SFL_QUIET ) )
     return NULL;
 
-  return xrweatherwindmsgs[wind2num(arg)][wind2num(global_weather->windspeed)];
+  return xrweatherwindmsgs[wind2num((int)arg)][wind2num(global_weather->windspeed)];
 }
 
-char * raintest_func( int plr, int arg, char *msg ) {
+char * raintest_func( int plr, intptr_t arg, char *msg ) {
   if( !ltstflg( ploc( plr ), LFL_OUTDOORS ) || ststflg( plr, SFL_NOWET ) ||
       ststflg( plr, SFL_QUIET ) )
     return NULL;
 
-  return xrweatherstartmsgs[rain2num( plr, arg )][rain2num( plr, global_weather->rain )][((get_temp(ploc(plr)) < 40) ? 1 : 0)];    
+  return xrweatherstartmsgs[rain2num( plr, (int)arg )][rain2num( plr, global_weather->rain )][((get_temp(ploc(plr)) < 40) ? 1 : 0)];
 }
 
 /* 
