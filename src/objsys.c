@@ -829,8 +829,6 @@ void aobjsat (int loc, int mode, int marg) {
         strcat(b, "<&+Carmor&N> ");
       if (otstbit(obj, OFL_CONTAINER)) {
         strcat(b, "<&+ycont&N> ");
-	if (!otstbit(obj, OFL_OPENABLE) || state(obj) == 0)
-	  ostack[ostackp++] = obj;
       }
     }
 
@@ -840,8 +838,13 @@ void aobjsat (int loc, int mode, int marg) {
       *line = 0;
        ct--;
     } 
-    else
+    else {
       strcat(line, b);
+      /* A wrapped object is retried; queue contents only after accepting it. */
+      if (*b && otstbit(obj, OFL_CONTAINER) &&
+          (!otstbit(obj, OFL_OPENABLE) || state(obj) == 0))
+        ostack[ostackp++] = obj;
+    }
   }
 
   if (*line) {
@@ -1022,6 +1025,9 @@ int get1objfrom (int ob, int container) {
 
   for (ct = 0 ; ct < lnumchars(ploc(mynum)) ; ct++) {
     i = lmob_nr(ct, ploc(mynum));
+    /* Corpses stay in the room but cannot guard objects or attack takers. */
+    if (alive(i) == -1)
+      continue;
     if (mtstflg(i, MFL_NOGRAB)) {
       bprintf("\001p%s\003 doesn't let you take it.\n", pname(i));
       return(-2);

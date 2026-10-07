@@ -357,7 +357,7 @@ void examcom (void) {
   /* Checks the cloned object */
 
 #ifdef LOCMIN_BLIZZARD
-  if (strncasecmp(ozname(a), "scroll", 6) && EQ(zname(ozone(a)), "blizzard")) {
+  if (strncasecmp(ozname(a), "scroll", 6) == 0 && EQ(zname(ozone(a)), "blizzard")) {
 #ifdef LOCMIN_CATACOMB
     if (iscarrby (OBJ_CATACOMB_CUPSERAPH, mynum)) {
       bprintf ("Funny, I thought this was a teleport scroll, but "
@@ -954,11 +954,6 @@ sitcom (void)
     bprintf ("You want to sit down while fighting?  Do you have a death "
 	     "wish or something?\n");
     return;
-  } else {
-    bprintf ("You assume the lotus position.\n");
-    send_msg(sendloc(mynum), 0, pvis (mynum), LVL_MAX, mynum, NOBODY,
-	      "%s sits down.\n", pname (mynum));
-    setpsitting (mynum, 1);
   }
 #ifdef LOCMIN_ICECAVE
   if (ploc (mynum) == LOC_ICECAVE_THRONE) {
@@ -970,6 +965,10 @@ sitcom (void)
     }
   }
 #endif
+  bprintf ("You assume the lotus position.\n");
+  send_msg(sendloc(mynum), 0, pvis (mynum), LVL_MAX, mynum, NOBODY,
+	    "%s sits down.\n", pname (mynum));
+  setpsitting (mynum, 1);
 }
 
 void ringcom (void) {
