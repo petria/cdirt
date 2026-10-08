@@ -1492,6 +1492,26 @@ void emptycom (void) {
     return;
   }
 
+#ifdef LOCMIN_START
+  if (ploc(mynum) == oloc(OBJ_START_PIT) ||
+      ploc(mynum) == oloc(OBJ_START_CHURCH_PIT)
+#ifdef LOCMIN_SEA
+      || ploc(mynum) == oloc(OBJ_SEA_HOLE)
+#endif
+     ) {
+    for (ct = 0; ct < onumobs(a); ct++) {
+      b = oobj_nr(ct, a);
+      if (iscontin(b, a)) {
+        ct--;
+        setoloc(b, mynum, CARRIED_BY);
+        bprintf("You empty the %s from the %s.\n", oname(b), oname(a));
+        dropobjcom(b);
+      }
+    }
+    return;
+  }
+#endif
+
   bprintf("You take the %s from the %s, and put %s %s%s\n", 
            nobs < 2 ? oname(ofirst_obj(a)) : "following items", oname(a),
            nobs < 2 ? "it" : "them",

@@ -167,12 +167,15 @@ void frobcom (char *line) {
             }
             
             setplev(x, f->level);
-            calib_player(x);
+            calib_player_without_skills(x);
 
-            if (f->oldlev < plev(x))
-              give_skills(mbits(x), x, f->oldlev, plev(x));
+            if (p.ublock.plev < plev(x))
+              give_skills(mbits(x), x, p.ublock.plev, plev(x));
             else
-              take_skills(mbits(x), x, f->oldlev, plev(x));
+              take_skills(mbits(x), x, p.ublock.plev, plev(x));
+
+            /* Skill changes can affect strength; enforce the final limits. */
+            calib_player(x);
 
             setptitle(x, std_title(plev(x), psex(x), pclass(x)));
 	    set_xpflags (mbits(x), f->level);

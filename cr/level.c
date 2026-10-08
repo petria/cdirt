@@ -57,7 +57,7 @@ int levelof (int score, int lev) {
   return 0;
 }
 
-void calib_player (int pl) {
+static void calib_player_impl (int pl, Boolean update_skills) {
   int b, oldlev;
 
   oldlev = plev(pl);
@@ -117,10 +117,12 @@ void calib_player (int pl) {
              "&+B[&+W%s &+wis now a %s (level &+C%d&N)&+B]\n", 
               pname (pl), player_level (pl), plev (pl));
 
-    if (oldlev < b)
-      give_skills(mbits(pl), pl, oldlev, b);
-    else
-      take_skills(mbits(pl), pl, oldlev, b);
+    if (update_skills) {
+      if (oldlev < b)
+        give_skills(mbits(pl), pl, oldlev, b);
+      else
+        take_skills(mbits(pl), pl, oldlev, b);
+    }
 
     if (b >= LVL_WIZARD) {
       set_xpflags(mbits(pl), plev(pl));
@@ -137,6 +139,15 @@ void calib_player (int pl) {
 
   if (pmagic (pl) > (b = maxmagic (pl)))
     setpmagic (pl, b);
+}
+
+void calib_player (int pl) {
+  calib_player_impl(pl, True);
+}
+
+/* Frob applies skills once, from the original level to the calibrated level. */
+void calib_player_without_skills (int pl) {
+  calib_player_impl(pl, False);
 }
 
 void give_skills(long int bits[], int pl, int oldlev, int newlev) {

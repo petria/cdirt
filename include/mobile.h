@@ -60,6 +60,7 @@ Boolean	chkdumb(void);
 Boolean	chkcrip(void);
 Boolean	chksitting(void);
 void	calib_player(int pl);
+void    calib_player_without_skills(int pl);
 void	calibme(void);
 int	levelof(int score,int lev);
 Boolean	check_setin(char *s, Boolean d, Boolean v);
