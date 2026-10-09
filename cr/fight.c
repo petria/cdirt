@@ -1326,10 +1326,13 @@ void check_parts(int victim, int attacker, Bodypart *area, Boolean sever)
   setup_globals(victim);
 
   if (hasarmr(area) && sever) {
+    int broken_armor = area->armor;
+
     GMSG("%r is smashed to bits.\n");
-    removeobj(False, area->armor, victim);
-    setcarrf(area->armor, IN_ROOM);
-    destroy(area->armor);
+    /* Removing equipment clears area->armor; retain its object ID. */
+    removeobj(False, broken_armor, victim);
+    /* destroy() moves it and removes it from the victim's inventory. */
+    destroy(broken_armor);
   }
 
   if (!has_arm(victim) && ((s = wears_shield(victim)) != -1)) {
